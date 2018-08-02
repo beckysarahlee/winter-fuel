@@ -1,0 +1,85 @@
+{% extends "layoutsearch.html" %}
+
+{% block pageTitle %}
+  Check the bank details you have added
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+  <a class="govuk-back-link" href='#'onclick="goBack()">Back</a>
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Check the bank details you have added</h1>
+
+            <dl class="app-check-your-answers app-check-your-answers--long">
+              <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                  Full name of the account holder
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                  {{ data['name'] }}
+                </dd>
+                <dd class="app-check-your-answers__change">
+                  <a href="#">
+                    Change<span class="govuk-visually-hidden">Full name of the account holder</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                  {{ data['type'] }}
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                  {{ data['sort1'] }}{{ data['sort2'] }}{{ data['sort3'] }}
+                </dd>
+                <dd class="app-check-your-answers__change">
+                  <a href="#">
+                    Change<span class="govuk-visually-hidden">{{ data['type'] }}</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                  {{ data['type2'] }}
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                  {{ data['account'] }}
+                </dd>
+                <dd class="app-check-your-answers__change">
+                  <a href="#">
+                    Change<span class="govuk-visually-hidden">{{ data['type2'] }}</span>
+                  </a>
+                </dd>
+              </div>
+
+            </dl>
+            <br>
+
+          <form action="confirmation" method="post" class="form"> 
+            <input type="submit" method="post" value="Make payment" class="govuk-button">
+          </form>
+
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+

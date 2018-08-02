@@ -1,0 +1,50 @@
+{% extends "layoutsearch.html" %}
+
+{% block pageTitle %}
+  Winter Fuel Payment complete
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+          <div class="govuk-panel govuk-panel--confirmation">
+            <h2 class="govuk-panel__title">Winter Fuel Payment complete</h2>
+            <div class="govuk-panel__body">
+              Amount paid<br><strong>£100</strong>
+            </div>
+          </div>
+
+            <h2 class="govuk-heading-m">What happens next</h2>
+            <p>The payment will appear in Ermintrude Thelma Louise Brown bank account in the next few days.</p>
+
+
+             <form action="nz123456c_paid" method="post" class="form"> 
+                <input type="submit" method="post" value="View record" class="govuk-button">
+              </form>
+            
+              <a class="govuk-link" href="search">Search again</a>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+

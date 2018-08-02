@@ -1,0 +1,182 @@
+{% extends "layoutsearch.html" %}
+
+{% block pageTitle %}
+  Ermintrude Thelma Louise Brown
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+
+  <section class="key-details-bar" role="contentinfo" aria-label="Key details">
+      <dl class="key-details-bar__key-details">
+        <div class="key-details-bar__top-block">
+          <dt class="govuk-visually-hidden">Name:</dt>
+          <dd class="key-details-bar__name">Ermintrude Thelma Louise Brown</dd>
+
+          <dt class="govuk-visually-hidden">National Insurance number:</dt>
+          <dd class="key-details-bar__nino">NZ 12 34 56 C</dd>
+
+          
+        </div>
+
+        <div class="key-details-bar__bottom-block">
+          <dt>Date of birth:</dt>
+          <dd>19 January 1953</dd>
+
+          <dt>Address:</dt>
+          <dd>123 Glossop Road, Little Hayfield, High Peak, TD152TB</dd>
+
+        </div>
+      </dl>
+    </section>
+
+  <main class="">
+
+    <div class="govuk-grid-row">
+
+     
+      <div class="govuk-grid-column-two-thirds">
+
+
+        <div class="tabs">
+            <div class="tabs-nav">
+              <ul class="tabs-list">
+                <li>
+                  <a href="#tab-1">
+                    Winter Fuel Payments
+                  </a>
+                </li>
+                <li>
+                  <a href="#tab-2">
+                    Bank details
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+        <div class="tabs-content">
+          <div class="tabs-panel" id="tab-1">
+            <div class="tabs-panel-inner">
+
+                       <dl class="app-check-your-answers app-check-your-answers--long">
+                            <div class="app-check-your-answers__contents">
+                              <dt class="app-check-your-answers__question">
+                                Amount to be paid
+                              </dt>
+                              <dd class="app-check-your-answers__answer">
+                                £100
+                              </dd>
+                            </div>
+                            <div class="app-check-your-answers__contents">
+                              <dt class="app-check-your-answers__question">
+                                Matched with
+                              </dt>
+                              <dd class="app-check-your-answers__answer">
+                                <a href="ab654321c">John Brown</a>
+                              </dd>
+                            </div>
+                            <div class="app-check-your-answers__contents">
+                              <dt class="app-check-your-answers__question">
+                                Status
+                              </dt>
+                              <dd class="app-check-your-answers__answer">
+                                Paid
+                              </dd>
+                            </div>
+                            <div class="app-check-your-answers__contents">
+                              <dt class="app-check-your-answers__question">
+                                Payment date
+                              </dt>
+                              <dd class="app-check-your-answers__answer">
+                                10th August 2018
+                              </dd>
+                            </div>
+                            <div class="app-check-your-answers__contents">
+                              <dt class="app-check-your-answers__question">
+                                Reference
+                              </dt>
+                              <dd class="app-check-your-answers__answer">
+                                WF12 43 65 87
+                              </dd>
+                            </div>
+                        </dl>
+
+              
+            </div>
+          </div>  
+
+
+            <div class="tabs-panel" id="tab-2">
+            <div class="tabs-panel-inner">
+             
+
+                        <dl class="app-check-your-answers app-check-your-answers--long">
+                            <div class="app-check-your-answers__contents">
+                              <dt class="app-check-your-answers__question">
+                                Account holder
+                              </dt>
+                              <dd class="app-check-your-answers__answer">
+                                {{ data['name'] }}
+                              </dd>
+                            </div>
+                            <div class="app-check-your-answers__contents">
+                              <dt class="app-check-your-answers__question">
+                                Sort code
+                              </dt>
+                              <dd class="app-check-your-answers__answer">
+                                {{ data['sort1'] }}{{ data['sort2'] }}{{ data['sort3'] }}
+                              </dd>
+                            </div>
+                            <div class="app-check-your-answers__contents">
+                              <dt class="app-check-your-answers__question">
+                                Account number
+                              </dt>
+                              <dd class="app-check-your-answers__answer">
+                                {{ data['account'] }}
+                              </dd>
+                            </div>
+                        </dl>
+
+
+
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+   </div>
+
+      <div class="govuk-grid-column-one-third">
+          <div class="invoicesummary">
+
+            <p>
+             <strong class="app-c-tag app-c-tag--success">paid</strong>
+           </p>
+             
+
+              <ul class="govuk-list">
+                <li>
+                  <a style="font-weight: 700;" class="govuk-link" href="#">Make a top up</a>
+                </li>
+                <li>
+                  <a style="font-weight: 700;" class="govuk-link" href="#">Mark as an overpayment</a>
+                </li>
+              </ul>
+         
+         </div>
+
+      </div>
+
+
+    </div>
+
+  </main>
+</div>
+
+
+{% endblock %}
+
