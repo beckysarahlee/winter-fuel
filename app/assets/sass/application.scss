@@ -217,6 +217,7 @@ span.status-tag-disabled {
 
 .key-details-bar {
   background-color: #005ea5;
+  margin-top: -10px;
 }
 
 .key-details-bar .key-details-bar__key-details {
@@ -224,6 +225,7 @@ span.status-tag-disabled {
   max-width: 960px;
   padding: 20px 30px;
   position: relative;
+
 }
 
 @media (max-width: 670px) {
@@ -331,6 +333,11 @@ span.status-tag-disabled {
   text-transform: uppercase;
   float: right;
   margin: 5px 0 0;
+}
+
+.key-details-bar-content {
+  font-weight: 700;
+  
 }
 
 @media (max-width: 670px) {
@@ -583,6 +590,11 @@ span.status-tag-disabled {
     background-repeat: no-repeat;
     background-position: 0 50%;
     margin-bottom: 10px;
+}
+
+.searchheader:hover {
+    background-color: #004880;
+    color: white;
 }
 
 .form-control-search { 
