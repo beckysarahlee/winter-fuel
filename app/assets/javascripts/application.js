@@ -162,6 +162,20 @@ function change_link()
 
 }
 
+function change_link2()
+{
+  if (document.getElementById("uk").checked)
+  {
+    document.getElementById("buttonChange2").innerHTML = "<a href = 'uk_address'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+  else if (document.getElementById("international").checked)
+  {
+    document.getElementById("buttonChange2").innerHTML = "<a href = 'international_address'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+ 
+
+}
+
 function changeLink() {
    var value = document.getElementById("input").value;
    var valueLower = value.toLowerCase(); 
@@ -171,6 +185,14 @@ function changeLink() {
 
    else if (valueLower == "ab654321c" ) {
        document.getElementById("link").href = "ab654321c";
+   }
+
+   else if (valueLower == "nz654321c" ) {
+       document.getElementById("link").href = "nz654321c";
+   }
+
+   else if (valueLower == "ab123456c" ) {
+       document.getElementById("link").href = "ab123456c";
    }
 
  
@@ -183,6 +205,25 @@ document.getElementById("input")
         document.getElementById("link").click();
     }
 });
+
+//postcode
+
+
+function SwapDivsWithClick(div1,div2)
+{
+   d1 = document.getElementById(div1);
+   d2 = document.getElementById(div2);
+   if( d2.style.display == "none" )
+   {
+      d1.style.display = "none";
+      d2.style.display = "block";
+   }
+   else
+   {
+      d1.style.display = "block";
+      d2.style.display = "none";
+   }
+}
 
 
 

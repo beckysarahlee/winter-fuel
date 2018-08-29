@@ -1,0 +1,76 @@
+{% extends "layoutsearch.html" %}
+
+{% block pageTitle %}
+  Check the address details you have added
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+  <a class="govuk-back-link" href='#'onclick="goBack()">Back</a>
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Check the address details you have added</h1>
+
+            <dl class="app-check-your-answers app-check-your-answers--long">
+              <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                  UK or international address
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                  {{ data['addresstype'] }}
+                </dd>
+                <dd class="app-check-your-answers__change">
+                  <a href="#">
+                    Change<span class="govuk-visually-hidden">UK or international address</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                  Address
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                  {{ data['address1'] }}<br>
+                  {{ data['address2'] }}<br>
+                  {{ data['address3'] }}<br>
+                  {{ data['address4'] }}<br>
+                  {{ data['country'] }}
+
+                </dd>
+                <dd class="app-check-your-answers__change">
+                  <a href="#">
+                    Change<span class="govuk-visually-hidden">Address</span>
+                  </a>
+                </dd>
+              </div>
+
+            </dl>
+            <br>
+
+          <form action="confirmation_address" method="post" class="form"> 
+            <input type="submit" method="post" value="Check if payment is due" class="govuk-button">
+          </form>
+
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
