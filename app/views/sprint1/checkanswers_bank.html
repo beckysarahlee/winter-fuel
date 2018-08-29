@@ -17,6 +17,22 @@
         <h1 class="govuk-heading-xl">Check the bank details you have added</h1>
 
             <dl class="app-check-your-answers app-check-your-answers--long">
+              
+               <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                  UK or international bank
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                  {{ data['banktype'] }}
+                </dd>
+                <dd class="app-check-your-answers__change">
+                  <a href="payment_type">
+                    Change<span class="govuk-visually-hidden">UK or international bank</span>
+                  </a>
+                </dd>
+              </div>
+
+
               <div class="app-check-your-answers__contents">
                 <dt class="app-check-your-answers__question">
                   Account holder's full name
