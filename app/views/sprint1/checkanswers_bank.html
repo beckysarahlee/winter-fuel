@@ -1,7 +1,7 @@
 {% extends "layoutsearch.html" %}
 
 {% block pageTitle %}
-  Check the bank details you have added
+  Check bank details before you make the payment
 {% endblock %}
 
 {% block content %}
@@ -14,7 +14,7 @@
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Check the bank details you have added</h1>
+        <h1 class="govuk-heading-xl">Check bank details before you make the payment</h1>
 
             <dl class="app-check-your-answers app-check-your-answers--long">
               
@@ -35,7 +35,7 @@
 
               <div class="app-check-your-answers__contents">
                 <dt class="app-check-your-answers__question">
-                  Account holder's full name
+                  Account holder
                 </dt>
                 <dd class="app-check-your-answers__answer">
                   {{ data['name'] }}
