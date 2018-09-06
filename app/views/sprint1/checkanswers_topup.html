@@ -1,0 +1,78 @@
+{% extends "layoutsearch.html" %}
+
+{% block pageTitle %}
+  Check details before you make the top up payment
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+  <a class="govuk-back-link" href='#'onclick="goBack()">Back</a>
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Check address details on 6 September 2018 before you make the top up payment</h1>
+
+
+           <!-- <h2 class="govuk-heading-m">
+                Address on 6 September 2018
+              </h2> -->
+            <dl class="app-check-your-answers app-check-your-answers--long">
+              <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                  John Brown
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                  123 Glossop Road,<br>
+                  Little Hayfield,<br>
+                  High Peak,<br>
+                  TD15 2PE
+                </dd>
+                <dd class="app-check-your-answers__change">
+                  <a href="address_type">
+                    Change<span class="govuk-visually-hidden">Living at address</span>
+                  </a>
+                </dd>
+              </div>
+
+               <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                  Ermintrude Thelma Louise Brown
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                  Other address
+                </dd>
+                <dd class="app-check-your-answers__change">
+                  <a href="#">
+                    Change<span class="govuk-visually-hidden">Living at address</span>
+                  </a>
+                </dd>
+              </div>
+
+            </dl>
+            <br>
+
+          <form action="confirmation_topup" method="post" class="form"> 
+            <input type="submit" method="post" value="Make the top up payment" class="govuk-button">
+          </form>
+
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+

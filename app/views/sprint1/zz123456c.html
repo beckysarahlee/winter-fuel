@@ -1,7 +1,7 @@
-{% extends "layoutsearch.html" %}
+{% extends "layoutsearchgsl.html" %}
 
 {% block pageTitle %}
-  Ermintrude Thelma Louise Brown
+ Ian Robertson
 {% endblock %}
 
 
@@ -9,34 +9,34 @@
 
 <div class="govuk-width-container">
 
-     <section class="key-details-bar" role="contentinfo" aria-label="Key details">
-      <dl class="key-details-bar__key-details">
-        <div class="key-details-bar__top-block">
-          <dt class="govuk-visually-hidden">Name:</dt>
-          <dd class="key-details-bar__name">Ermintrude Thelma Louise Brown</dd>
+  <a class="govuk-back-link" href='gsl'>Back to all GSL cases</a>
 
-          <dt class="govuk-visually-hidden">National Insurance number:</dt>
-          <dd class="key-details-bar__nino">NZ 12 34 56 C</dd>
-
-          
-        </div>
-
-        <div class="key-details-bar__bottom-block">
-          <dt>Date of birth:</dt>
-          <dd >19 January 1953</dd>
-
-          <dt>Address:</dt>
-          <dd>123 Glossop Road, Little Hayfield, High Peak, TD15 2TB</dd>
-
-        </div>
-      </dl>
-    </section>
-
-
-
-  <main class="">
+  <main class="govuk-main-wrapper">
 
     <div class="govuk-grid-row">
+
+       <section class="key-details-bar" role="contentinfo" aria-label="Key details">
+          <dl class="key-details-bar__key-details">
+            <div class="key-details-bar__top-block">
+              <dt class="govuk-visually-hidden">Name:</dt>
+              <dd class="key-details-bar__name">Ian Robertson</dd>
+
+              <dt class="govuk-visually-hidden">National Insurance number:</dt>
+              <dd class="key-details-bar__nino">ZZ 12 34 56 C</dd>
+
+              
+            </div>
+
+            <div class="key-details-bar__bottom-block">
+              <dt>Date of birth:</dt>
+              <dd >15 July 1952</dd>
+
+              <dt>Address:</dt>
+              <dd>AbteilungTM-K, 80788 Munich, Bavaria, Germany</dd>
+
+            </div>
+          </dl>
+        </section>
 
      
       <div class="govuk-grid-column-two-thirds">
@@ -76,7 +76,7 @@
                                 Circumstance
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                Lives with <a href="ab654321c">John Brown</a>
+                                Lives with <a href="#">Claire Robertson</a>
                               </dd>
                             </div>
                             <div class="app-check-your-answers__contents">
@@ -84,7 +84,7 @@
                                 Payment status
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                Paid
+                                Needs GSL decision
                               </dd>
                             </div>
                             <div class="app-check-your-answers__contents">
@@ -92,7 +92,7 @@
                                 Payment date
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                10 August 2018
+                               
                               </dd>
                             </div>
                             <div class="app-check-your-answers__contents">
@@ -100,9 +100,42 @@
                                 Benefits
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                State Pension (deferred)
+                                State Pension 
                               </dd>
                             </div>
+                            <div class="app-check-your-answers__contents">
+                              <dt class="app-check-your-answers__question">
+                                Age
+                              </dt>
+                              <dd class="app-check-your-answers__answer">
+                                59
+                              </dd>
+                            </div>
+                            <div class="app-check-your-answers__contents">
+                              <dt class="app-check-your-answers__question">
+                                Years living in the UK
+                              </dt>
+                              <dd class="app-check-your-answers__answer">
+                                27 years 2 months
+                              </dd>
+                            </div>
+                            <div class="app-check-your-answers__contents">
+                              <dt class="app-check-your-answers__question">
+                                Years working in the UK
+                              </dt>
+                              <dd class="app-check-your-answers__answer">
+                                11 years 6 months
+                              </dd>
+                            </div>
+                            <div class="app-check-your-answers__contents">
+                              <dt class="app-check-your-answers__question">
+                                % of life resident in the UK
+                              </dt>
+                              <dd class="app-check-your-answers__answer">
+                                45%
+                              </dd>
+                            </div>
+
                             <div class="app-check-your-answers__contents">
                               <dt class="app-check-your-answers__question">
                                 Reference number
@@ -128,23 +161,23 @@
                                 Account holder
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                {{ data['name'] }}
+                                Ian Robertson
                               </dd>
                             </div>
                             <div class="app-check-your-answers__contents">
                               <dt class="app-check-your-answers__question">
-                                Sort code
+                                SWIFT code
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                {{ data['sort1'] }}{{ data['sort2'] }}{{ data['sort3'] }}
+                                1432 5465 8873
                               </dd>
                             </div>
                             <div class="app-check-your-answers__contents">
                               <dt class="app-check-your-answers__question">
-                                Account number
+                                IBAN Number
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                {{ data['account'] }}
+                                1234 6543 9876 5678
                               </dd>
                             </div>
                         </dl>
@@ -164,17 +197,15 @@
           <div class="invoicesummary">
 
             <p>
-             <strong class="app-c-tag app-c-tag--success">paid</strong>
+             <strong class="app-c-tag app-c-tag--danger">Needs GSL decision</strong>
            </p>
              
 
               <ul class="govuk-list">
                 <li>
-                  <a style="font-weight: 700;" class="govuk-link" href="#">Make a top up payment</a>
+                  <a style="font-weight: 700;" class="govuk-link" href="#">Add decision</a> 
                 </li>
-                <li>
-                  <a style="font-weight: 700;" class="govuk-link" href="#">Mark as an overpayment</a>
-                </li>
+               
               </ul>
          
          </div>

@@ -176,23 +176,37 @@ function change_link2()
 
 }
 
+function change_link3()
+{
+  if (document.getElementById("john").checked)
+  {
+    document.getElementById("buttonChange3").innerHTML = "<a href = 'checkanswers_topup'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+  else if (document.getElementById("ermintrude").checked)
+  {
+    document.getElementById("buttonChange3").innerHTML = "<a href = '#'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+ 
+
+}
+
 function changeLink() {
    var value = document.getElementById("input").value;
    var valueLower = value.toLowerCase(); 
-   if (valueLower == "nz123456c" ) {
-       document.getElementById("link").href = "nz123456c";
+   if (valueLower == "gb123456c" ) {
+       document.getElementById("link").href = "gb123456c";
    }
 
-   else if (valueLower == "ab654321c" ) {
-       document.getElementById("link").href = "ab654321c";
+   else if (valueLower == "zz654321c" ) {
+       document.getElementById("link").href = "zz654321c";
    }
 
-   else if (valueLower == "nz654321c" ) {
-       document.getElementById("link").href = "nz654321c";
+   else if (valueLower == "gb654321c" ) {
+       document.getElementById("link").href = "gb654321c";
    }
 
-   else if (valueLower == "ab123456c" ) {
-       document.getElementById("link").href = "ab123456c";
+   else if (valueLower == "zz123456c" ) {
+       document.getElementById("link").href = "zz123456c";
    }
 
  

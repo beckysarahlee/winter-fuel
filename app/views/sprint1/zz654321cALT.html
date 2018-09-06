@@ -1,42 +1,56 @@
-{% extends "layoutsearchgsl.html" %}
+{% extends "layoutsearch.html" %}
 
 {% block pageTitle %}
- Ian Robertson
+  John Brown
 {% endblock %}
 
+
+
+{% block header %}
+  {% include "includes/cookie-banner.html" %}
+  {# Set serviceName in config.js. #}
+  {% include "includes/headsearch.html" %}
+
+      <section class="key-details-bar" role="contentinfo" aria-label="Key details">
+      <dl class="key-details-bar__key-details">
+        <div class="key-details-bar__top-block">
+          <dt class="govuk-visually-hidden">Name:</dt>
+          <dd class="key-details-bar__name">John Brown</dd>
+
+          <dt class="govuk-visually-hidden">National Insurance number:</dt>
+          <dd class="key-details-bar__nino">ZZ 65 43 21 C</dd>
+
+         
+<!--
+          <dt class="visually-hidden">Claim status:</dt>
+          <dd class="key-details-bar__status">Paid</dd> -->
+
+          
+        </div>
+
+        <div class="key-details-bar__bottom-block">
+          <dt>Date of birth:</dt>
+          <dd>2 March 1950</dd>
+
+          <dt>Address:</dt>
+          <dd>123 Glossop Road, Little Hayfield, High Peak, TD15 2TB</dd>
+
+        </div>
+      </dl>
+    </section>
+
+{% endblock %} 
 
 {% block content %}
 
 <div class="govuk-width-container">
 
-  <a class="govuk-back-link" href='gsl'>Back to all GSL cases</a>
 
-  <main class="govuk-main-wrapper">
+  
+
+  <main class="">
 
     <div class="govuk-grid-row">
-
-       <section class="key-details-bar" role="contentinfo" aria-label="Key details">
-          <dl class="key-details-bar__key-details">
-            <div class="key-details-bar__top-block">
-              <dt class="govuk-visually-hidden">Name:</dt>
-              <dd class="key-details-bar__name">Ian Robertson</dd>
-
-              <dt class="govuk-visually-hidden">National Insurance number:</dt>
-              <dd class="key-details-bar__nino">AB 12 34 56 C</dd>
-
-              
-            </div>
-
-            <div class="key-details-bar__bottom-block">
-              <dt>Date of birth:</dt>
-              <dd >15 July 1952</dd>
-
-              <dt>Address:</dt>
-              <dd>AbteilungTM-K, 80788 Munich, Bavaria, Germany</dd>
-
-            </div>
-          </dl>
-        </section>
 
      
       <div class="govuk-grid-column-two-thirds">
@@ -76,7 +90,7 @@
                                 Circumstance
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                Lives with <a href="#">Claire Robertson</a>
+                                Lives with <a href='#'onclick="goBack()">Ermintrude Thelma Louise Brown</a>
                               </dd>
                             </div>
                             <div class="app-check-your-answers__contents">
@@ -84,7 +98,7 @@
                                 Payment status
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                Needs GSL decision
+                                Paid
                               </dd>
                             </div>
                             <div class="app-check-your-answers__contents">
@@ -92,7 +106,7 @@
                                 Payment date
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                               
+                                20 September 2017
                               </dd>
                             </div>
                             <div class="app-check-your-answers__contents">
@@ -100,51 +114,29 @@
                                 Benefits
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                State Pension 
+                                State Pension
                               </dd>
                             </div>
-                            <div class="app-check-your-answers__contents">
-                              <dt class="app-check-your-answers__question">
-                                Age
-                              </dt>
-                              <dd class="app-check-your-answers__answer">
-                                59
-                              </dd>
-                            </div>
-                            <div class="app-check-your-answers__contents">
-                              <dt class="app-check-your-answers__question">
-                                Years living in the UK
-                              </dt>
-                              <dd class="app-check-your-answers__answer">
-                                27 years 2 months
-                              </dd>
-                            </div>
-                            <div class="app-check-your-answers__contents">
-                              <dt class="app-check-your-answers__question">
-                                Years working in the UK
-                              </dt>
-                              <dd class="app-check-your-answers__answer">
-                                11 years 6 months
-                              </dd>
-                            </div>
-                            <div class="app-check-your-answers__contents">
-                              <dt class="app-check-your-answers__question">
-                                % of life resident in the UK
-                              </dt>
-                              <dd class="app-check-your-answers__answer">
-                                45%
-                              </dd>
-                            </div>
-
                             <div class="app-check-your-answers__contents">
                               <dt class="app-check-your-answers__question">
                                 Reference number
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                WF12 43 65 87
+                                WF12 43 65 86
                               </dd>
                             </div>
                         </dl>
+
+                        <details class="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                            Show previous years
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                          Coming soon!
+                        </div>
+                      </details>
 
               
             </div>
@@ -161,23 +153,23 @@
                                 Account holder
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                Ian Robertson
+                                John Brown
                               </dd>
                             </div>
                             <div class="app-check-your-answers__contents">
                               <dt class="app-check-your-answers__question">
-                                SWIFT code
+                                Sort code
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                1432 5465 8873
+                                12 53 45
                               </dd>
                             </div>
                             <div class="app-check-your-answers__contents">
                               <dt class="app-check-your-answers__question">
-                                IBAN Number
+                                Account number
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                1234 6543 9876 5678
+                                124 562 365 523
                               </dd>
                             </div>
                         </dl>
@@ -189,6 +181,8 @@
         </div>
 
 
+
+
       </div>
 
    </div>
@@ -196,16 +190,18 @@
       <div class="govuk-grid-column-one-third">
           <div class="invoicesummary">
 
-            <p>
-             <strong class="app-c-tag app-c-tag--danger">Needs GSL decision</strong>
-           </p>
+             <p>
+               <strong class="app-c-tag app-c-tag--success">paid</strong>
+             </p>
              
 
               <ul class="govuk-list">
                 <li>
-                  <a style="font-weight: 700;" class="govuk-link" href="#">Add decision</a> 
+                  <a style="font-weight: 700;" class="govuk-link" href="#">Make a top up payment</a>
                 </li>
-               
+                <li>
+                  <a style="font-weight: 700;" class="govuk-link" href="#">Mark as an overpayment</a>
+                </li>
               </ul>
          
          </div>

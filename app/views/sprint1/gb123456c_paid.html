@@ -1,36 +1,29 @@
 {% extends "layoutsearch.html" %}
 
 {% block pageTitle %}
-  John Brown
+  Ermintrude Thelma Louise Brown
 {% endblock %}
 
 
+{% block content %}
 
-{% block header %}
-  {% include "includes/cookie-banner.html" %}
-  {# Set serviceName in config.js. #}
-  {% include "includes/headsearch.html" %}
+<div class="govuk-width-container">
 
-      <section class="key-details-bar" role="contentinfo" aria-label="Key details">
+     <section class="key-details-bar" role="contentinfo" aria-label="Key details">
       <dl class="key-details-bar__key-details">
         <div class="key-details-bar__top-block">
           <dt class="govuk-visually-hidden">Name:</dt>
-          <dd class="key-details-bar__name">John Brown</dd>
+          <dd class="key-details-bar__name">Ermintrude Thelma Louise Brown</dd>
 
           <dt class="govuk-visually-hidden">National Insurance number:</dt>
-          <dd class="key-details-bar__nino">AB 65 43 21 C</dd>
-
-         
-<!--
-          <dt class="visually-hidden">Claim status:</dt>
-          <dd class="key-details-bar__status">Paid</dd> -->
+          <dd class="key-details-bar__nino">GB 12 34 56 C</dd>
 
           
         </div>
 
         <div class="key-details-bar__bottom-block">
           <dt>Date of birth:</dt>
-          <dd>2 March 1950</dd>
+          <dd >19 January 1953</dd>
 
           <dt>Address:</dt>
           <dd>123 Glossop Road, Little Hayfield, High Peak, TD15 2TB</dd>
@@ -39,14 +32,7 @@
       </dl>
     </section>
 
-{% endblock %} 
 
-{% block content %}
-
-<div class="govuk-width-container">
-
-
-  
 
   <main class="">
 
@@ -90,7 +76,7 @@
                                 Circumstance
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                Lives with <a href='#'onclick="goBack()">Ermintrude Thelma Louise Brown</a>
+                                Lives with <a href="zz654321c">John Brown</a>
                               </dd>
                             </div>
                             <div class="app-check-your-answers__contents">
@@ -106,7 +92,7 @@
                                 Payment date
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                20 September 2017
+                                10 August 2018
                               </dd>
                             </div>
                             <div class="app-check-your-answers__contents">
@@ -114,7 +100,7 @@
                                 Benefits
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                State Pension
+                                State Pension (deferred)
                               </dd>
                             </div>
                             <div class="app-check-your-answers__contents">
@@ -122,21 +108,10 @@
                                 Reference number
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                WF12 43 65 86
+                                WF12 43 65 87
                               </dd>
                             </div>
                         </dl>
-
-                        <details class="govuk-details">
-                        <summary class="govuk-details__summary">
-                          <span class="govuk-details__summary-text">
-                            Show previous years
-                          </span>
-                        </summary>
-                        <div class="govuk-details__text">
-                          Coming soon!
-                        </div>
-                      </details>
 
               
             </div>
@@ -153,7 +128,7 @@
                                 Account holder
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                John Brown
+                                {{ data['name'] }}
                               </dd>
                             </div>
                             <div class="app-check-your-answers__contents">
@@ -161,7 +136,7 @@
                                 Sort code
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                12 53 45
+                                {{ data['sort1'] }}{{ data['sort2'] }}{{ data['sort3'] }}
                               </dd>
                             </div>
                             <div class="app-check-your-answers__contents">
@@ -169,7 +144,7 @@
                                 Account number
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                124 562 365 523
+                                {{ data['account'] }}
                               </dd>
                             </div>
                         </dl>
@@ -181,8 +156,6 @@
         </div>
 
 
-
-
       </div>
 
    </div>
@@ -190,19 +163,18 @@
       <div class="govuk-grid-column-one-third">
           <div class="invoicesummary">
 
-             <p>
-               <strong class="app-c-tag app-c-tag--success">paid</strong>
-             </p>
+            <p>
+             <strong class="app-c-tag app-c-tag--success">Paid</strong>
+           </p>
              
 
               <ul class="govuk-list">
                 <li>
-                  <a style="font-weight: 700;" class="govuk-link" href="#">Make a top up payment</a>
+                  <a style="font-weight: 700;" class="govuk-link" href="#">Change who lived at the address in qualifying week</a>
                 </li>
                 <li>
-                  <a style="font-weight: 700;" class="govuk-link" href="#">Mark as an overpayment</a>
+                  <a style="font-weight: 700;" class="govuk-link" href="#">Change bank account details</a>
                 </li>
-              </ul>
          
          </div>
 
