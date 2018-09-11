@@ -16,23 +16,36 @@
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">Check address details before you check if a top-up payment is due</h1>
 
-<h2 class="govuk-heading-m">
+
+            <h2 class="govuk-heading-m">
                Ermintrude Thelma Louise Brown
               </h2> 
             <dl class="app-check-your-answers app-check-your-answers--long">
               
-              
+              <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                  UK or international address
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                  {{ data['addresstype'] }}
+                </dd>
+                <dd class="app-check-your-answers__change">
+                  <a href="address_type2">
+                    Change<span class="govuk-visually-hidden">UK or international address</span>
+                  </a>
+                </dd>
+              </div>
 
               <div class="app-check-your-answers__contents">
                 <dt class="app-check-your-answers__question">
                   Address
                 </dt>
                 <dd class="app-check-your-answers__answer">
-                  123 Glossop Road,<br>
-                  Little Hayfield,<br>
-                  Glossop,<br>
-                  TD15 2TB<br>
-                  
+                  {{ data['address1'] }}<br>
+                  {{ data['address2'] }}<br>
+                  {{ data['address3'] }}<br>
+                  {{ data['address4'] }}<br>
+                  {{ data['country'] }}
 
                 </dd>
                 <dd class="app-check-your-answers__change">
@@ -55,7 +68,10 @@
                  Address
                 </dt>
                 <dd class="app-check-your-answers__answer">
-                  Other address
+                  123 Glossop Road,<br>
+                  Little Hayfield,<br>
+                  High Peak,<br>
+                  TD15 2PE
                 </dd>
                 <dd class="app-check-your-answers__change">
                   <a href="#">

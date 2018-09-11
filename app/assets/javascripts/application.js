@@ -184,7 +184,21 @@ function change_link3()
   }
   else if (document.getElementById("ermintrude").checked)
   {
-    document.getElementById("buttonChange3").innerHTML = "<a href = '#'><input type='submit' value='Continue' class='govuk-button'></a>";
+    document.getElementById("buttonChange3").innerHTML = "<a href = 'address_type2'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+ 
+
+}
+
+function change_link5()
+{
+  if (document.getElementById("uk").checked)
+  {
+    document.getElementById("buttonChange5").innerHTML = "<a href = 'uk_address2'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+  else if (document.getElementById("international").checked)
+  {
+    document.getElementById("buttonChange5").innerHTML = "<a href = '#'><input type='submit' value='Continue' class='govuk-button'></a>";
   }
  
 
