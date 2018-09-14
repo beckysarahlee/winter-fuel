@@ -190,6 +190,21 @@ function change_link3()
 
 }
 
+
+function change_link4()
+{
+  if (document.getElementById("yes").checked)
+  {
+    document.getElementById("buttonChange4").innerHTML = "<a href = 'address_post'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+  else if (document.getElementById("no").checked)
+  {
+    document.getElementById("buttonChange4").innerHTML = "<a href = '#'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+ 
+
+}
+
 function change_link5()
 {
   if (document.getElementById("uk").checked)
@@ -199,6 +214,20 @@ function change_link5()
   else if (document.getElementById("international").checked)
   {
     document.getElementById("buttonChange5").innerHTML = "<a href = '#'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+ 
+
+}
+
+function change_link6()
+{
+  if (document.getElementById("yes").checked)
+  {
+    document.getElementById("buttonChange6").innerHTML = "<a href = 'circumstance'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+  else if (document.getElementById("no").checked)
+  {
+    document.getElementById("buttonChange6").innerHTML = "<a href = '#'><input type='submit' value='Continue' class='govuk-button'></a>";
   }
  
 

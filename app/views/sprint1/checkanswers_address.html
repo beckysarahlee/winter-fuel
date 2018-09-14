@@ -17,7 +17,7 @@
         <h1 class="govuk-heading-xl">Check address details before you check if payment is due</h1>
 
             <dl class="app-check-your-answers app-check-your-answers--long">
-              <div class="app-check-your-answers__contents">
+              <!--<div class="app-check-your-answers__contents">
                 <dt class="app-check-your-answers__question">
                   UK or international address
                 </dt>
@@ -29,32 +29,104 @@
                     Change<span class="govuk-visually-hidden">UK or international address</span>
                   </a>
                 </dd>
-              </div>
+              </div> -->
 
               <div class="app-check-your-answers__contents">
                 <dt class="app-check-your-answers__question">
-                  Address
+                  Address on 6 September 2018
                 </dt>
                 <dd class="app-check-your-answers__answer">
-                  {{ data['address1'] }}<br>
-                  {{ data['address2'] }}<br>
-                  {{ data['address3'] }}<br>
-                  {{ data['address4'] }}<br>
+                  {{ data['address1'] }},<br>
+                  {{ data['address2'] }},<br>
+                  {{ data['address3'] }},<br>
+                  {{ data['address4'] }},<br>
                   {{ data['country'] }}
 
                 </dd>
                 <dd class="app-check-your-answers__change">
-                  <a href='#'onclick="goBack()">
+                  <a href='#'>
                     Change<span class="govuk-visually-hidden">Address</span>
                   </a>
                 </dd>
               </div>
 
+              <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                  Current address
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                  {{ data['address1'] }},<br>
+                  {{ data['address2'] }},<br>
+                  {{ data['address3'] }},<br>
+                  {{ data['address4'] }},<br>
+                  {{ data['country'] }}
+
+                </dd>
+                <dd class="app-check-your-answers__change">
+                  <a href='#'>
+                    Change<span class="govuk-visually-hidden">Current address</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                  Postal address
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                  {{ data['address1'] }},<br>
+                  {{ data['address2'] }},<br>
+                  {{ data['address3'] }},<br>
+                  {{ data['address4'] }},<br>
+                  {{ data['country'] }}
+
+                </dd>
+                <dd class="app-check-your-answers__change">
+                  <a href='#'>
+                    Change<span class="govuk-visually-hidden">Postal address</span>
+                  </a>
+                </dd>
+              </div>
+
+               <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                  Prison, hospital or carehome
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                  Not applicable
+
+                </dd>
+                <dd class="app-check-your-answers__change">
+                  <a href='#'onclick="goBack()">
+                    Change<span class="govuk-visually-hidden">Prison, hospital or carehome</span>
+                  </a>
+                </dd>
+              </div>
+
+             
+
             </dl>
             <br>
+           
+             <h2 class="govuk-heading-m">Now read the declaration</h2>
+
+              <p class="govuk-body">
+                By accepting these details you confirm that:
+              </p>
+
+              <ul class="govuk-list govuk-list--bullet">
+                <li>the information is correct and complete as far as you know</li>
+                <li>you will pay back any money you are overpaid if you are asked to</li>
+              </ul>
+
+              <p class="govuk-body">
+                You could be prosecuted or have to pay a financial penalty if you
+                  deliberately give the wrong or incomplete information or do not
+                  report changes.
+              </p>
 
           <form action="confirmation_address" method="post" class="form"> 
-            <input type="submit" method="post" value="Check if payment is due" class="govuk-button">
+            <input type="submit" method="post" value="Accept and check if payment is due" class="govuk-button">
           </form>
 
 
