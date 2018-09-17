@@ -1,7 +1,7 @@
 {% extends "layoutsearch.html" %}
 
 {% block pageTitle %}
-  Do any of the following apply to Sam?
+  Select who lived at the address
 {% endblock %}
 
 {% block content %}
@@ -16,7 +16,7 @@
       <div class="govuk-grid-column-two-thirds">
         
        
-           <form action="checkanswers_address" method="post" class="form"> 
+           <form action="checkanswers_topup2" method="post" class="form"> 
 
             <!--  <details class="govuk-details">
                 <summary class="govuk-details__summary">
@@ -37,40 +37,33 @@
             <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                 <h1 class="govuk-fieldset__heading">
-                  Qualifying week details
+                  Who lived at {{ data['address1'] }} on 6 September 2018?
                 </h1>
               </legend>
               <span id="waste-hint" class="govuk-hint">
-                Select all that apply
+                Only select those that get a Winter Fuel Payment.
               </span>
               <div class="govuk-checkboxes">
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="prison" name="prison" type="checkbox" value="Yes">
-                  <label class="govuk-label govuk-checkboxes__label" for="prison">
-                   Sam was in prison 6 to 13 September 2018
+                  <input class="govuk-checkboxes__input" id="john" name="waste" type="checkbox" value="John Brown">
+                  <label class="govuk-label govuk-checkboxes__label" for="john">
+                   Ermintrude Thelma Louise Brown
                   </label>
                 </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="hospital" name="hospital" type="checkbox" value="Yes">
-                  <label class="govuk-label govuk-checkboxes__label" for="hospital">
-                    Sam was in hospital for 52 weeks before 6 September 2018
-                  </label>
-                </div>
+                
               </div>
             </fieldset>
           </div>
 
-        
+          <p><i class="fas fa-plus"></i><a href="#"> Add another person</a></p>
 
-           
+             
 
-          <div>
+          <div >
             <a href = '#'><input type='submit' value='Continue' class='govuk-button'></a>
           </div>
 
-      </form>  
-
-                   
+            </form>         
 
       </div>
     </div>
