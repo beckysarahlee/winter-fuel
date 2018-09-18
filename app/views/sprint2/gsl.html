@@ -1,89 +1,84 @@
-{% extends "layoutsearch.html" %}
+{% extends "layoutsearchgsl.html" %}
 
 {% block pageTitle %}
-  Check bank details before you make the top-up payment
+  Genuine and sufficient link cases
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-width-container">
 
-  <a class="govuk-back-link" href='#'onclick="goBack()">Back</a>
+ 
 
   <main class="govuk-main-wrapper">
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Check these details before you make the top-up payment</h1>
+        <h1 class="govuk-heading-xl">Genuine and sufficient link cases</h1>
+       
+          <dl class="app-check-your-answers app-check-your-answers--long">
+              <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                  Ian Robertson
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                  AB 12 34 56 C
+                </dd>
+               
+                <dd class="app-check-your-answers__change">
+                  <a href="ab123456c">
+                    View details<span class="govuk-visually-hidden">Ian Robertson</span>
+                  </a>
+                </dd>
+              </div>
 
-            <dl class="app-check-your-answers app-check-your-answers--long">
+              <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                  Fiona Armstrong
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                  DF 12 43 56 A
+                </dd>
+               
+                <dd class="app-check-your-answers__change">
+                  <a href="#">
+                    View details<span class="govuk-visually-hidden">Fiona Armstrong</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                  Ann Ainsworth
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                  FS 46 54 32 D
+                </dd>
               
-               <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__question">
-                  UK or international bank
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                  UK
-                </dd>
-                <dd class="app-check-your-answers__change">
-                  <a href="payment_type">
-                    Change<span class="govuk-visually-hidden">UK or international bank</span>
-                  </a>
-                </dd>
-              </div>
-
-
-              <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__question">
-                  Account holder
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                  Ermintrude Brown
-                </dd>
                 <dd class="app-check-your-answers__change">
                   <a href="#">
-                    Change<span class="govuk-visually-hidden">Full name of the account holder</span>
+                    View details<span class="govuk-visually-hidden">Ann Ainsworth</span>
                   </a>
                 </dd>
               </div>
 
               <div class="app-check-your-answers__contents">
                 <dt class="app-check-your-answers__question">
-                  Sort code
+                  Robert Davies
                 </dt>
                 <dd class="app-check-your-answers__answer">
-                  12 43 45
+                  AB 32 45 87 C
                 </dd>
+              
                 <dd class="app-check-your-answers__change">
                   <a href="#">
-                    Change<span class="govuk-visually-hidden">Sort code</span>
+                    View details<span class="govuk-visually-hidden">Ann Ainsworth</span>
                   </a>
                 </dd>
               </div>
 
-              <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__question">
-                  Account number
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                  2345 6543 4321
-                </dd>
-                <dd class="app-check-your-answers__change">
-                  <a href="#">
-                    Change<span class="govuk-visually-hidden">Account number</span>
-                  </a>
-                </dd>
-              </div>
 
             </dl>
-            <br>
-
-
-            
-
-          <form action="confirmation_topup" method="post" class="form"> 
-            <input type="submit" method="post" value="Make the payment" class="govuk-button">
-          </form>
 
 
       </div>
@@ -91,6 +86,8 @@
 
   </main>
 </div>
+
+
 
 {% endblock %}
 

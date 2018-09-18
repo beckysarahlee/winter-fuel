@@ -1,7 +1,7 @@
 {% extends "layoutsearch.html" %}
 
 {% block pageTitle %}
-  UK or International address
+  UK or International bank account
 {% endblock %}
 
 {% block content %}
@@ -16,13 +16,13 @@
       <div class="govuk-grid-column-two-thirds">
 
        
-                <form action="address_type" method="post" class="form"> 
+                <form action="payment_type" method="post" class="form"> 
 
                       <div class="govuk-form-group"">
                           <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
                               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                                 <h1 class="govuk-fieldset__heading">
-                                    Where did Ermintrude live on 6 September 2018?
+                                    Is it a UK bank account or international?
                                 </h1>
                               </legend>
                               <span id="changed-name-hint" class="govuk-hint">
@@ -30,15 +30,15 @@
                               </span>
                               <div class="govuk-radios govuk-radios--inline">
                                 <div class="govuk-radios__item">
-                                  <input class="govuk-radios__input" id="uk" name="changed-name" type="radio" value="uk" onChange="change_link5();">
+                                  <input class="govuk-radios__input" id="uk" name="changed-name" type="radio" value="uk" onChange="change_link();">
                                   <label class="govuk-label govuk-radios__label" for="UK">
-                                  UK address
+                                  UK
                                 </label>
                                 </div>
                                 <div class="govuk-radios__item">
-                                  <input class="govuk-radios__input" id="international" name="changed-name" type="radio" value="international" onChange="change_link5();">
+                                  <input class="govuk-radios__input" id="international" name="changed-name" type="radio" value="international" onChange="change_link();">
                                   <label class="govuk-label govuk-radios__label" for="international">
-                                  International address
+                                  International
                                 </label>
                                 </div>
                               </div>
@@ -52,7 +52,7 @@
 
     
 
-        <div id='buttonChange5'>
+        <div id='buttonChange'>
           <a href = '#'><input type='submit' value='Continue' class='govuk-button'></a>
         </div>
 

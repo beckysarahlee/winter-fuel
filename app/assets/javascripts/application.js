@@ -233,6 +233,21 @@ function change_link6()
 
 }
 
+function change_link7()
+{
+  if (document.getElementById("yes").checked)
+  {
+    document.getElementById("buttonChange7").innerHTML = "<a href = 'circumstance'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+  else if (document.getElementById("no").checked)
+  {
+    document.getElementById("buttonChange7").innerHTML = "<a href = 'address_im'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+ 
+
+}
+
+
 function changeLink() {
    var value = document.getElementById("input").value;
    var valueLower = value.toLowerCase(); 
