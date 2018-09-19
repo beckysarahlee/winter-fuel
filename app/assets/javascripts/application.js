@@ -237,7 +237,7 @@ function change_link7()
 {
   if (document.getElementById("yes").checked)
   {
-    document.getElementById("buttonChange7").innerHTML = "<a href = 'circumstance'><input type='submit' value='Continue' class='govuk-button'></a>";
+    document.getElementById("buttonChange7").innerHTML = "<a href = 'address_1'><input type='submit' value='Continue' class='govuk-button'></a>";
   }
   else if (document.getElementById("no").checked)
   {
@@ -246,6 +246,50 @@ function change_link7()
  
 
 }
+
+function change_link9()
+{
+  if (document.getElementById("yes").checked)
+  {
+    document.getElementById("buttonChange9").innerHTML = "<a href = 'confirmation_negative'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+  else if (document.getElementById("no").checked)
+  {
+    document.getElementById("buttonChange9").innerHTML = "<a href = 'address_2'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+ 
+
+}
+
+function change_link8()
+{
+  if (document.getElementById("how-contacted-conditional-1").checked)
+  {
+    document.getElementById("buttonChange8").innerHTML = "<a href = 'confirmation_negative'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+  else if (document.getElementById("how-contacted-conditional-2").checked)
+  {
+    document.getElementById("buttonChange8").innerHTML = "<a href = 'address_3'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+ 
+
+}
+
+function change_link10()
+{
+  if (document.getElementById("how-contacted-conditional-1").checked)
+  {
+    document.getElementById("buttonChange10").innerHTML = "<a href = 'confirmation_negative'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+  else if (document.getElementById("how-contacted-conditional-2").checked)
+  {
+    document.getElementById("buttonChange10").innerHTML = "<a href = 'address_type'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+ 
+
+}
+
+
 
 
 function changeLink() {
