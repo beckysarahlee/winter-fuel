@@ -241,7 +241,7 @@ function change_link7()
   }
   else if (document.getElementById("no").checked)
   {
-    document.getElementById("buttonChange7").innerHTML = "<a href = 'address_im'><input type='submit' value='Continue' class='govuk-button'></a>";
+    document.getElementById("buttonChange7").innerHTML = "<a href = 'address_type'><input type='submit' value='Continue' class='govuk-button'></a>";
   }
  
 
