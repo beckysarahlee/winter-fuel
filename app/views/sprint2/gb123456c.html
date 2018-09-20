@@ -83,7 +83,7 @@
                                 Payment status
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                               <strong class="app-c-tag app-c-tag--danger">not paid</strong>
+                               Not paid
                               </dd>
                             </div>
                             <div class="app-check-your-answers__contents">
@@ -120,12 +120,24 @@
       <div class="govuk-grid-column-one-third">
           <div class="invoicesummary">
 
-              <h3 class="govuk-heading-s">Actions</h3>
+              <p>
+                <strong class="app-c-tag app-c-tag--danger">not paid</strong>
+              </p>
+
+              <ul class="govuk-list">
+                <li>
+                  <a style="font-weight: 700;" class="govuk-link" href="payment_type">Add bank account</a> 
+                </li>
+              </ul>
+
+
+
+           <!--   <h3 class="govuk-heading-s">Actions</h3>
 
               <form action="payment_type" method="post" class="form"> 
                 <input class="govuk-input" type="hidden" name="person" value="Fred Brown" type="text">
                 <input type="submit" method="post" value="Add bank account" class="govuk-button">
-              </form>
+              </form> -->
 
              
          
