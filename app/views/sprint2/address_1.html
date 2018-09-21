@@ -1,7 +1,7 @@
 {% extends "layoutsearch.html" %}
 
 {% block pageTitle %}
-  UK or International address
+  What dates was the caller in prison?
 {% endblock %}
 
 {% block content %}
@@ -14,52 +14,99 @@
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">What dates was the caller in prison?</h1>
 
        
-                <form class="form"> 
+                <form class="form" action="confirmation_negative" method="post"> 
 
-                      <div class="govuk-form-group"">
-                          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                                <h1 class="govuk-fieldset__heading">
-                                    Was the caller in prison from 17 to 24 September 2018?
-                                </h1>
-                              </legend>
-                              <span id="changed-name-hint" class="govuk-hint">
-                              
-                              </span>
-                              <div class="govuk-radios govuk-radios--inline">
-                                <div class="govuk-radios__item">
-                                  <input class="govuk-radios__input" id="yes" name="changed-name" type="radio" value="yes" onChange="change_link9();">
-                                  <label class="govuk-label govuk-radios__label" for="yes">
-                                  Yes
+                      <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                            <h1 class="govuk-label">
+                              What date did the caller move into prison?
+                            </h1>
+                          </legend>
+                          <div class="govuk-date-input" id="dob">
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dob-day">
+                                  Day
                                 </label>
-                                </div>
-                                <div class="govuk-radios__item">
-                                  <input class="govuk-radios__input" id="no" name="changed-name" type="radio" value="no" onChange="change_link9();">
-                                  <label class="govuk-label govuk-radios__label" for="no">
-                                  No
-                                </label>
-                                </div>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
                               </div>
-                            </fieldset>
-                           
-
-                          </fieldset>
+                            </div>
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dob-month">
+                                  Month
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                              </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dob-year">
+                                  Year
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
                       </div>
+
+                   
+                    <div class="govuk-form-group">
+                     <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                            <h1 class="govuk-label">
+                              If the caller no longer lives in prison, what date did they move out?
+                            </h1>
+                          </legend>
+                          <div class="govuk-date-input" id="dob">
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dob-day">
+                                  Day
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+                              </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dob-month">
+                                  Month
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                              </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dob-year">
+                                  Year
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>
+                    </div>
+
 
                     
 
              
-</form>
+
     
 
-        <div id='buttonChange9'>
+        <div>
           <a href = '#'><input type='submit' value='Continue' class='govuk-button'></a>
         </div>
 
 
-
+</form>
 
  
     

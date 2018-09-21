@@ -1,4 +1,4 @@
-{% extends "layoutsearch.html" %}
+ {% extends "layoutsearch.html" %}
 
 {% block pageTitle %}
   UK or International address
@@ -16,45 +16,83 @@
       <div class="govuk-grid-column-two-thirds">
 
        
-                <form action="address_type" method="post" class="form"> 
+      <form class="form"> 
 
-                      <div class="govuk-form-group"">
-                          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                                <h1 class="govuk-fieldset__heading">
-                                    Was the caller in prison or hospital, or living in a care home at anytime between 17 and 24 September 2018?
-                                </h1>
-                              </legend>
-                              <span id="changed-name-hint" class="govuk-hint">
-                              
-                              </span>
-                              <div class="govuk-radios govuk-radios--inline">
-                                <div class="govuk-radios__item">
-                                  <input class="govuk-radios__input" id="yes" name="changed-name" type="radio" value="yes" onChange="change_link7();">
-                                  <label class="govuk-label govuk-radios__label" for="yes">
-                                  Yes
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                  <h1 class="govuk-fieldset__heading">
+                    Was the caller in prison or hospital, or living in a care home at anytime between 17 and 24 September 2018?
+                  </h1>
+                </legend>
+                <div class="govuk-radios govuk-radios--inline" data-module="radios">
+                  <div class="govuk-radios--inline">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1">
+                    <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+                      Yes
+                    </label>
+                  </div>
+                 
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2" onChange="change_link8();">
+                    <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+                <br>
+
+                   <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-1">
+                    
+
+                        <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                              <h1 class="govuk-fieldset__heading">
+                               
+                              </h1>
+                            </legend>
+                            <span id="waste-hint" class="govuk-hint">
+                              Select all that apply.
+                            </span>
+                            <div class="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="prison" name="waste" type="checkbox" value="prison" onChange="change_link8();">
+                                <label class="govuk-label govuk-checkboxes__label" for="prison">
+                                  In prison
                                 </label>
-                                </div>
-                                <div class="govuk-radios__item">
-                                  <input class="govuk-radios__input" id="no" name="changed-name" type="radio" value="no" onChange="change_link7();">
-                                  <label class="govuk-label govuk-radios__label" for="no">
-                                  No
-                                </label>
-                                </div>
                               </div>
-                            </fieldset>
-                           
-
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="hospital" name="waste" type="checkbox" value="hospital" onChange="change_link8();">
+                                <label class="govuk-label govuk-checkboxes__label" for="hospital">
+                                  In hospital
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="carehome" name="waste" type="checkbox" value="carehome" onChange="change_link8();">
+                                <label class="govuk-label govuk-checkboxes__label" for="carehome">
+                                  In a care home
+                                </label>
+                              </div>
+                            </div>
                           </fieldset>
-                      </div>
+                        </div>
 
-              </form>
 
-    
 
-        <div id='buttonChange7'>
+                 
+                 
+                </div>
+              </fieldset>
+            </div>
+                     
+     </form>
+
+        <div id='buttonChange8'>
           <a href = '#'><input type='submit' value='Continue' class='govuk-button'></a>
         </div>
+
 
 
 

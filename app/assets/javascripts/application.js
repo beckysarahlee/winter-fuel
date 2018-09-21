@@ -263,11 +263,19 @@ function change_link9()
 
 function change_link8()
 {
-  if (document.getElementById("how-contacted-conditional-1").checked)
+  if (document.getElementById("prison").checked)
   {
-    document.getElementById("buttonChange8").innerHTML = "<a href = 'confirmation_negative'><input type='submit' value='Continue' class='govuk-button'></a>";
+    document.getElementById("buttonChange8").innerHTML = "<a href = 'address_1'><input type='submit' value='Continue' class='govuk-button'></a>";
   }
   else if (document.getElementById("how-contacted-conditional-2").checked)
+  {
+    document.getElementById("buttonChange8").innerHTML = "<a href = 'address_type'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+  else if (document.getElementById("carehome").checked)
+  {
+    document.getElementById("buttonChange8").innerHTML = "<a href = 'address_2'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+  else if (document.getElementById("hospital").checked)
   {
     document.getElementById("buttonChange8").innerHTML = "<a href = 'address_3'><input type='submit' value='Continue' class='govuk-button'></a>";
   }

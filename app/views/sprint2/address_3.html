@@ -1,7 +1,7 @@
 {% extends "layoutsearch.html" %}
 
 {% block pageTitle %}
-  UK or International address
+  What dates was the caller in hospital?
 {% endblock %}
 
 {% block content %}
@@ -14,43 +14,54 @@
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">What dates was the caller in hospital?</h1>
 
        
-      <form class="form"> 
+                <form class="form" action="confirmation_negative" method="post"> 
 
-          <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                  <h1 class="govuk-fieldset__heading">
-                    Was the caller staying in hospital at any time from 17 to 24 September?
-                  </h1>
-                </legend>
-                <div class="govuk-radios govuk-radios--inline" data-module="radios">
-                  <div class="govuk-radios--inline">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1" onChange="change_link10();">
-                    <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
-                      Yes
-                    </label>
-                  </div>
-                 
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2" onChange="change_link10();">
-                    <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
-                      No
-                    </label>
-                  </div>
-                </div>
-                <br>
+                      <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                            <h1 class="govuk-label">
+                              What date did the caller move into hospital?
+                            </h1>
+                          </legend>
+                          <div class="govuk-date-input" id="dob">
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dob-day">
+                                  Day
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+                              </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dob-month">
+                                  Month
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                              </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dob-year">
+                                  Year
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>
 
-                   <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-1">
+                   
                     <div class="govuk-form-group">
-
                      <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
                           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                             <h1 class="govuk-label">
-                              What date did the caller go into hospital?
+                              If the caller no longer lives in hospital, what date did they move out?
                             </h1>
                           </legend>
                           <div class="govuk-date-input" id="dob">
@@ -81,65 +92,21 @@
                           </div>
                         </fieldset>
                       </div>
-
-                    </div>
-
-                     <div class="govuk-form-group">
-
-                     <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
-                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                            <h1 class="govuk-label">
-                              If the caller is no longer in hospital, what date did they come out?
-                            </h1>
-                          </legend>
-                          <div class="govuk-date-input" id="dob">
-                            <div class="govuk-date-input__item">
-                              <div class="govuk-form-group">
-                                <label class="govuk-label govuk-date-input__label" for="dob-day">
-                                  Day
-                                </label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
-                              </div>
-                            </div>
-                            <div class="govuk-date-input__item">
-                              <div class="govuk-form-group">
-                                <label class="govuk-label govuk-date-input__label" for="dob-month">
-                                  Month
-                                </label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
-                              </div>
-                            </div>
-                            <div class="govuk-date-input__item">
-                              <div class="govuk-form-group">
-                                <label class="govuk-label govuk-date-input__label" for="dob-year">
-                                  Year
-                                </label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
-                              </div>
-                            </div>
-                          </div>
-                        </fieldset>
-                      </div>
-
                     </div>
 
 
-                  </div>
-                 
-                 
-                </div>
-              </fieldset>
-            </div>
-                     
-   </form>  
+                    
 
-        <div id='buttonChange10'>
+             
+
+    
+
+        <div>
           <a href = '#'><input type='submit' value='Continue' class='govuk-button'></a>
         </div>
 
 
-
+</form>
 
  
     

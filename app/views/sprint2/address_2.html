@@ -1,7 +1,7 @@
 {% extends "layoutsearch.html" %}
 
 {% block pageTitle %}
-  UK or International address
+  What dates was the caller in a care home?
 {% endblock %}
 
 {% block content %}
@@ -14,39 +14,12 @@
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">What dates was the caller in a care home?</h1>
 
        
-      <form class="form"> 
+                <form class="form" action="confirmation_negative" method="post"> 
 
-          <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                  <h1 class="govuk-fieldset__heading">
-                    Was the caller living in a care home at any time from 17 to 24 September?
-                  </h1>
-                </legend>
-                <div class="govuk-radios govuk-radios--inline" data-module="radios">
-                  <div class="govuk-radios--inline">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1" onChange="change_link8();">
-                    <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
-                      Yes
-                    </label>
-                  </div>
-                 
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2" onChange="change_link8();">
-                    <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
-                      No
-                    </label>
-                  </div>
-                </div>
-                <br>
-
-                   <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-1">
-                    <div class="govuk-form-group">
-
-                     <div class="govuk-form-group">
+                      <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
                           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                             <h1 class="govuk-label">
@@ -82,10 +55,8 @@
                         </fieldset>
                       </div>
 
-                    </div>
-
-                     <div class="govuk-form-group">
-
+                   
+                    <div class="govuk-form-group">
                      <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
                           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -121,25 +92,21 @@
                           </div>
                         </fieldset>
                       </div>
-
                     </div>
 
 
-                  </div>
-                 
-                 
-                </div>
-              </fieldset>
-            </div>
-                     
-     </form>
+                    
 
-        <div id='buttonChange8'>
+             
+
+    
+
+        <div>
           <a href = '#'><input type='submit' value='Continue' class='govuk-button'></a>
         </div>
 
 
-
+</form>
 
  
     
