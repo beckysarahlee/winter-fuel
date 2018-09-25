@@ -351,6 +351,11 @@ function changeLink() {
        document.getElementById("link").href = "gb654321c";
    }
 
+   else if (valueLower == "bg123456c" ) {
+       document.getElementById("link").href = "bg123456c";
+   }
+
+
  //  else if (valueLower == "zz123456c" ) {
  //      document.getElementById("link").href = "zz123456c";
 // }
