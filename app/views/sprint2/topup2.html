@@ -37,17 +37,17 @@
             <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                 <h1 class="govuk-fieldset__heading">
-                  Who else lived at {{ data['address1'] }} between 17 and 24 September 2018?
+                  Review matches
                 </h1>
               </legend>
               <span id="waste-hint" class="govuk-hint">
-                Only select or add people who get a Winter Fuel Payment.
+                Only select those who lived at {{ data['address1'] }} beween 17 and 24 September and are eligible for a Winter Fuel Payment.
               </span>
               <div class="govuk-checkboxes">
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="john" name="waste" type="checkbox" value="John Brown">
                   <label class="govuk-label govuk-checkboxes__label" for="john">
-                   Nobody, the caller lived alone
+                   The caller lived alone
                   </label>
                 </div>
                 

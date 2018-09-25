@@ -14,17 +14,19 @@
       <div class="govuk-grid-column-two-thirds">
         
           <div class="govuk-panel govuk-panel--confirmation">
-            <h2 class="govuk-panel__title">Top-up payment of £100 has been made to the caller.</h2>
+            <h2 class="govuk-panel__title">The caller has been overpaid £100</h2>
             <div class="govuk-panel__body">
-             
+              <strong></strong>
             </div>
           </div>
 
             <h2 class="govuk-heading-m">What happens next</h2>
-            <p>The payment will appear in their bank account within the next 14 days.</p>
-            <p>{{ data['circumstances'] }}</p>
-         
+            <p>The overpayments debt management team has been notified.</p>
 
+            <p>The caller failed to tell us that they were in {{ data['prison'] }} so it is likely the team will be in touch to recover the payment.</p>
+
+            <p>A letter has been sent to the caller with more information.</p>
+       
 
 
              <form action="search" method="post" class="form"> 

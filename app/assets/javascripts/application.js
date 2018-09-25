@@ -180,11 +180,11 @@ function change_link3()
 {
   if (document.getElementById("john").checked)
   {
-    document.getElementById("buttonChange3").innerHTML = "<a href = 'checkanswers_topup'><input type='submit' value='Continue' class='govuk-button'></a>";
+    document.getElementById("buttonChange3").innerHTML = "<a href = 'date_topup'><input type='submit' value='Continue' class='govuk-button'></a>";
   }
   else if (document.getElementById("ermintrude").checked)
   {
-    document.getElementById("buttonChange3").innerHTML = "<a href = 'address_type2'><input type='submit' value='Continue' class='govuk-button'></a>";
+    document.getElementById("buttonChange3").innerHTML = "<a href = 'address_prison_topup'><input type='submit' value='Continue' class='govuk-button'></a>";
   }
  
 
@@ -292,6 +292,28 @@ function change_link10()
   else if (document.getElementById("how-contacted-conditional-2").checked)
   {
     document.getElementById("buttonChange10").innerHTML = "<a href = 'address_type'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+ 
+
+}
+
+function change_link11()
+{
+  if (document.getElementById("prison").checked)
+  {
+    document.getElementById("buttonChange11").innerHTML = "<a href = 'address_1topup'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+  else if (document.getElementById("how-contacted-conditional-2").checked)
+  {
+    document.getElementById("buttonChange11").innerHTML = "<a href = 'address_type2'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+  else if (document.getElementById("carehome").checked)
+  {
+    document.getElementById("buttonChange11").innerHTML = "<a href = 'address_2topup'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+  else if (document.getElementById("hospital").checked)
+  {
+    document.getElementById("buttonChange11").innerHTML = "<a href = 'address_3topup'><input type='submit' value='Continue' class='govuk-button'></a>";
   }
  
 

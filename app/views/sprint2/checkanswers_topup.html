@@ -16,9 +16,7 @@
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">Check these details before you continue</h1>
 
-<h2 class="govuk-heading-m">
-               Ermintrude Thelma Louise Brown
-              </h2> 
+
             <dl class="app-check-your-answers app-check-your-answers--long">
               
               
@@ -37,6 +35,37 @@
                 </dd>
                 <dd class="app-check-your-answers__change">
                   <a href='#'onclick="goBack()">
+                    Change<span class="govuk-visually-hidden">Address</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                  Matched at same address
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                 
+                  None
+
+                </dd>
+                <dd class="app-check-your-answers__change">
+                  <a href='#'onclick="goBack()">
+                    Change<span class="govuk-visually-hidden">Matched at same address</span>
+                  </a>
+                </dd>
+              </div>
+
+               <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                  Date Fred stopped living at address
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                  {{ data['dob-day'] }} {{ data['dob-month'] }} {{ data['dob-year'] }}
+
+                </dd>
+                <dd class="app-check-your-answers__change">
+                  <a href='#'>
                     Change<span class="govuk-visually-hidden">Address</span>
                   </a>
                 </dd>
