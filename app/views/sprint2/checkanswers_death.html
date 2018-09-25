@@ -20,29 +20,9 @@
       
             <dl class="app-check-your-answers app-check-your-answers--long">
               
-
               <div class="app-check-your-answers__contents">
                 <dt class="app-check-your-answers__question">
-                  Address
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                  {{ data['address1'] }}<br>
-                  {{ data['address2'] }}<br>
-                  {{ data['address3'] }}<br>
-                  {{ data['address4'] }}<br>
-                  {{ data['country'] }}
-
-                </dd>
-                <dd class="app-check-your-answers__change">
-                  <a href='#'onclick="goBack()">
-                    Change<span class="govuk-visually-hidden">Address</span>
-                  </a>
-                </dd>
-              </div>
-
-              <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__question">
-                  Date moved to address
+                  Date of death
                 </dt>
                 <dd class="app-check-your-answers__answer">
                   {{ data['dob-day'] }} {{ data['dob-month'] }} {{ data['dob-year'] }}
@@ -55,21 +35,44 @@
                 </dd>
               </div>
 
-                <div class="app-check-your-answers__contents">
+              <div class="app-check-your-answers__contents">
                 <dt class="app-check-your-answers__question">
-                  Matched at same address
+                  Name next of kin / executor
                 </dt>
                 <dd class="app-check-your-answers__answer">
                  
-                  None
+                  {{ data['fullname'] }}
 
                 </dd>
                 <dd class="app-check-your-answers__change">
                   <a href='#'onclick="goBack()">
-                    Change<span class="govuk-visually-hidden">Matched at same address</span>
+                    Change<span class="govuk-visually-hidden">Name next of kin / executor</span>
                   </a>
                 </dd>
               </div>
+
+              <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                  Address of next of kin / executor
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                  {{ data['address1'] }}<br>
+                  {{ data['address2'] }}<br>
+                  {{ data['address3'] }}<br>
+                  {{ data['address4'] }}<br>
+                  {{ data['country'] }}
+
+                </dd>
+                <dd class="app-check-your-answers__change">
+                  <a href='#'onclick="goBack()">
+                    Change<span class="govuk-visually-hidden">Address of next of kin / executor</span>
+                  </a>
+                </dd>
+              </div>
+
+              
+
+                
 
 
             </dl>
@@ -95,9 +98,10 @@
                   report changes.
               </p>
 
-          <form action="confirmation_topup1" method="post" class="form"> 
-            <input class="govuk-input" type="hidden" name="circumstances" value="They do not need to do anything next year, they will get the payment automatically using the new address." type="text">
-            <input type="submit" method="post" value="Accept and check if payment is due" class="govuk-button">
+          <form action="confirmation_overpayment" method="post" class="form"> 
+            <input class="govuk-input" type="hidden" name="overpayment" value="" type="text">
+          
+            <input type="submit" method="post" value="Accept and check for an overpayment" class="govuk-button">
           </form>
 
 

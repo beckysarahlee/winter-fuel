@@ -123,7 +123,7 @@
               </p>
 
           <form action="confirmation_overpayment" method="post" class="form"> 
-            <input class="govuk-input" type="hidden" name="circumstances" value="They do not need to do anything next year, they will get the payment automatically using the new address." type="text">
+            <input class="govuk-input" type="hidden" name="overpayment" value="The caller was late in telling us that they were in {{ data['prison'] }} so it is likely the team will be in touch to recover the payment." type="text">
             <input type="submit" method="post" value="Accept and check for an overpayment" class="govuk-button">
           </form>
 

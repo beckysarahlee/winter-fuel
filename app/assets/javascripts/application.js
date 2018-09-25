@@ -319,6 +319,20 @@ function change_link11()
 
 }
 
+function change_link13()
+{
+  if (document.getElementById("uk").checked)
+  {
+    document.getElementById("buttonChange13").innerHTML = "<a href = 'uk_addressdeath'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+  else if (document.getElementById("international").checked)
+  {
+    document.getElementById("buttonChange13").innerHTML = "<a href = '#'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+ 
+
+}
+
 
 
 
