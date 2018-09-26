@@ -1,7 +1,7 @@
 {% extends "layoutsearch.html" %}
 
 {% block pageTitle %}
-  Review matches
+  Select who lived at the address
 {% endblock %}
 
 {% block content %}
@@ -16,7 +16,7 @@
       <div class="govuk-grid-column-two-thirds">
         
        
-           <form action="checkanswers_topup2" method="post" class="form"> 
+           <form action="#" method="post" class="form"> 
 
             <!--  <details class="govuk-details">
                 <summary class="govuk-details__summary">
@@ -41,13 +41,13 @@
                 </h1>
               </legend>
               <span id="waste-hint" class="govuk-hint">
-                Only select those who lived at {{ data['address1'] }} beween 17 and 24 September 2018 and who are eligible for a Winter Fuel Payment.
+                Only select those who lived at 1 East Allerdean beween 17 and 24 September and are eligible for a Winter Fuel Payment.
               </span>
               <div class="govuk-checkboxes">
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="john" name="waste" type="checkbox" value="John Brown">
                   <label class="govuk-label govuk-checkboxes__label" for="john">
-                   Ermintrude Thelma Louise Brown
+                   The caller lived alone
                   </label>
                 </div>
                 
@@ -55,7 +55,7 @@
             </fieldset>
           </div>
 
-          <p><i class="fas fa-plus"></i><a href="#"> Add a person</a></p>
+          <p><i class="fas fa-plus"></i><a href="addperson"> Add a person</a></p>
 
              
 

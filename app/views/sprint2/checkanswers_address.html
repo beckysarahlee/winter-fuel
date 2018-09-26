@@ -35,7 +35,7 @@
 
               <div class="app-check-your-answers__contents">
                 <dt class="app-check-your-answers__question">
-                  Prison, hospital or care home in qualifying week
+                  In prison, hospital or a care home in qualifying week
                 </dt>
                 <dd class="app-check-your-answers__answer">
                   No
@@ -43,14 +43,14 @@
                 </dd>
                 <dd class="app-check-your-answers__change">
                   <a href='#'onclick="goBack()">
-                    Change<span class="govuk-visually-hidden">Prison, hospital or carehome</span>
+                    Change<span class="govuk-visually-hidden">in prison, hospital or a care home</span>
                   </a>
                 </dd>
               </div>
 
               <div class="app-check-your-answers__contents">
                 <dt class="app-check-your-answers__question">
-                  Resident in the UK in qualifying week
+                  UK resident in qualifying week
                 </dt>
                 <dd class="app-check-your-answers__answer">
                   Yes
@@ -58,7 +58,7 @@
                 </dd>
                 <dd class="app-check-your-answers__change">
                   <a href='#'onclick="goBack()">
-                    Change<span class="govuk-visually-hidden">Prison, hospital or carehome</span>
+                    Change<span class="govuk-visually-hidden">resident in qualifying week</span>
                   </a>
                 </dd>
               </div>
@@ -68,16 +68,16 @@
                   Address
                 </dt>
                 <dd class="app-check-your-answers__answer">
-                  {{ data['address1'] }},<br>
-                  {{ data['address2'] }},<br>
-                  {{ data['address3'] }},<br>
-                  {{ data['address4'] }},<br>
+                  {{ data['address1'] }}<br>
+                  {{ data['address2'] }}<br>
+                  {{ data['address3'] }}<br>
+                  {{ data['address4'] }}<br>
                   {{ data['country'] }}
 
                 </dd>
                 <dd class="app-check-your-answers__change">
                   <a href='#'>
-                    Change<span class="govuk-visually-hidden">Address</span>
+                    Change<span class="govuk-visually-hidden">address</span>
                   </a>
                 </dd>
               </div>
@@ -92,7 +92,7 @@
                 </dd>
                 <dd class="app-check-your-answers__change">
                   <a href='#'>
-                    Change<span class="govuk-visually-hidden">Address</span>
+                    Change<span class="govuk-visually-hidden">date moved to address</span>
                   </a>
                 </dd>
               </div>
@@ -149,22 +149,18 @@
              <h2 class="govuk-heading-m">Caller declaration</h2>
 
               <p class="govuk-body">
-                By accepting these details you confirm that:
+                By submitting this claim you agree that the information you've given is complete and correct. While you're receiving the Winter Fuel Payment, you'll report changes to your circumstances straight away by calling 0345 000 000.  If you give wrong or incomplete information, or you don’t report changes, you may:
               </p>
 
               <ul class="govuk-list govuk-list--bullet">
-                <li>the information is correct and complete as far as you know</li>
-                <li>you will pay the money back if you are overpaid</li>
+                <li>be prosecuted</li>
+                <li>need to pay a financial penalty</li>
+                <li>have your Winter Fuel Payment reduced or stopped</li>
+                <li>be paid too much Winter Fuel Payment and have to pay the money back</li>
               </ul>
 
-              <p class="govuk-body">
-                You could be prosecuted or have to pay a financial penalty if you
-                  deliberately give the wrong or incomplete information, or do not
-                  report changes.
-              </p>
-
           <form action="confirmation_address" method="post" class="form"> 
-            <input type="submit" method="post" value="Accept and check if payment is due" class="govuk-button">
+            <input type="submit" method="post" value="Accept and continue" class="govuk-button">
           </form>
 
 
