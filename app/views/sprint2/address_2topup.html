@@ -1,7 +1,7 @@
 {% extends "layoutsearch.html" %}
 
 {% block pageTitle %}
-  What dates was the caller in a care home?
+  When was the caller in a care home?
 {% endblock %}
 
 {% block content %}
@@ -14,7 +14,7 @@
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">What dates was the caller in a care home?</h1>
+        <h1 class="govuk-heading-xl">When was the caller in a care home?</h1>
 
        
                 <form class="form" action="reason" method="post"> 
@@ -22,9 +22,9 @@
                       <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
                           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                            <h1 class="govuk-label">
-                              What date did the caller move into a care home?
-                            </h1>
+                            <h2 class="govuk-label">
+                              Date the caller moved into the care home
+                            </h2>
                           </legend>
                           <div class="govuk-date-input" id="dob">
                             <div class="govuk-date-input__item">
@@ -60,9 +60,9 @@
                      <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
                           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                            <h1 class="govuk-label">
-                              If the caller no longer lives in a care home, what date did they move out?
-                            </h1>
+                            <h2 class="govuk-label">
+                              Date the caller moved out of the care home (if they have moved out)
+                            </h2>
                           </legend>
                           <div class="govuk-date-input" id="dob">
                             <div class="govuk-date-input__item">
@@ -99,7 +99,7 @@
 
              
 
-    <input class="govuk-input" type="hidden" name="prison" value="care home" type="text">
+    <input class="govuk-input" type="hidden" name="prison" value="Care home" type="text">
 
         <div>
           <a href = '#'><input type='submit' value='Continue' class='govuk-button'></a>

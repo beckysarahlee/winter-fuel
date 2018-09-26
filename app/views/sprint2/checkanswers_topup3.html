@@ -26,23 +26,23 @@
                   Address
                 </dt>
                 <dd class="app-check-your-answers__answer">
-                  1 East Allerdean,<br>
-                  Little Hayfield,<br>
-                  Glossop,<br>
+                  1 East Allerdean<br>
+                  Little Hayfield<br>
+                  Glossop<br>
                   TD15 2TB<br>
                   
 
                 </dd>
                 <dd class="app-check-your-answers__change">
                   <a href='#'onclick="goBack()">
-                    Change<span class="govuk-visually-hidden">Address</span>
+                    Change<span class="govuk-visually-hidden">address</span>
                   </a>
                 </dd>
               </div>
 
               <div class="app-check-your-answers__contents">
                 <dt class="app-check-your-answers__question">
-                  Matched at same address
+                  Matches at same address
                 </dt>
                 <dd class="app-check-your-answers__answer">
                  
@@ -51,14 +51,14 @@
                 </dd>
                 <dd class="app-check-your-answers__change">
                   <a href='#'onclick="goBack()">
-                    Change<span class="govuk-visually-hidden">Matched at same address</span>
+                    Change<span class="govuk-visually-hidden">matches at same address</span>
                   </a>
                 </dd>
               </div>
 
                <div class="app-check-your-answers__contents">
                 <dt class="app-check-your-answers__question">
-                  Date Sam started living at address
+                  Date moved to address
                 </dt>
                 <dd class="app-check-your-answers__answer">
                   {{ data['dob-day'] }} {{ data['dob-month'] }} {{ data['dob-year'] }}
@@ -66,14 +66,14 @@
                 </dd>
                 <dd class="app-check-your-answers__change">
                   <a href='#'>
-                    Change<span class="govuk-visually-hidden">Address</span>
+                    Change<span class="govuk-visually-hidden">date moved to address</span>
                   </a>
                 </dd>
               </div>
 
                <div class="app-check-your-answers__contents">
                 <dt class="app-check-your-answers__question">
-                  Notified government department of change before today
+                  Already told government department about change
                 </dt>
                 <dd class="app-check-your-answers__answer">
                 No
@@ -81,14 +81,14 @@
                 </dd>
                 <dd class="app-check-your-answers__change">
                   <a href='#'>
-                    Change<span class="govuk-visually-hidden">Notified government department of change</span>
+                    Change<span class="govuk-visually-hidden">already told government department about change</span>
                   </a>
                 </dd>
               </div>
 
               <div class="app-check-your-answers__contents">
                 <dt class="app-check-your-answers__question">
-                  Reason not notified government department before today
+                  Why the change hasn't been reported
                 </dt>
                 <dd class="app-check-your-answers__answer">
                 {{ data['reason'] }}
@@ -96,7 +96,7 @@
                 </dd>
                 <dd class="app-check-your-answers__change">
                   <a href='#'>
-                    Change<span class="govuk-visually-hidden">Notified government department of change</span>
+                    Change<span class="govuk-visually-hidden">why the change hasn't been reported</span>
                   </a>
                 </dd>
               </div>
@@ -111,25 +111,21 @@
              <h2 class="govuk-heading-m">Caller declaration</h2>
 
                <p class="govuk-body">
-                By accepting these details you confirm that:
+                By submitting this claim you agree that the information you've given is complete and correct. While you're receiving the Winter Fuel Payment, you'll report changes to your circumstances straight away by calling 0345 000 000.  If you give wrong or incomplete information, or you don’t report changes, you may:
               </p>
 
               <ul class="govuk-list govuk-list--bullet">
-                <li>the information is correct and complete as far as you know</li>
-                <li>you will pay the money back if you are overpaid</li>
+                <li>be prosecuted</li>
+                <li>need to pay a financial penalty</li>
+                <li>have your Winter Fuel Payment reduced or stopped</li>
+                <li>be paid too much Winter Fuel Payment and have to pay the money back</li>
               </ul>
-
-              <p class="govuk-body">
-                You could be prosecuted or have to pay a financial penalty if you
-                  deliberately give the wrong or incomplete information or do not
-                  report changes.
-              </p>
 
           <form action="confirmation_overpayment2" method="post" class="form"> 
 
-            <input class="govuk-input" type="hidden" name="overpayment" value="The caller was late in telling us that they were not living along so it is likely the team will be in touch to recover the payment." type="text">
+            <input class="govuk-input" type="hidden" name="overpayment" value="The caller was late to tell us that their circumstances had changed. It is likely that we will want to recover the overpayment." type="text">
             
-            <input type="submit" method="post" value="Accept and check if payment is due" class="govuk-button">
+            <input type="submit" method="post" value="Accept and continue" class="govuk-button">
           </form>
 
 

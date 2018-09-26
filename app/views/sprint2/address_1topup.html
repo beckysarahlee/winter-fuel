@@ -1,7 +1,7 @@
 {% extends "layoutsearch.html" %}
 
 {% block pageTitle %}
-  What dates was the caller in prison?
+  When was the caller into prison?
 {% endblock %}
 
 {% block content %}
@@ -14,7 +14,7 @@
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">What dates was the caller in prison?</h1>
+        <h1 class="govuk-heading-xl">When was the caller in prison?</h1>
 
        
                 <form class="form" action="reason" method="post"> 
@@ -22,9 +22,9 @@
                       <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
                           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                            <h1 class="govuk-label">
-                              What date did the caller move into prison?
-                            </h1>
+                            <h2 class="govuk-label">
+                              Date the caller went into prison
+                            </h2>
                           </legend>
                           <div class="govuk-date-input" id="dob">
                             <div class="govuk-date-input__item">
@@ -60,9 +60,9 @@
                      <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
                           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                            <h1 class="govuk-label">
-                              If the caller no longer lives in prison, what date did they move out?
-                            </h1>
+                            <h2 class="govuk-label">
+                              Date the caller came out of prison (if they came out)
+                            </h2>
                           </legend>
                           <div class="govuk-date-input" id="dob">
                             <div class="govuk-date-input__item">
@@ -98,7 +98,7 @@
                     
 
              
-<input class="govuk-input" type="hidden" name="prison" value="prison" type="text">
+<input class="govuk-input" type="hidden" name="prison" value="Prison" type="text">
     
 
         <div>
