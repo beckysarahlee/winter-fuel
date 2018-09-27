@@ -5,41 +5,57 @@
 {% endblock %}
 
 
+{% block header %}
+  {% include "includes/cookie-banner.html" %}
+{  {# Set serviceName in config.js. #}
+  {% include "includes/headsearchgsl.html" %}
+
+      <section class="key-details-bar" role="contentinfo" aria-label="Key details">
+      <dl class="key-details-bar__key-details">
+        <div class="key-details-bar__top-block">
+          <dt class="govuk-visually-hidden">Name:</dt>
+          <dd class="key-details-bar__name">Ian Robertson</dd>
+
+          <dt class="govuk-visually-hidden">National Insurance number:</dt>
+          <dd class="key-details-bar__nino">AB 12 34 56 C</dd>
+
+         
+<!--
+          <dt class="visually-hidden">Claim status:</dt>
+          <dd class="key-details-bar__status">Paid</dd> -->
+
+          
+        </div>
+
+        <div class="key-details-bar__bottom-block">
+          <dt>Date of birth:</dt>
+          <dd>15 July 1952</dd>
+
+          <dt>Address:</dt>
+          <dd>AbteilungTM-K, 80788 Munich, Bavaria, Germany</dd>
+
+        </div>
+      </dl>
+    </section>
+
+{% endblock %} 
+
 {% block content %}
 
 <div class="govuk-width-container">
 
-  <a class="govuk-back-link" href='gsl'>Back to all GSL cases</a>
-
-  <main class="govuk-main-wrapper">
+  <main class="">
 
     <div class="govuk-grid-row">
 
-       <section class="key-details-bar" role="contentinfo" aria-label="Key details">
-          <dl class="key-details-bar__key-details">
-            <div class="key-details-bar__top-block">
-              <dt class="govuk-visually-hidden">Name:</dt>
-              <dd class="key-details-bar__name">Ian Robertson</dd>
 
-              <dt class="govuk-visually-hidden">National Insurance number:</dt>
-              <dd class="key-details-bar__nino">AB 12 34 56 C</dd>
-
-              
-            </div>
-
-            <div class="key-details-bar__bottom-block">
-              <dt>Date of birth:</dt>
-              <dd >15 July 1952</dd>
-
-              <dt>Address:</dt>
-              <dd>AbteilungTM-K, 80788 Munich, Bavaria, Germany</dd>
-
-            </div>
-          </dl>
-        </section>
 
      
       <div class="govuk-grid-column-two-thirds">
+
+         <h1 class="govuk-visually-hidden">Winter Fuel details: Ian Robertson</h1>
+
+         <a class="govuk-back-link" href='#'onclick="goBack()">Back to all GSL cases</a>
 
 
         <div class="tabs">
