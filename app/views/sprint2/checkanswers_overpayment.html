@@ -68,22 +68,22 @@
 
               <div class="app-check-your-answers__contents">
                 <dt class="app-check-your-answers__question">
-                  Already told government department about change
+                  Government departments already know where the claimant was
                 </dt>
                 <dd class="app-check-your-answers__answer">
                 No
-
+ 
                 </dd>
                 <dd class="app-check-your-answers__change">
                   <a href='#'>
-                    Change<span class="govuk-visually-hidden">already told government department about change</span>
+                    Change<span class="govuk-visually-hidden">government departments know where the claimant was</span>
                   </a>
                 </dd>
               </div>
 
               <div class="app-check-your-answers__contents">
                 <dt class="app-check-your-answers__question">
-                  Why the change wasn't reported
+                  Why the claimant didn't say where they were
                 </dt>
                 <dd class="app-check-your-answers__answer">
                 {{ data['reason'] }}
@@ -91,7 +91,7 @@
                 </dd>
                 <dd class="app-check-your-answers__change">
                   <a href='#'>
-                    Change<span class="govuk-visually-hidden">why the change wasn't reported</span>
+                    Change<span class="govuk-visually-hidden">why the claimant didn't say where they were</span>
                   </a>
                 </dd>
               </div>
@@ -105,7 +105,7 @@
             <br>
 
 
-             <h2 class="govuk-heading-m">Caller declaration</h2>
+             <h2 class="govuk-heading-m">Claimant declaration</h2>
 
               <p class="govuk-body">
                 By submitting this claim you agree that the information you've given is complete and correct. While you're receiving the Winter Fuel Payment, you'll report changes to your circumstances straight away by calling 0345 000 000.  If you give wrong or incomplete information, or you don’t report changes, you may:
@@ -119,7 +119,7 @@
               </ul>
 
           <form action="confirmation_overpayment" method="post" class="form"> 
-            <input class="govuk-input" type="hidden" name="overpayment" value="The caller was late to tell us where they were during qualifying week. It is likely that we will want to recover the overpayment." type="text">
+            <input class="govuk-input" type="hidden" name="overpayment" value="The claimant left it too late to tell us where they were during qualifying week. We may want them to pay the money back." type="text">
             <input type="submit" method="post" value="Accept and continue" class="govuk-button">
           </form>
 
