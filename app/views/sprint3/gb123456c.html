@@ -1,27 +1,30 @@
 {% extends "layoutsearch.html" %}
 
 {% block pageTitle %}
-  Bob Smith
+  Fred Brown
 {% endblock %}
 
 
+
+
 {% block header %}
-  {% include "includes/cookie-banner.html" %} {# Set serviceName in config.js. #}
+  {% include "includes/cookie-banner.html" %}
+{  {# Set serviceName in config.js. #}
   {% include "includes/headsearch.html" %}
 
       <section class="key-details-bar" role="contentinfo" aria-label="Key details">
       <dl class="key-details-bar__key-details">
         <div class="key-details-bar__top-block">
           <dt class="govuk-visually-hidden">Name:</dt>
-          <dd class="key-details-bar__name">Bob Smith</dd>
+          <dd class="key-details-bar__name">Fred Brown</dd>
 
           <dt class="govuk-visually-hidden">National Insurance number:</dt>
-          <dd class="key-details-bar__nino">BG 12 34 56 C</dd>
+          <dd class="key-details-bar__nino">GB 12 34 56 C</dd>
 
-         <!--
-
+         
+<!--
           <dt class="visually-hidden">Claim status:</dt>
-          <dd class="key-details-bar__status">Dead letter office (DLO)</dd> -->
+          <dd class="key-details-bar__status">Paid</dd> -->
 
           
         </div>
@@ -31,7 +34,7 @@
           <dd>19 January 1953</dd>
 
           <dt>Address:</dt>
-          <dd>1 East Allerdean, Little Hayfield, High Peak, TD15 2TB</dd>
+          <dd>123 Glossop Road, Little Hayfield, High Peak, TD15 2TB</dd>
 
         </div>
       </dl>
@@ -50,7 +53,7 @@
      
       <div class="govuk-grid-column-two-thirds">
 
-        <h1 class="govuk-visually-hidden">Winter Fuel details: Bob Smith</h1>
+         <h1 class="govuk-visually-hidden">Winter Fuel details: Fred Brown</h1>
 
 
         <div class="tabs">
@@ -61,11 +64,6 @@
                     Payment details
                   </a>
                 </li>
-                <li>
-                  <a href="#tab-2">
-                    Bank account details
-                  </a>
-                </li>
               </ul>
             </div>
 
@@ -73,22 +71,22 @@
           <div class="tabs-panel" id="tab-1">
             <div class="tabs-panel-inner">
 
-                       <dl class="app-check-your-answers app-check-your-answers--long">
+                   <dl class="app-check-your-answers app-check-your-answers--long">
                             <div class="app-check-your-answers__contents">
                               <dt class="app-check-your-answers__question">
                                 Payment amount
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                £200
+                                £100
                               </dd>
                             </div>
-                            
+                           
                             <div class="app-check-your-answers__contents">
                               <dt class="app-check-your-answers__question">
                                 Payment status
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                Paid
+                               Not paid
                               </dd>
                             </div>
                             <div class="app-check-your-answers__contents">
@@ -96,15 +94,15 @@
                                 Payment date
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                10 August 2018
+                                (awaiting payment)
                               </dd>
                             </div>
-                            <div class="app-check-your-answers__contents">
+                             <div class="app-check-your-answers__contents">
                               <dt class="app-check-your-answers__question">
                                 Matches at same address
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                None
+                               <a href="zz654321c">Ermintrude Thelma Louise Brown</a>
                               </dd>
                             </div>
                             <div class="app-check-your-answers__contents">
@@ -121,44 +119,9 @@
               
             </div>
           </div>  
-
-
-            <div class="tabs-panel" id="tab-2">
-            <div class="tabs-panel-inner">
-             
-
-                        <dl class="app-check-your-answers app-check-your-answers--long">
-                            <div class="app-check-your-answers__contents">
-                              <dt class="app-check-your-answers__question">
-                                Account holder
-                              </dt>
-                              <dd class="app-check-your-answers__answer">
-                                Bob Smith
-                              </dd>
-                            </div>
-                            <div class="app-check-your-answers__contents">
-                              <dt class="app-check-your-answers__question">
-                                Sort code
-                              </dt>
-                              <dd class="app-check-your-answers__answer">
-                                20 20 20 
-                              </dd>
-                            </div>
-                            <div class="app-check-your-answers__contents">
-                              <dt class="app-check-your-answers__question">
-                                Account number
-                              </dt>
-                              <dd class="app-check-your-answers__answer">
-                                **** **78
-                              </dd>
-                            </div>
-                        </dl>
-
-
-
-            </div>
-          </div>
         </div>
+
+        
 
 
       </div>
@@ -169,36 +132,36 @@
           <div class="invoicesummary">
 
               <p>
-             <strong class="app-c-tag app-c-tag--success">Paid</strong>
-           </p>
-             
+                <strong class="app-c-tag app-c-tag--danger">not paid</strong>
+              </p>
 
               <ul class="govuk-list">
                 <li>
-                  <a style="font-weight: 700;" class="govuk-link" href="topup3">Review matches</a>
+                  <a style="font-weight: 700;" class="govuk-link" href="payment_type">Add bank account</a> 
+                </li>
+             
+              <li>
+                  <a style="font-weight: 700;" class="govuk-link" href="#">Review matches</a>
                 </li>
                 <li>
                   <a style="font-weight:700;" class="govuk-link" href="#">Change address</a>
                 </li>
-                <li>
-                  <a style="font-weight:700;" class="govuk-link" href="#">Change bank account</a>
-                </li>
-                <li>
-                  <a style="font-weight: 700;" class="govuk-link" href="#">Enter date of death</a>
-                </li>
+
+
+              
                 <li>
                   <a style="font-weight:700;" class="govuk-link" href="#">Stop payments</a>
                 </li>
-              </ul>
+                 </ul>
 
-            <!--
 
-           <h3 class="govuk-heading-s">Actions</h3>
 
-              <form action="#" method="post" class="form"> 
-                <input type="submit" method="post" value="Change payment amount" class="govuk-button">
-              </form>-->
-             
+           <!--   <h3 class="govuk-heading-s">Actions</h3>
+
+              <form action="payment_type" method="post" class="form"> 
+                <input class="govuk-input" type="hidden" name="person" value="Fred Brown" type="text">
+                <input type="submit" method="post" value="Add bank account" class="govuk-button">
+              </form> -->
 
              
          

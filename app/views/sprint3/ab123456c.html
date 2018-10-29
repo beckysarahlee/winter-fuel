@@ -1,37 +1,38 @@
-{% extends "layoutsearch.html" %}
+{% extends "layoutsearchgsl.html" %}
 
 {% block pageTitle %}
-  Bob Smith
+ Ian Robertson
 {% endblock %}
 
 
 {% block header %}
-  {% include "includes/cookie-banner.html" %} {# Set serviceName in config.js. #}
-  {% include "includes/headsearch.html" %}
+  {% include "includes/cookie-banner.html" %}
+{  {# Set serviceName in config.js. #}
+  {% include "includes/headsearchgsl.html" %}
 
       <section class="key-details-bar" role="contentinfo" aria-label="Key details">
       <dl class="key-details-bar__key-details">
         <div class="key-details-bar__top-block">
           <dt class="govuk-visually-hidden">Name:</dt>
-          <dd class="key-details-bar__name">Bob Smith</dd>
+          <dd class="key-details-bar__name">Ian Robertson</dd>
 
           <dt class="govuk-visually-hidden">National Insurance number:</dt>
-          <dd class="key-details-bar__nino">BG 12 34 56 C</dd>
+          <dd class="key-details-bar__nino">AB 12 34 56 C</dd>
 
-         <!--
-
+         
+<!--
           <dt class="visually-hidden">Claim status:</dt>
-          <dd class="key-details-bar__status">Dead letter office (DLO)</dd> -->
+          <dd class="key-details-bar__status">Paid</dd> -->
 
           
         </div>
 
         <div class="key-details-bar__bottom-block">
           <dt>Date of birth:</dt>
-          <dd>19 January 1953</dd>
+          <dd>15 July 1952</dd>
 
           <dt>Address:</dt>
-          <dd>1 East Allerdean, Little Hayfield, High Peak, TD15 2TB</dd>
+          <dd>AbteilungTM-K, 80788 Munich, Bavaria, Germany</dd>
 
         </div>
       </dl>
@@ -47,10 +48,14 @@
 
     <div class="govuk-grid-row">
 
+
+
      
       <div class="govuk-grid-column-two-thirds">
 
-        <h1 class="govuk-visually-hidden">Winter Fuel details: Bob Smith</h1>
+         <h1 class="govuk-visually-hidden">Winter Fuel details: Ian Robertson</h1>
+
+         <a class="govuk-back-link" href='#'onclick="goBack()">Back to all GSL cases</a>
 
 
         <div class="tabs">
@@ -79,7 +84,7 @@
                                 Payment amount
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                £200
+                                £100
                               </dd>
                             </div>
                             
@@ -88,7 +93,7 @@
                                 Payment status
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                Paid
+                                Needs GSL decision
                               </dd>
                             </div>
                             <div class="app-check-your-answers__contents">
@@ -96,7 +101,7 @@
                                 Payment date
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                10 August 2018
+                               
                               </dd>
                             </div>
                             <div class="app-check-your-answers__contents">
@@ -104,18 +109,59 @@
                                 Matches at same address
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                None
+                                <a href="#">Claire Robertson</a>
                               </dd>
                             </div>
                             <div class="app-check-your-answers__contents">
                               <dt class="app-check-your-answers__question">
-                                Relevant benefits
+                                Benefits
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                None
+                                State Pension 
                               </dd>
                             </div>
-                            
+                            <div class="app-check-your-answers__contents">
+                              <dt class="app-check-your-answers__question">
+                                Age
+                              </dt>
+                              <dd class="app-check-your-answers__answer">
+                                59
+                              </dd>
+                            </div>
+                            <div class="app-check-your-answers__contents">
+                              <dt class="app-check-your-answers__question">
+                                Years living in the UK
+                              </dt>
+                              <dd class="app-check-your-answers__answer">
+                                27 years 
+                              </dd>
+                            </div>
+                            <div class="app-check-your-answers__contents">
+                              <dt class="app-check-your-answers__question">
+                                Years National Insurance contributions
+                              </dt>
+                              <dd class="app-check-your-answers__answer">
+                                11 years 
+                              </dd>
+                            </div>
+                            <div class="app-check-your-answers__contents">
+                              <dt class="app-check-your-answers__question">
+                                % of life resident in the UK
+                              </dt>
+                              <dd class="app-check-your-answers__answer">
+                                45%
+                              </dd>
+                            </div>
+                            <div class="app-check-your-answers__contents">
+                              <dt class="app-check-your-answers__question">
+                                % of life paying National Insurance contributions
+                              </dt>
+                              <dd class="app-check-your-answers__answer">
+                                45%
+                              </dd>
+                            </div>
+
+                           
                         </dl>
 
               
@@ -133,23 +179,23 @@
                                 Account holder
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                Bob Smith
+                                Ian Robertson
                               </dd>
                             </div>
                             <div class="app-check-your-answers__contents">
                               <dt class="app-check-your-answers__question">
-                                Sort code
+                                SWIFT code
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                20 20 20 
+                                1432 5465 8873
                               </dd>
                             </div>
                             <div class="app-check-your-answers__contents">
                               <dt class="app-check-your-answers__question">
-                                Account number
+                                IBAN Number
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                **** **78
+                                1234 6543 9876 5678
                               </dd>
                             </div>
                         </dl>
@@ -168,26 +214,13 @@
       <div class="govuk-grid-column-one-third">
           <div class="invoicesummary">
 
-              <p>
-             <strong class="app-c-tag app-c-tag--success">Paid</strong>
-           </p>
-             
+            <p>
+            <strong class="app-c-tag app-c-tag--danger">Needs GSL decision</strong>
+          </p>
 
-              <ul class="govuk-list">
+            <ul class="govuk-list">
                 <li>
-                  <a style="font-weight: 700;" class="govuk-link" href="topup3">Review matches</a>
-                </li>
-                <li>
-                  <a style="font-weight:700;" class="govuk-link" href="#">Change address</a>
-                </li>
-                <li>
-                  <a style="font-weight:700;" class="govuk-link" href="#">Change bank account</a>
-                </li>
-                <li>
-                  <a style="font-weight: 700;" class="govuk-link" href="#">Enter date of death</a>
-                </li>
-                <li>
-                  <a style="font-weight:700;" class="govuk-link" href="#">Stop payments</a>
+                  <a style="font-weight: 700;" class="govuk-link" href="#">Add decision</a> 
                 </li>
               </ul>
 
@@ -196,8 +229,8 @@
            <h3 class="govuk-heading-s">Actions</h3>
 
               <form action="#" method="post" class="form"> 
-                <input type="submit" method="post" value="Change payment amount" class="govuk-button">
-              </form>-->
+                <input type="submit" method="post" value="Add decision" class="govuk-button">
+              </form> -->
              
 
              

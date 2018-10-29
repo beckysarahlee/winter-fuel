@@ -162,6 +162,7 @@ function change_link()
 
 }
 
+
 function change_link2()
 {
   if (document.getElementById("uk").checked)
@@ -333,6 +334,22 @@ function change_link13()
 
 }
 
+function change_link12()
+{
+  if (document.getElementById("dob_verified").checked)
+  {
+    document.getElementById("buttonChange14").innerHTML = "<a href = 'qq123456c_main'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+  else if (document.getElementById("dob_not_verified").checked)
+  {
+    document.getElementById("buttonChange14").innerHTML = "<a href = 'not_verified'><input type='submit' value='Continue' class='govuk-button'></a>";
+  }
+ 
+
+}
+
+
+
 
 
 
@@ -354,6 +371,10 @@ function changeLink() {
    else if (valueLower == "bg123456c" ) {
        document.getElementById("link").href = "bg123456c";
    }
+
+   else if (valueLower == "qq123456c" ) {
+    document.getElementById("link").href = "qq123456c";
+}
 
 
  //  else if (valueLower == "zz123456c" ) {
