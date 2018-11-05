@@ -10,15 +10,29 @@ router.get('/', function (req, res) {
 // Branching
 router.get('/sprint3/qq123456c_main2', function (req, res) {
   // Get the answer from the query string (eg. ?over18=false)
-  var over18 = req.query.over18
+  var dob = req.query.dob
 
-  if (over18 === 'false') {
+  if (dob === 'false') {
     // Redirect to the relevant page
     res.redirect('/sprint3/qq123456c_dob')
-  } else {
+  } 
+  
+  else {
     // If over18 is any other value (or is missing) render the page requested
     res.render('sprint3/qq123456c_main2')
   }
 })
 
+router.get('/sprint3/qq123456c_dob2', function (req, res) {
+  // Get the answer from the query string (eg. ?over18=false)
+  var dob2 = req.query.dob2
+
+  if (dob2 === 'false') {
+    // Redirect to the relevant page
+    res.redirect('/sprint3/qq123456c_evidence')
+  } else {
+    
+    res.render('sprint3/qq123456c_dob2')
+  }
+})
 module.exports = router

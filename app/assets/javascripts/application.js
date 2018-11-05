@@ -376,6 +376,11 @@ function changeLink() {
     document.getElementById("link").href = "qq123456c";
 }
 
+    else  {
+  document.getElementById("link").href = "zz678910c";
+}
+
+
 
  //  else if (valueLower == "zz123456c" ) {
  //      document.getElementById("link").href = "zz123456c";

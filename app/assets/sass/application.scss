@@ -417,6 +417,7 @@ span.status-tag-disabled {
   line-height: 1.25;
   border-bottom: 1px solid #bfc1c3;
   margin: 0;
+  list-style: none;
 }
 
 @media (min-width: 641px) {
@@ -470,9 +471,9 @@ span.status-tag-disabled {
   }
 }
 
+
+
 //index page
-
-
 .homepage-top {
   background-color:  #005ea5;
   box-sizing: border-box;
@@ -602,6 +603,23 @@ width: 250px;
 height: 40px; 
 margin-bottom: 10px;
 }
+
+.claim-status {
+  background-color: #6f777b;
+}
+
+.app-task-list__task-message {
+  width: 100%;
+  float: left;
+  @include govuk-font(19);
+}
+
+.app-task-list__task-name {
+  width: 33.3%;
+  float: left;
+  @include govuk-font(19);
+}
+
 
 
 

@@ -8,8 +8,8 @@
 {% block header %}
   {% include "includes/cookie-banner.html" %} {# Set serviceName in config.js. #}
   {% include "includes/headsearch.html" %}
-  {% include "includes/QQ123456C_head.html" %}
 
+  {% include "includes/QQ123456C_head.html" %}
 {% endblock %} 
 
 {% block content %}
@@ -55,11 +55,11 @@
                                   </h2>
                                   <ul class="app-task-list__items">
                                     <li class="app-task-list__item">
-                                      <a class="app-task-list__task-name" href="dob_verification.html" aria-describedby="eligibility-completed">
+                                      <a class="app-task-list__task-name" href="qq123456c_dob_verified" aria-describedby="eligibility-completed">
                                         Verify date of birth
                                       </a>
-                                      <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
-                                        Completed
+                                      <strong class="govuk-tag claim-status app-task-list__task-completed" id="eligibility-completed">
+                                        awaiting evidence
                                       </strong>
                                     </li>
                               
@@ -74,9 +74,9 @@
                                       <a class="app-task-list__task-name" href="payment_type" aria-describedby="company-information-completed">
                                         Add bank details
                                       </a>
-                                      <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">
-                                        Completed
-                                      </strong>
+                                      <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                                          Completed
+                                        </strong>
                                     </li>
                                 </ul>
                             </li>
@@ -86,9 +86,9 @@
                                   </h2>
                                   <ul class="app-task-list__items">
                                     <li class="app-task-list__item">
-                                      <a class="app-task-list__task-name" href="checkanswers_bank.html">
-                                       Confirm and pay
-                                      </a>
+                                      <span class="app-task-list__task-message">
+                                        Evidence of the claimant's date of birth must be verified before payment can be made.
+                           </span>
                                     </li>
                                   </ul>
                                 </li>
@@ -182,34 +182,34 @@
                                 Account holder
                               </dt>
                               <dd class="app-check-your-answers__answer">
-                                Not known
+                                Mrs J Finch
                               </dd>
                               <dd class="app-check-your-answers__change">
                                 <a href="">Change bank account</a>
                               </dd>
                             </div>
                             <div class="app-check-your-answers__contents">
-                              <dt class="app-check-your-answers__question"  style="font-weight: 400">
-                                Sort code
-                              </dt>
-                              <dd class="app-check-your-answers__answer">
-                                    Not known
-                              </dd>
-                              <dd class="app-check-your-answers__change">
-                                
-                              </dd>
-                            </div>
-                            <div class="app-check-your-answers__contents">
-                              <dt class="app-check-your-answers__question"  style="font-weight: 400">
-                                Account number
-                              </dt>
-                              <dd class="app-check-your-answers__answer">
-                                    Not known
-                              </dd>
-                              <dd class="app-check-your-answers__change">
-                             
-                              </dd>
-                            </div>
+                                <dt class="app-check-your-answers__question"  style="font-weight: 400">
+                                  Sort code
+                                </dt>
+                                <dd class="app-check-your-answers__answer">
+                                      11-12-13
+                                </dd>
+                                <dd class="app-check-your-answers__change">
+                                  
+                                </dd>
+                              </div>
+                              <div class="app-check-your-answers__contents">
+                                <dt class="app-check-your-answers__question"  style="font-weight: 400">
+                                  Account number
+                                </dt>
+                                <dd class="app-check-your-answers__answer">
+                                      01234567
+                                </dd>
+                                <dd class="app-check-your-answers__change">
+                               
+                                </dd>
+                              </div>
                         </dl>
 
                     </div>
