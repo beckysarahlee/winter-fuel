@@ -15,8 +15,8 @@ router.get('/sprint3/qq123456c_main2', function (req, res) {
   if (dob === 'false') {
     // Redirect to the relevant page
     res.redirect('/sprint3/qq123456c_dob')
-  } 
-  
+  }
+
   else {
     // If over18 is any other value (or is missing) render the page requested
     res.render('sprint3/qq123456c_main2')
@@ -31,8 +31,19 @@ router.get('/sprint3/qq123456c_dob2', function (req, res) {
     // Redirect to the relevant page
     res.redirect('/sprint3/qq123456c_evidence')
   } else {
-    
+
     res.render('sprint3/qq123456c_dob2')
   }
 })
+
+router.post(`/development/payment-letter-router`, (req, res) => { // router name
+  const privacyPolicy = req.session.data['payment-letter-yn']  // name of data / id name
+
+  if (privacyPolicy === 'Yes') { // name of data / + answer
+    res.redirect(`/development/has-letter`)
+  } else {
+    res.redirect(`/development/post-code-lookup`)
+  }
+})
+
 module.exports = router
