@@ -15,7 +15,7 @@ Decision
     <dl class="key-details-bar__key-details">
         <div class="key-details-bar__top-block">
             <dd class="key-details-bar__name"> {{data.fullname}} </dd>
-            <dd class="key-details-bar__DOB"> DOB: {{data.dobday}} {{data.dobmonth}} {{data.dobyear}} </dd>
+            <dd class="key-details-bar__nino"> {{data.ninumber}} </dd>
         </div>
     </dl>
 </section>
@@ -29,7 +29,7 @@ Decision
 
 <div class="govuk-width-container">
 
-<a href="/sprint15/international/bankoverseas-cont" class="govuk-back-link">Back</a>
+<a href="/sprint15/international/country-leavinguk" class="govuk-back-link">Back</a>
 
 
   <main class="govuk-main-wrapper">
@@ -37,7 +37,6 @@ Decision
       <div class="govuk-grid-column-two-thirds">
 
                     <form method="post"> 
-                    <span class="govuk-caption-xl govuk-!-font-size-36">Contact information</span>
                     <h1 class="govuk-heading-xl">What telephone number should we use to contact you?</h1>
                     <span id="passport-issued-hint" class="govuk-hint">
                         For international numbers include country code
@@ -45,7 +44,7 @@ Decision
                     <div class="govuk-form-group">
                     
                     
-                    <input class="govuk-input govuk-input--width-10" id="telephonenumber" name="telephonenumber" type="tel" aria-describedby="telephone-number-hint" autocomplete="tel">
+                    <input class="govuk-input govuk-input--width-10" id="telephonenumberbox2" name="telephonenumberbox2" type="tel" aria-describedby="telephone-number-hint" autocomplete="tel">
                     </div>
                     <button type="submit" class="govuk-button"> Save and continue </a>
 

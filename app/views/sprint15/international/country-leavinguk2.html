@@ -16,7 +16,7 @@ PAB details
     <dl class="key-details-bar__key-details">
         <div class="key-details-bar__top-block">
             <dd class="key-details-bar__name"> {{data.fullname}} </dd>
-            <dd class="key-details-bar__DOB"> DOB: {{data.dobday}} {{data.dobmonth}} {{data.dobyear}} </dd>
+            <dd class="key-details-bar__nino"> {{data.ninumber}} </dd>
         </div>
     </dl>
 </section>
@@ -35,23 +35,19 @@ PAB details
 <main class="govuk-main-wrapper">
 
 <form method="post"> 
-<span class="govuk-caption-xl govuk-!-font-size-36">Outside UK details</span>
     <h1 class="govuk-heading-xl">What countries have you lived in since leaving the UK?</h1>
 
     <div class="govuk-form-group">
         <input class="govuk-input govuk-input--width-20" id="address" name="country" type="text" autocomplete="street-addres" spellcheck="false"> 
     </div>
 
+    <a href="/sprint15/international/country-leavinguk-spain" class="govuk-link govuk-!-font-size-19"> Add another</a>
 
+<br>
+<br>  
 
+<p> <a href="/sprint15/international/telephone" class="govuk-button"> Save and continue </a></p>
 
-            <button type="submit" class="govuk-button govuk-!-margin-right-1">
-              Save and continue
-            </button>
-
-            <a href="/sprint15/international/country-leavinguk-spain" class="govuk-button govuk-button--secondary">
-              Add another
-            </a>
 </form>
 
 </main>

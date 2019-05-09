@@ -11,7 +11,7 @@
     <dl class="key-details-bar__key-details">
         <div class="key-details-bar__top-block">
             <dd class="key-details-bar__name"> {{data.fullname}} </dd>
-            <dd class="key-details-bar__DOB"> DOB: {{data.dobday}} {{data.dobmonth}} {{data.dobyear}} </dd>
+            <dd class="key-details-bar__nino"> {{data.ninumber}} </dd>
         </div>
     </dl>
 </section>
@@ -29,14 +29,13 @@
 
         <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds">
-                <span class="govuk-caption-xl govuk-!-font-size-36">Qualifying week questions</span>
-                    <h1 class="govuk-heading-xl">What are the dates you were admitted and discharged from hospital?</h1>
+                    <h1 class="govuk-heading-xl">Give hospital details</h1>
                     <span id="hospdate-hint" class="govuk-hint">
                       These dates do not have to be exact, but to the best of your knowledge
                          </span>
                     
-                    <p class="govuk-!-margin-top-6">
-                        <strong>Date of admission</strong>
+                    <p class="govuk-heading-m govuk-!-margin-top-6">
+                        Date of admission
                     </p>
                   
                              <span id="date-hint" class="govuk-hint">
@@ -75,8 +74,8 @@
                     </div>
 
 
-                                     <p>
-                        <strong>Date of discharge</strong>
+                                     <p class="govuk-heading-m">
+                        Date of discharge
                     </p>
                     
                              <span id="date-hint" class="govuk-hint">

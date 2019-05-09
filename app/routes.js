@@ -1,10 +1,11 @@
 const express = require('express')
 const router = express.Router()
 
+// copy the const name and the file path to new version
 const sprint15 = require('./routes/sprint15');
 const sprint15b = require('./routes/sprint15b');
 
-
+//copy the router use and update the sprint version
 router.use(sprint15);
 router.use(sprint15b);
 

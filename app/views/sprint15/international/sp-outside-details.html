@@ -11,7 +11,7 @@
     <dl class="key-details-bar__key-details">
         <div class="key-details-bar__top-block">
             <dd class="key-details-bar__name"> {{data.fullname}} </dd>
-            <dd class="key-details-bar__DOB"> DOB: {{data.dobday}} {{data.dobmonth}} {{data.dobyear}} </dd>
+            <dd class="key-details-bar__nino"> {{data.ninumber}} </dd>
         </div>
     </dl>
 </section>
@@ -30,8 +30,7 @@
 
         <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds">
-                <span class="govuk-caption-xl govuk-!-font-size-36">Outside UK details</span>
-                    <h1 class="govuk-heading-xl">Give State Pension or benefit details</h1>
+                    <h1 class="govuk-heading-xl">Give state pension or benefit details</h1>
 
                     <label class="govuk-label govuk-!-margin-top-5" for="sp-ni-number">
                         <strong>What type of benefit do you get?</strong>
@@ -92,19 +91,13 @@
                     
                     
                 
-                  
+                  <a href="/sprint15/international/sp-outside-details-add1" class="govuk-link govuk-!-font-size-19"> Add another person</a>
                
 
                 </div>
         </div>
             
-            <button type="submit" class="govuk-button govuk-!-margin-right-1">
-              Save and continue
-            </button>
-
-            <a href="/sprint15/international/sp-outside-details-add1" class="govuk-button govuk-button--secondary">
-              Add another
-            </a>
+            <button type="submit" class="govuk-button govuk-!-margin-top-5"> Save and continue  </button>
 
 
     </main>

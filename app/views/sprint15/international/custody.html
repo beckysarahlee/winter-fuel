@@ -11,7 +11,7 @@
     <dl class="key-details-bar__key-details">
         <div class="key-details-bar__top-block">
             <dd class="key-details-bar__name"> {{data.fullname}} </dd>
-             <dd class="key-details-bar__DOB"> DOB: {{data.dobday}} {{data.dobmonth}} {{data.dobyear}} </dd>
+            <dd class="key-details-bar__nino"> {{data.ninumber}} </dd>
         </div>
     </dl>
 </section>
@@ -21,7 +21,7 @@
  
  <div class="govuk-width-container">
 
-  <a href="/sprint15/international/homepage3" class="govuk-back-link">Back</a>
+  <a href="/sprint15/international/hospital" class="govuk-back-link">Back</a>
 
  <form method=post>
 
@@ -29,9 +29,12 @@
 
         <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds">
-                    <span class="govuk-caption-xl govuk-!-font-size-36">Qualifying week questions</span>
-                    <h1 class="govuk-heading-xl">Will you be serving a custodial sentence during the qualifying week, 16 to 22 September 2019?</h1>
                     
+                    <h1 class="govuk-heading-xl">Will you be serving a custodial sentence during the week of 16 to 22 September 2019?</h1>
+                    
+                    <span id="date-hint" class="govuk-hint">
+                        The week of 16 to 22 September 2019 is the qualifying week for a Winter Fuel Payment
+                         </span>
 
                                     <div class="govuk-radios">
                                     <div class="govuk-radios__item">

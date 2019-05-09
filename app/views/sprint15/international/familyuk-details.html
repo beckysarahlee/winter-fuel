@@ -11,7 +11,7 @@
     <dl class="key-details-bar__key-details">
         <div class="key-details-bar__top-block">
             <dd class="key-details-bar__name"> {{data.fullname}} </dd>
-            <dd class="key-details-bar__DOB"> DOB: {{data.dobday}} {{data.dobmonth}} {{data.dobyear}} </dd>
+            <dd class="key-details-bar__nino"> {{data.ninumber}} </dd>
         </div>
     </dl>
 </section>
@@ -30,16 +30,15 @@
 
         <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds">
-                <span class="govuk-caption-xl govuk-!-font-size-36">UK details</span>
                     <h1 class="govuk-heading-xl">Give details about your family in the UK</h1>
                     
                     <label class="govuk-label govuk-!-margin-top-5" for="sp-ni-number">
-                        <strong>What is your relationship to them?</strong>
+                        What is your relationship to them?
                     </label>
                     <input class="govuk-input" id="familyrelationship" name="familyrelationship" type="text" autocomplete="name" spellcheck="false">
 
                     <label class="govuk-label govuk-!-margin-top-5" for="sp-ni-number">
-                        <strong>How many times have you visited them in the last 3 years?</strong>
+                        How many times have you visited them in the last 3 years?
                     </label>
                     <input class="govuk-input govuk-input--width-3" id="familyvisited" name="familyvisited" type="text" autocomplete="name" spellcheck="false">
 

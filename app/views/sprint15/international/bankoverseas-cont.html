@@ -11,7 +11,7 @@
     <dl class="key-details-bar__key-details">
         <div class="key-details-bar__top-block">
             <dd class="key-details-bar__name"> {{data.fullname}} </dd>
-            <dd class="key-details-bar__DOB"> DOB: {{data.dobday}} {{data.dobmonth}} {{data.dobyear}} </dd>
+            <dd class="key-details-bar__nino"> {{data.ninumber}} </dd>
         </div>
     </dl>
 </section>
@@ -30,44 +30,43 @@
 
         <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds">
-                <span class="govuk-caption-xl govuk-!-font-size-36">Bank details</span>
                     <h1 class="govuk-heading-xl">Overseas bank details continued</h1>
                     
 
 
                    <label class="govuk-label govuk-!-margin-top-5" for="sp-ni-number">
-                       <strong>Full name of the account holder</strong>
+                       Full name of the account holder
                     </label>
                     <input class="govuk-input govuk-input--width-20" id="accountprovider" name="accountprovider" type="text" autocomplete="name" spellcheck="false">
 
                     <label class="govuk-label govuk-!-margin-top-5" for="sp-ni-number">
-                       <strong>Account type</strong>
+                       Account type
                     </label>
                     <span id="dob-hint" class="govuk-hint">
                       For example, deposit
                 </span>
-                    <input class="govuk-input govuk-input--width-20" id="accounttype" name="accounttype" type="text" autocomplete="name" spellcheck="false">
+                    <input class="govuk-input govuk-input--width-20" id="accountprovider" name="accountprovider" type="text" autocomplete="name" spellcheck="false">
 
                     <label class="govuk-label govuk-!-margin-top-5" for="sp-ni-number">
-                      <strong>Sort code number</strong>
+                       Sort code number
                     </label>
                     <input class="govuk-input govuk-input--width-11" id="overseassortcode" name="overseassortcode" type="numbers">
                     
 
                     <label class="govuk-label govuk-!-margin-top-5" for="sp-ni-number">
-                       <strong>Account number</strong>
+                       Account number
                     </label>
-                    <input class="govuk-input govuk-input--width-6" id="overseasaccountno" name="overseasaccountno" type="numbers">
+                    <input class="govuk-input govuk-input--width-6" id="ukaccountno" name="ukaccountno" type="numbers">
 
                      <label class="govuk-label govuk-!-margin-top-5" for="sp-ni-number">
-                       <strong>International Bank Account Number (IBAN)</strong>
+                       International Bank Account Number (IBAN)
                     </label>
-                    <input class="govuk-input" id="IBAN" name="IBAN" type="numbers">
+                    <input class="govuk-input" id="referenceno" name="referenceno" type="numbers">
 
                     <label class="govuk-label govuk-!-margin-top-5" for="sp-ni-number">
-                       <strong>Bank Identification Code (BIC)</strong>
+                       Bank Identification Code (BIC)
                     </label>
-                    <input class="govuk-input" id="BIC" name="BIC" type="numbers">
+                    <input class="govuk-input" id="referenceno" name="referenceno" type="numbers">
 
 
                 </div>

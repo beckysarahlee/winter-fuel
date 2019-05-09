@@ -11,7 +11,7 @@
     <dl class="key-details-bar__key-details">
         <div class="key-details-bar__top-block">
             <dd class="key-details-bar__name"> {{data.fullname}} </dd>
-            <dd class="key-details-bar__DOB"> DOB: {{data.dobday}} {{data.dobmonth}} {{data.dobyear}} </dd>
+            <dd class="key-details-bar__nino"> {{data.ninumber}} </dd>
         </div>
     </dl>
 </section>
@@ -30,17 +30,16 @@
 
         <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds">
-                <span class="govuk-caption-xl govuk-!-font-size-36">Outside UK details</span>
                     <h1 class="govuk-heading-xl">Give State Pension or benefit details</h1>
 
-                    
-                    <div class="govuk-inset-text">
-                    <p> <strong>Type 1</strong><br> State Pension
-                    <br>Ireland
-                    <br>01 04 2018
+                    <dd class="govuk-summary-list__value">
+                    <p> <strong>Type 1</strong><br> {{data.benefittype}}
+                        <br> {{data.countrybenefit}}
+                        <br> {{data.outsidebenefitday}}
+                         {{data.outsidebenefitmonth}}
+                         {{data.outsidebenefityear}}
                     </p>
-                    
-                    </div>
+                    </dd>
 
                     <label class="govuk-label govuk-!-margin-top-5" for="sp-ni-number">
                         <strong>What type of benefit do you get?
@@ -105,13 +104,7 @@
                 </div>
         </div>
             
-            <button type="submit" class="govuk-button govuk-!-margin-right-1">
-              Save and continue
-            </button>
-
-            <a href="#" class="govuk-button govuk-button--secondary">
-              Add another
-            </a>
+            <button type="submit" class="govuk-button govuk-!-margin-top-5"> Save and continue  </button>
 
 
     </main>

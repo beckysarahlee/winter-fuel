@@ -11,7 +11,7 @@
     <dl class="key-details-bar__key-details">
         <div class="key-details-bar__top-block">
             <dd class="key-details-bar__name"> {{data.fullname}} </dd>
-            <dd class="key-details-bar__DOB"> DOB: {{data.dobday}} {{data.dobmonth}} {{data.dobyear}} </dd>
+            <dd class="key-details-bar__nino"> {{data.ninumber}} </dd>
         </div>
     </dl>
 </section>
@@ -30,8 +30,7 @@
 
         <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds">
-                <span class="govuk-caption-xl govuk-!-font-size-36">Household details</span>
-                    <h1 class="govuk-heading-xl">When did they get their last Winter Fuel Payment?</h1>
+                    <h1 class="govuk-heading-xl">When did they get their last payment?</h1>
                         <span id="dob-hint" class="govuk-hint">
                             These dates do not have to be exact, but to the best of your knowledge
                         </span>
@@ -70,17 +69,14 @@
                       </div>
                     </div>
                   </div>
+
+          <a href="/sprint15/international/wf-last-payment-adddate.html" class="govuk-link govuk-!-font-size-19"  >Add another date</a>
+                
+
                 </div>
         </div>
             
-
-            <button type="submit" class="govuk-button govuk-!-margin-right-1">
-              Save and continue
-            </button>
-
-            <a href="/sprint15/international/wf-last-payment-adddate.html" class="govuk-button govuk-button--secondary">
-              Add another date
-            </a>
+            <button type="submit" class="govuk-button govuk-!-margin-top-5"> Save and continue </button>
 
 
     </main>
