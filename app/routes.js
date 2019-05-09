@@ -75,12 +75,4 @@ router.post('/sprint15/international/declaration', function(req, res) {
   res.redirect('/sprint15/international/applicationcomplete')
 })
 
-
-
-
-
-
-
-
-
 module.exports = router
