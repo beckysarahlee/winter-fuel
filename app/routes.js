@@ -4,10 +4,12 @@ const router = express.Router()
 // copy the const name and the file path to new version
 const sprint15 = require('./routes/sprint15');
 const sprint15b = require('./routes/sprint15b');
+const sprint17 = require('./routes/sprint17');
 
 //copy the router use and update the sprint version
 router.use(sprint15);
 router.use(sprint15b);
+router.use(sprint17);
 
 
 router.use((req, res, next) => {
@@ -73,6 +75,6 @@ router.get('/sprint17/', function(req, res) {
 
 router.post('/sprint15/international/declaration', function(req, res) {
   res.redirect('/sprint15/international/applicationcomplete')
-})
+}) 
 
 module.exports = router

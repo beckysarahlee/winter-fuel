@@ -2,454 +2,442 @@
 const express = require('express');
 const router = express.Router()
 
-// update this version number to update all routes in the version
-const version = 'sprint15b';
-
-module.exports = router;
-
-// '/start' is telling the router which URL to work on eg: localhost:3000/start
-// router.post is telling the router look for: <form method="post"> on /start
-// anything inside the <form method="post"></form> tags with a name="" will be inside req.body
-router.post('/' + version + '/uk/PAB', (req, res) => {
-  // you can see whats inside the request body in the terminal with console.log()
-  console.log(req.body)
-
-  if (req.body.PAB === 'yes') {  // checks in the reqest body for name="branch" and checks for value="international"
-    res.redirect('/' + version + '/uk/PAB-fullname')     // if value is international it redirects to /international/page-1 
-  } else {                                    // if the value is neither uk or international it does something else
-    res.redirect('/' + version + '/uk/dateofbirth')             // redirects to /other/page-1
-  }
-})
-
-router.post('/' + version + '/uk/qweek', (req, res) => { // router name
-  console.log(req.body) // name of data / id name
-
-  if (req.body.qweek === 'yes') { // name of data / + answer
-    res.redirect('/' + version + '/uk/write-address')
-  } else {
-    res.redirect('/' + version + '/uk/qweek-address')
-  }
-})
-
-router.post('/' + version + '/international/qweek-address1', (req, res) => { // router name
+router.post('/sprint15b/international/qweek-address1', (req, res) => { // router name
   console.log(req.body) // name of data / id name
 
   if (req.body.qweekaddress === 'yes') { // name of data / + answer
-    res.redirect('/' + version + '/international/write-address1')
+    res.redirect('/sprint15b/international/write-address1')
   } else {
-    res.redirect('/' + version + '/international/qweek-address2')
+    res.redirect('/sprint15b/international/qweek-address2')
   }
 })
 
 
-
-
-router.post('/' + version + '/international/write-address1', (req, res) => { // router name
-  console.log(req.body) // name of data / id name
-
-  if (req.body.writeaddress === 'yes') { // name of data / + answer
-    res.redirect('/' + version + '/international/country-leavinguk')
-  } else {
-    res.redirect('/' + version + '/international/write-address2')
-  }
-})
-
-/////////
-
-router.post('/' + version + '/international/country-leavinguk', (req, res) => { // router name
+router.post('/sprint15b/international/country-leavinguk', (req, res) => { // router name
   console.log(req.body) // name of data / id name
 
   if (req.body.countryleavinguk === 'yes') { // name of data / + answer
-    res.redirect('/' + version + '/international/country-leavinguk2')
+    res.redirect('/sprint15b/international/country-leavinguk2')
   } else {
-    res.redirect('/' + version + '/international/telephone')
+    res.redirect('/sprint15b/international/worked-outside')
   }
 })
 
-////////
-
-
-
-
-
-
-router.post('/' + version + '/international/write-address1', (req, res) => { // router name
+router.post('/sprint15b/international/write-address1', (req, res) => { // router name
   console.log(req.body) // name of data / id name
 
   if (req.body.writeaddress === 'yes') { // name of data / + answer
-    res.redirect('/' + version + '/international/write-address2')
+    res.redirect('/sprint15b/international/anyone-else-sp')
   } else {
-    res.redirect('/' + version + '/international/country-leavinguk')
+    res.redirect('/sprint15b/international/write-address2')
   }
 })
 
-router.post('/' + version + '/international/qweek-country', (req, res) => { // router name
+router.post('/sprint15b/international/qweek-country', (req, res) => { // router name
   console.log(req.body) // name of data / id name
 
   if (req.body.writeaddress === 'yes') { // name of data / + answer
-    res.redirect('./' + version + '/international/country-leavinguk2')
+    res.redirect('./sprint15b/international/country-leavinguk2')
   } else {
-    res.redirect('/' + version + '/international/qweek-country')
+    res.redirect('/sprint15b/international/qweek-country')
   }
 })
 
-router.post('/' + version + '/international/anyone-else-sp', (req, res) => { // router name
+router.post('/sprint15b/international/anyone-else-sp', (req, res) => { // router name
   console.log(req.anyoneElseSp) // name of data / id name
 
   if (req.body.anyoneElseSp === 'yes') { // name of data / + answer
-    res.redirect('/' + version + '/international/anyone-else-sp-details')
+    res.redirect('/sprint15b/international/anyone-else-sp-details')
   } else {
-    res.redirect('/' + version + '/international/anyone-else-wf')
+    res.redirect('/sprint15b/international/anyone-else-wf')
   }
 })
 
-router.post('/' + version + '/international/relationship-status', (req, res) => { // router name
+router.post('/sprint15b/international/relationship-status', (req, res) => { // router name
   console.log(req.relationship) // name of data / id name
 
   if (req.body.relationship === 'single') { // name of data / + answer
-    res.redirect('/' + version + '/international/check-answers1')
+    res.redirect('/sprint15b/international/sp-uk')
   } else {
-    res.redirect('/' + version + '/international/european-national')
+    res.redirect('/sprint15b/international/european-national')
   }
 })
 
 
-router.post('/' + version + '/international/anyone-else-wf', (req, res) => { // router name
+router.post('/sprint15b/international/anyone-else-wf', (req, res) => { // router name
   console.log(req.anyoneElseWf) // name of data / id name
 
   if (req.body.anyoneElseWf === 'yes') { // name of data / + answer
-    res.redirect('/' + version + '/international/wf-last-payment')
+    res.redirect('/sprint15b/international/wf-last-payment')
   } else {
-    res.redirect('/' + version + '/international/hospital')
+    res.redirect('/sprint15b/international/homepage')
   }
 })
 
-router.post('/' + version + '/international/hospital', (req, res) => { // router name
+router.post('/sprint15b/international/hospital', (req, res) => { // router name
   console.log(req.hospital) // name of data / id name
 
   if (req.body.hospital === 'yes') { // name of data / + answer
-    res.redirect('/' + version + '/international/hospital-details')
+    res.redirect('/sprint15b/international/hospital-details')
   } else {
-    res.redirect('/' + version + '/international/custody')
+    res.redirect('/sprint15b/international/bank-1')
   }
 })
 
-router.post('/' + version + '/international/custody', (req, res) => { // router name
+router.post('/sprint15b/international/custody', (req, res) => { // router name
   console.log(req.custody) // name of data / id name
 
   if (req.body.custody === 'yes') { // name of data / + answer
-    res.redirect('/' + version + '/international/authorityname')
+    res.redirect('/sprint15b/international/authorityname')
   } else {
-    res.redirect('/' + version + '/international/carehome')
+    res.redirect('/sprint15b/international/carehome')
   }
 })
 
-router.post('/' + version + '/international/carehome', (req, res) => { // router name
+router.post('/sprint15b/international/carehome', (req, res) => { // router name
   console.log(req.body) // name of data / id name
 
   if (req.body.carehome === 'yes') { // name of data / + answer
-    res.redirect('/' + version + '/international/carehome_address')
+    res.redirect('/sprint15b/international/carehome_address')
   } else {
-    res.redirect('/' + version + '/international/uknational')
+    res.redirect('/sprint15b/international/hospital')
   }
 })
 
-router.post('/' + version + '/international/uknational', (req, res) => { // router name
+router.post('/sprint15b/international/uknational', (req, res) => { // router name
   console.log(req.body) // name of data / id name
 
   if (req.body.uknational === 'yes') { // name of data / + answer
-    res.redirect('/' + version + '/international/other-uk')
+    res.redirect('/sprint15b/international/other-uk')
   } else {
-    res.redirect('/' + version + '/international/refugee')
+    res.redirect('/sprint15b/international/refugee')
   }
 })
 
-router.post('/' + version + '/international/other-uk', (req, res) => { // router name
+router.post('/sprint15b/international/other-uk', (req, res) => { // router name
   console.log(req.body) // name of data / id name
 
   if (req.body.otheruk === 'yes') { // name of data / + answer
-    res.redirect('/' + version + '/international/nationalities-start')
+    res.redirect('/sprint15b/international/nationalities-start')
   } else {
-    res.redirect('/' + version + '/international/lived-in-uk')
+    res.redirect('/sprint15b/international/lived-in-uk')
   }
 })
 
-router.post('/' + version + '/international/lived-in-uk', (req, res) => { // router name
+router.post('/sprint15b/international/lived-in-uk', (req, res) => { // router name
   console.log(req.body) // name of data / id name
 
   if (req.body.livedinuk === 'yes') { // name of data / + answer
-    res.redirect('/' + version + '/international/longest-lived-uk')
+    res.redirect('/sprint15b/international/longest-lived-uk')
   } else {
-    res.redirect('/' + version + '/international/property')
+    res.redirect('/sprint15b/international/worked-in-uk')
   }
 })
 
 
-router.post('/' + version + '/international/property', (req, res) => { // router name
+router.post('/sprint15b/international/property', (req, res) => { // router name
   console.log(req.body) // name of data / id name
 
   if (req.body.property === 'yes') { // name of data / + answer
-    res.redirect('/' + version + '/international/propertyaddress')
+    res.redirect('/sprint15b/international/propertyaddress')
   } else {
-    res.redirect('/' + version + '/international/worked-outside')
+    res.redirect('/sprint15b/international/business')
   }
 })
 
-router.post('/' + version + '/international/worked-outside', (req, res) => { // router name
+router.post('/sprint15b/international/worked-outside', (req, res) => { // router name
   console.log(req.body) // name of data / id name
 
   if (req.body.workedoutside === 'yes') { // name of data / + answer
-    res.redirect('/' + version + '/international/longest-worked2')
+    res.redirect('/sprint15b/international/longest-worked2')
   } else {
-    res.redirect('/' + version + '/international/business')
+    res.redirect('/sprint15b/international/homepage3')
   }
 })
 
-router.post('/' + version + '/international/business', (req, res) => { // router name
+router.post('/sprint15b/international/business', (req, res) => { // router name
   console.log(req.body) // name of data / id name
 
   if (req.body.business === 'yes') { // name of data / + answer
-    res.redirect('/' + version + '/international/business-date')
+    res.redirect('/sprint15b/international/business-date')
   } else {
-    res.redirect('/' + version + '/international/healthcare')
+    res.redirect('/sprint15b/international/returned-uk')
   }
 })
 
-router.post('/' + version + '/international/healthcare', (req, res) => { // router name
+router.post('/sprint15b/international/healthcare', (req, res) => { // router name
   console.log(req.body) // name of data / id name
 
   if (req.body.healthcare === 'yes') { // name of data / + answer
-    res.redirect('/' + version + '/international/healthcaredate')
+    res.redirect('/sprint15b/international/healthcaredate')
   } else {
-    res.redirect('/' + version + '/international/sp-uk')
+    res.redirect('/sprint15b/international/sp-outside')
   }
 })
 
-router.post('/' + version + '/international/sp-outside', (req, res) => { // router name
+router.post('/sprint15b/international/sp-outside', (req, res) => { // router name
   console.log(req.body) // name of data / id name
 
   if (req.body.outsidebenefit === 'yes') { // name of data / + answer
-    res.redirect('/' + version + '/international/sp-outside-details')
+    res.redirect('/sprint15b/international/sp-outside-details')
   } else {
-    res.redirect('/' + version + '/international/returned-uk')
+    res.redirect('/sprint15b/international/country-leavinguk')
   }
 })
 
-router.post('/' + version + '/international/returned-uk', (req, res) => { // router name
+router.post('/sprint15b/international/returned-uk', (req, res) => { // router name
   console.log(req.body) // name of data / id name
 
   if (req.body.returneduk === 'yes') { // name of data / + answer
-    res.redirect('/' + version + '/international/returned-ukdetails')
+    res.redirect('/sprint15b/international/returned-ukdetails')
   } else {
-    res.redirect('/' + version + '/international/familyuk')
+    res.redirect('/sprint15b/international/familyuk')
   }
   })
 
-  router.post('/' + version + '/international/familyuk', (req, res) => { // router name
+  router.post('/sprint15b/international/familyuk', (req, res) => { // router name
     console.log(req.body) // name of data / id name
-
+  
     if (req.body.familyuk === 'yes') { // name of data / + answer
-      res.redirect('/' + version + '/international/familyuk-details')
+      res.redirect('/sprint15b/international/familyuk-details')
     } else {
-      res.redirect('/' + version + '/international/anylinks')
+      res.redirect('/sprint15b/international/anylinks')
     }
     })
 
-    router.post('/' + version + '/international/bank-1', (req, res) => { // router name
+    router.post('/sprint15b/international/bank-1', (req, res) => { // router name
       console.log(req.body) // name of data / id name
-
+    
       if (req.body.bankaccount === 'uk') { // name of data / + answer
-        res.redirect('/' + version + '/international/bankuk')
+        res.redirect('/sprint15b/international/bankuk')
       } else {
-        res.redirect('/' + version + '/international/bankoverseas')
+        res.redirect('/sprint15b/international/bankoverseas')
       }
     })
 
-    router.post('/' + version + '/international/letteroremail', (req, res) => { // router name
+    router.post('/sprint15b/international/letteroremail', (req, res) => { // router name
       console.log(req.body) // name of data / id name
-
+    
       if (req.body.letteroremail === 'yes') { // name of data / + answer
-        res.redirect('/' + version + '/international/letteroremail-decision')
+        res.redirect('/sprint15b/international/letteroremail-decision')
       } else {
-        res.redirect('/' + version + '/international/applicationcomplete')
+        res.redirect('/sprint15b/international/declaration')
+      }
+    })
+
+    router.post('/sprint15b/international/worked-in-uk', (req, res) => { // router name
+      console.log(req.body) // name of data / id name
+    
+      if (req.body.workedinuk === 'yes') { // name of data / + answer
+        res.redirect('/sprint15b/international/dates-worked')
+      } else {
+        res.redirect('/sprint15b/international/property')
       }
     })
 
 //sprint 15 buttons
 
-router.post('/' + version + '/international/findsomeone', function(req, res) {
-  res.redirect('/' + version + '/international/findsomeoneresults')
+router.post('/sprint15b/international/findsomeone', function(req, res) {
+  res.redirect('/sprint15b/international/findsomeoneresults')
 })
 
-router.post('/' + version + '/international/country', function(req, res) {
-  res.redirect('/' + version + '/international/DOB')
+router.post('/sprint15b/international/findsomeoneresults', function(req, res) {
+  res.redirect('/sprint15b/international/fullname')
 })
 
-router.post('/' + version + '/international/DOB', function(req, res) {
-  res.redirect('/' + version + '/international/fullname')
+router.post('/sprint15b/international/country', function(req, res) {
+  res.redirect('/sprint15b/international/findsomeone')
 })
 
-router.post('/' + version + '/international/fullname', function(req, res) {
-  res.redirect('/' + version + '/international/homeaddress')
+router.post('/sprint15b/international/DOB', function(req, res) {
+  res.redirect('/sprint15b/international/country')
 })
 
-router.post('/' + version + '/international/homeaddress', function(req, res) {
-  res.redirect('/' + version + '/international/date-living')
+router.post('/sprint15b/international/fullname', function(req, res) {
+  res.redirect('/sprint15b/international/relationship-status')
 })
 
-router.post('/' + version + '/international/date-living', function(req, res) {
-  res.redirect('/' + version + '/international/qweek-address1')
+router.post('/sprint15b/international/homeaddress', function(req, res) {
+  res.redirect('/sprint15b/international/check-homeaddress')
 })
 
-router.post('/' + version + '/international/telephone', function(req, res) {
-  res.redirect('/' + version + '/international/emailaddress')
+router.post('/sprint15b/international/check-homeaddress', function(req, res) {
+  res.redirect('/sprint15b/international/date-living')
 })
 
-router.post('/' + version + '/international/emailaddress', function(req, res) {
-  res.redirect('/' + version + '/international/contact-preference')
+router.post('/sprint15b/international/date-living', function(req, res) {
+  res.redirect('/sprint15b/international/qweek-address1')
 })
 
-router.post('/' + version + '/international/contact-preference', function(req, res) {
-  res.redirect('/' + version + '/international/relationship-status')
+router.post('/sprint15b/international/telephone', function(req, res) {
+  res.redirect('/sprint15b/international/check-telephone')
 })
 
-router.post('/' + version + '/international/european-national', function(req, res) {
-  res.redirect('/' + version + '/international/check-answers1')
+router.post('/sprint15b/international/check-telephone', function(req, res) {
+  res.redirect('/sprint15b/international/emailaddress')
 })
 
-router.post('/' + version + '/international/anyone-else-sp-details', function(req, res) {
-  res.redirect('/' + version + '/international/anyone-else-wf')
+router.post('/sprint15b/international/emailaddress', function(req, res) {
+  res.redirect('/sprint15b/international/contact-preference')
 })
 
-router.post('/' + version + '/international/wf-last-payment', function(req, res) {
-  res.redirect('/' + version + '/international/hospital')
+router.post('/sprint15b/international/contact-preference', function(req, res) {
+  res.redirect('/sprint15b/international/letteroremail')
 })
 
-router.post('/' + version + '/international/hospital-details', function(req, res) {
-  res.redirect('/' + version + '/international/custody')
+router.post('/sprint15b/international/european-national', function(req, res) {
+  res.redirect('/sprint15b/international/homeaddress')
 })
 
-router.post('/' + version + '/international/authorityname', function(req, res) {
-  res.redirect('/' + version + '/international/authorityaddress')
+router.post('/sprint15b/international/anyone-else-sp-details', function(req, res) {
+  res.redirect('/sprint15b/international/anyone-else-wf')
 })
 
-router.post('/' + version + '/international/authorityaddress', function(req, res) {
-  res.redirect('/' + version + '/international/carehome')
+router.post('/sprint15b/international/wf-last-payment', function(req, res) {
+  res.redirect('/sprint15b/international/homepage')
 })
 
-router.post('/' + version + '/international/carehome_address', function(req, res) {
-  res.redirect('/' + version + '/international/carehome_date')
+router.post('/sprint15b/international/hospital-details', function(req, res) {
+  res.redirect('/sprint15b/international/bank-1')
 })
 
-router.post('/' + version + '/international/carehome_date', function(req, res) {
-  res.redirect('/' + version + '/international/uknational')
+router.post('/sprint15b/international/authorityname', function(req, res) {
+  res.redirect('/sprint15b/international/authorityaddress')
 })
 
-router.post('/' + version + '/international/othernationalities', function(req, res) {
-  res.redirect('/' + version + '/international/lived-in-uk')
+router.post('/sprint15b/international/authorityaddress', function(req, res) {
+  res.redirect('/sprint15b/international/carehome')
 })
 
-router.post('/' + version + '/international/refugee', function(req, res) {
-  res.redirect('/' + version + '/international/other-uk')
+router.post('/sprint15b/international/carehome_address', function(req, res) {
+  res.redirect('/sprint15b/international/carehome_date')
 })
 
-router.post('/' + version + '/international/nationalities-start', function(req, res) {
-  res.redirect('/' + version + '/international/lived-in-uk')
+router.post('/sprint15b/international/carehome_date', function(req, res) {
+  res.redirect('/sprint15b/international/hospital')
 })
 
-router.post('/' + version + '/international/longest-lived-uk', function(req, res) {
-  res.redirect('/' + version + '/international/property')
+router.post('/sprint15b/international/othernationalities', function(req, res) {
+  res.redirect('/sprint15b/international/lived-in-uk')
 })
 
-router.post('/' + version + '/international/propertyaddress', function(req, res) {
-  res.redirect('/' + version + '/international/worked-outside')
+router.post('/sprint15b/international/refugee', function(req, res) {
+  res.redirect('/sprint15b/international/other-uk')
 })
 
-router.post('/' + version + '/international/longest-worked2', function(req, res) {
-  res.redirect('/' + version + '/international/business')
+router.post('/sprint15b/international/nationalities-start', function(req, res) {
+  res.redirect('/sprint15b/international/lived-in-uk')
 })
 
-router.post('/' + version + '/international/business-date', function(req, res) {
-  res.redirect('/' + version + '/international/business-type')
-})
-
-router.post('/' + version + '/international/business-type', function(req, res) {
-  res.redirect('/' + version + '/international/healthcare')
-})
-
-router.post('/' + version + '/international/healthcaredate', function(req, res) {
-  res.redirect('/' + version + '/international/sp-uk')
-})
-
-router.post('/' + version + '/international/sp-uk', function(req, res) {
-  res.redirect('/' + version + '/international/sp-outside')
-})
-
-router.post('/' + version + '/international/sp-outside-details', function(req, res) {
-  res.redirect('/' + version + '/international/returned-uk')
-})
-
-router.post('/' + version + '/international/sp-outside-details-add1', function(req, res) {
-  res.redirect('/' + version + '/international/returned-uk')
-})
-
-router.post('/' + version + '/international/returned-ukdetails', function(req, res) {
-  res.redirect('/' + version + '/international/familyuk')
-})
-
-router.post('/' + version + '/international/returned-ukdetails-add1', function(req, res) {
-  res.redirect('/' + version + '/international/familyuk')
-})
-
-router.post('/' + version + '/international/returned-ukdetails-add2', function(req, res) {
-  res.redirect('/' + version + '/international/familyuk')
+router.post('/sprint15b/international/longest-lived-uk', function(req, res) {
+  res.redirect('/sprint15b/international/worked-in-uk')
 })
 
 
-  router.post('/' + version + '/international/familyuk-details', function(req, res) {
-  res.redirect('/' + version + '/international/anylinks')
+router.post('/sprint15b/international/dates-worked', function(req, res) {
+  res.redirect('/sprint15b/international/property')
 })
 
-router.post('/' + version + '/international/anylinks', function(req, res) {
-  res.redirect('/' + version + '/international/bank-1')
+
+router.post('/sprint15b/international/propertyaddress', function(req, res) {
+  res.redirect('/sprint15b/international/propertyaddress2')
 })
 
-router.post('/' + version + '/international/bankuk', function(req, res) {
-  res.redirect('/' + version + '/international/declaration')
+router.post('/sprint15b/international/propertyaddress2', function(req, res) {
+  res.redirect('/sprint15b/international/business')
 })
 
-router.post('/' + version + '/international/bankoverseas', function(req, res) {
-  res.redirect('/' + version + '/international/bankoverseas-cont')
+router.post('/sprint15b/international/longest-worked2', function(req, res) {
+  res.redirect('/sprint15b/international/homepage3')
 })
 
-router.post('/' + version + '/international/bankoverseas-cont', function(req, res) {
-  res.redirect('/' + version + '/international/declaration')
+
+router.post('/sprint15b/international/business-date', function(req, res) {
+  res.redirect('/sprint15b/international/returned-uk')
 })
 
-router.post('/' + version + '/international/declaration', function(req, res) {
-  res.redirect('/' + version + '/international/letteroremail')
+
+router.post('/sprint15b/international/healthcaredate', function(req, res) {
+  res.redirect('/sprint15b/international/sp-outside')
 })
 
-router.post('/' + version + '/international/letteroremail-decision', function(req, res) {
-  res.redirect('/' + version + '/international/applicationcomplete')
+router.post('/sprint15b/international/sp-uk', function(req, res) {
+  res.redirect('/sprint15b/international/homeaddress')
 })
 
-router.post('/' + version + '/international/qweek-address2', function(req, res) {
-  res.redirect('/' + version + '/international/write-address1')
+router.post('/sprint15b/international/sp-outside-details', function(req, res) {
+  res.redirect('/sprint15b/international/country-leavinguk')
 })
 
-router.post('/' + version + '/international/write-address2', function(req, res) {
-  res.redirect('/' + version + '/international/country-leavinguk')
+router.post('/sprint15b/international/sp-outside-details-add1', function(req, res) {
+  res.redirect('/sprint15b/international/country-leavinguk')
 })
 
-router.post('/' + version + '/international/anyone-else-sp-details-filledin', function(req, res) {
-  res.redirect('/' + version + '/international/anyone-else-wf')
+router.post('/sprint15b/international/returned-ukdetails', function(req, res) {
+  res.redirect('/sprint15b/international/familyuk')
+})
+ 
+router.post('/sprint15b/international/returned-ukdetails-add1', function(req, res) {
+  res.redirect('/sprint15b/international/familyuk')
 })
 
-router.post('/' + version + '/international/wf-last-payment-adddate', function(req, res) {
-  res.redirect('/' + version + '/international/hospital')
+router.post('/sprint15b/international/returned-ukdetails-add2', function(req, res) {
+  res.redirect('/sprint15b/international/familyuk')
 })
 
-router.post('/' + version + '/international/nationalities-start-add', function(req, res) {
-  res.redirect('/' + version + '/international/lived-in-uk')
+
+  router.post('/sprint15b/international/familyuk-details', function(req, res) {
+  res.redirect('/sprint15b/international/anylinks')
 })
+
+router.post('/sprint15b/international/anylinks', function(req, res) {
+  res.redirect('/sprint15b/international/healthcare')
+})
+
+router.post('/sprint15b/international/bankuk', function(req, res) {
+  res.redirect('/sprint15b/international/declaration')
+})
+
+router.post('/sprint15b/international/bankoverseas', function(req, res) {
+  res.redirect('/sprint15b/international/bankoverseas-cont')
+})
+
+router.post('/sprint15b/international/bankoverseas-cont', function(req, res) {
+  res.redirect('/sprint15b/international/check-bankdetails')
+})
+
+router.post('/sprint15b/international/check-bankdetails', function(req, res) {
+  res.redirect('/sprint15b/international/telephone')
+})
+
+
+router.post('/sprint15b/international/letteroremail-decision', function(req, res) {
+  res.redirect('/sprint15b/international/declaration')
+})
+
+router.post('/sprint15b/international/qweek-address2', function(req, res) {
+  res.redirect('/sprint15b/international/write-address1')
+})
+
+router.post('/sprint15b/international/write-address2', function(req, res) {
+  res.redirect('/sprint15b/international/anyone-else-sp')
+})
+
+router.post('/sprint15b/international/anyone-else-sp-details-filledin', function(req, res) {
+  res.redirect('/sprint15b/international/anyone-else-wf')
+})
+
+router.post('/sprint15b/international/wf-last-payment-adddate', function(req, res) {
+  res.redirect('/sprint15b/international/homepage2')
+})
+
+router.post('/sprint15b/international/nationalities-start-add', function(req, res) {
+  res.redirect('/sprint15b/international/lived-in-uk')
+})
+
+router.post('/sprint15b/international/declaration', function(req, res) {
+  res.redirect('/sprint15b/international/applicationcomplete')
+})
+
+
+module.exports = router;
