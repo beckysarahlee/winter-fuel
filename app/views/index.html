@@ -8,35 +8,57 @@
 
 <div class="govuk-width-container">
 
-  <main class="govuk-main-wrapper">
-      {# Start of most recent box #}
+    <main class="govuk-main-wrapper">
+    
+{# Start of most recent box #}
 
 
-          {# Start of prototype write up #}
+      {# Start of prototype write up #}
           <div class="prototype-write-up">
               <div class="govuk-grid-row">
                   <div class="govuk-grid-column-two-thirds">
                       <div class="most-recent">
-                                {# Start of prototype write up #}
-                                <h3 class="govuk-heading-s">In-payment citizen record</h3>
-                                <a href="/sprint10/ab123456c-overview">Alex Smith AB123456C</a>
-                          <p></p>
-                          <h3 class="govuk-heading-s">Cancel my Winter Fuel</h3>
-                                <a href="/development/start">Public-facing opt-out concept v1</a>
+                          {# Start of prototype write up #}
+                            <h2 class="govuk-heading-m">International claim capture</h2>
+                            <h3 class="govuk-heading-s"> Version 1</h3>
+                            <p>First version of new international claim capture. Claimant has made no previous claims for Winter Fuel, State Pension, or any other benefit. Therefore the agent has to manually input all data.</p>
+                            <a href="sprint15/international/" class="govuk-button">Start now</a>
+                          
+                          <h3 class="govuk-heading-s"> Version 1.1</h3>
+                          <p>Example where NI number pulls through some data. With the option to change the data which has been pre-populated if necessary.
+                          <br><br> NI number: QQ123456C
+                          <br> name: Benjamin Fischer</p>
+                            <a href="/sprint17/" class="govuk-button">Start now</a>
+                    </div>                  
+                          {# End of prototype write up #}
+    {# End of prototype write up #}
 
 
-                                {# End of prototype write up #}
+{# End of most recent box #}
 
-                              </div>
+<h2 class="govuk-heading-l">Older versions</h2>
+`
+  {# Start of hidden panel #}
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+           Sprint 10
+        </span>
+    </summary>
+      
+   {# Start of prototype write up #}
+    <div class="govuk-details__text">
+        <h3 class="govuk-heading-s">In-payment citizen record</h3>
+          <a href="/sprint10/ab123456c-overview">Alex Smith AB123456C</a>
+        <p></p>
+        <h3 class="govuk-heading-s">Cancel my Winter Fuel</h3>
+          <a href="/development/start">Public-facing opt-out concept v1</a>
 
-          {# End of prototype write up #}
 
+  {# End of prototype write up #}
 
-      {# End of most recent box #}
-
-                  <h2 class="govuk-heading-l">Older versions</h2>
-
-                  {# Start of hidden panel #}
+                    </div>
+                  </details>
                   <details class="govuk-details">
                       <summary class="govuk-details__summary">
                         <span class="govuk-details__summary-text">
@@ -115,7 +137,7 @@
                   </details>
                   {# End of hidden panel #}
 
-                  {# Start of hidden panel #}
+                    {# Start of hidden panel #}
                   <details class="govuk-details">
                       <summary class="govuk-details__summary">
                         <span class="govuk-details__summary-text">
@@ -332,11 +354,12 @@
 
                     </div>
                   </details>
-                  {# End of hidden panel #}
+      {# End of hidden panel #}
 
 
     </div>
-  </div>
-</main>
+    </main>
+</div>
+
 
 {% endblock %}

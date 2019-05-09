@@ -1,6 +1,23 @@
 const express = require('express')
 const router = express.Router()
 
+// copy the const name and the file path to new version
+const sprint15 = require('./routes/sprint15');
+const sprint15b = require('./routes/sprint15b');
+
+//copy the router use and update the sprint version
+router.use(sprint15);
+router.use(sprint15b);
+
+
+router.use((req, res, next) => {
+  if (req.method === 'POST') {
+    console.log(JSON.stringify(req.session.data, null, 2))
+  }
+  next()
+})
+
+
 // Route index page
 router.get('/', function (req, res) {
   res.render('index')
@@ -8,6 +25,7 @@ router.get('/', function (req, res) {
 
 // Add your routes here - above the module.exports line
 // Branching
+
 router.get('/sprint3/qq123456c_main2', function (req, res) {
   // Get the answer from the query string (eg. ?over18=false)
   var dob = req.query.dob
@@ -44,6 +62,17 @@ router.post(`/development/payment-letter-router`, (req, res) => { // router name
   } else {
     res.redirect(`/development/post-code-lookup`)
   }
+})
+
+
+///// Sprint 17 routes ////
+
+router.get('/sprint17/', function(req, res) {
+  res.render('./sprint17/whattodo')
+})
+
+router.post('/sprint15/international/declaration', function(req, res) {
+  res.redirect('/sprint15/international/applicationcomplete')
 })
 
 module.exports = router
