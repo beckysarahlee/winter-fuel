@@ -24,142 +24,137 @@ GOV.UK Prototype Kit
 
   <main class="govuk-main-wrapper">
 
-      <div class="govuk-grid-column-two-thirds">
-
-        <main id="content" role="main">
-          <div class="grid-row">
-            <div class="column-full">
-
-{% include './_bar.html' %}
-
-{% include './_tab-overview.html' %}
-
-
-            </div>
-          </div>
-        </main>
-
-        <br>
-        <br>
-
-        <div>
-          <h2 class="govuk-heading-m">Personal details</h2>
-          <dl class="app-check-your-answers app-check-your-answers--short">
-            <div class="app-check-your-answers__contents">
-              <dd class="app-check-your-answers__answer">
-
-              </dd>
-              <dd class="app-check-your-answers__change">
-                <a href="#">
-                </a>
-              </dd>
-            </div>
-
-            <div class="app-check-your-answers__contents">
-              <dt class="app-check-your-answers__answer">
-                Full name
-              </dt>
-              <dd class="app-check-your-answers__answer">
-                Roberto Hugh Smith
-              </dd>
-              <dd class="app-check-your-answers__change">
-              </dd>
-            </div>
-
-            <div class="app-check-your-answers__contents">
-              <dt class="app-check-your-answers__answer">
-                National Insurance number
-              </dt>
-              <dd class="app-check-your-answers__answer">
-                QQ 12 34 56 X
-              </dd>
-              <dd class="app-check-your-answers__change">
-              </dd>
-            </div>
-
-            <div class="app-check-your-answers__contents">
-              <dt class="app-check-your-answers__answer">
-                Date of birth
-              </dt>
-              <dd class="app-check-your-answers__answer">
-                12 December 1952
-              </dd>
-              <dd class="app-check-your-answers__change">
-              </dd>
-            </div>
-
-            {% if data['dead-day'] %}
-              <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__answer">
-                  Date of death
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                  {{data['dead-day']}} {{data['dead-month'] | formatMonth}} {{data['dead-year']}}
-                </dd>
-                <dd class="app-check-your-answers__change">
-                </dd>
-              </div>
-            {% endif %}
-
-            {% if data['imprisoned-day'] %}
-              <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__answer">
-                  Date of imprisonment
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                  {{data['imprisoned-day']}} {{data['imprisoned-month'] | formatMonth}} {{data['imprisoned-year']}}
-                </dd>
-                <dd class="app-check-your-answers__change">
-                </dd>
-              </div>
-            {% endif %}
-
-            <div class="app-check-your-answers__contents">
-              <dt class="app-check-your-answers__answer">
-                State Pension date
-              </dt>
-              <dd class="app-check-your-answers__answer">
-                12 December 2017
-              </dd>
-              <dd class="app-check-your-answers__change">
-              </dd>
-            </div>
-
-            <div class="app-check-your-answers__contents">
-              <dt class="app-check-your-answers__answer">
-                Marital status
-              </dt>
-              <dd class="app-check-your-answers__answer">
-                {% if data.maritalstatus %}
-                  {{data.maritalstatus}}
-                  {% else %}
-                    Never been married
-                {% endif %}
-              </dd>
-              <dd class="app-check-your-answers__change">
-                <a href="marital-status">
-                  Change<span class="govuk-visually-hidden">Change address</span>
-                </a>
-              </dd>
-            </div>
-          </div>
-
-        </div>
-
-
-        
-
-      </div>
-
-    </main>        </div>
-  <!-- </div> -->
-  {% endblock %}
-
-  {% block content %}
-  <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-    </div>
-  </div>
+      <main id="content" role="main">
+        <div class="grid-row">
+          <div class="column-full">
 
-  {% endblock %}
+            {% include './_bar.html' %}
+
+            {% include './_tab-overview.html' %}
+
+
+          </div>
+        </div>
+      </main>
+
+      <br>
+
+      <div>
+        <dl class="app-check-your-answers app-check-your-answers--short">
+
+          <div class="app-check-your-answers__contents">
+            <dd class="app-check-your-answers__answer">
+              <h2 class="govuk-heading-m">Last payment</h2>
+            </dd>
+            <dd class="app-check-your-answers__answer">
+              <strong></strong>
+            </dd>
+            <dd class="app-check-your-answers__change">
+              <a href="#"></a>
+            </dd>
+          </div>
+
+
+          <div class="app-check-your-answers__contents">
+            <dt class="app-check-your-answers__answer">
+              Wednesday 30 October 2018
+            </dt>
+            <dd class="app-check-your-answers__answer">
+              £100
+            </dd>
+            <dd class="app-check-your-answers__change">
+            </dd>
+          </div>
+      </div>
+
+      <div class="govuk-inset-text">
+        We have based this amount on the fact that our data shows 2 people
+        living at the same residential address.
+      </div>
+
+      <div>
+        <dl class="app-check-your-answers app-check-your-answers--short">
+
+          <div class="app-check-your-answers__contents">
+            <dd class="app-check-your-answers__answer">
+              <h2 class="govuk-heading-m">Next payment</h2>
+            </dd>
+            <dd class="app-check-your-answers__answer">
+              <strong></strong>
+            </dd>
+            <dd class="app-check-your-answers__change">
+              <a href="#"></a>
+            </dd>
+          </div>
+
+
+          <div class="app-check-your-answers__contents">
+            <dt class="app-check-your-answers__answer">
+              Wednesday 30 October 2019
+            </dt>
+            <dd class="app-check-your-answers__answer">
+              £100
+            </dd>
+            <dd class="app-check-your-answers__change">
+            </dd>
+          </div>
+      </div>
+
+      <br>
+
+      <div>
+        <h2 class="govuk-heading-m">Qualifying details</h2>
+        <dl class="app-check-your-answers app-check-your-answers--short">
+
+          <div class="app-check-your-answers__contents">
+            <dd class="app-check-your-answers__answer">
+              <strong>Full name</strong>
+            </dd>
+            <dd class="app-check-your-answers__answer">
+              <strong>Age</strong>
+            </dd>
+            <dd class="app-check-your-answers__change">
+              <a href="#">Change</a>
+            </dd>
+          </div>
+
+          <div class="app-check-your-answers__contents">
+            <dt class="app-check-your-answers__answer">
+              Alex Smith
+            </dt>
+            <dd class="app-check-your-answers__answer">
+              66
+            </dd>
+            <dd class="app-check-your-answers__change">
+            </dd>
+          </div>
+
+          <div class="app-check-your-answers__contents">
+            <dt class="app-check-your-answers__answer">
+              Francis Smith
+            </dt>
+            <dd class="app-check-your-answers__answer">
+              67
+            </dd>
+            <dd class="app-check-your-answers__change">
+            </dd>
+          </div>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+<!-- </div> -->
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+  </div>
+</div>
+
+{% endblock %}

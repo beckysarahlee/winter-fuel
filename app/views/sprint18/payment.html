@@ -50,7 +50,6 @@ GOV.UK Prototype Kit
       </main>
 
       <br>
-      <br>
 
       <dl class="app-check-your-answers app-check-your-answers--short">
         <h2 class="govuk-heading-m">Bank or building society account details</h2>
@@ -60,6 +59,7 @@ GOV.UK Prototype Kit
           </dd>
           <dd class="app-check-your-answers__change">
             <a href="bankdetails">
+                    Change<span class="govuk-visually-hidden">Change address</span>
               <span class="govuk-visually-hidden">Change payment details</span>
             </a>
           </dd>
@@ -84,7 +84,7 @@ GOV.UK Prototype Kit
             {% if data.accountholder %}
             {{data.accountholder}}
             {% else %}
-            Mr R H Smith
+            Mr A Smith
             {% endif %}
           </dd>
           <dd class="app-check-your-answers__change">
@@ -99,22 +99,7 @@ GOV.UK Prototype Kit
             {% if data.accountnumber %}
             {{data.accountnumber}}
             {% else %}
-            12345678
-            {% endif %}
-          </dd>
-          <dd class="app-check-your-answers__change">
-          </dd>
-        </div>
-
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__answer">
-            Sort code
-          </dt>
-          <dd class="app-check-your-answers__answer">
-            {% if data.sortcode %}
-            {{data.sortcode}}
-            {% else %}
-            01-02-03
+            ****5678
             {% endif %}
           </dd>
           <dd class="app-check-your-answers__change">
@@ -175,29 +160,8 @@ GOV.UK Prototype Kit
           </dd>
           <dd class="app-check-your-answers__change">
             <a href="address-DLO">
-              Stop payments<span class="govuk-visually-hidden"></span>
+              <span class="govuk-visually-hidden"></span>
             </a>
-          </dd>
-        </div>
-
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__answer">
-            Payment amount
-          </dt>
-          <dd class="app-check-your-answers__answer">
-            {% if data.frequency === 'Weekly' %}
-            £164.35
-            {% elseif data.frequency === 'Every 4 weeks' %}
-            £657.40
-            {% elseif data.frequency === 'Every 13 weeks' %}
-            £2,136.55
-            {% elseif data.frequency === 'Every 52 weeks' %}
-            £8,546.20
-            {% else %}
-            £657.40
-            {% endif %}
-          </dd>
-          <dd class="app-check-your-answers__change">
           </dd>
         </div>
 
@@ -206,10 +170,10 @@ GOV.UK Prototype Kit
             Last payment
           </dt>
           <dd class="app-check-your-answers__answer">
-            Tuesday 5 March 2019
+          Wednesday 30 October 2018
           </dd>
           <dd class="app-check-your-answers__answer">
-            £657.40
+            £100
           </dd>
           <dd class="app-check-your-answers__change">
           </dd>
@@ -220,10 +184,10 @@ GOV.UK Prototype Kit
             Next payment
           </dt>
           <dd class="app-check-your-answers__answer">
-            Friday 19 April 2019
+          Wednesday 30 October 2019
           </dd>
           <dd class="app-check-your-answers__answer">
-            £657.40
+            £100
           </dd>
           <dd class="app-check-your-answers__change">
           </dd>
@@ -235,7 +199,7 @@ GOV.UK Prototype Kit
 
     <div class="govuk-grid-column-full">
       <dl class="app-check-your-answers app-check-your-answers--short">
-        <h2 class="govuk-heading-m">Recent payments</h2>
+        <h2 class="govuk-heading-m">Previous payments</h2>
         <div class="app-check-your-answers__contents">
           <dt class="app-check-your-answers__question">
           </dt>
@@ -254,93 +218,58 @@ GOV.UK Prototype Kit
 
         <div class="app-check-your-answers__contents">
           <dt class="app-check-your-answers__answer">
-            Tuesday 2 April 2019
+            Wednesday 30 October 2018
           </dt>
           <dd class="app-check-your-answers__answer">
-            £657.40
-          </dd>
-          <dd class="app-check-your-answers__answer">
-            <span class="verified-badge verified">
-              <b>Sent </b>
-            </span>
-          </dd>
-          <dd class="app-check-your-answers__answer">
-
-          </dd>
-          <dd class="app-check-your-answers__change">
-            <a href="frequency"></a>
-          </dd>
-        </div>
-
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__answer">
-            Tuesday 5 March 2019
-          </dt>
-          <dd class="app-check-your-answers__answer">
-            £657.40
+            £100
           </dd>
           <dd class="app-check-your-answers__answer">
             <span class="verified-badge verified">
               <b>Paid</b>
             </span>
           </dd>
-          <dd class="app-check-your-answers__answer">
-
-
-          </dd>
-          <dd class="app-check-your-answers__change">
-          </dd>
         </div>
+
 
         <div class="app-check-your-answers__contents">
           <dt class="app-check-your-answers__answer">
-            Tuesday 5 February 2019
+            Wednesday 30 October 2017
           </dt>
           <dd class="app-check-your-answers__answer">
-            £657.40
+            £100
           </dd>
           <dd class="app-check-your-answers__answer">
             <span class="verified-badge verified">
               <b>Paid</b>
             </span>
           </dd>
-          <dd class="app-check-your-answers__answer">
-
-
-          </dd>
-          <dd class="app-check-your-answers__change">
-          </dd>
         </div>
 
         <div class="app-check-your-answers__contents">
           <dt class="app-check-your-answers__answer">
-            Tuesday 8 January 2019
+            Wednesday 30 October 2016
           </dt>
           <dd class="app-check-your-answers__answer">
-            £657.40
+            £100
           </dd>
           <dd class="app-check-your-answers__answer">
             <span class="verified-badge verified">
               <b>Paid</b>
             </span>
           </dd>
-          <dd class="app-check-your-answers__change">
-          </dd>
         </div>
 
         <div class="app-check-your-answers__contents">
           <dt class="app-check-your-answers__answer">
-            Tuesday 11 December 2018
+            Wednesday 30 October 2015
           </dt>
           <dd class="app-check-your-answers__answer">
-            £657.40
+            £100
           </dd>
           <dd class="app-check-your-answers__answer">
             <span class="verified-badge verified">
               <b>Paid</b>
             </span>
-          </dd>
-          <dd class="app-check-your-answers__change">
           </dd>
         </div>
 
