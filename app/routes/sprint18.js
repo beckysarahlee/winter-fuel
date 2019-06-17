@@ -170,6 +170,31 @@ router.use((req, res, next) => {
   })
   ;
 
+  // Removing occupants, underpayment
+  router.post('/sprint18/occupants', (req, res) => {
+    res.redirect('/sprint18/reason-removed1')
+  })
+  ;
+
+  router.post('/sprint18/reason-removed1', (req, res) => {
+    res.redirect('/sprint18/move-date')
+  })
+  ;
+
+  router.post('/sprint18/move-date', (req, res) => {
+    res.redirect('/sprint18/reason-removed2')
+  })
+  ;
+
+  router.post('/sprint18/reason-removed2', (req, res) => {
+    res.redirect('/sprint18/check-underpayment')
+  })
+  ;
+
+  router.post('/sprint18/check-underpayment', (req, res) => {
+    res.redirect('/sprint18/evidence-request')
+  })
+  ;
 
   // Stopping payments
   router.post('/sprint18/prevent-payments', function(req, res) {
