@@ -30,18 +30,6 @@ GOV.UK Prototype Kit
         <div class="grid-row">
           <div class="column-full">
 
-            <div class="govuk-panel govuk-panel--confirmation">
-                      <h1 class="govuk-panel__title">
-                        £100 top up payment sent
-                      </h1>
-                      <div class="govuk-panel__body">
-                        Due by Friday 14 December 2018<br>
-                      </div>
-                    </div>
-
-
-            <br>
-
             {% include './_bar.html' %}
 
             {% include './_tab-overview.html' %}
@@ -71,18 +59,6 @@ GOV.UK Prototype Kit
 
           <div class="app-check-your-answers__contents">
             <dt class="app-check-your-answers__answer">
-              Monday 10 December 2018
-            </dt>
-            <dd class="app-check-your-answers__answer">
-              £100
-            </dd>
-            <dd class="app-check-your-answers__change">
-              Due by Friday 14 December 2019
-            </dd>
-          </div>
-
-          <div class="app-check-your-answers__contents">
-            <dt class="app-check-your-answers__answer">
               Wednesday 30 October 2018
             </dt>
             <dd class="app-check-your-answers__answer">
@@ -94,8 +70,8 @@ GOV.UK Prototype Kit
       </div>
 
       <div class="govuk-inset-text">
-        This amount is based on 1 person living at this address
-        who qualifies for Winter Fuel payment.
+        We have based this amount on the fact that our data shows 2 people
+        living at the same residential address.
       </div>
 
       <div>
@@ -119,21 +95,30 @@ GOV.UK Prototype Kit
               Wednesday 30 October 2019
             </dt>
             <dd class="app-check-your-answers__answer">
-              £200
+              £100
             </dd>
             <dd class="app-check-your-answers__change">
             </dd>
           </div>
-
       </div>
 
-      <div class="govuk-inset-text">
-        This amount is based on 1 person living at this address
-        who qualifies for Winter Fuel payment.
-      </div>
+      <br>
 
       <div>
         <h2 class="govuk-heading-m">Qualifying details</h2>
+
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            Awaiting evidence of people living at the address<br>
+            <a href="evidence-verification">
+              Verify people living at the address<span class="govuk-visually-hidden"></span>
+            </a>
+          </strong>
+        </div>
+
+
         <dl class="app-check-your-answers app-check-your-answers--short">
 
           <div class="app-check-your-answers__contents">
@@ -150,15 +135,25 @@ GOV.UK Prototype Kit
 
           <div class="app-check-your-answers__contents">
             <dt class="app-check-your-answers__answer">
-              Alex Smith
+              Freddie Becker
             </dt>
             <dd class="app-check-your-answers__answer">
-              66
+              67
             </dd>
             <dd class="app-check-your-answers__change">
             </dd>
           </div>
 
+          <div class="app-check-your-answers__contents">
+            <dt class="app-check-your-answers__answer">
+              Kelly Meyer
+            </dt>
+            <dd class="app-check-your-answers__answer">
+              68
+            </dd>
+            <dd class="app-check-your-answers__change">
+            </dd>
+          </div>
 
       </div>
     </div>
