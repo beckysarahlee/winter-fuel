@@ -211,7 +211,7 @@ router.use((req, res, next) => {
   ;
 
   router.post('/sprint18b/evidence-verification', (req, res) => {
-    res.redirect('/sprint18b/overview-evidence-received')
+    res.redirect('/sprint18b/confirm-top-up')
   })
   ;
 
