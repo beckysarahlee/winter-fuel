@@ -196,6 +196,17 @@ router.use((req, res, next) => {
   })
   ;
 
+  router.post('/sprint18/evidence-request', (req, res) => {
+    res.redirect('/sprint18/overview-awaiting-verification')
+  })
+  ;
+
+  router.post('/sprint18/evidence-verification', (req, res) => {
+    res.redirect('/sprint18/overview-evidence-received')
+  })
+  ;
+
+
   // Stopping payments
   router.post('/sprint18/prevent-payments', function(req, res) {
     if ( req.body['stopped-reason'] === 'dead' ) {
