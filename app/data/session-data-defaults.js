@@ -21,4 +21,19 @@ module.exports = {
 
   // Insert values here
 
+  "default-user": "Alex Smith",
+  "default-user-nino": "AB 12 34 56 C",
+  "default-user-dob": "3 February 1953",
+  "address-line-1-default": "70 Elmgrove Terrace",
+  "address-town-default": "Newcastle-Upon-Tyne",
+  "address-county-default": "Tyne & Wear",
+  "address-postcode-default": "NE1 6XP",
+
+  "default-partner": "Geoff Smith",
+
+  "address-line-1-change": "12 High Street",
+  "address-town-change": "Newcastle-Upon-Tyne",
+  "address-county-change": "Tyne & Wear",
+  "address-postcode-change": "NE1 2AP"
+
 }

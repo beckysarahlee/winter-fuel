@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "includes/cookie-banner.html" %}
+{# Set serviceName in config.js. #}
+{{ govukHeader({
+  serviceName: serviceName,
+  serviceUrl: "/"
+}) }}
+
+{% from "checkboxes/macro.njk" import govukCheckboxes %}
+
+{% block headEnd %}
+{% include 'includes/remove-blue-bar.html' %}
+{% endblock %}
+
+
+{% include './_find-someone.html' %}
+
+
+<div class="govuk-width-container">
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <main id="content" role="main">
+        <div class="grid-row">
+          <div class="column-full">
+
+            {% include './_bar.html' %}
+
+
+          </div>
+        </div>
+      </main>
+
+<a href="overview" class="govuk-back-link">Back</a>
+
+
+      <form action="new-address-result" method="post">
+
+        <h1 class="govuk-heading-xl">What is {{ data['default-user']}}'s new address?</h1>
+
+        <p class="govuk-body"><a href="enter-manual-address.html">Enter an address manually</a>.</p>
+
+        {{ govukInput({
+        id: 'lookup-postcode',
+        name: 'lookup-postcode',
+        value: data['lookup-postcode'] if data['lookup-postcode'] else '',
+        classes: 'govuk-input--width-10',
+        label: {
+        text: 'Postcode',
+        classes: 'govuk-input--width-10'
+        }
+        }) }}
+
+        {{ govukInput({
+        id: 'lookup-number-name',
+        name: 'lookup-number-name',
+        value: data['lookup-number-name'] if data['lookup-number-name'] else '',
+        classes: 'govuk-input--width-20',
+        label: {
+        text: 'Building number or name',
+        classes: 'govuk-input--width-20'
+        }
+        }) }}
+
+        {{ govukButton({
+        html: 'Find address'
+        }) }}
+
+
+      </form>
+
+    </div>
+
+
+  </main>
+</div>
+<!-- </div> -->
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+  </div>
+</div>
+
+{% endblock %}
