@@ -98,7 +98,7 @@ router.use((req, res, next) => {
   ;
 
   router.post('/sprint19/address-1', (req, res) => {
-    res.redirect('/sprint19/homephone-address')
+    res.redirect('/sprint19/new-move-date')
   })
   ;
 
@@ -176,6 +176,23 @@ router.use((req, res, next) => {
   })
   ;
 
+  router.post('/sprint19/occupants1', function(req, res) {
+    if ( req.body['correct-address'] === 'yes' ) {
+      res.redirect('/sprint19/correct-address');
+    } else {
+      res.redirect('/sprint19/address');
+    }
+  });
+
+
+  router.post('/sprint19/correct-address', function(req, res) {
+    if ( req.body['sp-age'] === 'yes' ) {
+      res.redirect('/sprint19/other-occupants2');
+    } else {
+      res.redirect('/sprint19/other-occupants');
+    }
+  });
+
   router.post('/sprint19/reason-removed1', (req, res) => {
     res.redirect('/sprint19/searchlight-check')
   })
@@ -222,6 +239,31 @@ router.use((req, res, next) => {
       res.redirect('death-date');
     } else {
       res.redirect('imprisioned-date');
+    }
+  });
+
+
+  router.post('/sprint19/move-date1', function(req, res) {
+    if ( req.body['sp-age'] === 'yes' ) {
+      res.redirect('/sprint19/move-date');
+    } else {
+      res.redirect('/sprint19/move-date3');
+    }
+  });
+
+  router.post('/sprint19/move-date3', function(req, res) {
+    if ( req.body['sp-age'] === 'yes' ) {
+      res.redirect('/sprint19/confirm-top-up');
+    } else {
+      res.redirect('/sprint19/confirm-no-top-up');
+    }
+  });
+
+  router.post('/sprint19/list-of-reasons', function(req, res) {
+    if ( req.body['sp-age'] === 'yes' ) {
+      res.redirect('/sprint19/move-date3');
+    } else {
+      res.redirect('/sprint19/move-date3');
     }
   });
 
