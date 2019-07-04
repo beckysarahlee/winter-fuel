@@ -69,10 +69,7 @@ GOV.UK Prototype Kit
           </div>
       </div>
 
-      <div class="govuk-inset-text">
-        This amount is based on 2 people living at the same
-        address who qualify for winter fuel payment.
-      </div>
+      <a href="occupants1" class="govuk-button">Check the payment</a>
 
       <div>
         <dl class="app-check-your-answers app-check-your-answers--short">
@@ -110,22 +107,10 @@ GOV.UK Prototype Kit
 
           <div class="app-check-your-answers__contents">
             <dd class="app-check-your-answers__answer">
-              <strong>Full name</strong>
+              <strong>Residental address</strong>
             </dd>
             <dd class="app-check-your-answers__answer">
-              <strong>Age</strong>
-            </dd>
-            <dd class="app-check-your-answers__change">
-              <a href="occupants">Change</a>
-            </dd>
-          </div>
-
-          <div class="app-check-your-answers__contents">
-            <dt class="app-check-your-answers__answer">
-              Alex Smith
-            </dt>
-            <dd class="app-check-your-answers__answer">
-              66
+              <strong>Occupants</strong>
             </dd>
             <dd class="app-check-your-answers__change">
             </dd>
@@ -133,10 +118,13 @@ GOV.UK Prototype Kit
 
           <div class="app-check-your-answers__contents">
             <dt class="app-check-your-answers__answer">
-              Geoff Smith
+                {{ data['address-line-1-default'] }}<br>
+                {{ data['address-town-default'] }}<br>
+                {{ data['address-county-default'] }}<br>
+                {{ data['address-postcode-default'] }}
             </dt>
             <dd class="app-check-your-answers__answer">
-              67
+              2 people of retirement age
             </dd>
             <dd class="app-check-your-answers__change">
             </dd>
