@@ -29,10 +29,8 @@ GOV.UK Prototype Kit
           <div class="grid-row">
             <div class="column-full">
 
-
-            <div class="column-full">
-
 {% include './_bar.html' %}
+
             </div>
           </div>
         </main>
@@ -40,41 +38,40 @@ GOV.UK Prototype Kit
         </br>
 
         <div>
-          <a href="contact" class="govuk-back-link">Back</a>
+          <a href="address" class="govuk-back-link">Back</a>
         </div>
 
-        <h1 class="govuk-heading-l">Change address</h1>
+        {% include './_green-bar.html' %}
 
-        <form method="post">
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="postcode">
-              Enter new postcode
-            </label>
-            <input class="govuk-input govuk-input--width-10" id="postcode" name="postcode" type="postcode" aria-describedby="postcode-hint">
+
+        <div class="govuk-inset-text">
+        2 Windsor Street <br>
+        South Gosfroth <br>
+        Newcastle <br>
+        NE3 1YL
+        </div>
+
+            <a href="/sprint19/correct-address" class="govuk-button">Save</a>  
+
+
+
+            </div>
+
           </div>
-
-          <button type="submit" class="govuk-button">
-            Find address
-          </button>
-
 
         </div>
 
       </div>
 
+    </main>        </div>
+  </div>
+  {% endblock %}
+
+  {% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
     </div>
-
   </div>
 
-</main>        </div>
-</div>
-{% endblock %}
-
-{% block content %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
-  </div>
-</div>
-
-{% endblock %}
+  {% endblock %}
