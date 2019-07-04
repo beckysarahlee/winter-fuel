@@ -21,6 +21,8 @@ $govuk-global-styles: true;
 @import '_verified-badge';
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
+@import 'custom-styles';
+
 // Hide GOV.UK logo and bump size of service name
 .govuk-header__logo {display: none}
 .govuk-header__link--service-name {
