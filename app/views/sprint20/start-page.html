@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "includes/cookie-banner.html" %}
+{# Set serviceName in config.js. #}
+{{ govukHeader({
+  serviceName: serviceName,
+  serviceUrl: "/"
+}) }}
+
+{% block headEnd %}
+{% include 'includes/remove-blue-bar.html' %}
+{% endblock %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <form action="overview" method="post">
+
+          <h1 class="govuk-heading-xl">Check eligibility for Winter Fuel Payment</h1>
+
+          <div class="govuk-inset-text">
+            
+          </div>
+
+          <p class="govuk-body">Use this service to:</p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>do something</li>
+            <li>update your name, address or other details</li>
+            <li>do something else</li>
+          </ul>
+
+          <p class="govuk-body">Registering takes around 5 minutes.</p>
+
+          <a href="/sprint20/date-of-birth" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">
+            Start now
+          </a>
+
+      </div>
+
+    </div>
+
+</div>
+
+</main>
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+  </div>
+</div>
+
+{% endblock %}
