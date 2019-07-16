@@ -21,26 +21,35 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        <form action="/sprint20/benefits" method="post">
+        <form method="post">
 
           <a href="/sprint20/residency" class="govuk-back-link">Back</a>
           <br>
           <br>
 
+
           <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <h1 class="govuk-fieldset__heading">
-                  How long in hospital?
+                  Were you admitted to hospital after 15 September 2018?
                 </h1>
               </legend>
-              <span id="changed-name-hint" class="govuk-hint">
-                Hint text
-              </span>
 
-<p> Radio, before or after date <br>
-    Or date input? </p>
+<br>
 
+              <div class="govuk-radios govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="yes" name="hospital-admission" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="yes">
+                    Yes
+                  </label> </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="no" name="hospital-admission" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="no">
+                    No
+                  </label> </div>
+              </div>
             </fieldset>
           </div>
 
