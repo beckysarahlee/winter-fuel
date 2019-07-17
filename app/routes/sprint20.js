@@ -26,8 +26,7 @@ router.use((req, res, next) => {
   });
 
 
-
-// Benefits
+  // Benefits
 
 router.post('/sprint20/benefits', function(req, res) {
   if ( req.body['benefits'] === 'yes' ) {
@@ -38,8 +37,7 @@ router.post('/sprint20/benefits', function(req, res) {
 });
 
 
-
-// Residency type
+  // Residency type
 
   router.post('/sprint20/residency-type', function(req, res) {
     if ( req.body['where-were-you-living'] === 'hospital' ) {
@@ -55,7 +53,8 @@ router.post('/sprint20/benefits', function(req, res) {
     }
   });
 
-// Hospital
+
+  // Hospital
 
   router.post('/sprint20/hospital', function(req, res) {
     if ( req.body['hospital-admission'] === 'yes' ) {
@@ -66,7 +65,7 @@ router.post('/sprint20/benefits', function(req, res) {
   });
 
 
-// Hospital
+  // Care or nursing home
 
     router.post('/sprint20/care-home', function(req, res) {
       if ( req.body['hospital-admission'] === 'yes' ) {
