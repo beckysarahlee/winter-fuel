@@ -17,7 +17,7 @@ You can change the service name by editing the file '/app/config.js'.
 
 Import the header component macro place it in the `{% block header %}`and provide `navigation` items as shown below.
 
-    {% from 'header/macro.njk' import govukHeader %}
+    {% from 'govuk/components/header/macro.njk' import govukHeader %}
 
     {% block header %}
       {{ govukHeader({
@@ -39,30 +39,30 @@ Import the header component macro place it in the `{% block header %}`and provid
       }) }}
     {% endblock %}
 
-An example of this can be seen in the [blank question page](/docs/examples/template-question-page-blank) template.
+An example of this can be seen in the [blank question page](/docs/templates/question).
 
 ## Add a phase banner
 
-Import the phase-banner component and supply tag and feedback text.
+Import the phase-banner component and supply tag and feedback text. The phase banner must be inside a `{% block beforeContent %}`.
 
 ### How to include an Alpha banner
 
-    {% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+    {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
 
     {{ govukPhaseBanner({
       tag: {
         text: "alpha"
       },
-      html: "This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it."
+      html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
     }) }}
 
 ### How to include a Beta banner
 
-    {% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+    {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
 
     {{ govukPhaseBanner({
       tag: {
         text: "beta"
       },
-      html: "This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it."
+      html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
     }) }}
