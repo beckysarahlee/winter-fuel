@@ -16,6 +16,8 @@ GOV.UK Prototype Kit
 {% include 'includes/remove-blue-bar.html' %}
 {% endblock %}
 
+{% include './_find-someone.html' %}
+
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
@@ -23,7 +25,7 @@ GOV.UK Prototype Kit
 
     <form method="post">
 
-          <a href="/sprint20/residency" class="govuk-back-link">Back</a>
+          <a href="/sprint20/benefits" class="govuk-back-link">Back</a>
           <br>
           <br>
 
@@ -56,6 +58,8 @@ GOV.UK Prototype Kit
                   <label class="govuk-label govuk-radios__label" for="prison">
                     In prison
                   </label> </div>
+
+
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="normal" name="where-were-you-living" type="radio" value="normal">
                     <label class="govuk-label govuk-radios__label" for="normal">

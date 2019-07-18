@@ -68,12 +68,22 @@ router.post('/sprint20/benefits', function(req, res) {
   // Care or nursing home
 
     router.post('/sprint20/care-home', function(req, res) {
-      if ( req.body['hospital-admission'] === 'yes' ) {
+      if ( req.body['care-home-admission'] === 'yes' ) {
         res.redirect('who');
       } else {
-        res.redirect('hospital-over-year');
+        res.redirect('care-home-over-13');
       }
     });
+
+    // Who (Living with)
+
+      router.post('/sprint20/who', function(req, res) {
+        if ( req.body['who-do-you-live-with'] === 'yes' ) {
+          res.redirect('shared-payment');
+        } else {
+          res.redirect('full-payment');
+        }
+      });
 
   //    } else if (something === something) {
 
