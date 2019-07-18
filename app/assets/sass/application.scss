@@ -113,7 +113,7 @@ $govuk-assets-path: '/govuk/assets/';
 // status
 
 span.status-tag-low2 {
-    background-color: #85994b;
+    background-color: govuk-colour("light-green");
     color: #fff;
     margin-right: 0.75em;
     vertical-align: baseline;
@@ -170,7 +170,7 @@ span.status-tag-medium2 {
 }
 
 span.status-tag-low {
-    background-color: #85994b;
+    background-color: govuk-colour("light-green");
     color: #fff;
 
     vertical-align: baseline;
@@ -230,7 +230,7 @@ span.status-tag-disabled {
 //key header bar
 
 .key-details-bar {
-  background-color: #005ea5;
+  background-color: govuk-colour("blue");
   margin-top: 0px;
 }
 
@@ -340,7 +340,7 @@ span.status-tag-disabled {
   font-weight: 700;
   line-height: 1.25;
   padding: 5px 8px 0;
-  color: #005ea5;
+  color: govuk-colour("blue");
   background-color: #fff;
   letter-spacing: 1px;
   text-decoration: none;
@@ -394,7 +394,7 @@ span.status-tag-disabled {
 
 @media (min-width: 641px) {
   .tabs-content [role='tabpanel'] {
-    border-top: 1px solid #bfc1c3;
+    border-top: 1px solid govuk-colour("mid-grey");
   }
 }
 
@@ -408,11 +408,11 @@ span.status-tag-disabled {
 
 .tabs-panel-inner:focus {
   border: 0;
-    outline: 5px solid #ffbf47;
+    outline: 5px solid govuk-colour("yellow");
 }
 
 .tabs-list[role='tablist'] {
-  border-top: 1px solid #bfc1c3;
+  border-top: 1px solid govuk-colour("mid-grey");
   margin: 0;
 }
 
@@ -429,7 +429,7 @@ span.status-tag-disabled {
   list-style-type:none;
   font-size: 16px;
   line-height: 1.25;
-  border-bottom: 1px solid #bfc1c3;
+  border-bottom: 1px solid govuk-colour("mid-grey");
   margin: 0;
   list-style: none;
 }
@@ -451,7 +451,7 @@ span.status-tag-disabled {
 }
 
 .tabs-list[role='tablist'] li a {
-  background-color: #dee0e2;
+  background-color: govuk-colour("light-grey");
   display: block;
   font-weight: bold;
   padding: 0.47368em;
@@ -477,7 +477,7 @@ span.status-tag-disabled {
 
 @media (min-width: 641px) {
   .tabs-list[role='tablist'] li [aria-selected='true'] {
-    border: 1px solid #bfc1c3;
+    border: 1px solid govuk-colour("mid-grey");
     border-bottom: 1px solid transparent;
     margin-bottom: 0;
     margin-top: 0;
@@ -489,7 +489,7 @@ span.status-tag-disabled {
 
 //index page
 .homepage-top {
-  background-color:  #005ea5;
+  background-color:  govuk-colour("blue");
   box-sizing: border-box;
 
   margin-top: -10px;
@@ -533,14 +533,14 @@ span.status-tag-disabled {
 }
 
 .most-recent {
-  border: 1px solid   #bfc1c3;
+  border: 1px solid   govuk-colour("mid-grey");
   margin-bottom: 15px;
   margin-top: 15px;
   overflow: hidden;
   position: relative;
 
   &::before {
-    background-color:   #bfc1c3;
+    background-color:   govuk-colour("mid-grey");
     color: white;
     content: 'MOST RECENT';
     font-family: 'nta', Arial, sans-serif;
@@ -556,7 +556,7 @@ span.status-tag-disabled {
 //Tags
 
 .app-c-tag {
-  background-color: #005ea5;
+  background-color: govuk-colour("blue");
   color: #ffffff;
   display: inline-block;
   font-family: 'nta', Arial, sans-serif;
@@ -570,15 +570,15 @@ span.status-tag-disabled {
 }
 
 .app-c-tag--success {
-  background-color: #85994b;
+  background-color: govuk-colour("light-green");
 }
 
 .app-c-tag--warning {
-  background-color: #b58840;
+  background-color: govuk-colour("brown");
 }
 
 .app-c-tag--danger {
-  background-color: #df3034;
+  background-color: govuk-colour("red");
 }
 
 //search
@@ -590,7 +590,7 @@ span.status-tag-disabled {
     top: 0;
     width: 36px;
     height: 36px;
-    border: 1px solid #005ea5;
+    border: 1px solid govuk-colour("blue");
     border-width: 0 0 0 1px;
     border-left-color: #222;
     -webkit-border-radius: 0;
@@ -599,8 +599,8 @@ span.status-tag-disabled {
     overflow: hidden;
     text-indent: -5000px;
     color: #fff;
-    background-color: #005ea5;
-    hover: darken(#005ea5, 5%);
+    background-color: govuk-colour("blue");
+    hover: darken(govuk-colour("blue"), 5%);
     background-image: url(https://assets.publishing.service.gov.uk/static/search-button-ca89b2a79f944909ceb7370d3f0b78811d32b96e883348fcd8886f63dd619585.png);
     background-repeat: no-repeat;
     background-position: 0 50%;

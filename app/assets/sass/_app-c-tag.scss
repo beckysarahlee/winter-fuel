@@ -1,5 +1,5 @@
 .app-c-tag {
-  background-color: #005ea5;
+  background-color: govuk-colour("blue");
   color: #fff;
   display: inline-block;
   font-family: 'nta', Arial, sans-serif;
@@ -13,15 +13,15 @@
 }
 
 .app-c-tag--success {
-  background-color: #005ea5;
+  background-color: govuk-colour("blue");
 }
 
 .app-c-tag--warning {
-  background-color: #b58840;
+  background-color: govuk-colour("brown");
 }
 
 .app-c-tag--danger {
-  background-color: #df3034;
+  background-color: govuk-colour("red");
 }
 
 .app-c-tag--dead {

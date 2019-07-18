@@ -9,7 +9,7 @@
 }
 
 .navigation-global {
-  background: #dee0e2;
+  background: govuk-colour("light-grey");
 }
 
 .navigation-global ul {
@@ -42,17 +42,17 @@
 
 .navigation-global a:active,
 .navigation-global a:focus {
-  background: #ffbf47;
+  background: govuk-colour("yellow");
   color: #0b0c0c;
 }
 
 .navigation-global a:hover {
-  background: #f8f8f8;
+  background: govuk-colour("light-grey");
   text-decoration: underline;
 }
 
 .navigation-global .active {
-  background: #005ea5;
+  background: govuk-colour("blue");
   border-bottom: 0;
   font-weight: 700;
 }
@@ -68,7 +68,7 @@
 }
 
 .navigation-global .active:hover {
-  background: #005ea5;
+  background: govuk-colour("blue");
   color: #fff;
   text-decoration: underline;
 }
