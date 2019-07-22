@@ -41,6 +41,7 @@ router.post('/sprint20/benefits', function(req, res) {
 });
 
 
+
   // Residency type
 
   router.post('/sprint20/residency-type', function(req, res) {
@@ -83,11 +84,30 @@ router.post('/sprint20/benefits', function(req, res) {
 
       router.post('/sprint20/who', function(req, res) {
         if ( req.body['who-do-you-live-with'] === 'yes' ) {
-          res.redirect('shared-payment');
+          res.redirect('live-with-carehome');
         } else {
           res.redirect('full-payment');
         }
       });
+
+// Who (Care home during Q week)
+
+router.post('/sprint20/live-with-carehome', function(req, res) {
+  if ( req.body['live-with-carehome'] === 'yes' ) {
+    res.redirect('live-with-carehome-13weeks');
+  } else {
+    res.redirect('shared-payment');
+  }
+});
+
+router.post('/sprint20/live-with-carehome-13weeks', function(req, res) {
+  if ( req.body['carehome-13weeks'] === 'yes' ) {
+    res.redirect('shared-payment');
+  } else {
+    res.redirect('full-payment');
+  }
+});
+
 
   //    } else if (something === something) {
 
