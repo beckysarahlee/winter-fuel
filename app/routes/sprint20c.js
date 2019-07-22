@@ -8,86 +8,13 @@ router.use((req, res, next) => {
     next()
   })
 
-  // Scenarios
-
-
-
   // Date of birth
 
   router.post('/sprint20c/date-of-birth', (req, res) => {
-    res.redirect('/sprint20c/residency')
+    res.redirect('/sprint20c/too-young')
   })
   ;
 
-  // Living
-
-  router.post('/sprint20c/residency', function(req, res) {
-    if ( req.body['living'] === 'united-kingdom' ) {
-      res.redirect('benefits');
-    } else {
-      res.redirect('overseas');
-    }
-  });
-
-
-  // Benefits
-
-router.post('/sprint20c/benefits', function(req, res) {
-  if ( req.body['benefits'] === 'yes' ) {
-    res.redirect('receiving-benefits');
-  } else {
-    res.redirect('residency-type');
-  }
-});
-
-
-  // Residency type
-
-  router.post('/sprint20c/residency-type', function(req, res) {
-    if ( req.body['where-were-you-living'] === 'hospital' ) {
-      res.redirect('hospital');
-    } else if ( req.body['where-were-you-living'] === 'carehome' ) {
-      res.redirect('care-home');
-    } else if ( req.body['where-were-you-living'] === 'no-abode' ) {
-      res.redirect('no-abode');
-    } else if ( req.body['where-were-you-living'] === 'prison' ) {
-      res.redirect('prison');
-    } else {
-      res.redirect('who');
-    }
-  });
-
-
-  // Hospital
-
-  router.post('/sprint20c/hospital', function(req, res) {
-    if ( req.body['hospital-admission'] === 'yes' ) {
-      res.redirect('who');
-    } else {
-      res.redirect('hospital-over-year');
-    }
-  });
-
-
-  // Care or nursing home
-
-    router.post('/sprint20c/care-home', function(req, res) {
-      if ( req.body['care-home-admission'] === 'yes' ) {
-        res.redirect('who');
-      } else {
-        res.redirect('care-home-over-13');
-      }
-    });
-
-    // Who (Living with)
-
-      router.post('/sprint20c/who', function(req, res) {
-        if ( req.body['who-do-you-live-with'] === 'yes' ) {
-          res.redirect('shared-payment');
-        } else {
-          res.redirect('full-payment');
-        }
-      });
 
   //    } else if (something === something) {
 
