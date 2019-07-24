@@ -15,7 +15,7 @@ router.use((req, res, next) => {
   // Date of birth
 
   router.post('/sprint21/date-of-birth', (req, res) => {
-    res.redirect('/sprint21/residency')
+    res.redirect('/sprint21/receiving-sp')
   })
   ;
 
