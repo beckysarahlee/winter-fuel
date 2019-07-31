@@ -109,6 +109,35 @@ router.post('/sprint21/benefits', function(req, res) {
         }
       });
 
+      // Shared payment to ref
+
+      router.post('/sprint21/shared-payment', (req, res) => {
+        res.redirect('/sprint21/find')
+      })
+      ;
+
+      // Find a person
+
+      router.post('/sprint21/find', (req, res) => {
+        res.redirect('/sprint21/find-result')
+      })
+      ;
+
+      // Found person to security
+
+      router.post('/sprint21/find-result', (req, res) => {
+        res.redirect('/sprint21/security')
+      })
+      ;
+
+      // Found person to security
+
+      router.post('/sprint21/security', (req, res) => {
+        res.redirect('/sprint21/address-check')
+      })
+      ;
+
+
 // Who (Care home during Q week)
 
 router.post('/sprint21/live-with-carehome', function(req, res) {

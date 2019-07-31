@@ -19,6 +19,7 @@ $govuk-global-styles: true;
 @import 'timeline';
 @import 'navigation-secondary';
 @import '_verified-badge';
+@import '_govuk-panel--agent';
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 @import 'custom-styles';

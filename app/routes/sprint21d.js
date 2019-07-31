@@ -56,7 +56,7 @@ router.post('/sprint21d/benefits', function(req, res) {
   if ( req.body['benefits'] === 'yes' ) {
     res.redirect('receiving-benefits');
   } else {
-    res.redirect('residency-type');
+    res.redirect('who');
   }
 });
 
@@ -104,7 +104,7 @@ router.post('/sprint21d/benefits', function(req, res) {
 
       router.post('/sprint21d/who', function(req, res) {
         if ( req.body['who-do-you-live-with'] === 'yes' ) {
-          res.redirect('live-with-carehome');
+          res.redirect('shared-payment');
         } else {
           res.redirect('full-payment');
         }
