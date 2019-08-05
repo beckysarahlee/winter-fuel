@@ -116,6 +116,13 @@ router.post('/sprint21/benefits', function(req, res) {
       })
       ;
 
+      // Full payment
+
+      router.post('/sprint21/full-payment', (req, res) => {
+        res.redirect('/sprint21/find')
+      })
+      ;
+
       // Find a person
 
       router.post('/sprint21/find', (req, res) => {
@@ -155,6 +162,18 @@ router.post('/sprint21/live-with-carehome-13weeks', function(req, res) {
     res.redirect('full-payment');
   }
 });
+
+// Current address
+
+router.post('/sprint21/address-check', function(req, res) {
+  if ( req.body['address-match'] === 'yes' ) {
+    res.redirect('occupants');
+  } else {
+    res.redirect('change-address');
+  }
+});
+
+
 
 
   //    } else if (something === something) {
