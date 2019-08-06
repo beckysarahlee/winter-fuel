@@ -169,10 +169,24 @@ router.post('/sprint21/address-check', function(req, res) {
   if ( req.body['address-match'] === 'yes' ) {
     res.redirect('occupants');
   } else {
-    res.redirect('change-address');
+    res.redirect('postcode');
   }
 });
 
+
+// Postcode
+
+router.post('/sprint21/postcode', (req, res) => {
+  res.redirect('/sprint21/select-address')
+})
+;
+
+// Check
+
+router.post('/sprint21/postcode', (req, res) => {
+  res.redirect('/sprint21/select-address')
+})
+;
 
 
 

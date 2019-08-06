@@ -3,6 +3,8 @@ $govuk-global-styles: true;
 
 // Import GOV.UK Frontend
 @import "node_modules/govuk-frontend/all";
+// Import HMCTS Frontend
+@import "node_modules/@hmcts/frontend/all";
 
 // Patterns that aren't in Frontend
 @import "patterns/check-your-answers";
@@ -34,7 +36,9 @@ $govuk-global-styles: true;
 }
 
 
-
+.govuk-header__content {
+  padding-left: 0;
+}
 
 
 
