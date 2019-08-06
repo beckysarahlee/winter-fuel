@@ -210,6 +210,14 @@ router.post('/sprint21/check', (req, res) => {
 })
 ;
 
+// Check to declaration
+
+router.post('/sprint21/declaration', (req, res) => {
+  res.redirect('/sprint21/confirmation')
+})
+;
+
+
 
 
   //    } else if (something === something) {
