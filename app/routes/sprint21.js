@@ -188,6 +188,28 @@ router.post('/sprint21/postcode', (req, res) => {
 })
 ;
 
+// Select address to check
+
+router.post('/sprint21/select-address', (req, res) => {
+  res.redirect('/sprint21/occupants')
+})
+;
+
+
+// Occupants
+
+router.post('/sprint21/occupants', (req, res) => {
+  res.redirect('/sprint21/check')
+})
+;
+
+// Check to declaration
+
+router.post('/sprint21/check', (req, res) => {
+  res.redirect('/sprint21/declaration')
+})
+;
+
 
 
   //    } else if (something === something) {
