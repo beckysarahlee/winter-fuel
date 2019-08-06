@@ -7,9 +7,6 @@ $govuk-assets-path: '/govuk/assets/';
 // Import GOV.UK Frontend and any extension styles if extensions have been configured
 @import "lib/extensions/extensions";
 
-// Import HMCTS Frontend
-@import "node_modules/@hmcts/frontend/all";
-
 // Patterns that aren't in Frontend
 @import "patterns/check-your-answers";
 @import "patterns/step-by-step-navigation";
