@@ -198,7 +198,7 @@ router.post('/sprint21/select-address', (req, res) => {
 // Select address to check
 
 router.post('/sprint21/move-date', (req, res) => {
-  res.redirect('/sprint21/occupants')
+  res.redirect('/sprint21/check')
 })
 ;
 
