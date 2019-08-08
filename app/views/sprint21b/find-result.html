@@ -23,35 +23,29 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        <form method="post">
+<a href="#" class="govuk-back-link">Back</a>
 
-          <a href="/sprint21/residency-type" class="govuk-back-link">Back</a>
-          <br>
-          <br>
+      <form method="post">
 
-          <div class="govuk-panel govuk-panel--confirmation">
-                    <div class="govuk-panel__body">
-                    <strong>You are entitled to a Winter Fuel Payment of £100</strong>
-                    </div>
-                  </div>
+        <br>
 
-            <p>This is a shared payment because you live with someone else over
-              State Pension age.</p>
+        <h2 class="govuk-heading-xl">Alex Smith<br>
+          <span class="govuk-caption-xl"> {{data.nino}} </span>
+          <span class="app-c-tag app-c-tag">Receiving Winter Fuel Payment</span>
+        </h2>
 
-              <button type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
-                I don't know what to call this button
-              </button>
-
+        <button type="submit" class="govuk-button">
+          Continue
+        </button>
 
       </div>
 
-
-
     </div>
 
-</div>
+  </div>
 
 </main>
+</div>
 
 {% endblock %}
 
