@@ -167,7 +167,7 @@ router.post('/sprint21/live-with-carehome-13weeks', function(req, res) {
 
 router.post('/sprint21/address-check', function(req, res) {
   if ( req.body['address-match'] === 'yes' ) {
-    res.redirect('occupants');
+    res.redirect('check');
   } else {
     res.redirect('postcode');
   }
@@ -191,6 +191,13 @@ router.post('/sprint21/postcode', (req, res) => {
 // Select address to check
 
 router.post('/sprint21/select-address', (req, res) => {
+  res.redirect('/sprint21/move-date')
+})
+;
+
+// Select address to check
+
+router.post('/sprint21/move-date', (req, res) => {
   res.redirect('/sprint21/occupants')
 })
 ;
@@ -206,7 +213,7 @@ router.post('/sprint21/occupants', (req, res) => {
 // Check to declaration
 
 router.post('/sprint21/check', (req, res) => {
-  res.redirect('/sprint21/declaration')
+  res.redirect('/sprint21/confirmation')
 })
 ;
 
