@@ -635,3 +635,10 @@ margin-bottom: 10px;
   float: left;
   @include govuk-font(19);
 }
+
+// MOJ Filter width
+@media (min-width: 48.0625em) {
+  .moj-filter-layout__filter {
+    max-width: 33.3333333%;
+  }
+}

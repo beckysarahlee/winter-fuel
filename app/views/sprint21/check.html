@@ -32,7 +32,7 @@ GOV.UK Prototype Kit
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
 
-           <h1 class="govuk-heading-l">Check</h1>
+           <h1 class="govuk-heading-l">Check information</h1>
 
               <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                 <div class="govuk-summary-list__row">
@@ -45,9 +45,10 @@ GOV.UK Prototype Kit
                       <br>
                       {{data.postcode}}
                     {% else %}
-                      4 Potato close<br />
-                      Vegetable Street<br />
-                      TM07 7TO
+                      20 Elmgrove Terrace<br>
+                      Newcastle Upon Tyne<br>
+                      Tyne & Wear<br>
+                      NE1 6XP
                     {% endif %}
                   </dd>
                   <dd class="govuk-summary-list__actions">
@@ -56,6 +57,9 @@ GOV.UK Prototype Kit
                     </a>
                   </dd>
                 </div>
+
+
+                {% if data['moveday'] %}
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
                     When did you move to this address?
@@ -69,6 +73,9 @@ GOV.UK Prototype Kit
                     </a>
                   </dd>
                 </div>
+                {% endif %}
+
+
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
                     Occupants
