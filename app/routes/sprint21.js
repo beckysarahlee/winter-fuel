@@ -15,7 +15,7 @@ router.post('/sprint21/receiving-sp', (req, res) => {
     res.redirect('/sprint21/full-payment')
   }
   else if (req.body.pension.includes('sp')) {
-    res.redirect('/sprint21/benefits');
+    res.redirect('/sprint21/residency-type');
   } else {
     res.redirect('/sprint21/claimed')
   }
