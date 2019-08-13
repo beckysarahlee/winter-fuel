@@ -65,10 +65,9 @@ GOV.UK Prototype Kit
                   {% if data.address %}
                     {{data.address.split(', ').join('<br />') | safe}}
                   {% else %}
-                    70 Elmgrove Terrace<br>
-                    Newcastle Upon Tyne<br>
-                    Tyne & Wear<br>
-                    NE1 6XP
+                    59 Spilman Street<br>
+                    Skendleby<br>
+                    PE23 7RA
                   {% endif %}
                 </dd>
                 <dd class="app-check-your-answers__change">
@@ -89,7 +88,7 @@ GOV.UK Prototype Kit
                 {% elseif data.homephone %}
                   {{data.homephone}}
                 {% else %}
-                  0191 4461056
+                01665 720871
                 {% endif %}
               </dd>
 
@@ -119,112 +118,13 @@ GOV.UK Prototype Kit
               </dd>
             </div>
 
-            <div class="app-check-your-answers__contents">
-              <dt class="app-check-your-answers__answer">
-                Mobile phone number
-              </dt>
-              <dd class="app-check-your-answers__answer">
-                {% if data.mobilenumber %}
-                  {{data.mobilenumber}}
-                {% endif %}
-                {% if data['mobilephone-remove'] === 'Yes' %}
-                {% elseif data.mobilephone %}
-                  {{data.mobilephone}}
-                {% endif %}
-                </dd>
-              <dd class="app-check-your-answers__change">
-                <a href="mobilephone">
-                  {% if not data.mobilenumber %}
-                  <span class="govuk-visually-hidden"> mobile number</span>
-                  {% else %}
-                    <span class="govuk-visually-hidden"> mobile number</span>
-                  {% endif %}
-                </a>
-              </dd>
-            </div>
-
-            <div class="app-check-your-answers__contents">
-              <dt class="app-check-your-answers__answer">
-                Email address
-              </dt>
-              <dd class="app-check-your-answers__answer">
-                {% if data.email %}
-                  {{data.email}}
-                {% endif %}
-              </dd>
-              <dd class="app-check-your-answers__change">
-                <a href="email">
-                  {% if not data.email %}
-                    <span class="govuk-visually-hidden"> mobile number</span>
-                  {% else %}
-                    <span class="govuk-visually-hidden"> mobile number</span>
-                  {% endif %}
-                </a>
-              </dd>
-            </div>
-
-            <div class="app-check-your-answers__contents">
-              <dt class="app-check-your-answers__answer">
-                Contact preferences
-              </dt>
-              <dd class="app-check-your-answers__answer">
-                {% if data.contactpreference %}
-                  {{data.contactpreference}}
-                {% endif %}
-              </dd>
-              <dd class="app-check-your-answers__change">
-                <a href="contact-preferences">
-                  {% if not data.contactpreference %}
-                    <span class="govuk-visually-hidden"> contact preferences</span>
-                  {% else %}
-                    <span class="govuk-visually-hidden"> contact preferences</span>
-                  {% endif %}
-                </a>
-              </dd>
-            </div>
 
           </div>
 
         </div>
 
 
-        <div class="govuk-grid-column-one-third">
 
-          <h2 class="govuk-heading-m">
-            Contact changes
-          </h2>
-          <ol class="app-timeline">
-
-            <li class="app-timeline__entry">
-              <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
-                Address changed
-              </h3>
-
-              <p class="app-timeline__info govuk-!-margin-bottom-0">
-                <span class="govuk-visually-hidden">Bank account changed</span>
-                <span class="app-timeline__date">
-                  29 March 2019
-                </span>
-              </p>
-            </li>
-
-            <li class="app-timeline__entry">
-              <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
-                Address changed
-              </h3>
-
-              <p class="app-timeline__info govuk-!-margin-bottom-0">
-                <span class="govuk-visually-hidden">No changes made</span>
-                <span class="app-timeline__date">
-8 January 2019
-                </span>
-              </p>
-            </li>
-
-
-          </ol>
-
-        </div>
 
 
       </div>

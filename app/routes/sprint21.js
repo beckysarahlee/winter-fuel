@@ -174,6 +174,13 @@ router.post('/sprint21/address-check', function(req, res) {
 });
 
 
+// Power of attorney
+
+router.post('/sprint21/poa', (req, res) => {
+  res.redirect('/sprint21/check')
+})
+;
+
 // Postcode
 
 router.post('/sprint21/postcode', (req, res) => {
@@ -198,7 +205,7 @@ router.post('/sprint21/select-address', (req, res) => {
 // Select address to check
 
 router.post('/sprint21/move-date', (req, res) => {
-  res.redirect('/sprint21/check')
+  res.redirect('/sprint21/poa')
 })
 ;
 

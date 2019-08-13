@@ -85,6 +85,13 @@ router.use((req, res, next) => {
   })
   ;
 
+  router.post('/sprint18/security', (req, res) => {
+    res.redirect('/sprint18/overview')
+  })
+  ;
+
+
+
   router.use((req, res, next) => {
     if (req.method === 'POST') {
       console.log(JSON.stringify(req.session.data, null, 2))

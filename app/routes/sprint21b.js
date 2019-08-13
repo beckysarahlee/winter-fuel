@@ -167,12 +167,19 @@ router.post('/sprint21b/live-with-carehome-13weeks', function(req, res) {
 
 router.post('/sprint21b/address-check', function(req, res) {
   if ( req.body['address-match'] === 'yes' ) {
-    res.redirect('check');
+    res.redirect('poa');
   } else {
     res.redirect('postcode');
   }
 });
 
+
+// Power of attorney
+
+router.post('/sprint21b/poa', (req, res) => {
+  res.redirect('/sprint21b/check')
+})
+;
 
 // Postcode
 
@@ -198,7 +205,7 @@ router.post('/sprint21b/select-address', (req, res) => {
 // Select address to check
 
 router.post('/sprint21b/move-date', (req, res) => {
-  res.redirect('/sprint21b/occupants')
+  res.redirect('/sprint21b/poa')
 })
 ;
 
