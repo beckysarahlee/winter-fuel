@@ -85,6 +85,12 @@ router.use((req, res, next) => {
   })
   ;
 
+  router.post('/sprint18/find-1', (req, res) => {
+    res.redirect('/sprint18/security')
+  })
+  ;
+
+
   router.post('/sprint18/security', (req, res) => {
     res.redirect('/sprint18/overview')
   })
