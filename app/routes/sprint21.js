@@ -167,7 +167,7 @@ router.post('/sprint21/live-with-carehome-13weeks', function(req, res) {
 
 router.post('/sprint21/address-check', function(req, res) {
   if ( req.body['address-match'] === 'yes' ) {
-    res.redirect('check');
+    res.redirect('poa');
   } else {
     res.redirect('postcode');
   }
