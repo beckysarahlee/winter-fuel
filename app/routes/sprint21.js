@@ -220,7 +220,7 @@ router.post('/sprint21/occupants', (req, res) => {
 // Check to declaration
 
 router.post('/sprint21/check', (req, res) => {
-  res.redirect('/sprint21/confirmation')
+  res.redirect('/sprint21/declaration')
 })
 ;
 

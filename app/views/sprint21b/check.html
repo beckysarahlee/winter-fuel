@@ -32,7 +32,7 @@ GOV.UK Prototype Kit
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
 
-           <h1 class="govuk-heading-l">Check the caller’s answers</h1>
+              <h1 class="govuk-heading-l">Check the caller’s answers</h1>
 
               <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                 <div class="govuk-summary-list__row">
@@ -41,9 +41,9 @@ GOV.UK Prototype Kit
                   </dt>
                   <dd class="govuk-summary-list__value">
                     20 Elmgrove Terrace<br>
-                  Newcastle Upon Tyne<br>
-                  Tyne & Wear<br>
-                  NE1 6XP
+                    Newcastle Upon Tyne<br>
+                    Tyne & Wear<br>
+                    NE1 6XP
                   </dd>
                   <dd class="govuk-summary-list__actions">
                     <a class="govuk-link" href="#">
@@ -66,31 +66,36 @@ GOV.UK Prototype Kit
                 </div>
               </dl>
 
-              <p>Some of the information you have provided does not match what DWP hold on record.
-                <br>
-               <p>
-
-              <p>By submitting this change, you agree that:<br>
-              <ul class="govuk-list govuk-list--bullet">
-              <li>the information you've given is complete and correct</li>
-              <li>to tell Department for Work and Pensions (DWP) straight away if your circumstances change </li>
-              <li>DWP can ask you to pay back any recoverable overpayment</li>
-              </ul>
-              </p>
-
-              <div class="govuk-warning-text">
-              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-              <strong class="govuk-warning-text__text">
-              <span class="govuk-warning-text__assistive">Warning</span>
-              You could be prosecuted or have to pay a penalty if you give wrong or incomplete
-              information, or if you don't report changes.
-              </strong>
+              <div class="govuk-inset-text">
+                Based on the information you have given us, you should have received £100.
+                Some of this information does not match what DWP currently hold on record.
               </div>
+
+
+              <h1 class="govuk-heading-s">Do you want us to change your details?</h1>
+
+
+              <div class="govuk-radios govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="changed-name">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                    No
+                  </label>
+                </div>
+              </div>
+
+              <br>
 
             </fieldset>
 
             <button type="submit" class="govuk-button">
-              Caller agrees - send to DWP
+              Continue
 
           </div>
 

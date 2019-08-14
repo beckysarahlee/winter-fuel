@@ -92,7 +92,7 @@ router.use((req, res, next) => {
 
 
   router.post('/sprint18/security', (req, res) => {
-    res.redirect('/sprint18/overview')
+    res.redirect('/sprint18/overview-security')
   })
   ;
 
