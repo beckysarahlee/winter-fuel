@@ -129,7 +129,7 @@ router.post('/sprint22b/benefits', function(req, res) {
       // Full payment
 
       router.post('/sprint22b/full-payment', (req, res) => {
-        res.redirect('/sprint22b/find')
+        res.redirect('/sprint22b/security')
       })
       ;
 
@@ -143,7 +143,7 @@ router.post('/sprint22b/benefits', function(req, res) {
       // Found person to security
 
       router.post('/sprint22b/find-result', (req, res) => {
-        res.redirect('/sprint22b/security')
+        res.redirect('/sprint22b/date-of-birth')
       })
       ;
 
