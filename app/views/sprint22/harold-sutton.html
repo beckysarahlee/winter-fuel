@@ -16,33 +16,34 @@ GOV.UK Prototype Kit
 {% include 'includes/remove-blue-bar.html' %}
 {% endblock %}
 
-{% include './_blue_bar.html' %}
 
 <div class="govuk-width-container">
+
   <main class="govuk-main-wrapper">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
 
-        <form method="post">
+    <div class="govuk-grid-column-two-thirds">
 
-          <a href="/sprint22b/residency-type" class="govuk-back-link">Back</a>
-          <br>
-          <br>
+      <a href="/sprint22/result" class="govuk-back-link">Back</a>
 
-          <h1 class="govuk-heading-l">You do not qualify for Winter Fuel Payment</h1>
+      <main id="content" role="main">
+        <div class="grid-row">
+          <div class="column-full">
 
-          <p>This is because you were in prison during the week that we calculate
-            eligibility for Winter Fuel Payment.</p>
+            {% include './_bar.html' %}
 
-      </div>
+            {% include './_tab-overview.html' %}
+
+
+          </div>
+        </div>
+      </main>
 
 
     </div>
 
+  </main>
 </div>
-
-</main>
-
+<!-- </div> -->
 {% endblock %}
 
 {% block content %}
