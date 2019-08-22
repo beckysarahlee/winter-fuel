@@ -17,6 +17,7 @@ const sprint21 = require('./routes/sprint21');
 const sprint21b = require('./routes/sprint21b');
 const sprint21c = require('./routes/sprint21c');
 const sprint21d = require('./routes/sprint21d');
+const sprint22a = require('./routes/sprint22a');
 const sprint22b = require('./routes/sprint22b');
 const sprint22c = require('./routes/sprint22c');
 
@@ -37,6 +38,7 @@ router.use(sprint21);
 router.use(sprint21b);
 router.use(sprint21c);
 router.use(sprint21d);
+router.use(sprint22a);
 router.use(sprint22b);
 router.use(sprint22c);
 

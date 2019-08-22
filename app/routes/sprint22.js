@@ -8,14 +8,11 @@ router.use((req, res, next) => {
     next()
   })
 
-  // Date of birth
-
-  router.post('/sprint22/find', (req, res) => {
-    res.redirect('/sprint22/result')
+  router.post('/sprint22/exceptions', (req, res) => {
+    res.redirect('/sprint22/exceptions-result')
   })
   ;
 
   //    } else if (something === something) {
-
 
   module.exports = router;
