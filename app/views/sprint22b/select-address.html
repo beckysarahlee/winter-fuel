@@ -4,20 +4,11 @@
 GOV.UK Prototype Kit
 {% endblock %}
 
-{% block header %}
-{% include "includes/cookie-banner.html" %}
-{# Set serviceName in config.js. #}
-{{ govukHeader({
-  serviceName: serviceName,
-  serviceUrl: "/"
-}) }}
-
-{% block headEnd %}
-{% include 'includes/remove-blue-bar.html' %}
+{% block beforeContent %}
+  {% include './_blue_bar.html' %}
 {% endblock %}
 
-
-{% include './_blue_bar.html' %}
+{% block content %}
 
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
@@ -30,34 +21,32 @@ GOV.UK Prototype Kit
           <h2 class="govuk-heading-l">What is the first line of your address?</h2>
 
           <div class="govuk-form-group">
-            <label class="govuk-label class" for="sort">
-              Select new address
-            </label>
-
-            {% set addresses = [
-                  '5 addresses found',
-                  '2 Windsor Street, South Gosforth',
-                  '3a Windsor Street, South Gosforth',
-                  '3b Windsor Street, South Gosforth',
-                  '4 Windsor Street, South Gosforth',
-                  '5 Windsor Street, South Gosforth'
-                ] %}
-
-            <select class="govuk-select" id="address" name="address">
-              <option value="{{addresses[0]}}" selected>{{addresses[0]}}</option>
-              <option value="{{addresses[1]}}">{{addresses[1]}}</option>
-              <option value="{{addresses[2]}}">{{addresses[2]}}</option>
-              <option value="{{addresses[3]}}">{{addresses[3]}}</option>
-              <option value="{{addresses[4]}}">{{addresses[4]}}</option>
-              <option value="{{addresses[5]}}">{{addresses[5]}}</option>
-            </select>
+            <fieldset class="govuk-fieldset">
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                  <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                    2a Windsor Street
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                    2b Windsor Street
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                   12 Windsor Street
+                  </label>
+                </div>
+              </div>
+            </fieldset>
           </div>
 
-          <h2 class="govuk-heading-s">Postcode <br>
-            {{data.postcode}}  <a href="address" class="govuk-link"> Change</a></h2>
-
           <p>
-            <a href="address-postcode-manual" class="govuk-link">I can't find the address in the list</a>
+            <a href="manual-address" class="govuk-link">I can't find the address in the list</a>
           </p>
 
           <button type="submit" class="govuk-button">
@@ -72,17 +61,7 @@ GOV.UK Prototype Kit
     </div>
 
 </div>
-
 </main>
-</div>
-
-{% endblock %}
-
-{% block content %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
-  </div>
 </div>
 
 {% endblock %}
