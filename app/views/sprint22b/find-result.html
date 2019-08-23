@@ -4,17 +4,11 @@
 GOV.UK Prototype Kit
 {% endblock %}
 
-{% block header %}
-{% include "includes/cookie-banner.html" %}
-{# Set serviceName in config.js. #}
-{{ govukHeader({
-  serviceName: serviceName,
-  serviceUrl: "/"
-}) }}
-
-{% block headEnd %}
-{% include 'includes/remove-blue-bar.html' %}
+{% block beforeContent %}
+  {% include './_blue_bar.html' %}
 {% endblock %}
+
+{% block content %}
 
 {% include './_find-someone.html' %}
 
@@ -44,16 +38,7 @@ GOV.UK Prototype Kit
 
   </div>
 
-</main>
-</div>
-
-{% endblock %}
-
-{% block content %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
+  </main>
   </div>
-</div>
 
-{% endblock %}
+  {% endblock %}

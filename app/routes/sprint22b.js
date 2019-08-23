@@ -59,6 +59,16 @@ router.post('/sprint22b/benefits', function(req, res) {
   }
 });
 
+// Query
+
+router.post('/sprint22b/query', function(req, res) {
+if ( req.body['query'] === 'eligibility' ) {
+  res.redirect('start-page');
+} else {
+  res.redirect('/sprint22a/find');
+}
+});
+
 
 
   // Residency type
