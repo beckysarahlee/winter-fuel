@@ -4,24 +4,20 @@
 GOV.UK Prototype Kit
 {% endblock %}
 
-{% block header %}
-{% include "includes/cookie-banner.html" %}
-{# Set serviceName in config.js. #}
-{{ govukHeader({
-  serviceName: serviceName,
-  serviceUrl: "/"
-}) }}
-
-{% block headEnd %}
-{% include 'includes/remove-blue-bar.html' %}
+{% block beforeContent %}
+  {% include './_blue_bar.html' %}
 {% endblock %}
 
-{% include './_blue_bar.html' %}
+{% block content %}
 
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
+
+        <a href="/sprint22b/security" class="govuk-back-link">Back</a>
+        <br>
+        <br>
 
         <div class="moj-banner moj-banner--success">
 
@@ -82,16 +78,13 @@ NE1 6XP
 
 </div>
 
-</main>
-</div>
-
-{% endblock %}
-
-{% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
   </div>
+</div>
+
+</main>
 </div>
 
 {% endblock %}

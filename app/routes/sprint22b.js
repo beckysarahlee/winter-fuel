@@ -63,7 +63,7 @@ router.post('/sprint22b/benefits', function(req, res) {
 
 router.post('/sprint22b/query', function(req, res) {
 if ( req.body['query'] === 'eligibility' ) {
-  res.redirect('start-page');
+  res.redirect('date-of-birth');
 } else {
   res.redirect('/sprint22a/find');
 }
@@ -129,10 +129,47 @@ if ( req.body['query'] === 'eligibility' ) {
           }
         });
 
-      // Shared payment to ref
+      // Shared payment to overpayment find
 
       router.post('/sprint22b/shared-payment', (req, res) => {
-        res.redirect('/sprint22b/find')
+        res.redirect('/sprint22b/find-1')
+      })
+      ;
+
+      // Shared payment to overpayment find
+
+      router.post('/sprint22b/find-1', (req, res) => {
+        res.redirect('/sprint22b/find-result-1')
+      })
+      ;
+
+      // Overpayment branch
+
+      router.post('/sprint22b/find-result-1', (req, res) => {
+        res.redirect('/sprint22b/security-1')
+      })
+      ;
+
+      router.post('/sprint22b/security-1', (req, res) => {
+        res.redirect('/sprint22b/address-check-1')
+      })
+      ;
+
+      router.post('/sprint22b/address-check-1', function(req, res) {
+        if ( req.body['address-match'] === 'yes' ) {
+          res.redirect('poa-1');
+        } else {
+          res.redirect('postcode-1');
+        }
+      });
+
+      router.post('/sprint22b/poa-1', (req, res) => {
+        res.redirect('/sprint22b/check-1')
+      })
+      ;
+
+      router.post('/sprint22b/check-1', (req, res) => {
+        res.redirect('/sprint22b/declaration')
       })
       ;
 
@@ -215,14 +252,14 @@ router.post('/sprint22b/postcode', (req, res) => {
 })
 ;
 
-// Select address to check
+// Select address to move date
 
 router.post('/sprint22b/select-address', (req, res) => {
   res.redirect('/sprint22b/move-date')
 })
 ;
 
-// Select address to check
+// Move date to power of attorney
 
 router.post('/sprint22b/move-date', (req, res) => {
   res.redirect('/sprint22b/poa')

@@ -4,26 +4,18 @@
 GOV.UK Prototype Kit
 {% endblock %}
 
-{% block header %}
-{% include "includes/cookie-banner.html" %}
-{# Set serviceName in config.js. #}
-{{ govukHeader({
-  serviceName: serviceName,
-  serviceUrl: "/"
-}) }}
-
-{% block headEnd %}
-{% include 'includes/remove-blue-bar.html' %}
+{% block beforeContent %}
+  {% include './_blue_bar.html' %}
 {% endblock %}
 
-{% include './_find-someone.html' %}
+{% block content %}
 
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-<a href="#" class="govuk-back-link">Back</a>
+<a href="/sprint22b/find" class="govuk-back-link">Back</a>
 
       <form method="post">
 
@@ -35,7 +27,7 @@ GOV.UK Prototype Kit
         </h2>
 
         <button type="submit" class="govuk-button">
-          Continue
+          Confirm name
         </button>
 
       </div>
@@ -44,16 +36,7 @@ GOV.UK Prototype Kit
 
   </div>
 
-</main>
-</div>
-
-{% endblock %}
-
-{% block content %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
+  </main>
   </div>
-</div>
 
-{% endblock %}
+  {% endblock %}
