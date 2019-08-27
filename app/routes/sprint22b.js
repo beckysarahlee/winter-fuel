@@ -17,7 +17,7 @@ router.post('/sprint22b/receiving-sp', (req, res) => {
   else if (req.body.pension.includes('sp')) {
     res.redirect('/sprint22b/residency-type');
   } else {
-    res.redirect('/sprint22b/claimed')
+    res.redirect('/sprint22b/deferral')
   }
 })
 

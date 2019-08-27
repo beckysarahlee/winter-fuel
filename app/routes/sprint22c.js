@@ -17,7 +17,7 @@ router.post('/sprint22c/receiving-sp', (req, res) => {
   else if (req.body.pension.includes('sp')) {
     res.redirect('/sprint22c/residency-type');
   } else {
-    res.redirect('/sprint22c/claimed')
+    res.redirect('/sprint22c/deferral')
   }
 })
 
@@ -57,6 +57,16 @@ router.post('/sprint22c/benefits', function(req, res) {
   } else {
     res.redirect('residency-type');
   }
+});
+
+// Query
+
+router.post('/sprint22c/query', function(req, res) {
+if ( req.body['query'] === 'eligibility' ) {
+  res.redirect('date-of-birth');
+} else {
+  res.redirect('/sprint22a/find');
+}
 });
 
 
@@ -119,17 +129,54 @@ router.post('/sprint22c/benefits', function(req, res) {
           }
         });
 
-      // Shared payment to ref
+      // Shared payment to overpayment find
 
       router.post('/sprint22c/shared-payment', (req, res) => {
-        res.redirect('/sprint22c/find')
+        res.redirect('/sprint22c/find-1')
+      })
+      ;
+
+      // Shared payment to overpayment find
+
+      router.post('/sprint22c/find-1', (req, res) => {
+        res.redirect('/sprint22c/find-result-1')
+      })
+      ;
+
+      // Overpayment branch
+
+      router.post('/sprint22c/find-result-1', (req, res) => {
+        res.redirect('/sprint22c/security-1')
+      })
+      ;
+
+      router.post('/sprint22c/security-1', (req, res) => {
+        res.redirect('/sprint22c/address-check-1')
+      })
+      ;
+
+      router.post('/sprint22c/address-check-1', function(req, res) {
+        if ( req.body['address-match'] === 'yes' ) {
+          res.redirect('poa-1');
+        } else {
+          res.redirect('postcode-1');
+        }
+      });
+
+      router.post('/sprint22c/poa-1', (req, res) => {
+        res.redirect('/sprint22c/check-1')
+      })
+      ;
+
+      router.post('/sprint22c/check-1', (req, res) => {
+        res.redirect('/sprint22c/declaration')
       })
       ;
 
       // Full payment
 
       router.post('/sprint22c/full-payment', (req, res) => {
-        res.redirect('/sprint22c/find')
+        res.redirect('/sprint22c/security')
       })
       ;
 
@@ -205,14 +252,14 @@ router.post('/sprint22c/postcode', (req, res) => {
 })
 ;
 
-// Select address to check
+// Select address to move date
 
 router.post('/sprint22c/select-address', (req, res) => {
   res.redirect('/sprint22c/move-date')
 })
 ;
 
-// Select address to check
+// Move date to power of attorney
 
 router.post('/sprint22c/move-date', (req, res) => {
   res.redirect('/sprint22c/poa')
