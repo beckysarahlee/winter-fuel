@@ -8,11 +8,6 @@ router.use((req, res, next) => {
     next()
   })
 
-  router.post('/sprint22/exceptions', (req, res) => {
-    res.redirect('/sprint22/exceptions-result')
-  })
-  ;
-
   //    } else if (something === something) {
 
   module.exports = router;
