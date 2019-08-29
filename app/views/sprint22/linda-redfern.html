@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "includes/cookie-banner.html" %}
+{# Set serviceName in config.js. #}
+{{ govukHeader({
+  serviceName: serviceName,
+  serviceUrl: "/"
+}) }}
+
+{% block headEnd %}
+{% include 'includes/remove-blue-bar.html' %}
+{% endblock %}
+
+
+<div class="govuk-width-container">
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="/sprint22/exceptions-result" class="govuk-back-link">Back</a>
+
+      <main id="content" role="main">
+        <div class="grid-row">
+          <div class="column-full">
+
+            {% include './_bar.html' %}
+
+            <table class="govuk-table">
+  <thead class="govuk-table__head">
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Stage</th>
+      <td class="govuk-table__cell">Complete address</td>
+    </tr>
+  </tbody>
+</table>
+
+            <div class="govuk-form-group">
+              <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="16" aria-describedby="more-detail-hint"></textarea>
+            </div>
+
+            <button type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
+              Save
+            </button>
+
+            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Return to queue
+            </button>
+
+
+          </div>
+        </div>
+      </main>
+
+
+    </div>
+
+  </main>
+</div>
+<!-- </div> -->
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+  </div>
+</div>
+
+{% endblock %}
