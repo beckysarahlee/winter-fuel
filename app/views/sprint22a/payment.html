@@ -38,7 +38,19 @@ GOV.UK Prototype Kit
                 {% set status = 'Payment returned'%}
                 {% endif %}
 
-                {% include './_bar.html' %}
+                <div class="govuk-grid-row">
+                  <div class="govuk-grid-column-full">
+
+                        <div>
+                          <h1 class="govuk-heading-xl">
+                            Mary Henrietta Morrison <br>
+                                            <span class="govuk-caption-xl">{{data.nino}}</span>
+                            <span class="app-c-tag app-c-tag--orange">Payment returned</span>
+                          </h1>
+                        </div>
+
+                  </div>
+                </div>
 
               </div>
             </div>
@@ -148,163 +160,105 @@ GOV.UK Prototype Kit
 
     </div>
 
-
     <div class="govuk-grid-column-full">
       <dl class="app-check-your-answers app-check-your-answers--short">
-        <h2 class="govuk-heading-m">Payment details</h2>
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question">
-          </dt>
-          <dd class="app-check-your-answers__answer">
-
-          </dd>
-          <dd class="app-check-your-answers__change">
-            <a href="address-DLO">
-              <span class="govuk-visually-hidden"></span>
-            </a>
-          </dd>
-        </div>
-
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__answer">
-            Last payment
-          </dt>
-          <dd class="app-check-your-answers__answer">
-            Wednesday 30 October 2018
-          </dd>
-          <dd class="app-check-your-answers__answer">
-            £300
-          </dd>
-          <dd class="app-check-your-answers__change">
-          </dd>
-        </div>
-
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__answer">
-            Next payment
-          </dt>
-          <dd class="app-check-your-answers__answer">
-            Wednesday 30 October 2019
-          </dd>
-          <dd class="app-check-your-answers__answer">
-            £300
-          </dd>
-          <dd class="app-check-your-answers__change">
-          </dd>
-        </div>
 
     </div>
 
-    <br>
+    <div class="govuk-grid-column-two-thirds">
+              <h2 class="govuk-heading-m">Payment details</h2>
+    <table class="govuk-table">
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell"></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Last payment</td>
+          <td class="govuk-table__cell">Wednesday 30 October 2018</td>
+          <td class="govuk-table__cell">£300</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Next payment</td>
+          <td class="govuk-table__cell">Wednesday 30 October 2019</td>
+          <td class="govuk-table__cell">£300</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    
 
     <div class="govuk-grid-column-full">
       <dl class="app-check-your-answers app-check-your-answers--short">
-        <h2 class="govuk-heading-m">Previous payments</h2>
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question">
-          </dt>
-          <dd class="app-check-your-answers__answer">
-
-          </dd>
-          <dd class="app-check-your-answers__answer">
-
-          </dd>
-          <dd class="app-check-your-answers__change">
-            <a href="prevent-payments">
-              <span class="govuk-visually-hidden"></span>
-            </a>
-          </dd>
-        </div>
-
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__answer">
-            Wednesday 30 October 2018
-          </dt>
-          <dd class="app-check-your-answers__answer">
-            £300
-          </dd>
-          <dd class="app-check-your-answers__answer">
-            <span class="verified-badge verified">
-              <b>Paid</b>
-            </span>
-          </dd>
-        </div>
-
-
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__answer">
-            Wednesday 30 October 2017
-          </dt>
-          <dd class="app-check-your-answers__answer">
-            £300
-          </dd>
-          <dd class="app-check-your-answers__answer">
-            <span class="verified-badge verified">
-              <b>Paid</b>
-            </span>
-          </dd>
-        </div>
-
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__answer">
-            Wednesday 30 October 2016
-          </dt>
-          <dd class="app-check-your-answers__answer">
-            £300
-          </dd>
-          <dd class="app-check-your-answers__answer">
-            <span class="verified-badge verified">
-              <b>Paid</b>
-            </span>
-          </dd>
-        </div>
-
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__answer">
-            Wednesday 30 October 2015
-          </dt>
-          <dd class="app-check-your-answers__answer">
-            £300
-          </dd>
-          <dd class="app-check-your-answers__answer">
-            <span class="verified-badge verified">
-              <b>Paid</b>
-            </span>
-          </dd>
-        </div>
-
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__answer">
-            Wednesday 30 October 2014
-          </dt>
-          <dd class="app-check-your-answers__answer">
-            £200
-          </dd>
-          <dd class="app-check-your-answers__answer">
-            <span class="verified-badge verified">
-              <b>Paid</b>
-            </span>
-          </dd>
-        </div>
-
-<br>
-
-        <details class="govuk-details" data-module="govuk-details">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-              See more payments
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-          I haven't done this yet
-          </div>
-        </details>
 
     </div>
 
 
+    <div class="govuk-grid-column-two-thirds">
+              <h2 class="govuk-heading-m">Previous payments</h2>
+    <table class="govuk-table">
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell"></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Wednesday 30 October 2018</td>
+          <td class="govuk-table__cell">£300</td>
+          <td class="govuk-table__cell">
+            <span class="verified-badge verified">
+            <b>Paid</b>
+          </span></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Wednesday 30 October 2017</td>
+          <td class="govuk-table__cell">£300</td>
+          <td class="govuk-table__cell">
+            <span class="verified-badge verified">
+            <b>Paid</b>
+          </span></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Wednesday 30 October 2016</td>
+          <td class="govuk-table__cell">£300</td>
+          <td class="govuk-table__cell">
+            <span class="verified-badge verified">
+            <b>Paid</b>
+          </span></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Wednesday 30 October 2015</td>
+          <td class="govuk-table__cell">£300</td>
+          <td class="govuk-table__cell">
+            <span class="verified-badge verified">
+            <b>Paid</b>
+          </span></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Wednesday 30 October 2014</td>
+          <td class="govuk-table__cell">£300</td>
+          <td class="govuk-table__cell">
+            <span class="verified-badge verified">
+            <b>Paid</b>
+          </span></td>
+        </tr>
+      </tbody>
+    </table>
 
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          See more payments
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+      I haven't done this yet
+      </div>
+    </details>
 
+</div>
 
 
 </div>

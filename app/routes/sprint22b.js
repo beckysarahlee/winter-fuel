@@ -11,10 +11,11 @@ router.use((req, res, next) => {
 
 // Pension credit/State Pension
 router.post('/sprint22b/receiving-sp', (req, res) => {
-  if (req.body.pension.includes('pc')) {
+  const pension = req.body.pension || []
+  if (pension.includes('pc')) {
     res.redirect('/sprint22b/full-payment')
   }
-  else if (req.body.pension.includes('sp')) {
+  else if (pension.includes('sp')) {
     res.redirect('/sprint22b/residency-type');
   } else {
     res.redirect('/sprint22b/deferral')

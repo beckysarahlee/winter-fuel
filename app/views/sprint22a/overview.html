@@ -30,7 +30,19 @@ GOV.UK Prototype Kit
         <div class="grid-row">
           <div class="column-full">
 
-            {% include './_bar.html' %}
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+
+                    <div>
+                      <h1 class="govuk-heading-xl">
+                        Mary Henrietta Morrison <br>
+                                        <span class="govuk-caption-xl">{{data.nino}}</span>
+                        <span class="app-c-tag app-c-tag--orange">Payment returned</span>
+                      </h1>
+                    </div>
+
+              </div>
+            </div>
 
             {% include './_tab-overview.html' %}
 
