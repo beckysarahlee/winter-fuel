@@ -4,19 +4,11 @@
 GOV.UK Prototype Kit
 {% endblock %}
 
-{% block header %}
-{% include "includes/cookie-banner.html" %}
-{# Set serviceName in config.js. #}
-{{ govukHeader({
-  serviceName: serviceName,
-  serviceUrl: "/"
-}) }}
-
-{% block headEnd %}
-{% include 'includes/remove-blue-bar.html' %}
+{% block beforeContent %}
+{% include './_find-someone.html' %}
 {% endblock %}
 
-{% include './_find-someone.html' %}
+{% block content %}
 
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
@@ -35,27 +27,13 @@ GOV.UK Prototype Kit
             Anyone who has delayed getting their State Pension must call <br>
             0800 123 445 to make a claim for Winter Fuel Payment.
           </p>
-
-          <p>
-            <a href="benefits" class="govuk-link govuk-link--no-visited-state">
-              Continue with eligibility check</a>
-          </p>
       </div>
 
 
     </div>
 
 </div>
-
 </main>
-
-{% endblock %}
-
-{% block content %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
-  </div>
 </div>
 
 {% endblock %}
