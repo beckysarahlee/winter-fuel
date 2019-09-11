@@ -13,7 +13,7 @@ router.use((req, res, next) => {
 router.post('/sprint22b/receiving-sp', (req, res) => {
   const pension = req.body.pension || []
   if (pension.includes('pc')) {
-    res.redirect('/sprint22b/full-payment')
+    res.redirect('/sprint22b/residency-type-pc')
   }
   else if (pension.includes('sp')) {
     res.redirect('/sprint22b/residency-type');
@@ -21,6 +21,7 @@ router.post('/sprint22b/receiving-sp', (req, res) => {
     res.redirect('/sprint22b/deferral')
   }
 })
+
 
   // Date of birth
 
@@ -72,11 +73,25 @@ if ( req.body['query'] === 'eligibility' ) {
 
 
 
-  // Residency type
+  // Residency type SP
 
   router.post('/sprint22b/residency-type', function(req, res) {
     if ( req.body['where-were-you-living'] === 'hospital' ) {
       res.redirect('hospital');
+    } else if ( req.body['where-were-you-living'] === 'no-abode' ) {
+      res.redirect('no-abode');
+    } else if ( req.body['where-were-you-living'] === 'prison' ) {
+      res.redirect('prison');
+    } else {
+      res.redirect('who');
+    }
+  });
+
+  // Residency type PC
+
+  router.post('/sprint22b/residency-type-pc', function(req, res) {
+    if ( req.body['where-were-you-living'] === 'hospital' ) {
+      res.redirect('hospital-pc');
     } else if ( req.body['where-were-you-living'] === 'carehome' ) {
       res.redirect('care-home');
     } else if ( req.body['where-were-you-living'] === 'no-abode' ) {
@@ -84,7 +99,7 @@ if ( req.body['query'] === 'eligibility' ) {
     } else if ( req.body['where-were-you-living'] === 'prison' ) {
       res.redirect('prison');
     } else {
-      res.redirect('who');
+      res.redirect('pension-credit');
     }
   });
 
@@ -99,12 +114,22 @@ if ( req.body['query'] === 'eligibility' ) {
     }
   });
 
+  // Hospital PC
+
+  router.post('/sprint22b/hospital-pc', function(req, res) {
+    if ( req.body['hospital-admission'] === 'yes' ) {
+      res.redirect('pension-credit');
+    } else {
+      res.redirect('hospital-over-year');
+    }
+  });
+
 
   // Care or nursing home
 
     router.post('/sprint22b/care-home', function(req, res) {
       if ( req.body['care-home-admission'] === 'yes' ) {
-        res.redirect('who');
+        res.redirect('pension-credit');
       } else {
         res.redirect('care-home-over-13');
       }
