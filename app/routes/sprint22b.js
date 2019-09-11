@@ -202,7 +202,7 @@ if ( req.body['query'] === 'eligibility' ) {
       // Full payment
 
       router.post('/sprint22b/full-payment', (req, res) => {
-        res.redirect('/sprint22b/security')
+        res.redirect('/sprint22b/find')
       })
       ;
 
