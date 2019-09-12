@@ -8,322 +8,237 @@ router.use((req, res, next) => {
     next()
   })
 
+  // Query
 
-  router.use((req, res, next) => {
-  res.locals.back = req.headers.referer
-  next()
-})
-
-
-// Pension credit/State Pension
-router.post('/sprint22c/receiving-sp', (req, res) => {
-  const pension = req.body.pension || []
-  if (pension.includes('pc')) {
-    res.redirect('/sprint22c/residency-type-pc')
-  }
-  else if (pension.includes('sp')) {
-    res.redirect('/sprint22c/residency-type');
+  router.post('/sprint22c/query', function(req, res) {
+  if ( req.body['query'] === 'eligibility' ) {
+    res.redirect('date-of-birth');
   } else {
-    res.redirect('/sprint22c/deferral')
+    res.redirect('/sprint22c/find');
   }
-})
+  });
 
 
-  // Date of birth
 
-  router.post('/sprint22c/date-of-birth', (req, res) => {
-    res.redirect('/sprint22c/residency')
+  router.post('/sprint22c/frequency', (req, res) => {
+    res.redirect('/sprint22c/payment')
   })
   ;
 
-  // Claimed Winter Fuel Payment
+  router.use((req, res, next) => {
+    if (req.method === 'POST') {
+      console.log(JSON.stringify(req.session.data, null, 2))
+    }
+    next()
+  })
 
-  router.post('/sprint22c/claimed', function(req, res) {
-    if ( req.body['claimed'] === 'yes' ) {
-      res.redirect('benefits');
+  router.post('/sprint22c/bankdetails', (req, res) => {
+    res.redirect('/sprint22c/reissue-payment')
+  })
+  ;
+
+  router.use((req, res, next) => {
+    if (req.method === 'POST') {
+      console.log(JSON.stringify(req.session.data, null, 2))
+    }
+    next()
+  })
+
+  router.post('/sprint22c/workphone', (req, res) => {
+    res.redirect('/sprint22c/overview')
+  })
+  ;
+
+  router.use((req, res, next) => {
+    if (req.method === 'POST') {
+      console.log(JSON.stringify(req.session.data, null, 2))
+    }
+    next()
+  })
+
+  router.post('/sprint22c/mobilephone', (req, res) => {
+    res.redirect('/sprint22c/overview')
+  })
+  ;
+
+  router.use((req, res, next) => {
+    if (req.method === 'POST') {
+      console.log(JSON.stringify(req.session.data, null, 2))
+    }
+    next()
+  })
+
+  router.post('/sprint22c/email', (req, res) => {
+    res.redirect('/sprint22c/overview')
+  })
+  ;
+
+  router.use((req, res, next) => {
+    if (req.method === 'POST') {
+      console.log(JSON.stringify(req.session.data, null, 2))
+    }
+    next()
+  })
+
+  router.post('/sprint22c/homephone', (req, res) => {
+    res.redirect('/sprint22c/overview')
+  })
+  ;
+
+  router.use((req, res, next) => {
+    if (req.method === 'POST') {
+      console.log(JSON.stringify(req.session.data, null, 2))
+    }
+    next()
+  })
+
+  router.post('/sprint22c/find', (req, res) => {
+    res.redirect('/sprint22c/find-1')
+  })
+  ;
+
+  router.post('/sprint22c/find-1', (req, res) => {
+    res.redirect('/sprint22c/security')
+  })
+  ;
+
+
+  router.post('/sprint22c/security', (req, res) => {
+    res.redirect('/sprint22c/overview-security')
+  })
+  ;
+
+
+
+  router.use((req, res, next) => {
+    if (req.method === 'POST') {
+      console.log(JSON.stringify(req.session.data, null, 2))
+    }
+    next()
+  })
+
+  router.post('/sprint22c/address', (req, res) => {
+    res.redirect('/sprint22c/address-1')
+  })
+  ;
+
+  router.post('/sprint22c/address-1', (req, res) => {
+    res.redirect('/sprint22c/homephone-address')
+  })
+  ;
+
+  // Change of address and home phone number
+  router.post('/sprint22c/homephone-address', function(req, res) {
+    if ( req.body['homephone-address'] === 'Yes' ) {
+      res.redirect('homephone');
     } else {
-      res.redirect('deferral');
+      res.redirect('contact');
     }
   });
 
-  // Living
-
-  router.post('/sprint22c/residency', function(req, res) {
-    if ( req.body['living'] === 'united-kingdom' ) {
-      res.redirect('receiving-sp');
+  // Home phone number removal
+  router.post('/sprint22c/homephone-remove', function(req, res) {
+    if ( req.body['homephone-remove'] === 'Yes' ) {
+      res.redirect('overview');
     } else {
-      res.redirect('overseas');
+      res.redirect('homephone');
     }
   });
 
 
-  // Benefits
-
-router.post('/sprint22c/benefits', function(req, res) {
-  if ( req.body['benefits'] === 'yes' ) {
-    res.redirect('receiving-benefits');
-  } else {
-    res.redirect('residency-type');
-  }
-});
-
-// Query
-
-router.post('/sprint22c/query', function(req, res) {
-if ( req.body['query'] === 'eligibility' ) {
-  res.redirect('date-of-birth');
-} else {
-  res.redirect('/sprint22c/find');
-}
-});
-
-
-
-  // Residency type SP
-
-  router.post('/sprint22c/residency-type', function(req, res) {
-    if ( req.body['where-were-you-living'] === 'hospital' ) {
-      res.redirect('hospital');
-    } else if ( req.body['where-were-you-living'] === 'no-abode' ) {
-      res.redirect('no-abode');
-    } else if ( req.body['where-were-you-living'] === 'prison' ) {
-      res.redirect('prison');
+  // Mobile phone number removal
+  router.post('/sprint22c/mobilephone-remove', function(req, res) {
+    if ( req.body['mobilephone-remove'] === 'yes' ) {
+      res.redirect('overview');
     } else {
-      res.redirect('who');
+      res.redirect('mobilephone');
     }
   });
 
-  // Residency type PC
-
-  router.post('/sprint22c/residency-type-pc', function(req, res) {
-    if ( req.body['where-were-you-living'] === 'hospital' ) {
-      res.redirect('hospital-pc');
-    } else if ( req.body['where-were-you-living'] === 'carehome' ) {
-      res.redirect('care-home');
-    } else if ( req.body['where-were-you-living'] === 'no-abode' ) {
-      res.redirect('no-abode');
-    } else if ( req.body['where-were-you-living'] === 'prison' ) {
-      res.redirect('prison');
+  // Work phone number removal & change
+  router.post('/sprint22c/workphone-remove', function(req, res) {
+    if ( req.body['workphone-remove'] === 'Yes' ) {
+      res.redirect('overview');
     } else {
-      res.redirect('pension-credit');
+      res.redirect('workphone');
     }
   });
 
+  router.post('/sprint22c/workphone', (req, res) => {
+    res.redirect('/sprint22c/overview')
+  })
+  ;
 
-  // Hospital
-
-  router.post('/sprint22c/hospital', function(req, res) {
-    if ( req.body['hospital-admission'] === 'yes' ) {
-      res.redirect('who');
+  // Email removal
+  router.post('/sprint22c/email-remove', function(req, res) {
+    if ( req.body['email-remove'] === 'yes' ) {
+      res.redirect('overview');
     } else {
-      res.redirect('hospital-over-year');
+      res.redirect('email');
     }
   });
 
-  // Hospital PC
+  // Marital status change
+  router.post('/sprint22c/marital-status', (req, res) => {
+    res.redirect('/sprint22c/marriage-details')
+  })
+  ;
 
-  router.post('/sprint22c/hospital-pc', function(req, res) {
-    if ( req.body['hospital-admission'] === 'yes' ) {
-      res.redirect('pension-credit');
+  router.post('/sprint22c/marriage-details', (req, res) => {
+    res.redirect('/sprint22c/marriage-certificate')
+  })
+  ;
+
+  // Contact preferences
+  router.post('/sprint22c/contact-preferences', (req, res) => {
+    res.redirect('/sprint22c/contact')
+  })
+  ;
+
+  // Removing occupants, underpayment
+  router.post('/sprint22c/occupants', (req, res) => {
+    res.redirect('/sprint22c/reason-removed1')
+  })
+  ;
+
+  router.post('/sprint22c/reason-removed1', (req, res) => {
+    res.redirect('/sprint22c/move-date')
+  })
+  ;
+
+  router.post('/sprint22c/move-date', (req, res) => {
+    res.redirect('/sprint22c/reason-removed2')
+  })
+  ;
+
+  router.post('/sprint22c/reason-removed2', (req, res) => {
+    res.redirect('/sprint22c/check-underpayment')
+  })
+  ;
+
+  router.post('/sprint22c/check-underpayment', (req, res) => {
+    res.redirect('/sprint22c/evidence-request')
+  })
+  ;
+
+  router.post('/sprint22c/evidence-request', (req, res) => {
+    res.redirect('/sprint22c/overview-awaiting-verification')
+  })
+  ;
+
+  router.post('/sprint22c/evidence-verification', (req, res) => {
+    res.redirect('/sprint22c/overview-evidence-received')
+  })
+  ;
+
+
+  // Stopping payments
+  router.post('/sprint22c/prevent-payments', function(req, res) {
+    if ( req.body['stopped-reason'] === 'dead' ) {
+      res.redirect('death-date');
     } else {
-      res.redirect('hospital-over-year');
+      res.redirect('imprisioned-date');
     }
   });
-
-
-  // Care or nursing home
-
-    router.post('/sprint22c/care-home', function(req, res) {
-      if ( req.body['care-home-admission'] === 'yes' ) {
-        res.redirect('pension-credit');
-      } else {
-        res.redirect('care-home-over-13');
-      }
-    });
-
-    // Who (Living with)
-
-      router.post('/sprint22c/who', function(req, res) {
-        if ( req.body['who-do-you-live-with'] === 'yes' ) {
-          res.redirect('living-with');
-        } else {
-          res.redirect('full-payment');
-        }
-      });
-
-      // Living with (age)
-
-        router.post('/sprint22c/living-with', function(req, res) {
-          if ( req.body['live-with-age'] === 'yes' ) {
-            res.redirect('live-with-carehome');
-          } else {
-            res.redirect('full-payment');
-          }
-        });
-
-      // Shared payment to overpayment find
-
-      router.post('/sprint22c/shared-payment', (req, res) => {
-        res.redirect('/sprint22c/find-1')
-      })
-      ;
-
-      // Shared payment to overpayment find
-
-      router.post('/sprint22c/find-1', (req, res) => {
-        res.redirect('/sprint22c/find-result-1')
-      })
-      ;
-
-      // Overpayment branch
-
-      router.post('/sprint22c/find-result-1', (req, res) => {
-        res.redirect('/sprint22c/security-1')
-      })
-      ;
-
-      router.post('/sprint22c/security-1', (req, res) => {
-        res.redirect('/sprint22c/address-check-1')
-      })
-      ;
-
-      router.post('/sprint22c/address-check-1', function(req, res) {
-        if ( req.body['address-match'] === 'yes' ) {
-          res.redirect('poa-1');
-        } else {
-          res.redirect('postcode-1');
-        }
-      });
-
-      router.post('/sprint22c/poa-1', (req, res) => {
-        res.redirect('/sprint22c/check-1')
-      })
-      ;
-
-      router.post('/sprint22c/check-1', (req, res) => {
-        res.redirect('/sprint22c/declaration')
-      })
-      ;
-
-      // Full payment
-
-      router.post('/sprint22c/full-payment', (req, res) => {
-        res.redirect('/sprint22c/find')
-      })
-      ;
-
-      // Find a person
-
-      router.post('/sprint22c/find', (req, res) => {
-        res.redirect('/sprint22c/find-result')
-      })
-      ;
-
-      // Found person to security
-
-      router.post('/sprint22c/find-result', (req, res) => {
-        res.redirect('/sprint22c/security')
-      })
-      ;
-
-      // Found person to security
-
-      router.post('/sprint22c/security', (req, res) => {
-        res.redirect('/sprint22c/address-check')
-      })
-      ;
-
-
-// Who (Care home during Q week)
-
-router.post('/sprint22c/live-with-carehome', function(req, res) {
-  if ( req.body['live-with-carehome'] === 'yes' ) {
-    res.redirect('live-with-carehome-13weeks');
-  } else {
-    res.redirect('shared-payment');
-  }
-});
-
-router.post('/sprint22c/live-with-carehome-13weeks', function(req, res) {
-  if ( req.body['carehome-13weeks'] === 'yes' ) {
-    res.redirect('shared-payment');
-  } else {
-    res.redirect('full-payment');
-  }
-});
-
-// Current address
-
-router.post('/sprint22c/address-check', function(req, res) {
-  if ( req.body['address-match'] === 'yes' ) {
-    res.redirect('poa');
-  } else {
-    res.redirect('postcode');
-  }
-});
-
-
-// Power of attorney
-
-router.post('/sprint22c/poa', (req, res) => {
-  res.redirect('/sprint22c/check')
-})
-;
-
-// Postcode
-
-router.post('/sprint22c/postcode', (req, res) => {
-  res.redirect('/sprint22c/select-address')
-})
-;
-
-// Check
-
-router.post('/sprint22c/postcode', (req, res) => {
-  res.redirect('/sprint22c/select-address')
-})
-;
-
-// Select address to move date
-
-router.post('/sprint22c/select-address', (req, res) => {
-  res.redirect('/sprint22c/move-date')
-})
-;
-
-// Move date to power of attorney
-
-router.post('/sprint22c/move-date', (req, res) => {
-  res.redirect('/sprint22c/poa')
-})
-;
-
-
-// Occupants
-
-router.post('/sprint22c/occupants', (req, res) => {
-  res.redirect('/sprint22c/check')
-})
-;
-
-// Check to declaration
-
-router.post('/sprint22c/check', (req, res) => {
-  res.redirect('/sprint22c/declaration')
-})
-;
-
-// Check to declaration
-
-router.post('/sprint22c/declaration', (req, res) => {
-  res.redirect('/sprint22c/confirmation')
-})
-;
-
-
-
-
-  //    } else if (something === something) {
-
 
   module.exports = router;
