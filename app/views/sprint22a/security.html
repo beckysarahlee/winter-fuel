@@ -5,7 +5,7 @@ GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-{% include './_find-someone.html' %}
+{% include './_blue_bar.html' %}
 {% endblock %}
 
 {% block content %}
@@ -16,34 +16,20 @@ GOV.UK Prototype Kit
       <div class="govuk-grid-column-two-thirds">
       <br>
 
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-
-              <div>
-                <h1 class="govuk-heading-xl">
-                  Mary Henrietta Morrison <br>
-                                  <span class="govuk-caption-xl">{{data.nino}}</span>
-                  <span class="app-c-tag app-c-tag--orange">Payment returned</span>
-                </h1>
-              </div>
-
-        </div>
-      </div>
-
 
       <form method="post">
 
-                <h1 class="govuk-heading-l">Security questions</h1>
+                <h1 class="govuk-heading-xl">Security questions</h1>
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
               <h1 class="govuk-fieldset__heading">
-                How often do you get paid State Pension?
+                What is your date of birth?
               </h1>
             </legend>
             <span id="changed-name-hint" class="govuk-hint">
-              Every 4 weeks
+              1 March 1935
             </span>
             <div class="govuk-radios govuk-radios--inline">
               <div class="govuk-radios__item">
@@ -66,11 +52,38 @@ GOV.UK Prototype Kit
           <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
               <h1 class="govuk-fieldset__heading">
-                What is your home phone number?
+              Are you receiving any other benefits?
               </h1>
             </legend>
             <span id="changed-name-hint" class="govuk-hint">
-            01665 720871
+            State Pension and Pension Credit
+            </span>
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="benefits-1" name="benefits" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="benefits-1">
+                  Pass
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="benefits-2" name="benefits" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="benefits-2">
+                  Fail
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+              How much was your Winter Fuel payment in 2018?
+              </h1>
+            </legend>
+            <span id="changed-name-hint" class="govuk-hint">
+            £300
             </span>
             <div class="govuk-radios govuk-radios--inline">
               <div class="govuk-radios__item">
