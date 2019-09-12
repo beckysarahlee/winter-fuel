@@ -17,9 +17,10 @@ GOV.UK Prototype Kit
 
         <form method="post">
 
-          <a href="/sprint22b/residency-type" class="govuk-back-link">Back</a>
-          <br>
-          <br>
+          {{ govukBackLink({
+              text: "Back",
+              href: back
+            }) }}
 
           <h1 class="govuk-heading-l">You do not qualify for Winter Fuel Payment</h1>
 

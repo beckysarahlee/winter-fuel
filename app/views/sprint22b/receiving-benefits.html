@@ -25,10 +25,10 @@ GOV.UK Prototype Kit
 
     <form action="/sprint21/residency-type" method="post">
 
-          <a href="/sprint21/benefits" class="govuk-back-link">Back</a>
-          <br>
-          <br>
-
+      {{ govukBackLink({
+          text: "Back",
+          href: back
+        }) }}
 
           <div class="govuk-panel govuk-panel--confirmation">
                     <div class="govuk-panel__body">
