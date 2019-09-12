@@ -4,19 +4,11 @@
 GOV.UK Prototype Kit
 {% endblock %}
 
-{% block header %}
-{% include "includes/cookie-banner.html" %}
-{# Set serviceName in config.js. #}
-{{ govukHeader({
-  serviceName: serviceName,
-  serviceUrl: "/"
-}) }}
-
-{% block headEnd %}
-{% include 'includes/remove-blue-bar.html' %}
+{% block beforeContent %}
+{% include './_find-someone.html' %}
 {% endblock %}
 
-{% include './_blue_bar.html' %}
+{% block content %}
 
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
@@ -25,7 +17,7 @@ GOV.UK Prototype Kit
 
         <form method="post">
 
-          <a href="/sprint21/claimed" class="govuk-back-link">Back</a>
+          <a href="/sprint22b/receiving-sp" class="govuk-back-link">Back</a>
           <br>
           <br>
 
@@ -36,26 +28,22 @@ GOV.UK Prototype Kit
             0800 123 445 to make a claim for Winter Fuel Payment.
           </p>
 
-          <p>
-            <a href="benefits" class="govuk-link govuk-link--no-visited-state">
-              Continue with eligibility check</a>
-          </p>
+
+          <p class="govuk-body">You will need to know:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>your National Insurance number</li>
+            <li>your bank or building society details</li>
+            <li>the date you were married or entered into a civil partnership (if appropriate)</li>
+          </ul>
+
+
       </div>
 
 
     </div>
 
 </div>
-
 </main>
-
-{% endblock %}
-
-{% block content %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
-  </div>
 </div>
 
 {% endblock %}
