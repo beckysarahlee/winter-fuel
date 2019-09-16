@@ -293,10 +293,17 @@ router.post('/sprint22b/poa', (req, res) => {
 })
 ;
 
-// Postcode
+// Postcode underpayment
 
 router.post('/sprint22b/postcode', (req, res) => {
   res.redirect('/sprint22b/select-address')
+})
+;
+
+// Postcode overpayment
+
+router.post('/sprint22b/postcode-1', (req, res) => {
+  res.redirect('/sprint22b/select-address-1')
 })
 ;
 
