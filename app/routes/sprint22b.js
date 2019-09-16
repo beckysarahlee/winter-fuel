@@ -163,6 +163,17 @@ if ( req.body['query'] === 'eligibility' ) {
         }
       });
 
+      // Who (Living with)
+
+        router.post('/sprint22b/who-pc', function(req, res) {
+          if ( req.body['who-do-you-live-with'] === 'yes' ) {
+            res.redirect('shared-payment-pc');
+          } else {
+            res.redirect('receiving-benefits');
+          }
+        });
+
+
       // Living with (age)
 
         router.post('/sprint22b/living-with', function(req, res) {
