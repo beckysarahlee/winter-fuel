@@ -84,6 +84,8 @@ if ( req.body['query'] === 'eligibility' ) {
   router.post('/sprint22b/residency-type', function(req, res) {
     if ( req.body['where-were-you-living'] === 'hospital' ) {
       res.redirect('hospital');
+    } else if ( req.body['where-were-you-living'] === 'carehome' ) {
+      res.redirect('care-home');
     } else if ( req.body['where-were-you-living'] === 'no-abode' ) {
       res.redirect('no-abode');
     } else if ( req.body['where-were-you-living'] === 'prison' ) {
@@ -99,7 +101,7 @@ if ( req.body['query'] === 'eligibility' ) {
     if ( req.body['where-were-you-living'] === 'hospital' ) {
       res.redirect('hospital-pc');
     } else if ( req.body['where-were-you-living'] === 'carehome' ) {
-      res.redirect('care-home');
+      res.redirect('care-home-pc');
     } else if ( req.body['where-were-you-living'] === 'no-abode' ) {
       res.redirect('no-abode');
     } else if ( req.body['where-were-you-living'] === 'prison' ) {
@@ -135,11 +137,21 @@ if ( req.body['query'] === 'eligibility' ) {
 
     router.post('/sprint22b/care-home', function(req, res) {
       if ( req.body['care-home-admission'] === 'yes' ) {
-        res.redirect('pension-credit');
+        res.redirect('who');
       } else {
         res.redirect('care-home-over-13');
       }
     });
+
+    // Care or nursing home PC
+
+      router.post('/sprint22b/care-home-pc', function(req, res) {
+        if ( req.body['care-home-admission'] === 'yes' ) {
+          res.redirect('who-pc');
+        } else {
+          res.redirect('care-home-over-pc');
+        }
+      });
 
     // Who (Living with)
 
