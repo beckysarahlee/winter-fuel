@@ -321,10 +321,24 @@ router.post('/sprint22b/select-address', (req, res) => {
 })
 ;
 
+// Select address to move date
+
+router.post('/sprint22b/select-address-1', (req, res) => {
+  res.redirect('/sprint22b/move-date-1')
+})
+;
+
 // Move date to power of attorney
 
 router.post('/sprint22b/move-date', (req, res) => {
   res.redirect('/sprint22b/poa')
+})
+;
+
+// Move date to power of attorney 2
+
+router.post('/sprint22b/move-date-1', (req, res) => {
+  res.redirect('/sprint22b/poa-1')
 })
 ;
 
