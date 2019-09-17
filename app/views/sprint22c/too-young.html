@@ -18,9 +18,10 @@ GOV.UK Prototype Kit
 
         <form method="post">
 
-          <a href="/sprint21/date-of-birth" class="govuk-back-link">Back</a>
-          <br>
-          <br>
+          {{ govukBackLink({
+              text: "Back",
+              href: back
+            }) }}
 
 <h1 class="govuk-heading-l">You are too young to get a Winter Fuel Payment</h1>
 

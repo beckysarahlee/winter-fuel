@@ -7,6 +7,10 @@ router.use((req, res, next) => {
     }
     next()
   })
+  router.use((req, res, next) => {
+    res.locals.back = req.headers.referer
+    next()
+  })
 
   // Query
 
