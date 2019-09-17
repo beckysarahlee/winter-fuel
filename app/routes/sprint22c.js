@@ -18,6 +18,10 @@ router.use((req, res, next) => {
   }
   });
 
+  router.post('/sprint22c/date-of-birth', (req, res) => {
+    res.redirect('/sprint22c/too-young')
+  })
+  ;
 
 
   router.post('/sprint22c/frequency', (req, res) => {
