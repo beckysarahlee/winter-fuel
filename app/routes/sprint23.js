@@ -73,7 +73,7 @@ router.post('/sprint23/query', function(req, res) {
 if ( req.body['query'] === 'eligibility' ) {
   res.redirect('date-of-birth');
 } else {
-  res.redirect('find');
+  res.redirect('/sprint23b/find');
 }
 });
 
@@ -206,7 +206,7 @@ if ( req.body['query'] === 'eligibility' ) {
       ;
 
       router.post('/sprint23/security-1', (req, res) => {
-        res.redirect('/sprint23/address-check-1')
+        res.redirect('/sprint23/postcode')
       })
       ;
 
@@ -252,7 +252,7 @@ if ( req.body['query'] === 'eligibility' ) {
       // Found person to security
 
       router.post('/sprint23/security', (req, res) => {
-        res.redirect('/sprint23/address-check')
+        res.redirect('/sprint23/postcode')
       })
       ;
 
