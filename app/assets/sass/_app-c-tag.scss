@@ -12,10 +12,6 @@
   text-transform: uppercase;
 }
 
-.app-c-tag--success {
-  background-color: govuk-colour("blue");
-}
-
 .app-c-tag--warning {
   background-color: govuk-colour("brown");
 }
@@ -30,6 +26,10 @@
 
 .app-c-tag--orange {
   background-color: govuk-colour("orange");
+}
+
+.app-c-tag--green {
+  background-color: govuk-colour("green");
 }
 
 .app-c-tag--purple {

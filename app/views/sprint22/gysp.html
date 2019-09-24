@@ -4,6 +4,14 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
+    {{ govukBackLink({
+        text: "Back",
+        href: back
+      }) }}
+
+<br>
+<br>
+
     <h1 class="govuk-heading-xl">Get your State Pension file</h1>
 
     <form method="post">
@@ -32,29 +40,10 @@
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">Verify Address</td>
-            <td class="govuk-table__cell">In Progress</td>
-            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell">Complete</td>
+            <td class="govuk-table__cell">12:53</td>
           </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Calculate eligibility</td>
-            <td class="govuk-table__cell">Not started</td>
-            <td class="govuk-table__cell"></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Evaluate related cases</td>
-            <td class="govuk-table__cell">Not started</td>
-            <td class="govuk-table__cell"></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Calculate entitlement</td>
-            <td class="govuk-table__cell">Not started</td>
-            <td class="govuk-table__cell"></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Send letters</td>
-            <td class="govuk-table__cell">Not started</td>
-            <td class="govuk-table__cell"></td>
-          </tr>
+
         </tbody>
       </table>
 

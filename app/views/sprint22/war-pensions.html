@@ -4,12 +4,20 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
-    <h1 class="govuk-heading-xl">?</h1>
+    {{ govukBackLink({
+        text: "Back",
+        href: back
+      }) }}
+
+<br>
+<br>
+
+    <h1 class="govuk-heading-xl">War Pensions file</h1>
 
     <form method="post">
 
-      <button class="govuk-button" data-module="govuk-button">
-        Start
+      <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+        Stop ?
       </button>
 
       <table class="govuk-table">
@@ -26,33 +34,13 @@
             <td class="govuk-table__cell">Update case</td>
             <td class="govuk-table__cell">Complete
             </td>
-            <td class="govuk-table__cell">11:10</td>
+            <td class="govuk-table__cell">15:10</td>
             <td class="govuk-table__cell"><span class="verified-badge verified">
           </span></td>
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">Verify Address</td>
             <td class="govuk-table__cell">In Progress</td>
-            <td class="govuk-table__cell"></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Calculate eligibility</td>
-            <td class="govuk-table__cell">Not started</td>
-            <td class="govuk-table__cell"></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Evaluate related cases</td>
-            <td class="govuk-table__cell">Not started</td>
-            <td class="govuk-table__cell"></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Calculate entitlement</td>
-            <td class="govuk-table__cell">Not started</td>
-            <td class="govuk-table__cell"></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Send letters</td>
-            <td class="govuk-table__cell">Not started</td>
             <td class="govuk-table__cell"></td>
           </tr>
         </tbody>

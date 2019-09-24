@@ -63,3 +63,11 @@
     margin-bottom: 0;
   }
 }
+
+.app-task-list__task-time {
+  display: block;
+  @include govuk-media-query($from: 450px) {
+    float: right;
+    padding-left: govuk-spacing(4);
+  }
+}
