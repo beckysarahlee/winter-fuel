@@ -8,6 +8,27 @@ router.use((req, res, next) => {
     next()
   })
 
-  //    } else if (something === something) {
+  router.post('/sprint22/comparison-filter', function(req, res) {
+  if ( req.body['filter-by'] === 'file-type' ) {
+    res.redirect('comparison-filter-file');
+  } else {
+    res.redirect('comparison-filter-eligibility');
+  }
+  });
+  ;
+
+  router.post('/sprint22/comparison-filter-eligibility', function(req, res) {
+  if ( req.body['eligibility'] === 'eligible' ) {
+    res.redirect('comparison-filter-eligible');
+  } else {
+    res.redirect('comparison-filter-ineligible');
+  }
+  });
+  ;
+
+  router.post('/sprint22/comparison-filter-eligible', (req, res) => {
+    res.redirect('/sprint22/results')
+  })
+  ;
 
   module.exports = router;
