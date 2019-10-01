@@ -4,77 +4,62 @@
 GOV.UK Prototype Kit
 {% endblock %}
 
-{% block header %}
-{% include "includes/cookie-banner.html" %}
-{# Set serviceName in config.js. #}
-{{ govukHeader({
-  serviceName: serviceName,
-  serviceUrl: "/"
-}) }}
-
-{% block headEnd %}
-{% include 'includes/remove-blue-bar.html' %}
+{% block beforeContent %}
+{% include './_find-someone.html' %}
 {% endblock %}
 
-{% include './_find-someone.html' %}
-
+{% block content %}
 
 <div class="govuk-width-container">
-
   <main class="govuk-main-wrapper">
-
+    <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        <main id="content" role="main">
-          <div class="grid-row">
-            <div class="column-full">
+      <form method="post">
 
-{% include './_bar.html' %}
+        <h2 class="govuk-heading-xl">Alex Smith<br>
+          <span class="govuk-caption-xl"> {{data.nino}} </span>
+          <span class="app-c-tag">Receiving Winter Fuel Payment</span>
+        </h2>
 
-{% include './_tab-contact.html' %}
+            {{ govukBackLink({
+                text: "Back",
+                href: back
+              }) }}
 
-            </div>
-          </div>
-        </main>
+            <br>
+            <br>
 
-        </br>
-
-        <div>
-          <a href="overview" class="govuk-back-link">Back</a>
-        </div>
-
-</br>
+            <form method="post">
 
         <h1 class="govuk-heading-l">Do you want to change the home phone number?</h1>
 
-        <form method="post">
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-              </legend>
-              <div class="govuk-radios govuk-radios--inline">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="homephone-change-yes" name="homephone-address" type="radio" value="Yes">
-                  <label class="govuk-label govuk-radios__label" for="changed-name-1">
-                    Yes
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="homephone-change-no" name="homephone-address" type="radio" value="No">
-                  <label class="govuk-label govuk-radios__label" for="changed-name-2">
-                    No
-                  </label>
-                </div>
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                  </legend>
+                  <div class="govuk-radios govuk-radios--inline">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="homephone-change-yes" name="homephone-address" type="radio" value="Yes">
+                      <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="homephone-change-no" name="homephone-address" type="radio" value="No">
+                      <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
               </div>
-            </fieldset>
-          </div>
 
-          <button type="submit" class="govuk-button">
-            Continue
-          </button>
-        </form>
+              <button type="submit" class="govuk-button">
+                Continue
+              </button>
 
-
+            </form>
 
       </div>
 
@@ -82,17 +67,7 @@ GOV.UK Prototype Kit
 
   </div>
 
-</div>
-
-</main>        </div>
-</div>
-{% endblock %}
-
-{% block content %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
+  </main>
   </div>
-</div>
 
-{% endblock %}
+  {% endblock %}

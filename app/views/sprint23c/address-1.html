@@ -4,106 +4,78 @@
 GOV.UK Prototype Kit
 {% endblock %}
 
-{% block header %}
-{% include "includes/cookie-banner.html" %}
-{# Set serviceName in config.js. #}
-{{ govukHeader({
-  serviceName: serviceName,
-  serviceUrl: "/"
-}) }}
-
-{% block headEnd %}
-{% include 'includes/remove-blue-bar.html' %}
+{% block beforeContent %}
+{% include './_find-someone.html' %}
 {% endblock %}
 
-{% include './_find-someone.html' %}
-
+{% block content %}
 
 <div class="govuk-width-container">
-
   <main class="govuk-main-wrapper">
-
+    <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        <main id="content" role="main">
-          <div class="grid-row">
-            <div class="column-full">
+      <form method="post">
 
-{% include './_bar.html' %}
+        <h2 class="govuk-heading-xl">Alex Smith<br>
+          <span class="govuk-caption-xl"> {{data.nino}} </span>
+          <span class="app-c-tag">Receiving Winter Fuel Payment</span>
+        </h2>
 
-{% include './_tab-contact.html' %}
+            {{ govukBackLink({
+                text: "Back",
+                href: back
+              }) }}
 
-            </div>
-          </div>
-        </main>
-
-        </br>
-
-        <div>
-          <a href="address" class="govuk-back-link">Back</a>
-        </div>
-
-        <h1 class="govuk-heading-l">Change address</h1>
-
-<h2 class="govuk-heading-s">Postcode <br>
-{{data.postcode}} <a href="address" class="govuk-link"> Change</a></h2>
-
+            <br>
+            <br>
 
             <form method="post">
+
+              <h2 class="govuk-heading-l">What is the first line of your address?</h2>
+
               <div class="govuk-form-group">
-                <label class="govuk-label class" for="sort">
-                  Select new address
-                </label>
-
-                {% set addresses = [
-                  '5 addresses found',
-                  '2 Windsor Street, South Gosforth, Newcastle Upon Tyne, NE3 1YL',
-                  '3a Windsor Street, South Gosforth, Newcastle Upon Tyne, NE3 1YL',
-                  '3b Windsor Street, South Gosforth, Newcastle Upon Tyne, NE3 1YL',
-                  '4 Windsor Street, South Gosforth, Newcastle Upon Tyne, NE3 1YL',
-                  '5 Windsor Street, South Gosforth, Newcastle Upon Tyne, NE3 1YL'
-                ] %}
-
-                <select class="govuk-select" id="address" name="address">
-                  <option value="{{addresses[0]}}"selected>{{addresses[0]}}</option>
-                  <option value="{{addresses[1]}}">{{addresses[1]}}</option>
-                  <option value="{{addresses[2]}}">{{addresses[2]}}</option>
-                  <option value="{{addresses[3]}}">{{addresses[3]}}</option>
-                  <option value="{{addresses[4]}}">{{addresses[4]}}</option>
-                  <option value="{{addresses[5]}}">{{addresses[5]}}</option>
-                </select>
+                <fieldset class="govuk-fieldset">
+                  <div class="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                      <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                        27 Kent Street
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                      <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                        2 Kent Street
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                      <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                       7 Kent Street
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
               </div>
 
-<div>
-  <p>
-  <a href="address-postcode-manual" class="govuk-link">I can't find my address in the list</a>
-</p>
-</div>
+              <p>
+                <a href="manual-address" class="govuk-link">I can't find the address in the list</a>
+              </p>
 
               <button type="submit" class="govuk-button">
-                Save
+                Continue
               </button>
+
             </form>
-
-
-
-            </div>
-
-          </div>
-
-        </div>
 
       </div>
 
-    </main>        </div>
-  </div>
-  {% endblock %}
-
-  {% block content %}
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
     </div>
+
+  </div>
+
+  </main>
   </div>
 
   {% endblock %}

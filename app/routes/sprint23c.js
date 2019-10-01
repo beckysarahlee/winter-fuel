@@ -33,7 +33,7 @@ router.use((req, res, next) => {
   })
 
   router.post('/sprint23c/bankdetails', (req, res) => {
-    res.redirect('/sprint23c/reissue-payment')
+    res.redirect('/sprint23c/payment')
   })
   ;
 
@@ -81,7 +81,7 @@ router.use((req, res, next) => {
   })
 
   router.post('/sprint23c/homephone', (req, res) => {
-    res.redirect('/sprint23c/overview')
+    res.redirect('/sprint23c/contact')
   })
   ;
 
@@ -165,7 +165,7 @@ router.use((req, res, next) => {
   });
 
   router.post('/sprint23c/workphone', (req, res) => {
-    res.redirect('/sprint23c/overview')
+    res.redirect('/sprint23c/contact')
   })
   ;
 
