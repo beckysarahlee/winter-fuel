@@ -16,17 +16,7 @@ router.use((req, res, next) => {
 
 
 // Pension credit/State Pension
-router.post('/sprint23/receiving-sp', (req, res) => {
-  const pension = req.body.pension || []
-  if (pension.includes('pc')) {
-    res.redirect('/sprint23/residency-type-pc')
-  }
-  else if (pension.includes('sp')) {
-    res.redirect('/sprint23/residency-type');
-  } else {
-    res.redirect('/sprint23/deferral')
-  }
-})
+
 
 
   // Date of birth

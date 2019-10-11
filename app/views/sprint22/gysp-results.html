@@ -13,41 +13,41 @@
           href: back
         }) }}
 
-  <p class="govuk-visually-hidden" aria-labelledby="pagination-label"></p>
+      <p class="govuk-visually-hidden" aria-labelledby="pagination-label"></p>
 
-  <ul class="moj-pagination__list">
-  </ul>
-  <p class="moj-pagination__results"><b>Number of cases: </b>108</p>
-  </nav>
+      <ul class="moj-pagination__list">
+      </ul>
+      <p class="moj-pagination__results"><b>Number of cases: </b>108</p>
+    </nav>
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-half">
-  <div class="moj-search">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <div class="moj-search">
 
-  <form action="#" method="post">
+          <form action="#" method="post">
 
-  <div class="govuk-form-group">
-    <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
-      Find a case
-    </label>
+            <div class="govuk-form-group">
+              <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+                Find a case
+              </label>
 
-    <span id="search-hint" class="govuk-hint moj-search__hint ">
-      Search by National Insurance number
-    </span>
+              <span id="search-hint" class="govuk-hint moj-search__hint ">
+                Search by National Insurance number
+              </span>
 
-    <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
-  </div>
+              <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+            </div>
 
-  <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
-    Search
-  </button>
+            <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+              Search
+            </button>
 
-  </form>
-  </div>
-</div>
-</div>
+          </form>
+        </div>
+      </div>
+    </div>
 
-  <br>
+    <br>
 
     <div class="moj-filter-layout">
 
@@ -72,9 +72,11 @@
 
                   <th scope="col" class="govuk-table__header">Eligibility</th>
 
-                  <th scope="col" class="govuk-table__header">Payment amount</th>
+                  <th scope="col" class="govuk-table__header"></th>
 
-                  <th scope="col" class="govuk-table__header">Ineligible reason</th>
+                  <th scope="col" class="govuk-table__header"></th>
+
+                  <th scope="col" class="govuk-table__header"></th>
 
                 </tr>
               </thead>
@@ -92,6 +94,10 @@
 
                   <td class="govuk-table__cell">£200</td>
 
+                  <td class="govuk-table__cell"><span class="verified-badge verified">
+                      <b>Paid</b>
+                    </span></td>
+
                   <td class="govuk-table__cell"></td>
 
                 </tr>
@@ -105,7 +111,9 @@
 
                   <td class="govuk-table__cell">£200</td>
 
-                  <td class="govuk-table__cell"></td>
+                  <td class="govuk-table__cell"><span class="verified-badge verified">
+                      <b>Paid</b>
+                    </span></td>
 
 
                 </tr>
@@ -120,7 +128,9 @@
 
                   <td class="govuk-table__cell">£100</td>
 
-                  <td class="govuk-table__cell"></td>
+                  <td class="govuk-table__cell"><span class="verified-badge verified">
+                      <b>Paid</b>
+                    </span></td>
 
 
                 </tr>
@@ -133,7 +143,9 @@
 
                   <td class="govuk-table__cell">£100</td>
 
-                  <td class="govuk-table__cell"></td>
+                  <td class="govuk-table__cell"><span class="verified-badge verified">
+                      <b>Paid</b>
+                    </span></td>
 
                 </tr>
 
@@ -144,9 +156,9 @@
 
                   <td class="govuk-table__cell">Ineligible</td>
 
-                  <td class="govuk-table__cell"></td>
-
                   <td class="govuk-table__cell">Unverified date of birth</td>
+
+                  <td class="govuk-table__cell"></td>
 
                 </tr>
 
@@ -158,14 +170,16 @@
 
                   <td class="govuk-table__cell">£150</td>
 
-                  <td class="govuk-table__cell"></td>
+                  <td class="govuk-table__cell"><span class="verified-badge verified">
+                      <b>Paid</b>
+                    </span></td>
 
                 </tr>
 
                 <tr class="govuk-table__row">
 
                   <th scope="row" class="govuk-table__header">
-                    <a href="#">GG 12 34 56 X</a></th>
+                    <a href="gysp-record-2">GG 12 34 56 X</a></th>
 
                   <td class="govuk-table__cell">Eligible</td>
 
@@ -229,9 +243,9 @@
 
                 <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3">3</a></li>
 
-                  <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3">4</a></li>
+                <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3">4</a></li>
 
-                    <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3">5</a></li>
+                <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3">5</a></li>
 
                 <li class="moj-pagination__item  moj-pagination__item--next">
                   <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>

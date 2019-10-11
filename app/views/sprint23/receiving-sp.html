@@ -29,22 +29,39 @@ GOV.UK Prototype Kit
 
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-    <span id="waste-hint" class="govuk-hint">
-      Select all that apply.
-    </span>
 
-    <div class="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="state-pension" name="pension" type="checkbox" value="sp">
-        <label class="govuk-label govuk-checkboxes__label" for="state-pension">
-          State Pension
-        </label> </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="pension-credit" name="pension" type="checkbox" value="pc">
-        <label class="govuk-label govuk-checkboxes__label" for="pension-credit">
-          Pension Credit
-        </label> </div>
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <div class="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="sp">
+            <label class="govuk-label govuk-radios__label" for="">
+              State Pension
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="pc">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+              Pension Credit
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="both">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+              State Pension and Pension Credit
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="none">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+
+            </label>
+          </div>
+        </div>
+      </fieldset>
     </div>
+
+
   </fieldset>
 </div>
 
