@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <div>
+          <h1 class="govuk-heading-xl">
+            Alex Smith<br>
+                            <span class="govuk-caption-xl">{{data.nino}}</span>
+          </h1>
+        </div>
+
+        <table class="govuk-table">
+          <caption class="govuk-table__caption"></caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Top up</th>
+              <td class="govuk-table__cell">£100</td>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Date of birth</th>
+              <td class="govuk-table__cell">£109.80 per week</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Address</th>
+              <td class="govuk-table__cell">27 Kent Street<br>
+              Crossmoor<br>
+              PR4 9FH</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Occupants</th>
+              <td class="govuk-table__cell">Nobody else over State Pension age</td>
+            </tr>
+          </tbody>
+        </table>
+
+            </div>
+          </div>
+        </main>
+
+
+
+
+    </div>
+
+  </div>
+
+</div>
+
+</main>
+</div>
+
+{% endblock %}
