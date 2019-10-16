@@ -46,6 +46,21 @@ router.use((req, res, next) => {
     }
   });
 
+  // Benefits SP or PC?
+
+  router.post('/sprint23/receiving-sp', function(req, res) {
+    if ( req.body['benefit'] === 'sp' ) {
+      res.redirect('residency-type');
+    } else if ( req.body['benefit'] === 'pc' ) {
+      res.redirect('full-payment');
+    } else if ( req.body['benefit'] === 'both' ) {
+      res.redirect('full-payment');
+    } else if ( req.body['benefit'] === 'none' ) {
+      res.redirect('claimed');
+    }
+  });
+
+
 
   // Benefits
 
