@@ -18,10 +18,15 @@ router.use((req, res, next) => {
   })
   ;
 
+  router.post('/sprint26/overpayment-debt', (req, res) => {
+    res.redirect('/sprint26/overpayment-confirmation')
+  })
+  ;
+
   // Top up referral to payment
 
   router.post('/sprint26/top-up', (req, res) => {
-    res.redirect('/sprint26/top-up-payment')
+    res.redirect('/sprint26/top-up-confirmation')
   })
   ;
 
@@ -32,6 +37,18 @@ router.use((req, res, next) => {
   })
   ;
 
+  // Top up confirmation to get another
 
+  router.post('/sprint26/top-up-confirmation', (req, res) => {
+    res.redirect('/sprint26/get-underpayment')
+  })
+  ;
+
+  // Underpayment confirmation to get another
+
+  router.post('/sprint26/overpayment-confirmation', (req, res) => {
+    res.redirect('/sprint26/get-overpayment')
+  })
+  ;
 
   module.exports = router;
