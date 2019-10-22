@@ -13,28 +13,14 @@ router.use((req, res, next) => {
   })
   ;
 
-  router.post('/sprint26/get-overpayment', (req, res) => {
-    res.redirect('/sprint26/overpayment')
-  })
-  ;
+  // OVERPAYMENT
 
-  router.post('/sprint26/overpayment-debt', (req, res) => {
-    res.redirect('/sprint26/overpayment-confirmation')
-  })
-  ;
+    router.post('/sprint26/get-overpayment', (req, res) => {
+      res.redirect('/sprint26/overpayment')
+    })
+    ;
 
-  // Top up referral to confirmation or no payment
-
-  router.post('/sprint26/top-up', function(req, res) {
-    if ( req.body['topup-payment'] === 'yes' ) {
-      res.redirect('top-up-confirmation');
-    } else {
-      res.redirect('top-up-no');
-    }
-  });
-
-
-  //  referral to confirmation or no payment
+  // Overpayment referral to confirmation or no payment
 
   router.post('/sprint26/overpayment', function(req, res) {
     if ( req.body['overpayment-payment'] === 'yes' ) {
@@ -44,7 +30,25 @@ router.use((req, res, next) => {
     }
   });
 
+  // Overpayment confirmation to get another
 
+  router.post('/sprint26/overpayment-confirmation', (req, res) => {
+    res.redirect('/sprint26/get-overpayment')
+  })
+  ;
+
+
+
+  // UNDERPAYMENT
+  // Top up referral to confirmation or no payment
+
+  router.post('/sprint26/top-up', function(req, res) {
+    if ( req.body['topup-payment'] === 'yes' ) {
+      res.redirect('top-up-confirmation');
+    } else {
+      res.redirect('top-up-no');
+    }
+  });
 
   // Top up payment to referral
 
@@ -60,11 +64,30 @@ router.use((req, res, next) => {
   })
   ;
 
-  // Underpayment confirmation to get another
 
-  router.post('/sprint26/overpayment-confirmation', (req, res) => {
-    res.redirect('/sprint26/get-overpayment')
+  // NO PAYMENT
+  // Get next referral (No payment)
+
+  router.post('/sprint26/get-nopayment', (req, res) => {
+    res.redirect('/sprint26/nopayment')
   })
   ;
+
+  // Make payment or do not make payment... (No payment)
+  router.post('/sprint26/nopayment', function(req, res) {
+    if ( req.body['nopayment-payment'] === 'yes' ) {
+      res.redirect('nopayment-confirmation');
+    } else {
+      res.redirect('nopayment-no');
+    }
+  });
+
+  // No payment payment confirmation to get no payment
+
+  router.post('/sprint26/nopayment-confirmation', (req, res) => {
+    res.redirect('/sprint26/get-nopayment')
+  })
+  ;
+
 
   module.exports = router;
