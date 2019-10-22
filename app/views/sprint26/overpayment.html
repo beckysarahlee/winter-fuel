@@ -55,13 +55,32 @@ GOV.UK Prototype Kit
           </tbody>
         </table>
 
-        <a href="overpayment-debt" role="button" draggable="false" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
-          *Accept referral*
-        </a>
+        <form method="post">
+              <div class="govuk-form-group">
+                <h3 class="govuk-heading-s">Do you want to accept referral and send to debt management?</h3>
+                <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                  <div class="govuk-radios govuk-radios--inline">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="overpayment-payment" name="overpayment-payment" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="overpayment-payment">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="overpayment-payment-2" name="overpayment-payment" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="overpayment-payment-2">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
 
-        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-          *Decline*
-        </button>
+              <button class="govuk-button" data-module="govuk-button">
+                Continue
+              </button>
+
+              </form>
 
             </div>
           </div>

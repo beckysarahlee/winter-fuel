@@ -23,12 +23,28 @@ router.use((req, res, next) => {
   })
   ;
 
-  // Top up referral to payment
+  // Top up referral to confirmation or no payment
 
-  router.post('/sprint26/top-up', (req, res) => {
-    res.redirect('/sprint26/top-up-confirmation')
-  })
-  ;
+  router.post('/sprint26/top-up', function(req, res) {
+    if ( req.body['topup-payment'] === 'yes' ) {
+      res.redirect('top-up-confirmation');
+    } else {
+      res.redirect('top-up-no');
+    }
+  });
+
+
+  //  referral to confirmation or no payment
+
+  router.post('/sprint26/overpayment', function(req, res) {
+    if ( req.body['overpayment-payment'] === 'yes' ) {
+      res.redirect('overpayment-confirmation');
+    } else {
+      res.redirect('overpayment-no');
+    }
+  });
+
+
 
   // Top up payment to referral
 

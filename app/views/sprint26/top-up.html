@@ -59,13 +59,33 @@ GOV.UK Prototype Kit
           </tbody>
         </table>
 
-        <a href="top-up-payment" role="button" draggable="false" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
-          *Accept referral*
-        </a>
 
-        <a href="top-up-payment" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-          *Decline*
-        </a>
+  <form method="post">
+        <div class="govuk-form-group">
+          <h3 class="govuk-heading-s">Do you want to accept referral and make a top up payment?</h3>
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="topup-payment" name="topup-payment" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="topup-payment">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="topup-payment-2" name="topup-payment" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="topup-payment-2">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+
+        </form>
 
       </div>
     </div>
