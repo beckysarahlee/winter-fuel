@@ -30,10 +30,6 @@ GOV.UK Prototype Kit
 
         <br>
 
-        <button class="govuk-button" data-module="govuk-button">
-          Record payment?
-        </button>
-
               <h2 class="govuk-heading-m">Entitlement</h2>
 
               <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -155,8 +151,10 @@ GOV.UK Prototype Kit
                 </div>
               </dl>
 
-              <form action="/form-handler" method="post" novalidate>
-
+              <form action="gysp-payment" method="post" novalidate>
+                <button class="govuk-button" data-module="govuk-button">
+                  Record payment
+                </button>
                 <input type="hidden" name="answers-checked" value="true">
               </form>
 
