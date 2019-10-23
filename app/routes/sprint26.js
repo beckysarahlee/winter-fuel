@@ -33,7 +33,7 @@ router.use((req, res, next) => {
   // Overpayment confirmation to get another
 
   router.post('/sprint26/overpayment-confirmation', (req, res) => {
-    res.redirect('/sprint26/get-overpayment')
+    res.redirect('/sprint26/get-nopayment')
   })
   ;
 
