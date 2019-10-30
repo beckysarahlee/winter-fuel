@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include './_find-someone.html' %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+      <form method="post">
+
+        <h2 class="govuk-heading-xl">Alex Smith<br>
+          <span class="govuk-caption-xl"> {{data.nino}} </span>
+          <span class="app-c-tag">Receiving Winter Fuel Payment</span>
+        </h2>
+
+            {% include './_tab-overview.html' %}
+
+            <br>
+            <br>
+
+              <h2 class="govuk-heading-m">Personal details</h2>
+              <dl class="app-check-your-answers app-check-your-answers--short">
+                <div class="app-check-your-answers__contents">
+                  <dt class="app-check-your-answers__question">
+
+                  </dt>
+                  <dd class="app-check-your-answers__answer">
+
+                  </dd>
+                </div>
+
+                <div class="app-check-your-answers__contents">
+                  <dt class="app-check-your-answers__answer">
+                    Name
+                  </dt>
+                  <dd class="app-check-your-answers__answer">
+                    Alex Smith
+                  </dd>
+              </div>
+
+              <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__answer">
+                  National Insurance number
+                </dt>
+                <dd class="app-check-your-answers__answer">
+
+                </dd>
+              </div>
+
+              <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__answer">
+                  Date of birth
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                  29 June 1949
+                </dd>
+              </div>
+
+              <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__answer">
+                  Age
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                  70
+                </dd>
+              </div>
+
+              <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__answer">
+                  2018 payment?
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                  £100
+                </dd>
+              </div>
+
+              <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__answer">
+                  Occupants?
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                  Living with someone born before 6 November 1953?
+                </dd>
+              </div>
+
+
+
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+
+        <h2 class="govuk-heading-m">
+          Contact history
+        </h2>
+        <ol class="app-timeline">
+
+          <li class="app-timeline__entry">
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+          <a href="top-up-request" class="govuk-link">Top up payment request <br>sent to DWP</a>
+            </h3>
+
+            <p class="app-timeline__info govuk-!-margin-bottom-0">
+              <span class="app-timeline__date">
+              8 November 2018
+              </span>
+            </p>
+          </li>
+
+        </ol>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  </main>
+  </div>
+
+  {% endblock %}

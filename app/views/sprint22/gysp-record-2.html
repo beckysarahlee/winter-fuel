@@ -12,7 +12,7 @@ GOV.UK Prototype Kit
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-grid-column-three-quarters">
 
       {{ govukBackLink({
           text: "Back",
@@ -41,8 +41,8 @@ GOV.UK Prototype Kit
                     £100
                   </dd>
                   <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="#">
-                      <span class="govuk-visually-hidden"> name</span>
+                    <a class="govuk-link" href="gysp-payment">
+                    Record payment<span class="govuk-visually-hidden"></span>
                     </a>
                   </dd>
                 </div>
@@ -150,13 +150,6 @@ GOV.UK Prototype Kit
                   </dd>
                 </div>
               </dl>
-
-              <form action="gysp-payment" method="post" novalidate>
-                <button class="govuk-button" data-module="govuk-button">
-                  Record payment
-                </button>
-                <input type="hidden" name="answers-checked" value="true">
-              </form>
 
             </div>
           </div>
