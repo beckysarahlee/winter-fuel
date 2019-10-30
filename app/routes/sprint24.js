@@ -25,7 +25,7 @@ router.use((req, res, next) => {
 
   router.post('/sprint24/claimed', function(req, res) {
     if ( req.body['claimed'] === 'yes' ) {
-      res.redirect('benefits');
+      res.redirect('residency-type');
     } else {
       res.redirect('deferral');
     }
