@@ -14,11 +14,6 @@ router.use((req, res, next) => {
   next()
 })
 
-
-// Pension credit/State Pension
-
-
-
   // Date of birth
 
   router.post('/sprint24/date-of-birth', (req, res) => {
@@ -52,9 +47,9 @@ router.use((req, res, next) => {
     if ( req.body['benefit'] === 'sp' ) {
       res.redirect('residency-type');
     } else if ( req.body['benefit'] === 'pc' ) {
-      res.redirect('full-payment');
+      res.redirect('residency-type-pc');
     } else if ( req.body['benefit'] === 'both' ) {
-      res.redirect('full-payment');
+      res.redirect('residency-type-pc');
     } else if ( req.body['benefit'] === 'none' ) {
       res.redirect('claimed');
     }
