@@ -137,6 +137,12 @@ router.use((req, res, next) => {
     }
   });
 
+  // Living with age
+  router.post('/sprint27b/living-with-age', (req, res) => {
+    res.redirect('/sprint27b/contact')
+  })
+  ;
+
   // Change of address and home phone number
   router.post('/sprint27b/homephone-address', function(req, res) {
     if ( req.body['homephone-address'] === 'Yes' ) {
