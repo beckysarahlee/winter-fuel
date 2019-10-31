@@ -17,10 +17,7 @@ GOV.UK Prototype Kit
 
       <form method="post">
 
-        <h2 class="govuk-heading-xl">Alex Smith<br>
-          <span class="govuk-caption-xl"> {{data.nino}} </span>
-          <span class="app-c-tag">Receiving Winter Fuel Payment</span>
-        </h2>
+        {% include './_bar.html' %}
 
             {% include './_tab-payment.html' %}
 
@@ -28,6 +25,15 @@ GOV.UK Prototype Kit
 
             <dl class="app-check-your-answers app-check-your-answers--short">
               <h2 class="govuk-heading-m">Bank or building society account details</h2>
+
+              <div class="govuk-warning-text">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="govuk-warning-text__text">
+                  <span class="govuk-warning-text__assistive">Warning</span>
+                  A payment to this account has been returned.
+                </strong>
+              </div>
+
               <div class="app-check-your-answers__contents">
                 <dd class="app-check-your-answers__answer">
                 </dd>
@@ -85,7 +91,7 @@ GOV.UK Prototype Kit
                   Sort code
                 </dt>
                 <dd class="app-check-your-answers__answer">
-                  00 00 00 
+                  00 00 00
                 </dd>
                 <dd class="app-check-your-answers__change">
                 </dd>
@@ -160,7 +166,6 @@ GOV.UK Prototype Kit
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell"><a href="previous-payment1" class="govuk-link">Wednesday 30 October 2018</a></td>
-              <td class="govuk-table__cell"></td>
               <td class="govuk-table__cell">£100</td>
               <td class="govuk-table__cell">
                 <span class="verified-badge verified">
@@ -169,7 +174,6 @@ GOV.UK Prototype Kit
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell"><a href="#" class="govuk-link">Wednesday 30 October 2017</a></td>
-              <td class="govuk-table__cell"></td>
               <td class="govuk-table__cell">£100</td>
               <td class="govuk-table__cell">
                 <span class="verified-badge verified">
@@ -178,7 +182,6 @@ GOV.UK Prototype Kit
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell"><a href="#" class="govuk-link">Wednesday 30 October 2016</a></td>
-              <td class="govuk-table__cell"></td>
               <td class="govuk-table__cell">£100</td>
               <td class="govuk-table__cell">
                 <span class="verified-badge verified">
@@ -187,7 +190,6 @@ GOV.UK Prototype Kit
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell"><a href="#" class="govuk-link">Wednesday 30 October 2015</a></td>
-              <td class="govuk-table__cell"></td>
               <td class="govuk-table__cell">£100</td>
               <td class="govuk-table__cell">
                 <span class="verified-badge verified">
@@ -196,7 +198,6 @@ GOV.UK Prototype Kit
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell"><a href="#" class="govuk-link">Wednesday 30 October 2014</a></td>
-              <td class="govuk-table__cell"></td>
               <td class="govuk-table__cell">£100</td>
               <td class="govuk-table__cell">
                 <span class="verified-badge verified">

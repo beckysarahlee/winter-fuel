@@ -27,10 +27,7 @@ GOV.UK Prototype Kit
 
       <form method="post">
 
-        <h2 class="govuk-heading-xl">Alex Smith<br>
-          <span class="govuk-caption-xl"> {{data.nino}} </span>
-          <span class="app-c-tag">Receiving Winter Fuel Payment</span>
-        </h2>
+        {% include './_bar.html' %}
 
             {% include './_tab-overview.html' %}
 
@@ -62,7 +59,7 @@ GOV.UK Prototype Kit
                 National Insurance number
               </dt>
               <dd class="app-check-your-answers__answer">
-                {{data.nino}}
+
               </dd>
             </div>
 
