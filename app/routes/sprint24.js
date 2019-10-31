@@ -267,8 +267,20 @@ router.post('/sprint24/live-with-carehome', function(req, res) {
   }
 });
 
+// Care home during Q week over 13 weeks?
+
 router.post('/sprint24/live-with-carehome-13weeks', function(req, res) {
   if ( req.body['carehome-13weeks'] === 'yes' ) {
+    res.redirect('shared-payment');
+  } else {
+    res.redirect('live-with-anyone-else');
+  }
+});
+
+
+
+router.post('/sprint24/live-with-anyone-else', function(req, res) {
+  if ( req.body['carehome-other'] === 'yes' ) {
     res.redirect('shared-payment');
   } else {
     res.redirect('full-payment');

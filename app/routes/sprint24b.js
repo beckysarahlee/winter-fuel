@@ -271,10 +271,19 @@ router.post('/sprint24b/live-with-carehome-13weeks', function(req, res) {
   if ( req.body['carehome-13weeks'] === 'yes' ) {
     res.redirect('shared-payment');
   } else {
-    res.redirect('full-payment');
+    res.redirect('live-with-anyone-else');
   }
 });
 
+
+
+router.post('/sprint24b/live-with-anyone-else', function(req, res) {
+  if ( req.body['carehome-other'] === 'yes' ) {
+    res.redirect('shared-payment');
+  } else {
+    res.redirect('full-payment');
+  }
+});
 // Current address
 
 router.post('/sprint24b/address-check', function(req, res) {
