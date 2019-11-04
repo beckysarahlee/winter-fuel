@@ -25,7 +25,10 @@ GOV.UK Prototype Kit
 
         <form method="post">
 
-          <a href="/sprint21/residency" class="govuk-back-link">Back</a>
+          {{ govukBackLink({
+              text: "Back",
+              href: back
+            }) }}
           <br>
           <br>
 
@@ -42,7 +45,7 @@ GOV.UK Prototype Kit
 
         <p>You qualify for £100 because you were under 80 years old and living in a care or nursing
     home for 13 weeks or more, including qualifying week.</p>
-    
+
       </div>
 
 

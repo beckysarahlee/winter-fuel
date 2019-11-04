@@ -85,7 +85,7 @@ if ( req.body['query'] === 'eligibility' ) {
     if ( req.body['where-were-you-living'] === 'hospital' ) {
       res.redirect('hospital');
     } else if ( req.body['where-were-you-living'] === 'carehome' ) {
-      res.redirect('care-home');
+      res.redirect('care-home-shared');
     } else if ( req.body['where-were-you-living'] === 'no-abode' ) {
       res.redirect('no-abode');
     } else if ( req.body['where-were-you-living'] === 'prison' ) {
@@ -131,17 +131,6 @@ if ( req.body['query'] === 'eligibility' ) {
       res.redirect('hospital-over-year');
     }
   });
-
-
-  // Care or nursing home
-
-    router.post('/sprint24/care-home', function(req, res) {
-      if ( req.body['care-home-admission'] === 'yes' ) {
-        res.redirect('who');
-      } else {
-        res.redirect('care-home-over-13');
-      }
-    });
 
     // Care or nursing home PC
 
