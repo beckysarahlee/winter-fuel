@@ -15,29 +15,61 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-      <form method="post">
+        <form method="post">
 
           {% include './_bar.html' %}
 
-            {{ govukBackLink({
+          {{ govukBackLink({
                 text: "Back",
                 href: back
               }) }}
 
-            <br>
-            <br>
+          <br>
+          <br>
 
-            <h1 class="govuk-heading-l">Re-issue payment</h1>
+          <table class="govuk-table">
+            <h1 class="govuk-heading-l">Reissue payment</h1>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Amount</th>
+                <td class="govuk-table__cell">£100</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Period</th>
+                <td class="govuk-table__cell">Winter 2019</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Payment date</th>
+                <td class="govuk-table__cell">13 November 2019</td>
+              </tr>
+            </tbody>
+          </table>
 
-
+          <table class="govuk-table">
+            <h2 class="govuk-heading-m">Bank account details</h2>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Account holder</th>
+                <td class="govuk-table__cell">£109.80 per week</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Account number</th>
+                <td class="govuk-table__cell">£109.80 per week</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Sort code</th>
+                <td class="govuk-table__cell">£4,282.20</td>
+              </tr>
+            </tbody>
+          </table>
 
       </div>
 
     </div>
 
-  </div>
+</div>
 
-  </main>
-  </div>
+</main>
+</div>
 
-  {% endblock %}
+{% endblock %}
