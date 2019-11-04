@@ -57,7 +57,7 @@ router.use((req, res, next) => {
   })
 
   router.post('/sprint27c/mobilephone', (req, res) => {
-    res.redirect('/sprint27c/overview')
+    res.redirect('/sprint27c/contact')
   })
   ;
 
@@ -69,7 +69,7 @@ router.use((req, res, next) => {
   })
 
   router.post('/sprint27c/email', (req, res) => {
-    res.redirect('/sprint27c/overview')
+    res.redirect('/sprint27c/contact')
   })
   ;
 
@@ -155,7 +155,7 @@ router.use((req, res, next) => {
   // Home phone number removal
   router.post('/sprint27c/homephone-remove', function(req, res) {
     if ( req.body['homephone-remove'] === 'Yes' ) {
-      res.redirect('overview');
+      res.redirect('contact');
     } else {
       res.redirect('homephone');
     }
@@ -165,7 +165,7 @@ router.use((req, res, next) => {
   // Mobile phone number removal
   router.post('/sprint27c/mobilephone-remove', function(req, res) {
     if ( req.body['mobilephone-remove'] === 'yes' ) {
-      res.redirect('overview');
+      res.redirect('contact');
     } else {
       res.redirect('mobilephone');
     }
@@ -174,7 +174,7 @@ router.use((req, res, next) => {
   // Work phone number removal & change
   router.post('/sprint27c/workphone-remove', function(req, res) {
     if ( req.body['workphone-remove'] === 'Yes' ) {
-      res.redirect('overview');
+      res.redirect('contact');
     } else {
       res.redirect('workphone');
     }
@@ -188,7 +188,7 @@ router.use((req, res, next) => {
   // Email removal
   router.post('/sprint27c/email-remove', function(req, res) {
     if ( req.body['email-remove'] === 'yes' ) {
-      res.redirect('overview');
+      res.redirect('contact');
     } else {
       res.redirect('email');
     }

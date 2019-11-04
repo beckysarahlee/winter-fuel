@@ -89,12 +89,12 @@ GOV.UK Prototype Kit
                   Mobile phone number
                 </dt>
                 <dd class="app-check-your-answers__answer">
-
-                  {% if data['workphone-remove'] === 'Yes' %}
-                  {% elseif data.worknumber %}
-                  {{data.worknumber}}
-                  {% else %}
-                  
+                  {% if data.mobilenumber %}
+                  {{data.mobilenumber}}
+                  {% endif %}
+                  {% if data['mobilephone-remove'] === 'Yes' %}
+                  {% elseif data.mobilephone %}
+                  {{data.mobilephone}}
                   {% endif %}
                 </dd>
                 <dd class="app-check-your-answers__change">
@@ -113,17 +113,21 @@ GOV.UK Prototype Kit
                   Work phone number
                 </dt>
                 <dd class="app-check-your-answers__answer">
-
-                  {% if data['workphone-remove'] === 'Yes' %}
-                  {% elseif data.worknumber %}
+                  {% if data.worknumber %}
                   {{data.worknumber}}
-                  {% else %}
-                  0191 2798475
+                  {% endif %}
+                  {% if data['workphone-remove'] === 'Yes' %}
+                  {% elseif data.workphone %}
+                  {{data.workphone}}
                   {% endif %}
                 </dd>
                 <dd class="app-check-your-answers__change">
                   <a href="workphone">
-                    Change
+                    {% if not data.worknumber %}
+                    Add<span class="govuk-visually-hidden"> work number</span>
+                    {% else %}
+                    Change<span class="govuk-visually-hidden"> work number</span>
+                    {% endif %}
                   </a>
                 </dd>
               </div>
@@ -133,17 +137,20 @@ GOV.UK Prototype Kit
                   Email address
                 </dt>
                 <dd class="app-check-your-answers__answer">
-
-                  {% if data['workphone-remove'] === 'Yes' %}
-                  {% elseif data.worknumber %}
-                  {{data.worknumber}}
+                  {% if data['email-remove'] === 'Yes' %}
+                  {% elseif data.email %}
+                  {{data.email}}
                   {% else %}
-                  0191 2798475
+                  mary234@hotmail.com
                   {% endif %}
                 </dd>
                 <dd class="app-check-your-answers__change">
-                  <a href="workphone">
-                    Change
+                  <a href="email">
+                    {% if not data.email %}
+                    Add<span class="govuk-visually-hidden">email</span>
+                    {% else %}
+                    Change<span class="govuk-visually-hidden">email</span>
+                    {% endif %}
                   </a>
                 </dd>
               </div>
@@ -154,16 +161,14 @@ GOV.UK Prototype Kit
                 </dt>
                 <dd class="app-check-your-answers__answer">
 
-                  {% if data['workphone-remove'] === 'Yes' %}
-                  {% elseif data.worknumber %}
-                  {{data.worknumber}}
-                  {% else %}
-                  0191 2798475
-                  {% endif %}
                 </dd>
                 <dd class="app-check-your-answers__change">
-                  <a href="workphone">
-                    Change
+                  <a href="contact-preferences">
+                    {% if not data.contactpreferences %}
+                    Add<span class="govuk-visually-hidden">contact preferences</span>
+                    {% else %}
+                    Change<span class="govuk-visually-hidden">contact preferences</span>
+                    {% endif %}
                   </a>
                 </dd>
               </div>
