@@ -22,83 +22,46 @@ GOV.UK Prototype Kit
             {% include './_tab-payment.html' %}
 
             <br>
+            <br>
+          <h2 class="govuk-heading-m">Bank or building society account details</h2>
 
-            <dl class="app-check-your-answers app-check-your-answers--short">
-              <h2 class="govuk-heading-m">Bank or building society account details</h2>
-
+            <table class="govuk-table">
               <div class="govuk-warning-text">
                 <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
                 <strong class="govuk-warning-text__text">
                   <span class="govuk-warning-text__assistive">Warning</span>
-                  A payment to this account has been returned.
+                  A payment to this account has been returned.<br>
+                  <a href="bankdetails" class="govuk-link">Change bank details and re-issue payment</a>
                 </strong>
               </div>
-
-              <div class="app-check-your-answers__contents">
-                <dd class="app-check-your-answers__answer">
-                </dd>
-                <dd class="app-check-your-answers__change">
-                  <a href="bankdetails">
-                    Change
-                    <span class="govuk-visually-hidden">Change payment details</span>
-                  </a>
-                </dd>
-              </div>
-
-              <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__answer">
-                  Bank or building society
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                  HSBC
-                </dd>
-                <dd class="app-check-your-answers__change">
-                </dd>
-              </div>
-
-              <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__answer">
-                  Account holder
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                  {% if data.accountholder %}
-                  {{data.accountholder}}
-                  {% else %}
-                  Mr A Smith
-                  {% endif %}
-                </dd>
-                <dd class="app-check-your-answers__change">
-                </dd>
-              </div>
-
-              <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__answer">
-                  Account number
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                  {% if data.accountnumber %}
-                  {{data.accountnumber}}
-                  {% else %}
-                  ****5678
-                  {% endif %}
-                </dd>
-                <dd class="app-check-your-answers__change">
-                </dd>
-              </div>
-
-              <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__answer">
-                  Sort code
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                  00 00 00
-                </dd>
-                <dd class="app-check-your-answers__change">
-                </dd>
-              </div>
-
-              <br>
-
+              <a href="previous-payment1"
+              <span class="govuk-link govuk-!-font-size-19" style="margin-left: 90%">Change</span>
+              </a>
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header"></th>
+                  <th scope="col" class="govuk-table__header"></th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Bank or building society</th>
+                  <td class="govuk-table__cell">HSBC</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Account holder</th>
+                  <td class="govuk-table__cell">Mr A Smith</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Account number</th>
+                  <td class="govuk-table__cell">12345678</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Sort code</th>
+                  <td class="govuk-table__cell">00 11 22</td>
+                </tr>
+              </tbody>
+            </table>
 
 
       </div>
@@ -116,7 +79,7 @@ GOV.UK Prototype Kit
 
             <p class="app-timeline__info govuk-!-margin-bottom-0">
               <span class="app-timeline__date">
-              8 November 2018
+              4 November 2019
               </span>
             </p>
           </li>
@@ -154,56 +117,54 @@ GOV.UK Prototype Kit
         </div>
 
 
+
         <div class="govuk-grid-column-full">
+          <br>
                   <h2 class="govuk-heading-m">Previous payments</h2>
         <table class="govuk-table">
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell"></td>
-              <td class="govuk-table__cell"></td>
-              <td class="govuk-table__cell"></td>
-              <td class="govuk-table__cell"></td>
+              <th scope="col" class="govuk-table__header">Payment date</th>
+              <th scope="col" class="govuk-table__header">Amount</th>
+              <th scope="col" class="govuk-table__header">Status</th>
+              <th scope="col" class="govuk-table__header"></th>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell"><a href="previous-payment1" class="govuk-link">Wednesday 30 October 2018</a></td>
+              <td class="govuk-table__cell">Monday 4 November 2019</td>
               <td class="govuk-table__cell">£100</td>
-              <td class="govuk-table__cell">
-                <span class="verified-badge verified">
-                <b>Paid</b>
-              </span></td>
+              <td class="govuk-table__cell">Returned</td>
+              <td class="govuk-table__cell"><a href="previous-payment1" class="govuk-link">Details</a></td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell"><a href="#" class="govuk-link">Wednesday 30 October 2017</a></td>
+              <td class="govuk-table__cell">Monday 29 October 2018</td>
               <td class="govuk-table__cell">£100</td>
-              <td class="govuk-table__cell">
-                <span class="verified-badge verified">
-                <b>Paid</b>
-              </span></td>
+              <td class="govuk-table__cell">Paid</td>
+              <td class="govuk-table__cell"><a href="previous-payment" class="govuk-link">Details</a></td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell"><a href="#" class="govuk-link">Wednesday 30 October 2016</a></td>
+              <td class="govuk-table__cell">Monday 30 October 2017</td>
               <td class="govuk-table__cell">£100</td>
-              <td class="govuk-table__cell">
-                <span class="verified-badge verified">
-                <b>Paid</b>
-              </span></td>
+              <td class="govuk-table__cell">Paid</td>
+              <td class="govuk-table__cell"><a href="#" class="govuk-link">Details</a></td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell"><a href="#" class="govuk-link">Wednesday 30 October 2015</a></td>
+              <td class="govuk-table__cell">Monday 31 October 2016</td>
               <td class="govuk-table__cell">£100</td>
-              <td class="govuk-table__cell">
-                <span class="verified-badge verified">
-                <b>Paid</b>
-              </span></td>
+              <td class="govuk-table__cell">Paid</td>
+              <td class="govuk-table__cell"><a href="#" class="govuk-link">Details</a></td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell"><a href="#" class="govuk-link">Wednesday 30 October 2014</a></td>
+              <td class="govuk-table__cell">Monday 2 November 2015</td>
               <td class="govuk-table__cell">£100</td>
-              <td class="govuk-table__cell">
-                <span class="verified-badge verified">
-                <b>Paid</b>
-              </span></td>
-            </tr>
+              <td class="govuk-table__cell">Paid</td>
+              <td class="govuk-table__cell"><a href="#" class="govuk-link">Details</a></td>
+              </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Monday 27 October 2014</td>
+              <td class="govuk-table__cell">£100</td>
+              <td class="govuk-table__cell">Paid</td>
+              <td class="govuk-table__cell"><a href="#" class="govuk-link">Details</a></td>
+              </tr>
           </tbody>
         </table>
 

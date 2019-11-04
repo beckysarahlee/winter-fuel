@@ -33,7 +33,7 @@ router.use((req, res, next) => {
   })
 
   router.post('/sprint27c/bankdetails', (req, res) => {
-    res.redirect('/sprint27c/payment')
+    res.redirect('/sprint27c/reissue-payment')
   })
   ;
 

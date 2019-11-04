@@ -34,71 +34,35 @@ GOV.UK Prototype Kit
             <br>
             <br>
 
+            <table class="govuk-table">
             <h2 class="govuk-heading-m">Personal details</h2>
-            <dl class="app-check-your-answers app-check-your-answers--short">
-              <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__question">
-
-                </dt>
-                <dd class="app-check-your-answers__answer">
-
-                </dd>
-              </div>
-
-              <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__answer">
-                  Name
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                  Alex Smith
-                </dd>
-            </div>
-
-            <div class="app-check-your-answers__contents">
-              <dt class="app-check-your-answers__answer">
-                National Insurance number
-              </dt>
-              <dd class="app-check-your-answers__answer">
-
-              </dd>
-            </div>
-
-            <div class="app-check-your-answers__contents">
-              <dt class="app-check-your-answers__answer">
-                Date of birth
-              </dt>
-              <dd class="app-check-your-answers__answer">
-                29 June 1949
-              </dd>
-            </div>
-
-            <div class="app-check-your-answers__contents">
-              <dt class="app-check-your-answers__answer">
-                Age
-              </dt>
-              <dd class="app-check-your-answers__answer">
-                70
-              </dd>
-            </div>
-
-            <div class="app-check-your-answers__contents">
-              <dt class="app-check-your-answers__answer">
-                2018 payment?
-              </dt>
-              <dd class="app-check-your-answers__answer">
-                £100
-              </dd>
-            </div>
-
-            <div class="app-check-your-answers__contents">
-              <dt class="app-check-your-answers__answer">
-                Occupants?
-              </dt>
-              <dd class="app-check-your-answers__answer">
-                Living with someone born before 6 November 1953?
-              </dd>
-            </div>
-
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Name</th>
+                  <td class="govuk-table__cell">Alex Smith</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">National Insurance number</th>
+                  <td class="govuk-table__cell">{{data.nino}}</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Date of birth</th>
+                  <td class="govuk-table__cell">29 June 1949</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Age</th>
+                  <td class="govuk-table__cell">70</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">2018 payment?</th>
+                  <td class="govuk-table__cell">£100</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Occupants?</th>
+                  <td class="govuk-table__cell">Living with someone born before 6 November 1953?</td>
+                </tr>
+              </tbody>
+            </table>
 
       </div>
 

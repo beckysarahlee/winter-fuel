@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include './_find-someone.html' %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+      <form method="post">
+
+          {% include './_bar.html' %}
+
+            {{ govukBackLink({
+                text: "Back",
+                href: back
+              }) }}
+
+            <br>
+            <br>
+
+            <h1 class="govuk-heading-l">Re-issue payment</h1>
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  </main>
+  </div>
+
+  {% endblock %}
