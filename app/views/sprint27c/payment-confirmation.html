@@ -15,53 +15,74 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-      <form method="post">
+        <form method="post">
 
-        {% include './_bar.html' %}
+          <div class="moj-banner moj-banner--success">
 
-            {% include './_tab-payment.html' %}
+            <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+              <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
 
-            <br>
-            <br>
+            <div class="moj-banner__message">
+              <span class="moj-banner__assistive">Success</span>£100 payment reissued</div>
+
+          </div>
+
+          {% include './_bar-normal.html' %}
+
+          {% include './_tab-payment.html' %}
+
+          <br>
+          <br>
           <h2 class="govuk-heading-m">Bank or building society account details</h2>
 
-            <table class="govuk-table">
-              <div class="govuk-warning-text">
-                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-                <strong class="govuk-warning-text__text">
-                  <span class="govuk-warning-text__assistive">Warning</span>
-                  A payment to this account has been returned.<br>
-                  <a href="bankdetails" class="govuk-link">Change bank details and re-issue payment</a>
-                </strong>
-              </div>
-              <a href="bankdetails"
-              <span class="govuk-link govuk-!-font-size-19" style="margin-left: 90%">Change</span>
-              </a>
-              <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                  <th scope="col" class="govuk-table__header"></th>
-                  <th scope="col" class="govuk-table__header"></th>
-                </tr>
-              </thead>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Account holder</th>
-                  <td class="govuk-table__cell">
-                    Mrs M H Morrison
-                </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Account number</th>
-                  <td class="govuk-table__cell">12345678</td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Sort code</th>
-                  <td class="govuk-table__cell">00 11 22</td>
-                </tr>
-              </tbody>
-            </table>
+          <table class="govuk-table">
+            <a href="bankdetails" <span class="govuk-link govuk-!-font-size-19" style="margin-left: 90%">Change</span>
+            </a>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header"></th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Account holder</th>
+                <td class="govuk-table__cell">
+                  {% if data.accountholder %}
+                  {{data.accountholder}}
+                  {% else %}
+                  Mrs H Morrison
+                  {% endif %}</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Account number</th>
+                <td class="govuk-table__cell">
+                  {% if data.accountnumber %}
+                  {{data.accountnumber}}
+                  {% else %}
+                  12345678
+                  {% endif %}</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Sort code</th>
+                <td class="govuk-table__cell">
+                  {% if data.rollnumber %}
+                  {{data.rollnumber}}
+                  {% else %}
+                  00 11 22
+                  {% endif %}</td>
+              </tr>
+            </tbody>
+          </table>
 
 
       </div>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
 
       <div class="govuk-grid-column-one-third">
         <h2 class="govuk-heading-m">
@@ -71,12 +92,25 @@ GOV.UK Prototype Kit
 
           <li class="app-timeline__entry">
             <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
-          <a>Payment returned</a>
+              <a>Payment reissued</a>
             </h3>
 
             <p class="app-timeline__info govuk-!-margin-bottom-0">
               <span class="app-timeline__date">
-              4 November 2019
+                7 November 2019
+              </span>
+            </p>
+          </li>
+
+
+          <li class="app-timeline__entry">
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+              <a>Payment returned</a>
+            </h3>
+
+            <p class="app-timeline__info govuk-!-margin-bottom-0">
+              <span class="app-timeline__date">
+                4 November 2019
               </span>
             </p>
           </li>
@@ -111,13 +145,13 @@ GOV.UK Prototype Kit
 
         </ol>
 
-        </div>
+      </div>
 
 
 
-        <div class="govuk-grid-column-full">
-          <br>
-                  <h2 class="govuk-heading-m">Previous payments</h2>
+      <div class="govuk-grid-column-full">
+        <br>
+        <h2 class="govuk-heading-m">Previous payments</h2>
         <table class="govuk-table">
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
@@ -127,10 +161,10 @@ GOV.UK Prototype Kit
               <th scope="col" class="govuk-table__header"></th>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Monday 4 November 2019</td>
+              <td class="govuk-table__cell">Monday 11 November 2019</td>
               <td class="govuk-table__cell">£100</td>
-              <td class="govuk-table__cell">Returned</td>
-              <td class="govuk-table__cell"><a href="previous-payment1" class="govuk-link">Details</a></td>
+              <td class="govuk-table__cell">Reissued</td>
+              <td class="govuk-table__cell"><a href="previous-payment-reissued" class="govuk-link">Details</a></td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">Monday 29 October 2018</td>
@@ -155,25 +189,25 @@ GOV.UK Prototype Kit
               <td class="govuk-table__cell">£100</td>
               <td class="govuk-table__cell">Paid</td>
               <td class="govuk-table__cell"><a href="#" class="govuk-link">Details</a></td>
-              </tr>
+            </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">Monday 27 October 2014</td>
               <td class="govuk-table__cell">£100</td>
               <td class="govuk-table__cell">Paid</td>
               <td class="govuk-table__cell"><a href="#" class="govuk-link">Details</a></td>
-              </tr>
+            </tr>
           </tbody>
         </table>
 
 
-    </div>
+      </div>
 
 
     </div>
 
-  </div>
+</div>
 
-  </main>
-  </div>
+</main>
+</div>
 
-  {% endblock %}
+{% endblock %}
