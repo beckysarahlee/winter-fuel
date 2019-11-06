@@ -22,60 +22,37 @@ GOV.UK Prototype Kit
             {% include './_tab-payment.html' %}
 
             <br>
+            <br>
 
-            <dl class="app-check-your-answers app-check-your-answers--short">
               <h2 class="govuk-heading-m">Bank or building society account details</h2>
-              <div class="app-check-your-answers__contents">
-                <dd class="app-check-your-answers__answer">
-                </dd>
-                <dd class="app-check-your-answers__change">
-                  <a href="bankdetails">
-                    Change
-                    <span class="govuk-visually-hidden">Change payment details</span>
-                  </a>
-                </dd>
-              </div>
+              <table class="govuk-table">
+                <a href="bankdetails"
+                <span class="govuk-link govuk-!-font-size-19" style="margin-left: 90%">Change</span>
+                </a>
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header"></th>
+                    <th scope="col" class="govuk-table__header"></th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Account holder</th>
+                    <td class="govuk-table__cell">
+                      Mrs M H Morrison
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Account number</th>
+                    <td class="govuk-table__cell">12345678</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Sort code</th>
+                    <td class="govuk-table__cell">00 11 22</td>
+                  </tr>
+                </tbody>
+              </table>
 
-              <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__answer">
-                  Account holder
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                  {% if data.accountholder %}
-                  {{data.accountholder}}
-                  {% else %}
-                  Mr A Smith
-                  {% endif %}
-                </dd>
-                <dd class="app-check-your-answers__change">
-                </dd>
-              </div>
 
-              <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__answer">
-                  Account number
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                  {% if data.accountnumber %}
-                  {{data.accountnumber}}
-                  {% else %}
-                  ****5678
-                  {% endif %}
-                </dd>
-                <dd class="app-check-your-answers__change">
-                </dd>
-              </div>
-
-              <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__answer">
-                  Sort code
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                  00 00 00
-                </dd>
-                <dd class="app-check-your-answers__change">
-                </dd>
-              </div>
 
               <br>
 

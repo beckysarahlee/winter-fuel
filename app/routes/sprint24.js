@@ -51,7 +51,7 @@ router.use((req, res, next) => {
     } else if ( req.body['benefit'] === 'both' ) {
       res.redirect('residency-type-pc');
     } else if ( req.body['benefit'] === 'none' ) {
-      res.redirect('claimed');
+      res.redirect('deferral');
     }
   });
 

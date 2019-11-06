@@ -37,11 +37,12 @@ GOV.UK Prototype Kit
           </div>
         </main>
 
-        </br>
+        <br>
 
-        <div>
-                <a href="overview" class="govuk-back-link">Back</a>
-        </div>
+        {{ govukBackLink({
+            text: "Back",
+            href: back
+          }) }}
 
         <h1 class="govuk-heading-l">Change email address</h1>
         <form method="post">

@@ -28,14 +28,18 @@ GOV.UK Prototype Kit
           <h2 class="govuk-heading-m">Contact details</h2>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Address</th>
+                <th scope="row" class="govuk-table__header">Address<br>
+                      <span class="hmcts-badge">Hospital</span>
+                </th>
                 <td class="govuk-table__cell">
                   {% if data.address %}
                   {{data.address.split(', ').join('<br />') | safe}}
                   {% else %}
-                  78 Graham Road<br>
-                  Chelsham<br>
-                  CR6 9ND
+                  Freeman hospital<br>
+                  Freeman Road<br>
+                  High Heaton<br>
+                  Newcastle upon Tyne<br>
+                  NE7 7DN<br>
                   {% endif %}
                 </td>
                 <td class="govuk-table__cell">
@@ -60,7 +64,7 @@ GOV.UK Prototype Kit
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Time spent in hospital</th>
                 <td class="govuk-table__cell">
-
+                  17 weeks and 2 days
                 </td>
                 <td class="govuk-table__cell">
                   <a href="address">

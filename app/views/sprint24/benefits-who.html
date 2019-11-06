@@ -24,8 +24,12 @@ GOV.UK Prototype Kit
       <div class="govuk-grid-column-two-thirds">
 
         <form method="post">
+          
+          {{ govukBackLink({
+              text: "Back",
+              href: back
+            }) }}
 
-          <a href="/sprint21/residency-type" class="govuk-back-link">Back</a>
           <br>
           <br>
 

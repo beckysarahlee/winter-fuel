@@ -37,15 +37,16 @@ GOV.UK Prototype Kit
           </div>
         </main>
 
-        </br>
+        <br>
 
-        <div>
-          <a href="address-dlo" class="govuk-back-link">Back</a>
-        </div>
+        {{ govukBackLink({
+            text: "Back",
+            href: back
+          }) }}
 
         <h1 class="govuk-heading-l">Add new address</h1>
 
-<h2 class="govuk-heading-s">Postcode </br>
+<h2 class="govuk-heading-s">Postcode <br>
 {{data.postcode}} <a href="address" class="govuk-link"> Change</a></h2>
 
 

@@ -15,7 +15,11 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        <a href="/sprint22b/security" class="govuk-back-link">Back</a>
+        {{ govukBackLink({
+            text: "Back",
+            href: back
+          }) }}
+
         <br>
         <br>
 

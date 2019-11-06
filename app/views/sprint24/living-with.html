@@ -17,14 +17,18 @@ GOV.UK Prototype Kit
 
         <form method="post">
 
-          <a href="/sprint22b/who" class="govuk-back-link">Back</a>
+          {{ govukBackLink({
+              text: "Back",
+              href: back
+            }) }}
+
           <br>
           <br>
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
 
-                  <h1 class="govuk-heading-l">Was anyone you live with born before 6 November 1953?</h1>
+                  <h1 class="govuk-heading-l">Was anyone you live with born before 6 April 1954?</h1>
 
               <br>
 

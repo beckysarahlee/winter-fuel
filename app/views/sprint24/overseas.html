@@ -17,7 +17,11 @@ GOV.UK Prototype Kit
 
         <form action="/sprint21/benefits" method="post">
 
-          <a href="/sprint22b/residency" class="govuk-back-link">Back</a>
+          {{ govukBackLink({
+              text: "Back",
+              href: back
+            }) }}
+
           <br>
           <br>
 

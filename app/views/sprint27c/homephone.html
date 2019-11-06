@@ -39,9 +39,11 @@ GOV.UK Prototype Kit
 
         <br>
 
-<div>
-        <a href="overview" class="govuk-back-link">Back</a>
-</div>
+        {{ govukBackLink({
+            text: "Back",
+            href: back
+          }) }}
+
 <br>
         <h1 class="govuk-heading-l">Change home phone number</h1>
 

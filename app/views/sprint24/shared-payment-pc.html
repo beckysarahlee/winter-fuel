@@ -18,7 +18,11 @@ GOV.UK Prototype Kit
 
         <form method="post">
 
-          <a href="/sprint22b/live-with-carehome" class="govuk-back-link">Back</a>
+          {{ govukBackLink({
+              text: "Back",
+              href: back
+            }) }}
+
           <br>
           <br>
 
@@ -33,7 +37,7 @@ GOV.UK Prototype Kit
 
             <p>You qualify for £100 because you were under 80 years old and living with someone else
               who was also getting Pension Credit during this year's qualifying week.</p>
-            
+
 
               <button type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
                 Find caller's record

@@ -18,7 +18,11 @@ GOV.UK Prototype Kit
 
         <form method="post">
 
-          <a href="/sprint21/date-of-birth" class="govuk-back-link">Back</a>
+          {{ govukBackLink({
+              text: "Back",
+              href: back
+            }) }}
+
           <br>
           <br>
 

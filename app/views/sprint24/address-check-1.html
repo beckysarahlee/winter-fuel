@@ -15,7 +15,11 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        <a href="/sprint22b/security" class="govuk-back-link">Back</a>
+        {{ govukBackLink({
+            text: "Back",
+            href: back
+          }) }}
+          
         <br>
         <br>
 
@@ -36,7 +40,7 @@ GOV.UK Prototype Kit
 
 <p>86 Leicester Road<br>
 Aydon<br>
-NE45 2EE  
+NE45 2EE
 </p>
 
 <h3 class="govuk-heading-s">Does the address match?</h3>

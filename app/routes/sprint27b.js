@@ -123,6 +123,11 @@ router.use((req, res, next) => {
   ;
 
   router.post('/sprint27b/address-1', (req, res) => {
+    res.redirect('/sprint27b/move-date')
+  })
+  ;
+
+  router.post('/sprint27b/move-date', (req, res) => {
     res.redirect('/sprint27b/living-with')
   })
   ;
