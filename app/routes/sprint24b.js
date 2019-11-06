@@ -178,7 +178,7 @@ if ( req.body['query'] === 'eligibility' ) {
 
         router.post('/sprint24b/living-with', function(req, res) {
           if ( req.body['live-with-age'] === 'yes' ) {
-            res.redirect('live-with-carehome');
+            res.redirect('shared-payment');
           } else {
             res.redirect('full-payment');
           }
