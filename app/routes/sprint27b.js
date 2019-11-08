@@ -123,11 +123,6 @@ router.use((req, res, next) => {
   ;
 
   router.post('/sprint27b/address-1', (req, res) => {
-    res.redirect('/sprint27b/move-date')
-  })
-  ;
-
-  router.post('/sprint27b/move-date', (req, res) => {
     res.redirect('/sprint27b/living-with')
   })
   ;
@@ -138,13 +133,13 @@ router.use((req, res, next) => {
     if ( req.body['living-with'] === 'Yes' ) {
       res.redirect('living-with-age');
     } else {
-      res.redirect('homephone-address');
+      res.redirect('contact-left-hospital');
     }
   });
 
   // Living with age
   router.post('/sprint27b/living-with-age', (req, res) => {
-    res.redirect('/sprint27b/contact')
+    res.redirect('/sprint27b/contact-left-hospital')
   })
   ;
 
@@ -249,6 +244,13 @@ router.use((req, res, next) => {
 
   router.post('/sprint27b/evidence-verification', (req, res) => {
     res.redirect('/sprint27b/overview-evidence-received')
+  })
+  ;
+
+
+  // Hospital leave date to address
+  router.post('/sprint27b/left-hospital', (req, res) => {
+    res.redirect('/sprint27b/address')
   })
   ;
 

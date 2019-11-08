@@ -27,10 +27,8 @@ GOV.UK Prototype Kit
           <table class="govuk-table">
           <h2 class="govuk-heading-m">Contact details</h2>
             <tbody class="govuk-table__body">
-
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Address<br>
-                </th>
+                <th scope="row" class="govuk-table__header">Address</th>
                 <td class="govuk-table__cell">
                   {% if data.address %}
                   {{data.address.split(', ').join('<br />') | safe}}
@@ -48,10 +46,9 @@ GOV.UK Prototype Kit
                 </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Occupants<br>
-                </th>
+                <th scope="row" class="govuk-table__header">Occupants</th>
                 <td class="govuk-table__cell">
-                  
+                  Living with somebody else over State Pension age
                 </td>
                 <td class="govuk-table__cell">
                   <a href="living-with">
@@ -131,19 +128,19 @@ GOV.UK Prototype Kit
                 </td>
                 <td class="govuk-table__cell">
                   <a href="email">
-                    Change
+                    {% if not data.email %}
+                    Add<span class="govuk-visually-hidden">email</span>
+                    {% else %}
+                    Change<span class="govuk-visually-hidden">email</span>
+                    {% endif %}
                   </a>
                 </td>
               </tr>
-
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Contact preferences</th>
+                <td class="govuk-table__cell"></td>
                 <td class="govuk-table__cell">
-                  {% if data.contactpreference %}
-                  {{data.contactpreference}}
-                  {% endif %}</td>
-                <td class="govuk-table__cell">
-                  <a href="contact-preferences">
+                  <a href="">
                     {% if not data.contactpreferences %}
                     Add <span class="govuk-visually-hidden">contact preferences</span>
                     {% else %}
@@ -156,56 +153,6 @@ GOV.UK Prototype Kit
           </table>
 
       </div>
-
-      <div class="govuk-grid-column-one-third">
-
-<br>
-
-        <h2 class="govuk-heading-m">
-          Contact changes
-        </h2>
-        <ol class="app-timeline">
-
-          <li class="app-timeline__entry">
-            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
-              Address change
-            </h3>
-
-            <p class="app-timeline__info govuk-!-margin-bottom-0">
-              <span class="app-timeline__date">
-              12 November 2018
-              </span>
-            </p>
-          </li>
-
-          <li class="app-timeline__entry">
-            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
-              Left hospital
-            </h3>
-
-            <p class="app-timeline__info govuk-!-margin-bottom-0">
-              <span class="app-timeline__date">
-              12 November 2019
-              </span>
-            </p>
-          </li>
-
-          <li class="app-timeline__entry">
-            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
-              Entered hospital
-            </h3>
-
-            <p class="app-timeline__info govuk-!-margin-bottom-0">
-              <span class="app-timeline__date">
-              2 July 2019
-              </span>
-            </p>
-          </li>
-
-        </ol>
-
-      </div>
-
 
     </div>
 
