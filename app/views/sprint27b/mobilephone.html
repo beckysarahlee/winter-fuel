@@ -37,11 +37,12 @@ GOV.UK Prototype Kit
           </div>
         </main>
 
-        </br>
+        <br>
 
-        <div>
-                <a href="overview" class="govuk-back-link">Back</a>
-        </div>
+        {{ govukBackLink({
+            text: "Back",
+            href: back
+          }) }}
 
         <h1 class="govuk-heading-l">Change mobile phone number</h1>
 
@@ -57,7 +58,7 @@ GOV.UK Prototype Kit
         <div>
         <a href="mobilephone-remove" class="govuk-link govuk-!-font-size-19">Remove mobile phone number</a>
       </div>
-        </br>
+        <br>
 
         <button type="submit" class="govuk-button">
           Save
