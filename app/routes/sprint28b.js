@@ -114,9 +114,16 @@ router.use((req, res, next) => {
   ;
 
   router.post('/sprint28b/address-1', (req, res) => {
+    res.redirect('/sprint28b/move-date')
+  })
+  ;
+
+  router.post('/sprint28b/move-date', (req, res) => {
     res.redirect('/sprint28b/living-with')
   })
   ;
+
+
 
   // Change of address and home phone number
   router.post('/sprint28b/homephone-address', function(req, res) {
@@ -129,12 +136,26 @@ router.use((req, res, next) => {
 
   // Living with anyone at address change
   router.post('/sprint28b/living-with', function(req, res) {
-    if ( req.body['living-with'] === 'Yes' ) {
-      res.redirect('living-with-age');
+    if ( req.body['living-with'] === 'Living with someone else of State Pension age' ) {
+      res.redirect('contact');
     } else {
-      res.redirect('homephone-address');
+      res.redirect('check');
     }
   });
+
+  // Check to payments
+  router.post('/sprint28b/check', (req, res) => {
+    res.redirect('/sprint28b/make-payment')
+  })
+  ;
+
+  // Make payment to contact
+  router.post('/sprint28b/make-payment', (req, res) => {
+    res.redirect('/sprint28b/contact')
+  })
+  ;
+
+
 
   // Living with age back to contact
   router.post('/sprint28b/living-with-age', (req, res) => {
