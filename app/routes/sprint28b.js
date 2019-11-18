@@ -139,7 +139,7 @@ router.use((req, res, next) => {
     if ( req.body['living-with'] === 'Living with someone else of State Pension age' ) {
       res.redirect('contact');
     } else {
-      res.redirect('check');
+      res.redirect('make-payment');
     }
   });
 
