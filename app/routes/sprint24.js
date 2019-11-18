@@ -287,17 +287,6 @@ router.post('/sprint24/live-with-anyone-else', function(req, res) {
   }
 });
 
-// Current address
-
-router.post('/sprint24/address-check', function(req, res) {
-  if ( req.body['address-match'] === 'yes' ) {
-    res.redirect('poa');
-  } else {
-    res.redirect('postcode');
-  }
-});
-
-
 // Power of attorney
 
 router.post('/sprint24/poa', (req, res) => {
@@ -364,10 +353,14 @@ router.post('/sprint24/occupants', (req, res) => {
 
 // Check to declaration
 
-router.post('/sprint24/check', (req, res) => {
-  res.redirect('/sprint24/declaration')
-})
-;
+router.post('/sprint24/check', function(req, res) {
+  if ( req.body['change'] === 'yes' ) {
+    res.redirect('declaration');
+  } else {
+    res.redirect('no-change');
+  }
+});
+
 
 // Check to declaration
 
