@@ -28,7 +28,7 @@ GOV.UK Prototype Kit
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
 
-              <h1 class="govuk-heading-l">Check the caller’s answers</h1>
+              <h1 class="govuk-heading-l">You have given some new information</h1>
 
 
               <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -60,7 +60,7 @@ GOV.UK Prototype Kit
                 {% if data['movemonth'] %}
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
-                    Move date
+                    Moved in date
                   </dt>
                   <dd class="govuk-summary-list__value">
                   {{data.movemonth}}/{{data.moveyear}}
@@ -76,10 +76,10 @@ GOV.UK Prototype Kit
 
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
-                    Occupants
+                    Occupancy details
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    Nobody else over State Pension age
+                    Was not living with anyone of State Pension age.
                   </dd>
                   <dd class="govuk-summary-list__actions">
                     <a class="govuk-link" href="#">
@@ -90,12 +90,12 @@ GOV.UK Prototype Kit
               </dl>
 
               <div class="govuk-inset-text">
-                <p>Based on your answers, your payment should have been £200.</p>
-                <p>Some of your answers do not match what DWP has on record.</p>
+                <p>Based on this new information, your payment should have been £200.</p>
+          <!--      <p>Some of your answers do not match what DWP has on record.</p>   -->
               </div>
 
 
-                            <h1 class="govuk-heading-s">Do you want us to change the details we have?</h1>
+                            <h1 class="govuk-heading-s">Do you want DWP to save the new information you've given?</h1>
 
 
               <div class="govuk-radios govuk-radios--inline">
