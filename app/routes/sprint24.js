@@ -73,7 +73,7 @@ router.post('/sprint24/query', function(req, res) {
 if ( req.body['query'] === 'eligibility' ) {
   res.redirect('date-of-birth');
 } else {
-  res.redirect('/sprint24b/find');
+  res.redirect('/sprint29b/find');
 }
 });
 
