@@ -362,7 +362,7 @@ router.post('/sprint24/check', function(req, res) {
 });
 
 
-// Check to declaration
+// Declaration to confirmation
 
 router.post('/sprint24/declaration', (req, res) => {
   res.redirect('/sprint24/confirmation')

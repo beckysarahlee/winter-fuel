@@ -52,13 +52,13 @@ GOV.UK Prototype Kit
                 </div>
 
 
-                {% if data['moveday'] %}
+                {% if data['movemonth'] %}
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
                     When did you move to this address?
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    {{data.moveday}}/{{data.movemonth}}/{{data.moveyear}}
+                    {{data.movemonth}}/{{data.moveyear}}
                   </dd>
                   <dd class="govuk-summary-list__actions">
                     <a class="govuk-link" href="#">
@@ -85,8 +85,8 @@ GOV.UK Prototype Kit
               </dl>
 
               <div class="govuk-inset-text">
-                <p>Based on your answers, your payment should have been £200.</p>
-                <p>Some of your answers do not match what DWP has on record.</p>
+                <p>Based on your answers, your payment should have been £100.
+                  Some of your answers do not match what DWP has on record.</p>
               </div>
 
 
