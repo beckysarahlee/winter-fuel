@@ -34,18 +34,18 @@ GOV.UK Prototype Kit
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Payment amount</th>
+                <th scope="row" class="govuk-table__header">Amount</th>
                 <td class="govuk-table__cell">£100</td>
                 <td class="govuk-table__cell"></td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Payment reference</th>
+                <th scope="row" class="govuk-table__header">Reference number </th>
                 <td class="govuk-table__cell">13243546</td>
                 <td class="govuk-table__cell"></td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Payment date</th>
-                <td class="govuk-table__cell">Monday 11 November 2019</td>
+                <th scope="row" class="govuk-table__header">Date paid</th>
+                <td class="govuk-table__cell">Monday, 11 November 2019</td>
                 <td class="govuk-table__cell"></td>
               </tr>
             </tbody>
@@ -58,12 +58,12 @@ GOV.UK Prototype Kit
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Account holder</th>
+                <th scope="row" class="govuk-table__header">Name on the account</th>
                 <td class="govuk-table__cell">
                   {% if data.accountholder %}
                   {{data.accountholder}}
                   {% else %}
-                  Mrs H Morrison
+                  Mr T J Oliver
                   {% endif %}</td>
               </tr>
               <tr class="govuk-table__row">
@@ -72,7 +72,7 @@ GOV.UK Prototype Kit
                   {% if data.accountnumber %}
                   {{data.accountnumber}}
                   {% else %}
-                  12345678
+                  ****5678
                   {% endif %}</td>
               </tr>
               <tr class="govuk-table__row">
@@ -93,7 +93,7 @@ GOV.UK Prototype Kit
 
       <div class="govuk-grid-column-one-third">
         <h2 class="govuk-heading-m">
-          Payment history
+          Action history
         </h2>
         <ol class="app-timeline">
 
