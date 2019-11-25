@@ -17,10 +17,7 @@ GOV.UK Prototype Kit
 
       <form method="post">
 
-        <h2 class="govuk-heading-xl">Alex Smith<br>
-          <span class="govuk-caption-xl"> {{data.nino}} </span>
-          <span class="app-c-tag">Receiving Winter Fuel Payment</span>
-        </h2>
+          {% include './_bar.html' %}
 
             {{ govukBackLink({
                 text: "Back",
@@ -32,7 +29,7 @@ GOV.UK Prototype Kit
 
             <form method="post">
 
-              <div class="govuk-form-group">        
+              <div class="govuk-form-group">
                 <h1 class="govuk-heading-l">Occupants</h1>
                 <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
