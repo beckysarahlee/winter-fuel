@@ -47,7 +47,7 @@ GOV.UK Prototype Kit
                 </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Occupants</th>
+                <th scope="row" class="govuk-table__header">Occupancy details</th>
                 <td class="govuk-table__cell">
                   {% if data['living-with'] %}
                     {{data['living-with']}}
@@ -63,7 +63,7 @@ GOV.UK Prototype Kit
                 </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Home phone number</th>
+                <th scope="row" class="govuk-table__header">Home telephone</th>
                 <td class="govuk-table__cell">
                   {% if data['homephone-remove'] === 'Yes' %}
                   {% elseif data.homephone %}
@@ -80,7 +80,7 @@ GOV.UK Prototype Kit
                 </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Mobile phone number</th>
+                <th scope="row" class="govuk-table__header">Mobile</th>
                 <td class="govuk-table__cell">
                   {% if data.mobilenumber %}
                   {{data.mobilenumber}}
@@ -101,7 +101,7 @@ GOV.UK Prototype Kit
                 </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Work phone number</th>
+                <th scope="row" class="govuk-table__header">Work telephone</th>
                 <td class="govuk-table__cell">
                   {% if data.worknumber %}
                   {{data.worknumber}}

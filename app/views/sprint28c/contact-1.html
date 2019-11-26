@@ -15,6 +15,16 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
+        <div class="moj-banner moj-banner--success">
+
+        <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/1000/svg" viewBox="0 0 25 25" height="25" width="25">
+        <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
+
+        <div class="moj-banner__message">
+        <span class="moj-banner__assistive">Success</span>£100 top-up payment made</div>
+
+        </div>
+
         <form method="post">
           {% include './_bar.html' %}
 
@@ -47,12 +57,12 @@ GOV.UK Prototype Kit
                 </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Occupants</th>
+                <th scope="row" class="govuk-table__header">Occupancy details</th>
                 <td class="govuk-table__cell">
                   {% if data['living-with'] %}
                     {{data['living-with']}}
                   {% else %}
-                Living with someone else of State Pension age
+                Lives with someone else of State Pension age
                   {% endif %}
                 </td>
                 <td class="govuk-table__cell">
@@ -63,13 +73,13 @@ GOV.UK Prototype Kit
                 </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Home phone number</th>
+                <th scope="row" class="govuk-table__header">Home telephone</th>
                 <td class="govuk-table__cell">
                   {% if data['homephone-remove'] === 'Yes' %}
                   {% elseif data.homephone %}
                   {{data.homephone}}
                   {% else %}
-                  01665 720871
+                  01665 720 871
                   {% endif %}
                 </td>
                 <td class="govuk-table__cell">
@@ -80,7 +90,7 @@ GOV.UK Prototype Kit
                 </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Mobile phone number</th>
+                <th scope="row" class="govuk-table__header">Mobile</th>
                 <td class="govuk-table__cell">
                   {% if data.mobilenumber %}
                   {{data.mobilenumber}}
@@ -101,7 +111,7 @@ GOV.UK Prototype Kit
                 </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Work phone number</th>
+                <th scope="row" class="govuk-table__header">Work telephone</th>
                 <td class="govuk-table__cell">
                   {% if data.worknumber %}
                   {{data.worknumber}}
@@ -157,7 +167,7 @@ GOV.UK Prototype Kit
 
       <div class="govuk-grid-column-one-third">
         <h2 class="govuk-heading-m">
-          Contact changes
+          Action history
         </h2>
         <ol class="app-timeline">
 

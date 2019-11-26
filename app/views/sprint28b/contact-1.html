@@ -21,7 +21,7 @@ GOV.UK Prototype Kit
         <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
 
         <div class="moj-banner__message">
-        <span class="moj-banner__assistive">Success</span>£100 top up payment sent</div>
+        <span class="moj-banner__assistive">Success</span>£100 top-up payment made</div>
 
         </div>
 
@@ -57,12 +57,12 @@ GOV.UK Prototype Kit
                 </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Occupants</th>
+                <th scope="row" class="govuk-table__header">Occupancy details</th>
                 <td class="govuk-table__cell">
                   {% if data['living-with'] %}
                     {{data['living-with']}}
                   {% else %}
-                Living with someone else of State Pension age
+                Lives with someone else of State Pension age
                   {% endif %}
                 </td>
                 <td class="govuk-table__cell">
@@ -73,7 +73,7 @@ GOV.UK Prototype Kit
                 </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Home phone number</th>
+                <th scope="row" class="govuk-table__header">Home telephone</th>
                 <td class="govuk-table__cell">
                   {% if data['homephone-remove'] === 'Yes' %}
                   {% elseif data.homephone %}
@@ -90,7 +90,7 @@ GOV.UK Prototype Kit
                 </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Mobile phone number</th>
+                <th scope="row" class="govuk-table__header">Mobile</th>
                 <td class="govuk-table__cell">
                   {% if data.mobilenumber %}
                   {{data.mobilenumber}}
@@ -111,7 +111,7 @@ GOV.UK Prototype Kit
                 </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Work phone number</th>
+                <th scope="row" class="govuk-table__header">Work telephone</th>
                 <td class="govuk-table__cell">
                   {% if data.worknumber %}
                   {{data.worknumber}}
