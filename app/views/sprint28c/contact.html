@@ -24,8 +24,23 @@ GOV.UK Prototype Kit
           <br>
 
           <table class="govuk-table">
-          <h2 class="govuk-heading-m">Contact details</h2>
+          <h2 class="govuk-heading-m">Residency details</h2>
+
             <tbody class="govuk-table__body">
+
+              <a href="address"
+              <span class="govuk-link govuk-!-font-size-19" style="margin-left: 89%">Change</span>
+              </a>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header"></th>
+                <td class="govuk-table__cell">
+                </td>
+                <td class="govuk-table__cell">
+                  <a href="address">
+                    <span class="govuk-visually-hidden">Change address</span>
+                  </a>
+                </td>
+              </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Address</th>
                 <td class="govuk-table__cell">
@@ -41,7 +56,6 @@ GOV.UK Prototype Kit
                 </td>
                 <td class="govuk-table__cell">
                   <a href="address">
-                    Change
                     <span class="govuk-visually-hidden">Change address</span>
                   </a>
                 </td>
@@ -57,11 +71,20 @@ GOV.UK Prototype Kit
                 </td>
                 <td class="govuk-table__cell">
                   <a href="address">
-                    Change
                     <span class="govuk-visually-hidden">Change address</span>
                   </a>
                 </td>
               </tr>
+
+            </tbody>
+          </table>
+
+
+<br>
+
+          <table class="govuk-table">
+          <h2 class="govuk-heading-m">Contact details</h2>
+            <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Home telephone</th>
                 <td class="govuk-table__cell">
@@ -128,7 +151,7 @@ GOV.UK Prototype Kit
                   {% elseif data.email %}
                   {{data.email}}
                   {% else %}
-                  mary234@hotmail.com
+                  ilovemycat234@hotmail.com
                   {% endif %}
                 </td>
                 <td class="govuk-table__cell">
