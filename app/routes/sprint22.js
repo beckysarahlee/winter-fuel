@@ -74,7 +74,7 @@ router.use((req, res, next) => {
 
   // Find case to find result
   router.post('/sprint22/find-case', (req, res) => {
-    res.redirect('/sprint22/find-result')
+    res.redirect('/sprint22/gysp-record')
   })
   ;
 
