@@ -18,7 +18,7 @@ GOV.UK Prototype Kit
         <form method="post">
           {% include './_bar.html' %}
 
-          {% include './_tab-contact.html' %}
+          {% include './_tab-contact-topup.html' %}
 
           <br>
           <br>
@@ -65,31 +65,11 @@ GOV.UK Prototype Kit
             </tbody>
           </table>
 
-<br>
+          <br>
 
           <table class="govuk-table">
           <h2 class="govuk-heading-m">Contact details</h2>
             <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Correspondence address</th>
-                <td class="govuk-table__cell">
-                  {% if data['address-change'] %}
-                    {{data['address-change'].split(', ').join('<br />') | safe }}
-                  {% elif data.address %}
-                    {{data.address.split(', ').join('<br />') | safe}}
-                  {% else %}
-                    78 Graham Road<br>
-                    Chelsham<br>
-                    CR6 9ND
-                  {% endif %}
-                </td>
-                <td class="govuk-table__cell">
-                  <a href="address">
-                    Change
-                    <span class="govuk-visually-hidden">Change address</span>
-                  </a>
-                </td>
-              </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Home telephone</th>
                 <td class="govuk-table__cell">
@@ -185,19 +165,18 @@ GOV.UK Prototype Kit
 
       <div class="govuk-grid-column-one-third">
         <h2 class="govuk-heading-m">
-          Action history
+          Contact changes
         </h2>
         <ol class="app-timeline">
 
           <li class="app-timeline__entry">
             <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
-              <a href="history-details" class="govuk-link">Change of address</a>
+          <a>Address changed</a>
             </h3>
 
             <p class="app-timeline__info govuk-!-margin-bottom-0">
-              <span class="govuk-visually-hidden">Marriage verified</span>
               <span class="app-timeline__date">
-                5 July 2018
+              4 November 2019
               </span>
             </p>
           </li>
