@@ -5,7 +5,6 @@ GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-{% include './_find-someone.html' %}
 {% endblock %}
 
 {% block content %}
@@ -14,22 +13,30 @@ GOV.UK Prototype Kit
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
+        <form method="post">
 
-      <form method="post">
+          <h1 class="govuk-heading-xl">Get a referral</h1>
 
-        {% include './_bar.html' %}
-
-        <button type="submit" class="govuk-button">
-          Confirm name
+        <button type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
+        Continue
         </button>
 
-      </div>
+        </form>
+
+            </div>
+          </div>
+        </main>
+
+
+
 
     </div>
 
   </div>
 
-  </main>
-  </div>
+</div>
 
-  {% endblock %}
+</main>
+</div>
+
+{% endblock %}

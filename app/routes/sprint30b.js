@@ -20,21 +20,11 @@ router.use((req, res, next) => {
 
   // FIND SOMEONE AND SECURITY -------------------------------------------------
 
-  // Find someone to find result
-  router.post('/sprint30b/find', (req, res) => {
-    res.redirect('/sprint30b/find-1')
-  })
-  ;
 
-  // Find result to security
-  router.post('/sprint30b/find-1', (req, res) => {
-    res.redirect('/sprint30b/security')
-  })
-  ;
 
   // Security into record with security confirmation box
-  router.post('/sprint30b/security', (req, res) => {
-    res.redirect('/sprint30b/overview-security')
+  router.post('/sprint30b/get-overpayment', (req, res) => {
+    res.redirect('/sprint30b/overview')
   })
   ;
 
