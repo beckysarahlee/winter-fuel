@@ -24,19 +24,19 @@ GOV.UK Prototype Kit
           <br>
 
           <table class="govuk-table">
-          <h2 class="govuk-heading-m">Residency details</h2>
+            <h2 class="govuk-heading-m">Residency details</h2>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Address</th>
                 <td class="govuk-table__cell">
                   {% if data['address-change'] %}
-                    {{data['address-change'].split(', ').join('<br />') | safe }}
+                  {{data['address-change'].split(', ').join('<br />') | safe }}
                   {% elif data.address %}
-                    {{data.address.split(', ').join('<br />') | safe}}
+                  {{data.address.split(', ').join('<br />') | safe}}
                   {% else %}
-                    78 Graham Road<br>
-                    Chelsham<br>
-                    CR6 9ND
+                  78 Graham Road<br>
+                  Chelsham<br>
+                  CR6 9ND
                   {% endif %}
                 </td>
                 <td class="govuk-table__cell">
@@ -50,9 +50,9 @@ GOV.UK Prototype Kit
                 <th scope="row" class="govuk-table__header">Occupancy details</th>
                 <td class="govuk-table__cell">
                   {% if data['living-with'] %}
-                    {{data['living-with']}}
+                  {{data['living-with']}}
                   {% else %}
-                Lives with someone of State Pension age
+                  Lives with someone of State Pension age
                   {% endif %}
                 </td>
                 <td class="govuk-table__cell">
@@ -65,22 +65,22 @@ GOV.UK Prototype Kit
             </tbody>
           </table>
 
-<br>
+          <br>
 
           <table class="govuk-table">
-          <h2 class="govuk-heading-m">Contact details</h2>
+            <h2 class="govuk-heading-m">Contact details</h2>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Correspondence address</th>
                 <td class="govuk-table__cell">
                   {% if data['address-change'] %}
-                    {{data['address-change'].split(', ').join('<br />') | safe }}
+                  {{data['address-change'].split(', ').join('<br />') | safe }}
                   {% elif data.address %}
-                    {{data.address.split(', ').join('<br />') | safe}}
+                  {{data.address.split(', ').join('<br />') | safe}}
                   {% else %}
-                    78 Graham Road<br>
-                    Chelsham<br>
-                    CR6 9ND
+                  78 Graham Road<br>
+                  Chelsham<br>
+                  CR6 9ND
                   {% endif %}
                 </td>
                 <td class="govuk-table__cell">
@@ -191,20 +191,78 @@ GOV.UK Prototype Kit
 
           <li class="app-timeline__entry">
             <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+              Remove home telephone
+            </h3>
+
+            <p class="app-timeline__info govuk-!-margin-bottom-0">
+              <span class="govuk-visually-hidden">Marriage verified</span>
+              <span class="app-timeline__date">
+                8 March 2016
+              </span>
+            </p>
+          </li>
+
+          <li class="app-timeline__entry">
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+              <a href="history-details" class="govuk-link">Change of residency details</a>
+            </h3>
+
+            <p class="app-timeline__info govuk-!-margin-bottom-0">
+              <span class="govuk-visually-hidden">Marriage verified</span>
+              <span class="app-timeline__date">
+                8 March 2016
+              </span>
+            </p>
+          </li>
+
+          <li class="app-timeline__entry">
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+              Change of occupancy details
+            </h3>
+
+            <p class="app-timeline__info govuk-!-margin-bottom-0">
+              <span class="govuk-visually-hidden">Marriage verified</span>
+              <span class="app-timeline__date">
+                5 July 2013
+              </span>
+            </p>
+          </li>
+
+          <li class="app-timeline__entry">
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+              Change of home telephone
+            </h3>
+
+            <p class="app-timeline__info govuk-!-margin-bottom-0">
+              <span class="govuk-visually-hidden">Marriage verified</span>
+              <span class="app-timeline__date">
+                19 January 2009
+              </span>
+            </p>
+          </li>
+
+          <li class="app-timeline__entry">
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
               <a href="history-details" class="govuk-link">Change of address</a>
             </h3>
 
             <p class="app-timeline__info govuk-!-margin-bottom-0">
               <span class="govuk-visually-hidden">Marriage verified</span>
               <span class="app-timeline__date">
-                5 July 2018
+                18 January 2009
               </span>
             </p>
           </li>
 
+          <li class="app-timeline__entry">
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+              <a href="contact-history" class="govuk-link">See full history</a>
+            </h3>
+          </li>
+
         </ol>
 
-        </div>
+      </div>
 
     </div>
 

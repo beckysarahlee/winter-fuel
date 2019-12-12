@@ -15,55 +15,66 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-      <form method="post">
+        <form method="post">
 
-{% include './_bar.html' %}
+          <div class="hmcts-banner">
 
-            {% include './_tab-overview.html' %}
+            <div class="hmcts-banner__message">
 
-            <br>
-            <br>
+              <h2 class="govuk-heading-m">The case has been reassigned to you by Jane Smith</h2>
+              <p><a href="#">Dismiss</a></p>
 
-            <table class="govuk-table">
+            </div>
+
+          </div>
+
+          {% include './_bar.html' %}
+
+          {% include './_tab-overview.html' %}
+
+          <br>
+          <br>
+
+          <table class="govuk-table">
             <h2 class="govuk-heading-m">2019 payment</h2>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Monday, 4 November 2019</th>
-                  <td class="govuk-table__cell">£100</td>
-                </tr>
-              </tbody>
-            </table>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Monday, 4 November 2019</th>
+                <td class="govuk-table__cell">£100</td>
+              </tr>
+            </tbody>
+          </table>
 
 
-              <table class="govuk-table">
-              <h2 class="govuk-heading-m">Qualification details</h2>
-                <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Age</th>
-                    <td class="govuk-table__cell">79</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Date of birth</th>
-                    <td class="govuk-table__cell">9 June 1940</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Occupancy details</th>
-                    <td class="govuk-table__cell">                  {% if data['living-with'] %}
-                                        {{data['living-with']}}
-                                      {% else %}
-                                    Lives with someone else of State Pension age
-                                      {% endif %}</td>
-                  </tr>
-                </tbody>
-              </table>
+          <table class="govuk-table">
+            <h2 class="govuk-heading-m">Qualification details</h2>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Age</th>
+                <td class="govuk-table__cell">79</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Date of birth</th>
+                <td class="govuk-table__cell">9 June 1940</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Occupancy details</th>
+                <td class="govuk-table__cell"> {% if data['living-with'] %}
+                  {{data['living-with']}}
+                  {% else %}
+                  Lives with someone else of State Pension age
+                  {% endif %}</td>
+              </tr>
+            </tbody>
+          </table>
 
       </div>
 
     </div>
 
-  </div>
+</div>
 
-  </main>
-  </div>
+</main>
+</div>
 
-  {% endblock %}
+{% endblock %}
