@@ -15,19 +15,16 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-          {% include './_overpayment-banner.html' %}
-
-
+        <form method="post">
           {% include './_bar.html' %}
 
-          {% include './_tab-contact.html' %}
+          {% include './_tab-contact-topup.html' %}
 
           <br>
           <br>
 
-        <form method="post">
-          <h2 class="govuk-heading-m">Residency details</h2>
           <table class="govuk-table">
+          <h2 class="govuk-heading-m">Residency details</h2>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Address</th>
@@ -55,20 +52,8 @@ GOV.UK Prototype Kit
                   {% if data['living-with'] %}
                     {{data['living-with']}}
                   {% else %}
-                Not living with someone else of <br>State Pension age
+                Lives with someone of State Pension age
                   {% endif %}
-                </td>
-                <td class="govuk-table__cell">
-                  <a href="address">
-                    Change
-                    <span class="govuk-visually-hidden">Change address</span>
-                  </a>
-                </td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Move date</th>
-                <td class="govuk-table__cell">
-                  1 March 2002
                 </td>
                 <td class="govuk-table__cell">
                   <a href="address">
@@ -85,27 +70,6 @@ GOV.UK Prototype Kit
           <table class="govuk-table">
           <h2 class="govuk-heading-m">Contact details</h2>
             <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Correspondence <br>
-                  address</th>
-                <td class="govuk-table__cell">
-                  {% if data['address-change'] %}
-                    {{data['address-change'].split(', ').join('<br />') | safe }}
-                  {% elif data.address %}
-                    {{data.address.split(', ').join('<br />') | safe}}
-                  {% else %}
-                    2 Sandringham Avenue<br>
-                    Chelsham<br>
-                    CR6 9LU
-                  {% endif %}
-                </td>
-                <td class="govuk-table__cell">
-                  <a href="address">
-                    Change
-                    <span class="govuk-visually-hidden">Change address</span>
-                  </a>
-                </td>
-              </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Home telephone</th>
                 <td class="govuk-table__cell">
@@ -182,8 +146,7 @@ GOV.UK Prototype Kit
                 </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Contact <br>
-                  preferences</th>
+                <th scope="row" class="govuk-table__header">Contact preferences</th>
                 <td class="govuk-table__cell"></td>
                 <td class="govuk-table__cell">
                   <a href="">
@@ -202,19 +165,18 @@ GOV.UK Prototype Kit
 
       <div class="govuk-grid-column-one-third">
         <h2 class="govuk-heading-m">
-          Action history
+          Contact changes
         </h2>
         <ol class="app-timeline">
 
           <li class="app-timeline__entry">
             <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
-              Change of
+          <a>Address changed</a>
             </h3>
 
             <p class="app-timeline__info govuk-!-margin-bottom-0">
-              <span class="govuk-visually-hidden">Marriage verified</span>
               <span class="app-timeline__date">
-                5 July 2018
+              4 November 2019
               </span>
             </p>
           </li>
