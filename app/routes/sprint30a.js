@@ -180,11 +180,20 @@ router.use((req, res, next) => {
 
 
   // Stopping payments
-  router.post('/sprint30a/prevent-payments', function(req, res) {
-    if ( req.body['stopped-reason'] === 'dead' ) {
-      res.redirect('death-date');
+  router.post('/sprint30a/stop-payments', function(req, res) {
+    if ( req.body['stop-payments'] === 'Yes' ) {
+      res.redirect('payment-stopped');
     } else {
-      res.redirect('imprisioned-date');
+      res.redirect('payment');
+    }
+  });
+
+  // Starting payments
+  router.post('/sprint30a/start-payments', function(req, res) {
+    if ( req.body['start-payments'] === 'Yes' ) {
+      res.redirect('payment');
+    } else {
+      res.redirect('payment-stopped');
     }
   });
 

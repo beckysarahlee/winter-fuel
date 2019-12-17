@@ -15,18 +15,9 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        <div class="hmcts-banner">
+          {% include './_overpayment-banner.html' %}
 
-          <div class="hmcts-banner__message">
 
-            <h2 class="govuk-heading-m">£100 underpayment</h2>
-            <p><a href="overpayment">See details</a></p>
-
-          </div>
-
-        </div>
-
-        <form method="post">
           {% include './_bar.html' %}
 
           {% include './_tab-contact.html' %}
@@ -34,6 +25,7 @@ GOV.UK Prototype Kit
           <br>
           <br>
 
+        <form method="post">
           <h2 class="govuk-heading-m">Residency details</h2>
           <table class="govuk-table">
             <tbody class="govuk-table__body">
@@ -63,7 +55,7 @@ GOV.UK Prototype Kit
                   {% if data['living-with'] %}
                     {{data['living-with']}}
                   {% else %}
-                Lives with someone of State Pension age
+                Not living with someone else of <br>State Pension age
                   {% endif %}
                 </td>
                 <td class="govuk-table__cell">
@@ -76,7 +68,7 @@ GOV.UK Prototype Kit
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Move date</th>
                 <td class="govuk-table__cell">
-                  3 July 2018
+                  1 March 2002
                 </td>
                 <td class="govuk-table__cell">
                   <a href="address">
@@ -94,16 +86,17 @@ GOV.UK Prototype Kit
           <h2 class="govuk-heading-m">Contact details</h2>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Correspondence address</th>
+                <th scope="row" class="govuk-table__header">Correspondence <br>
+                  address</th>
                 <td class="govuk-table__cell">
                   {% if data['address-change'] %}
                     {{data['address-change'].split(', ').join('<br />') | safe }}
                   {% elif data.address %}
                     {{data.address.split(', ').join('<br />') | safe}}
                   {% else %}
-                    78 Graham Road<br>
+                    2 Sandringham Avenue<br>
                     Chelsham<br>
-                    CR6 9ND
+                    CR6 9LU
                   {% endif %}
                 </td>
                 <td class="govuk-table__cell">
@@ -189,7 +182,8 @@ GOV.UK Prototype Kit
                 </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Contact preferences</th>
+                <th scope="row" class="govuk-table__header">Contact <br>
+                  preferences</th>
                 <td class="govuk-table__cell"></td>
                 <td class="govuk-table__cell">
                   <a href="">

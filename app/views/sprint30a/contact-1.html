@@ -72,6 +72,22 @@ GOV.UK Prototype Kit
                   </a>
                 </td>
               </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Move date</th>
+                <td class="govuk-table__cell">
+                  {% if data['moveday'] %}
+                  {{data.moveday}}/{{data.movemonth}}/{{data.moveyear}}
+                  {% else %}
+                  6 March 2016
+                  {% endif %}
+                </td>
+                <td class="govuk-table__cell">
+                  <a href="address">
+                    Change
+                    <span class="govuk-visually-hidden">Change address</span>
+                  </a>
+                </td>
+              </tr>
             </tbody>
           </table>
 
@@ -175,7 +191,7 @@ GOV.UK Prototype Kit
 
       <div class="govuk-grid-column-one-third">
         <h2 class="govuk-heading-m">
-          Contact changes
+          Action history
         </h2>
         <ol class="app-timeline">
 
@@ -191,9 +207,67 @@ GOV.UK Prototype Kit
             </p>
           </li>
 
+          <li class="app-timeline__entry">
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+              Remove home telephone
+            </h3>
+
+            <p class="app-timeline__info govuk-!-margin-bottom-0">
+              <span class="govuk-visually-hidden">Marriage verified</span>
+              <span class="app-timeline__date">
+                8 March 2016
+              </span>
+            </p>
+          </li>
+
+          <li class="app-timeline__entry">
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+              <a href="history-details" class="govuk-link">Change of residency details</a>
+            </h3>
+
+            <p class="app-timeline__info govuk-!-margin-bottom-0">
+              <span class="govuk-visually-hidden">Marriage verified</span>
+              <span class="app-timeline__date">
+                8 March 2016
+              </span>
+            </p>
+          </li>
+
+          <li class="app-timeline__entry">
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+              Change of occupancy details
+            </h3>
+
+            <p class="app-timeline__info govuk-!-margin-bottom-0">
+              <span class="govuk-visually-hidden">Marriage verified</span>
+              <span class="app-timeline__date">
+                5 July 2013
+              </span>
+            </p>
+          </li>
+
+          <li class="app-timeline__entry">
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+              Change of home telephone
+            </h3>
+
+            <p class="app-timeline__info govuk-!-margin-bottom-0">
+              <span class="govuk-visually-hidden">Marriage verified</span>
+              <span class="app-timeline__date">
+                19 January 2009
+              </span>
+            </p>
+          </li>
+
+          <li class="app-timeline__entry">
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+              <a href="contact-history" class="govuk-link">See full history</a>
+            </h3>
+          </li>
+
         </ol>
 
-        </div>
+      </div>
 
     </div>
 

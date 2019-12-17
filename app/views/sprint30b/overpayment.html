@@ -15,7 +15,16 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-          {% include './_bar.html' %}
+
+        {% include './_bar.html' %}
+
+        {{ govukBackLink({
+              text: "Back",
+              href: back
+            }) }}
+
+        <br>
+        <br>
 
         <table class="govuk-table">
           <caption class="govuk-table__caption"></caption>
@@ -26,13 +35,14 @@ GOV.UK Prototype Kit
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Age during qualifying week</th>
-              <td class="govuk-table__cell">70</td>
+              <td class="govuk-table__cell">79</td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Address</th>
-              <td class="govuk-table__cell">27 Kent Street<br>
-              Crossmoor<br>
-              PR4 9FH</td>
+              <td class="govuk-table__cell">
+                78 Graham Road<br>
+                Chelsham<br>
+                CR6 9ND</td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Date they moved in</th>
@@ -41,32 +51,32 @@ GOV.UK Prototype Kit
           </tbody>
         </table>
 
-<br>
+        <br>
         <h3 class="govuk-heading-m">New information</h3>
 
         <table class="govuk-table">
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Occupancy details during qualifying week</th>
-          <td class="govuk-table__cell">Was living with someone of State Pension age.</td>
-        </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Occupancy details during qualifying week</th>
+            <td class="govuk-table__cell">Was living with someone of State Pension age</td>
+          </tr>
         </table>
 
+        <button class="govuk-button" data-module="govuk-button">
+          Send to debt management
+        </button>
 
-              <button class="govuk-button" data-module="govuk-button">
-                ?
-              </button>
+        <p><a href="#" class="govuk-link">Don't send to debt management, send somewhere else...</a></p>
 
-
-            </div>
-          </div>
-        </main>
-
-
-
-
+      </div>
     </div>
+  </main>
 
-  </div>
+
+
+
+</div>
+
+</div>
 
 </div>
 
