@@ -178,4 +178,18 @@ router.use((req, res, next) => {
     }
   });
 
+
+  // Reissue payment to payment with confirmation and updated
+  router.post('/sprint30c/reissue-payment', (req, res) => {
+    res.redirect('/sprint30c/payment-confirmation')
+  })
+  ;
+
+  // Underpayment ref to overview with payment made banner
+  router.post('/sprint30c/underpayment', (req, res) => {
+    res.redirect('/sprint30c/overview-paymentmade')
+  })
+  ;
+
+
   module.exports = router;
