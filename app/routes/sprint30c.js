@@ -187,7 +187,7 @@ router.use((req, res, next) => {
 
   // Underpayment ref to overview with payment made banner
   router.post('/sprint30c/underpayment', (req, res) => {
-    res.redirect('/sprint30c/overview-paymentmade')
+    res.redirect('/sprint30c/top-up-confirmation')
   })
   ;
 

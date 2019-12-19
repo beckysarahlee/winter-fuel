@@ -5,7 +5,6 @@ GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-{% include './_find-someone.html' %}
 {% endblock %}
 
 {% block content %}
@@ -61,9 +60,13 @@ GOV.UK Prototype Kit
           </tr>
         </table>
 
+      <form method="post">
+
         <button class="govuk-button" data-module="govuk-button">
           Send to debt management
         </button>
+
+      </form>
 
         <p><a href="#" class="govuk-link">Don't send to debt management, send somewhere else...</a></p>
 

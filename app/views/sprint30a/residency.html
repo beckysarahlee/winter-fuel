@@ -18,25 +18,25 @@ GOV.UK Prototype Kit
         <form method="post">
           {% include './_bar.html' %}
 
-          {% include './_tab-contact.html' %}
+          {% include './_tab-residency.html' %}
 
           <br>
           <br>
 
           <table class="govuk-table">
-            <h2 class="govuk-heading-m">Contact details</h2>
+            <h2 class="govuk-heading-m">Residency details</h2>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Correspondence address</th>
+                <th scope="row" class="govuk-table__header">Address</th>
                 <td class="govuk-table__cell">
                   {% if data['address-change'] %}
                   {{data['address-change'].split(', ').join('<br />') | safe }}
                   {% elif data.address %}
                   {{data.address.split(', ').join('<br />') | safe}}
                   {% else %}
-                  19 Sunny Road<br>
+                  78 Graham Road<br>
                   Chelsham<br>
-                  CR6 9IK
+                  CR6 9ND
                   {% endif %}
                 </td>
                 <td class="govuk-table__cell">
@@ -47,95 +47,37 @@ GOV.UK Prototype Kit
                 </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Home telephone</th>
+                <th scope="row" class="govuk-table__header">Occupancy details</th>
                 <td class="govuk-table__cell">
-                  {% if data['homephone-remove'] === 'Yes' %}
-                  {% elseif data.homephone %}
-                  {{data.homephone}}
+                  {% if data['living-with'] %}
+                  {{data['living-with']}}
                   {% else %}
-                  01665 720 871
+                  Lives with someone of State Pension age
                   {% endif %}
                 </td>
                 <td class="govuk-table__cell">
-                  <a href="homephone">
+                  <a href="address">
                     Change
-                    <span class="govuk-visually-hidden">Change home phone number</span>
+                    <span class="govuk-visually-hidden">Change address</span>
                   </a>
                 </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Mobile</th>
+                <th scope="row" class="govuk-table__header">Move date</th>
                 <td class="govuk-table__cell">
-                  {% if data.mobilenumber %}
-                  {{data.mobilenumber}}
-                  {% endif %}
-                  {% if data['mobilephone-remove'] === 'Yes' %}
-                  {% elseif data.mobilephone %}
-                  {{data.mobilephone}}
-                  {% endif %}
+                  6 March 2016
                 </td>
                 <td class="govuk-table__cell">
-                  <a href="mobilephone">
-                    {% if not data.mobilenumber %}
-                    Add<span class="govuk-visually-hidden"> mobile number</span>
-                    {% else %}
-                    Change<span class="govuk-visually-hidden"> mobile number</span>
-                    {% endif %}
-                  </a>
-                </td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Work telephone</th>
-                <td class="govuk-table__cell">
-                  {% if data.worknumber %}
-                  {{data.worknumber}}
-                  {% endif %}
-                  {% if data['workphone-remove'] === 'Yes' %}
-                  {% elseif data.workphone %}
-                  {{data.workphone}}
-                  {% endif %}
-                </td>
-                <td class="govuk-table__cell">
-                  <a href="workphone">
-                    {% if not data.worknumber %}
-                    Add<span class="govuk-visually-hidden"> work number</span>
-                    {% else %}
-                    Change<span class="govuk-visually-hidden"> work number</span>
-                    {% endif %}
-                  </a>
-                </td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Email address</th>
-                <td class="govuk-table__cell">
-                  {% if data['email-remove'] === 'Yes' %}
-                  {% elseif data.email %}
-                  {{data.email}}
-                  {% else %}
-                  mary234@hotmail.com
-                  {% endif %}
-                </td>
-                <td class="govuk-table__cell">
-                  <a href="email">
-                    Change<span class="govuk-visually-hidden">email</span>
-                  </a>
-                </td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Contact preferences</th>
-                <td class="govuk-table__cell"></td>
-                <td class="govuk-table__cell">
-                  <a href="">
-                    {% if not data.contactpreferences %}
-                    Add <span class="govuk-visually-hidden">contact preferences</span>
-                    {% else %}
-                    Change <span class="govuk-visually-hidden">contact preferences</span>
-                    {% endif %}
+                  <a href="address">
+                    Change
+                    <span class="govuk-visually-hidden">Change address</span>
                   </a>
                 </td>
               </tr>
             </tbody>
           </table>
+
+          <br>
 
       </div>
 
