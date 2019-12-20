@@ -17,10 +17,7 @@ GOV.UK Prototype Kit
 
       <form method="post">
 
-        <h2 class="govuk-heading-xl">Alex Smith<br>
-          <span class="govuk-caption-xl"> {{data.nino}} </span>
-          <span class="app-c-tag">Receiving Winter Fuel Payment</span>
-        </h2>
+            {% include './_bar.html' %}
 
             {{ govukBackLink({
                 text: "Back",
@@ -30,20 +27,26 @@ GOV.UK Prototype Kit
             <br>
             <br>
 
-            <h1 class="govuk-heading-l">Change work phone number</h1>
+            {% if not data.worknumber %}
+            <h1 class="govuk-heading-l">Add work telephone</h1>
+            {% else %}
+            <h1 class="govuk-heading-l">Change work telephone</h1>
+            {% endif %}
 
             <form method="post">
               <div class="govuk-form-group">
                 <label class="govuk-label" for="telephone-number">
-                  Enter new work phone number
+                  Work telephone number
 
                 </label>
                 <input class="govuk-input govuk-input--width-20" id="worknumber" name="worknumber" type="tel">
               </div>
 
+        {% if data.worknumber %}
               <div>
               <a href="workphone-remove" class="govuk-link govuk-!-font-size-19">Remove work phone number</a>
             </div>
+                {% endif %}
               <br>
 
               <button type="submit" class="govuk-button">

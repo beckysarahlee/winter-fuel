@@ -27,21 +27,29 @@ GOV.UK Prototype Kit
             <br>
             <br>
 
+
+            {% if not data.homephone %}
+            <h1 class="govuk-heading-l">Add home telephone</h1>
+            {% else %}
             <h1 class="govuk-heading-l">Change home telephone</h1>
+            {% endif %}
 
             <form method="post">
             <div class="govuk-form-group">
               <label class="govuk-label" for="telephone-number">
-                New home telephone
+                Telephone number
 
               </label>
               <input class="govuk-input govuk-input--width-20" id="homephone" name="homephone" type="tel">
             </div>
 
+              {% if data.homephone %}
             <div>
-              <p>0191 000 000</p>
-            <a href="homephone-remove" class="govuk-link govuk-!-font-size-19">Remove old home telephone</a>
+            <a href="homephone-remove" class="govuk-link govuk-!-font-size-19">Remove 01665 720 871</a>
             </div>
+              {% endif %}
+
+
             <br>
 
             <button type="submit" class="govuk-button">
