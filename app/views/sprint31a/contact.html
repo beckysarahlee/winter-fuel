@@ -27,6 +27,38 @@ GOV.UK Prototype Kit
             <h2 class="govuk-heading-m">Contact details</h2>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Current address</th>
+                <td class="govuk-table__cell">
+                  {% if data['address-change'] %}
+                  {{data['address-change'].split(', ').join('<br />') | safe }}
+                  {% elif data.address %}
+                  {{data.address.split(', ').join('<br />') | safe}}
+                  {% else %}
+                  78 Graham Road<br>
+                  Chelsham<br>
+                  CR6 9ND
+                  {% endif %}
+                </td>
+                <td class="govuk-table__cell">
+                  <a href="address">
+                    Change
+                    <span class="govuk-visually-hidden">Change address</span>
+                  </a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Date they moved in</th>
+                <td class="govuk-table__cell">
+                  6 March 2016
+                </td>
+                <td class="govuk-table__cell">
+                  <a href="address">
+                    Change
+                    <span class="govuk-visually-hidden">Change address</span>
+                  </a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Correspondence address</th>
                 <td class="govuk-table__cell">
                   {% if data['address-change'] %}
@@ -149,6 +181,19 @@ GOV.UK Prototype Kit
           Action history
         </h2>
         <ol class="app-timeline">
+
+          <li class="app-timeline__entry">
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+              Changed bank account
+            </h3>
+
+            <p class="app-timeline__info govuk-!-margin-bottom-0">
+              <span class="govuk-visually-hidden">Marriage verified</span>
+              <span class="app-timeline__date">
+                5 January 2018
+              </span>
+            </p>
+          </li>
 
           <li class="app-timeline__entry">
             <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
