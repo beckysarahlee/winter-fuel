@@ -43,11 +43,21 @@ GOV.UK Prototype Kit
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Name on the account</th>
                 <td class="govuk-table__cell">
-                  Mr D Leon
+                  {% if data['accountholder'] %}
+                    {{data['accountholder']}}
+                  {% else %}
+                    Mr D Leon
+                  {% endif %}
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Account number</th>
-                <td class="govuk-table__cell">****5678</td>
+                <td class="govuk-table__cell">
+                  {% if data['accountnumber'] %}
+                    {{data['accountnumber']}}
+                  {% else %}
+                    12345678
+                  {% endif %}
+                </td>
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Sort code</th>
