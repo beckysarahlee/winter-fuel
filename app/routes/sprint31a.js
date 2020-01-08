@@ -166,9 +166,15 @@ router.use((req, res, next) => {
 
   // PAYMENT CHANGES -----------------------------------------------------------
 
-  // Bank details to reissue payment
+  // Bank details change to bank confirm
   router.post('/sprint31a/bankdetails', (req, res) => {
-    res.redirect('/sprint31a/reissue-payment')
+    res.redirect('/sprint31a/confirm-bank')
+  })
+  ;
+
+  // Bank confirm to payment
+  router.post('/sprint31a/confirm-bank', (req, res) => {
+    res.redirect('/sprint31a/payment')
   })
   ;
 
