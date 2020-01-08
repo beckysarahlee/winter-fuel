@@ -17,10 +17,7 @@ GOV.UK Prototype Kit
 
       <form method="post">
 
-        <h2 class="govuk-heading-xl">Alex Smith<br>
-          <span class="govuk-caption-xl"> {{data.nino}} </span>
-          <span class="app-c-tag">Receiving Winter Fuel Payment</span>
-        </h2>
+{% include './_bar.html' %}
 
             {{ govukBackLink({
                 text: "Back",
@@ -38,7 +35,6 @@ GOV.UK Prototype Kit
                 <div class="govuk-inset-text">
                   Based on the information you have given us, you should have received £200.
                 </div>
-
 
 
                 <table class="govuk-table">
@@ -80,7 +76,7 @@ GOV.UK Prototype Kit
                       <tr class="govuk-table__row">
                         <th scope="row" class="govuk-table__header">Name on the account</th>
                         <td class="govuk-table__cell">
-                          Mr T J Oliver
+                          D Leon
                       </tr>
                       <tr class="govuk-table__row">
                         <th scope="row" class="govuk-table__header">Account number</th>
