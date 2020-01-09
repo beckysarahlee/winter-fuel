@@ -24,19 +24,19 @@ GOV.UK Prototype Kit
           <br>
 
           <table class="govuk-table">
-          <h2 class="govuk-heading-m">Residency details</h2>
+            <h2 class="govuk-heading-m">Contact details</h2>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Address</th>
+                <th scope="row" class="govuk-table__header">Current address</th>
                 <td class="govuk-table__cell">
                   {% if data['address-change'] %}
-                    {{data['address-change'].split(', ').join('<br />') | safe }}
+                  {{data['address-change'].split(', ').join('<br />') | safe }}
                   {% elif data.address %}
-                    {{data.address.split(', ').join('<br />') | safe}}
+                  {{data.address.split(', ').join('<br />') | safe}}
                   {% else %}
-                    78 Graham Road<br>
-                    Chelsham<br>
-                    CR6 9ND
+                  78 Graham Road<br>
+                  Chelsham<br>
+                  CR6 9ND
                   {% endif %}
                 </td>
                 <td class="govuk-table__cell">
@@ -47,13 +47,9 @@ GOV.UK Prototype Kit
                 </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Occupancy details</th>
+                <th scope="row" class="govuk-table__header">Date they moved in</th>
                 <td class="govuk-table__cell">
-                  {% if data['living-with'] %}
-                    {{data['living-with']}}
-                  {% else %}
-                Lives with someone of State Pension age
-                  {% endif %}
+                  6 March 2016
                 </td>
                 <td class="govuk-table__cell">
                   <a href="address">
@@ -62,14 +58,6 @@ GOV.UK Prototype Kit
                   </a>
                 </td>
               </tr>
-            </tbody>
-          </table>
-
-          <br>
-
-          <table class="govuk-table">
-          <h2 class="govuk-heading-m">Contact details</h2>
-            <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Home telephone</th>
                 <td class="govuk-table__cell">
@@ -82,8 +70,13 @@ GOV.UK Prototype Kit
                 </td>
                 <td class="govuk-table__cell">
                   <a href="homephone">
-                    Change
-                    <span class="govuk-visually-hidden">Change home phone number</span>
+                <!--    Change
+                    <span class="govuk-visually-hidden">Change home phone number</span> -->
+                    {% if not data.homephone %}
+                    Add<span class="govuk-visually-hidden"> home phone number</span>
+                    {% else %}
+                    Change<span class="govuk-visually-hidden"> home phone number</span>
+                    {% endif %}
                   </a>
                 </td>
               </tr>
@@ -164,26 +157,8 @@ GOV.UK Prototype Kit
       </div>
 
       <div class="govuk-grid-column-one-third">
-        <h2 class="govuk-heading-m">
-          Contact changes
-        </h2>
-        <ol class="app-timeline">
-
-          <li class="app-timeline__entry">
-            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
-          <a>Address changed</a>
-            </h3>
-
-            <p class="app-timeline__info govuk-!-margin-bottom-0">
-              <span class="app-timeline__date">
-              4 November 2019
-              </span>
-            </p>
-          </li>
-
-        </ol>
-
-        </div>
+        {% include './_action-history2.html' %}
+      </div>
 
     </div>
 

@@ -46,7 +46,7 @@ GOV.UK Prototype Kit
                   {% if data['accountholder'] %}
                     {{data['accountholder']}}
                   {% else %}
-                    Mr D Leon
+                    D Leon
                   {% endif %}
               </tr>
               <tr class="govuk-table__row">
@@ -61,7 +61,13 @@ GOV.UK Prototype Kit
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Sort code</th>
-                <td class="govuk-table__cell">00 11 22</td>
+                <td class="govuk-table__cell">
+                  {% if data['sortcode'] %}
+                    {{data['sortcode']}}
+                  {% else %}
+                    11 22 33
+                  {% endif %}
+                </td>
               </tr>
             </tbody>
           </table>
@@ -98,6 +104,12 @@ GOV.UK Prototype Kit
               <th scope="col" class="govuk-table__header"></th>
             </tr>
             <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Monday, 29 October 2019</td>
+              <td class="govuk-table__cell">£100</td>
+              <td class="govuk-table__cell">Paid</td>
+              <td class="govuk-table__cell"><a href="previous-payment" class="govuk-link">Details</a></td>
+            </tr>
+            <tr class="govuk-table__row">
               <td class="govuk-table__cell">Monday, 29 October 2018</td>
               <td class="govuk-table__cell">£100</td>
               <td class="govuk-table__cell">Paid</td>
@@ -121,12 +133,6 @@ GOV.UK Prototype Kit
               <td class="govuk-table__cell">Paid</td>
               <td class="govuk-table__cell"><a href="#" class="govuk-link">Details</a></td>
             </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Monday, 27 October 2014</td>
-              <td class="govuk-table__cell">£200</td>
-              <td class="govuk-table__cell">Paid</td>
-              <td class="govuk-table__cell"><a href="#" class="govuk-link">Details</a></td>
-            </tr>
           </tbody>
         </table>
 
@@ -140,10 +146,16 @@ GOV.UK Prototype Kit
             <table class="govuk-table">
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
-                  <th scope="col" class="govuk-table__header">Date paid</th>
+                  <th scope="col" class="govuk-table__header">Payment date</th>
                   <th scope="col" class="govuk-table__header">Amount</th>
                   <th scope="col" class="govuk-table__header">Status</th>
                   <th scope="col" class="govuk-table__header"></th>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Monday, 27 October 2014</td>
+                  <td class="govuk-table__cell">£200</td>
+                  <td class="govuk-table__cell">Paid</td>
+                  <td class="govuk-table__cell"><a href="#" class="govuk-link">Details</a></td>
                 </tr>
                 <tr class="govuk-table__row">
                   <td class="govuk-table__cell">Monday, 29 October 2013</td>

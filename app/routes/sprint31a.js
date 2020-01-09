@@ -173,10 +173,13 @@ router.use((req, res, next) => {
   ;
 
   // Bank confirm to payment
-  router.post('/sprint31a/confirm-bank', (req, res) => {
-    res.redirect('/sprint31a/payment')
-  })
-  ;
+  router.post('/sprint31a/confirm-bank', function(req, res) {
+    if ( req.body['bank-name'] === 'Yes' ) {
+      res.redirect('payment');
+    } else {
+      res.redirect('bankdetails');
+    }
+  });
 
   // Reissue payment to payment with confirmation and updated
   router.post('/sprint31a/reissue-payment', (req, res) => {

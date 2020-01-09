@@ -39,6 +39,7 @@ const sprint30a = require('./routes/sprint30a');
 const sprint30b = require('./routes/sprint30b');
 const sprint30c = require('./routes/sprint30c');
 const sprint31a = require('./routes/sprint31a');
+const sprint31b = require('./routes/sprint31b');
 
 
 
@@ -80,6 +81,7 @@ router.use(sprint30a);
 router.use(sprint30b);
 router.use(sprint30c);
 router.use(sprint31a);
+router.use(sprint31b);
 
 
 

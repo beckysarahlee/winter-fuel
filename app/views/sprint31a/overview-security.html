@@ -16,13 +16,11 @@ GOV.UK Prototype Kit
       <div class="govuk-grid-column-two-thirds">
 
         <div class="moj-banner moj-banner--success">
-
           <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/1000/svg" viewBox="0 0 25 25" height="25" width="25">
             <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
 
           <div class="moj-banner__message">
             <span class="moj-banner__assistive">Success</span>Passed security</div>
-
         </div>
 
         <form method="post">
@@ -69,99 +67,8 @@ GOV.UK Prototype Kit
       </div>
 
       <div class="govuk-grid-column-one-third">
-        <h2 class="govuk-heading-m">
-          Action history
-        </h2>
-        <ol class="app-timeline">
-
-          <li class="app-timeline__entry">
-            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
-              Changed bank account
-            </h3>
-
-            <p class="app-timeline__info govuk-!-margin-bottom-0">
-              <span class="govuk-visually-hidden">Marriage verified</span>
-              <span class="app-timeline__date">
-                5 January 2018
-              </span>
-            </p>
-          </li>
-
-          <li class="app-timeline__entry">
-            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
-              Removed home telephone
-            </h3>
-
-            <p class="app-timeline__info govuk-!-margin-bottom-0">
-              <span class="govuk-visually-hidden">Marriage verified</span>
-              <span class="app-timeline__date">
-                8 March 2016
-              </span>
-            </p>
-          </li>
-
-          <li class="app-timeline__entry">
-            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
-              <a href="history-details" class="govuk-link">Changed residency details</a>
-            </h3>
-
-            <p class="app-timeline__info govuk-!-margin-bottom-0">
-              <span class="govuk-visually-hidden">Marriage verified</span>
-              <span class="app-timeline__date">
-                8 March 2016
-              </span>
-            </p>
-          </li>
-
-          <li class="app-timeline__entry">
-            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
-              Changed occupancy details
-            </h3>
-
-            <p class="app-timeline__info govuk-!-margin-bottom-0">
-              <span class="govuk-visually-hidden">Marriage verified</span>
-              <span class="app-timeline__date">
-                5 July 2013
-              </span>
-            </p>
-          </li>
-
-          <li class="app-timeline__entry">
-            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
-              Changed home telephone
-            </h3>
-
-            <p class="app-timeline__info govuk-!-margin-bottom-0">
-              <span class="govuk-visually-hidden">Marriage verified</span>
-              <span class="app-timeline__date">
-                19 January 2009
-              </span>
-            </p>
-          </li>
-
-          <li class="app-timeline__entry">
-            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
-              <a href="history-details" class="govuk-link">Changed address</a>
-            </h3>
-
-            <p class="app-timeline__info govuk-!-margin-bottom-0">
-              <span class="govuk-visually-hidden">Marriage verified</span>
-              <span class="app-timeline__date">
-                18 January 2009
-              </span>
-            </p>
-          </li>
-
-          <li class="app-timeline__entry">
-            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
-              <a href="contact-history" class="govuk-link">See full history</a>
-            </h3>
-          </li>
-
-        </ol>
-
+        {% include './_action-history.html' %}
       </div>
-
 
     </div>
 
