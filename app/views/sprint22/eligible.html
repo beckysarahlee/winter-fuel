@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="manage-jobs2">Check and update</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="check-cases">Check cases</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Eligible cases</li>
+  </ol>
+</div>
+
+{{ govukBackLink({
+    text: "Back",
+    href: back
+  }) }}
+
+
+  <br>
+  <br>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">Eligible cases</h1>
+
+        <span class="govuk-caption-l">Total cases</span>
+        <h2 class="govuk-heading-l">10.64 million</h2>
+
+    <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <section class="key-details-bar" role="contentinfo" aria-label="Key details">
+      <dl class="key-details-bar__key-details">
+        <span class="govuk-caption-l"><a href="eligible">£100</a></span>
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-0"><a href="eligible">4.4 million</a></h2>
+      </dl>
+    </section>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    <section class="key-details-bar" role="contentinfo" aria-label="Key details">
+      <dl class="key-details-bar__key-details">
+        <span class="govuk-caption-l"><a href="eligible">£150</a></span>
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-0"><a href="eligible">457,940</a></h2>
+      </dl>
+    </section>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    <section class="key-details-bar" role="contentinfo" aria-label="Key details">
+      <dl class="key-details-bar__key-details">
+        <span class="govuk-caption-l"><a href="eligible">£200</a></span>
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-0"><a href="eligible">3.6 million</a></h2>
+      </dl>
+    </section>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    <section class="key-details-bar" role="contentinfo" aria-label="Key details">
+      <dl class="key-details-bar__key-details">
+        <span class="govuk-caption-l"><a href="eligible">£300</a></span>
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-0"><a href="eligible">1.8 million</a></h2>
+      </dl>
+    </section>
+  </div>
+</div>
+
+  </div>
+</div>
+
+
+{% endblock %}
