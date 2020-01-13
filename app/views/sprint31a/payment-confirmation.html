@@ -55,21 +55,21 @@ GOV.UK Prototype Kit
                   {% endif %}</td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Account number</th>
-                <td class="govuk-table__cell">
-                  {% if data.accountnumber %}
-                  {{data.accountnumber}}
-                  {% else %}
-                  ****5678
-                  {% endif %}</td>
-              </tr>
-              <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Sort code</th>
                 <td class="govuk-table__cell">
                   {% if data.rollnumber %}
                   {{data.rollnumber}}
                   {% else %}
                   00 11 22
+                  {% endif %}</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Account number</th>
+                <td class="govuk-table__cell">
+                  {% if data.accountnumber %}
+                  {{data.accountnumber}}
+                  {% else %}
+                  ****5678
                   {% endif %}</td>
               </tr>
             </tbody>
