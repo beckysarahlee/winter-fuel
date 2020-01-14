@@ -6,7 +6,13 @@
         <div>
           <h1 class="govuk-heading-xl">
             Tommy Jason Oliver <br>
-                            <span class="govuk-body-l">{{data.nino}}</span>
+                            <span class="govuk-body-l">
+                              {% if data['nino'] %}
+                                {{data['nino']}}
+                              {% else %}
+                                XX 12 34 56
+                              {% endif %}
+                            </span>
         <!--    <span class="app-c-tag">Gets a Winter Fuel payment</span>   -->
           </h1>
         </div>
