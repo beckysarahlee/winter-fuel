@@ -34,9 +34,9 @@ GOV.UK Prototype Kit
                   {% elif data.address %}
                   {{data.address.split(', ').join('<br />') | safe}}
                   {% else %}
-                  78 Graham Road<br>
-                  Chelsham<br>
-                  CR6 9ND
+                  12 Old Street<br>
+                  Oldham<br>
+                  OD3 8TP
                   {% endif %}
                 </td>
                 <td class="govuk-table__cell">
@@ -54,6 +54,12 @@ GOV.UK Prototype Kit
                     {% else %}
                     Lives with someone else of State Pension age
                   {% endif %}</td>
+                  <td class="govuk-table__cell">
+                    <a href="living-with">
+                      Change
+                      <span class="govuk-visually-hidden">Change address</span>
+                    </a>
+                  </td>
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Date they moved in</th>

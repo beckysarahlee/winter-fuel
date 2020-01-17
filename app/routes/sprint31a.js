@@ -156,7 +156,7 @@ router.use((req, res, next) => {
 
   // Make payment to contact
   router.post('/sprint31a/make-payment', (req, res) => {
-    res.redirect('/sprint31a/contact-1')
+    res.redirect('/sprint31a/contact-topup')
   })
   ;
 
