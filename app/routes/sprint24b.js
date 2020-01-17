@@ -178,11 +178,21 @@ if ( req.body['query'] === 'eligibility' ) {
 
         router.post('/sprint24b/living-with', function(req, res) {
           if ( req.body['live-with-age'] === 'yes' ) {
-            res.redirect('shared-payment');
+            res.redirect('over80-shared');
           } else {
             res.redirect('full-payment');
           }
         });
+
+        // Living with (over 80?)
+
+          router.post('/sprint24b/over80-shared', function(req, res) {
+            if ( req.body['over80'] === 'yes' ) {
+              res.redirect('shared-payment-over80');
+            } else {
+              res.redirect('shared-payment');
+            }
+          });
 
       // Shared payment to overpayment find
 
