@@ -25,7 +25,7 @@ router.use((req, res, next) => {
 
   // Security into record with se curity confirmation box
   router.post('/sprint31b/security', (req, res) => {
-    res.redirect('/sprint31a/overview-security-topup')
+    res.redirect('/sprint31b/overview-security-topup')
   })
   ;
 

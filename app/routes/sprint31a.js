@@ -137,11 +137,16 @@ router.use((req, res, next) => {
   // Living with anyone at address change
   router.post('/sprint31a/living-with', function(req, res) {
     if ( req.body['living-with'] === 'Living with someone else of State Pension age' ) {
-      res.redirect('contact');
+      res.redirect('living-with-age');
     } else {
-      res.redirect('declaration');
+      res.redirect('poa');
     }
   });
+
+  router.post('/sprint31a/poa', (req, res) => {
+    res.redirect('/sprint31a/declaration')
+  })
+  ;
 
   router.post('/sprint31a/declaration', (req, res) => {
     res.redirect('/sprint31a/make-payment')

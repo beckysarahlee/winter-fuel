@@ -73,6 +73,23 @@ GOV.UK Prototype Kit
                 </td>
               </tr>
               <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Correspondence address</th>
+                <td class="govuk-table__cell">
+                  {% if data['address-change'] %}
+                  {{data['address-change'].split(', ').join('<br />') | safe }}
+                  {% elif data.address %}
+                  {{data.address.split(', ').join('<br />') | safe}}
+                  {% else %}
+                  {% endif %}
+                </td>
+                <td class="govuk-table__cell">
+                  <a href="address">
+                    Add
+                    <span class="govuk-visually-hidden">Change address</span>
+                  </a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Home telephone</th>
                 <td class="govuk-table__cell">
                   {% if data['homephone-remove'] === 'Yes' %}
@@ -145,7 +162,7 @@ GOV.UK Prototype Kit
                   {% elseif data.email %}
                   {{data.email}}
                   {% else %}
-                  mary234@hotmail.com
+                  leon234@hotmail.com
                   {% endif %}
                 </td>
                 <td class="govuk-table__cell">

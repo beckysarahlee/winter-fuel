@@ -18,7 +18,7 @@ GOV.UK Prototype Kit
         <form method="post">
           {% include './_bar.html' %}
 
-          {% include './_tab-contact.html' %}
+          {% include './_tab-contact-topup.html' %}
 
           <br>
           <br>
@@ -34,9 +34,9 @@ GOV.UK Prototype Kit
                   {% elif data.address %}
                   {{data.address.split(', ').join('<br />') | safe}}
                   {% else %}
-                  12 Old Street<br>
-                  Oldham<br>
-                  OD3 8TP
+                  78 Graham Road<br>
+                  Chelsham<br>
+                  CR6 9ND
                   {% endif %}
                 </td>
                 <td class="govuk-table__cell">
@@ -55,37 +55,19 @@ GOV.UK Prototype Kit
                     Lives with someone else of State Pension age
                   {% endif %}</td>
                   <td class="govuk-table__cell">
-                    <a href="">
+                    <a href="living-with">
                       Change
                       <span class="govuk-visually-hidden">Change address</span>
                     </a>
-                  </td>
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Date they moved in</th>
                 <td class="govuk-table__cell">
-                  6 March 2016
+                  8 August 2019
                 </td>
                 <td class="govuk-table__cell">
                   <a href="address">
                     Change
-                    <span class="govuk-visually-hidden">Change address</span>
-                  </a>
-                </td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Correspondence address</th>
-                <td class="govuk-table__cell">
-                  {% if data['address-change'] %}
-                  {{data['address-change'].split(', ').join('<br />') | safe }}
-                  {% elif data.address %}
-                  {{data.address.split(', ').join('<br />') | safe}}
-                  {% else %}
-                  {% endif %}
-                </td>
-                <td class="govuk-table__cell">
-                  <a href="address">
-                    Add
                     <span class="govuk-visually-hidden">Change address</span>
                   </a>
                 </td>
@@ -163,7 +145,7 @@ GOV.UK Prototype Kit
                   {% elseif data.email %}
                   {{data.email}}
                   {% else %}
-                leon234@hotmail.com
+                  leon234@hotmail.com
                   {% endif %}
                 </td>
                 <td class="govuk-table__cell">
@@ -191,7 +173,7 @@ GOV.UK Prototype Kit
       </div>
 
       <div class="govuk-grid-column-one-third">
-        {% include './_action-history.html' %}
+        {% include './_action-history2.html' %}
       </div>
 
     </div>
