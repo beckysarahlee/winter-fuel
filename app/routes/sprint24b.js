@@ -85,7 +85,7 @@ if ( req.body['query'] === 'eligibility' ) {
     if ( req.body['where-were-you-living'] === 'hospital' ) {
       res.redirect('hospital');
     } else if ( req.body['where-were-you-living'] === 'carehome' ) {
-      res.redirect('care-home-shared');
+      res.redirect('care-home');
     } else if ( req.body['where-were-you-living'] === 'no-abode' ) {
       res.redirect('no-abode');
     } else if ( req.body['where-were-you-living'] === 'prison' ) {
@@ -139,7 +139,7 @@ if ( req.body['query'] === 'eligibility' ) {
       if ( req.body['care-home-admission'] === 'yes' ) {
         res.redirect('who');
       } else {
-        res.redirect('care-home-over-13');
+        res.redirect('care-home-shared');
       }
     });
 
@@ -147,7 +147,7 @@ if ( req.body['query'] === 'eligibility' ) {
 
       router.post('/sprint24b/care-home-pc', function(req, res) {
         if ( req.body['care-home-admission'] === 'yes' ) {
-          res.redirect('who-pc');
+          res.redirect('care-home-pc-full');
         } else {
           res.redirect('care-home-over-pc');
         }
