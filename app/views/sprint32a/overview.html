@@ -42,10 +42,20 @@ GOV.UK Prototype Kit
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">Age</th>
                     <td class="govuk-table__cell">66</td>
+                    <td class="govuk-table__cell">
+                      <a href="">
+                        <span class="govuk-visually-hidden">Change address</span>
+                      </a>
+                    </td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">Date of birth</th>
                     <td class="govuk-table__cell">9 August 1953</td>
+                    <td class="govuk-table__cell">
+                      <a href="">
+                        <span class="govuk-visually-hidden">Change address</span>
+                      </a>
+                    </td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">Occupancy</th>
@@ -53,8 +63,45 @@ GOV.UK Prototype Kit
                       {% if data['living-with'] %}
                       {{data['living-with']}}
                         {% else %}
-                        Lives with someone else of State Pension age
+                        Lives with someone of State Pension age
                       {% endif %}</td>
+                      <td class="govuk-table__cell">
+                        <a href="">
+                          <span class="govuk-visually-hidden">Change address</span>
+                        </a>
+                      </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Address</th>
+                    <td class="govuk-table__cell">
+                      {% if data['address-change'] %}
+                      {{data['address-change'].split(', ').join('<br />') | safe }}
+                      {% elif data.address %}
+                      {{data.address.split(', ').join('<br />') | safe}}
+                      {% else %}
+                      1 Victoria Road<br>
+                      FALKIRK<br>
+                      FK55 8XN
+                      {% endif %}
+                    </td>
+                    <td class="govuk-table__cell">
+                      <a href="address">
+                        Change
+                        <span class="govuk-visually-hidden">Change address</span>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Date they moved in</th>
+                    <td class="govuk-table__cell">
+                      6 March 2016
+                    </td>
+                    <td class="govuk-table__cell">
+                      <a href="address">
+                        Change
+                        <span class="govuk-visually-hidden">Change address</span>
+                      </a>
+                    </td>
                   </tr>
                 </tbody>
               </table>
