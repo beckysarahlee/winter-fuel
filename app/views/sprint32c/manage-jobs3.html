@@ -1,7 +1,10 @@
 {% extends "layout.html" %}
 
+{% block header %}
+  {% include './_header-manage.html' %}
+{% endblock %}
+
 {% block beforeContent %}
-{% include './_secondary_nav_manage.html' %}
 {% endblock %}
 
 {% block content %}

@@ -5,9 +5,15 @@
 
         <div>
           <h1 class="govuk-heading-xl">
-            <br>
-            BB 12 34 56 X<span class="govuk-caption-xl"></span>
-            <span class="app-c-tag app-c-tag--orange">Decision needed</span>
+            Name<br>
+                            <span class="govuk-body-l">
+                              {% if data['nino'] %}
+                                {{data['nino']}}
+                              {% else %}
+                                XX 12 34 56
+                              {% endif %}
+
+                            </span>
           </h1>
         </div>
 
