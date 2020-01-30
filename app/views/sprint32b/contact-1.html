@@ -37,69 +37,6 @@ GOV.UK Prototype Kit
             <h2 class="govuk-heading-m">Contact details</h2>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Current address</th>
-                <td class="govuk-table__cell">
-                  {% if data['address-change'] %}
-                  {{data['address-change'].split(', ').join('<br />') | safe }}
-                  {% elif data.address %}
-                  {{data.address.split(', ').join('<br />') | safe}}
-                  {% else %}
-                  1 Victoria Road<br>
-                  FALKIRK<br>
-                  FK55 8XN
-                  {% endif %}
-                </td>
-                <td class="govuk-table__cell">
-                  <a href="address">
-                    Change
-                    <span class="govuk-visually-hidden">Change address</span>
-                  </a>
-                </td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Occupancy</th>
-                <td class="govuk-table__cell">
-                  {% if data['living-with'] %}
-                  {{data['living-with']}}
-                    {% else %}
-                    Lives with someone of State Pension age
-                  {% endif %}</td>
-                  <td class="govuk-table__cell">
-                    <a href="living-with">
-                      Change
-                      <span class="govuk-visually-hidden">Change address</span>
-                    </a>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Date they moved in</th>
-                <td class="govuk-table__cell">
-                  8 August 2019
-                </td>
-                <td class="govuk-table__cell">
-                  <a href="address">
-                    Change
-                    <span class="govuk-visually-hidden">Change address</span>
-                  </a>
-                </td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Correspondence address</th>
-                <td class="govuk-table__cell">
-                  {% if data['address-change'] %}
-                  {{data['address-change'].split(', ').join('<br />') | safe }}
-                  {% elif data.address %}
-                  {{data.address.split(', ').join('<br />') | safe}}
-                  {% else %}
-                  {% endif %}
-                </td>
-                <td class="govuk-table__cell">
-                  <a href="address">
-                    Add
-                    <span class="govuk-visually-hidden">Change address</span>
-                  </a>
-                </td>
-              </tr>
-              <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Home telephone</th>
                 <td class="govuk-table__cell">
                   {% if data['homephone-remove'] === 'Yes' %}
@@ -111,14 +48,16 @@ GOV.UK Prototype Kit
                 </td>
                 <td class="govuk-table__cell">
                   <a href="homephone">
+                    Change<span class="govuk-visually-hidden"> home phone number</span>
+                  </a>
                 <!--    Change
                     <span class="govuk-visually-hidden">Change home phone number</span> -->
-                    {% if not data.homephone %}
+                <!--    {% if not data.homephone %}
                     Add<span class="govuk-visually-hidden"> home phone number</span>
                     {% else %}
                     Change<span class="govuk-visually-hidden"> home phone number</span>
                     {% endif %}
-                  </a>
+                  </a>   -->
                 </td>
               </tr>
               <tr class="govuk-table__row">
@@ -170,12 +109,23 @@ GOV.UK Prototype Kit
                   {% elseif data.email %}
                   {{data.email}}
                   {% else %}
-                  dora-best@hotmail.com
+                dora-best@hotmail.com
                   {% endif %}
                 </td>
                 <td class="govuk-table__cell">
                   <a href="email">
                     Change<span class="govuk-visually-hidden">email</span>
+                  </a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Correspondence address</th>
+                <td class="govuk-table__cell">
+                </td>
+                <td class="govuk-table__cell">
+                  <a href="address">
+                    Add
+                    <span class="govuk-visually-hidden">Change address</span>
                   </a>
                 </td>
               </tr>
@@ -195,10 +145,6 @@ GOV.UK Prototype Kit
             </tbody>
           </table>
 
-      </div>
-
-      <div class="govuk-grid-column-one-third">
-        {% include './_action-history2.html' %}
       </div>
 
     </div>

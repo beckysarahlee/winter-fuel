@@ -1,11 +1,11 @@
 {% extends "layout.html" %}
 
 {% block header %}
-  {% include './_header.html' %}
+  {% include './_header-manage.html' %}
 {% endblock %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
@@ -17,7 +17,7 @@
 
       <form method="post">
 
-            {% include './_bar.html' %}
+{% include './_bar.html' %}
 
             {% include './_tab-overview.html' %}
 
@@ -107,6 +107,10 @@
                 </tbody>
               </table>
 
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+        {% include './_action-history.html' %}
       </div>
 
     </div>

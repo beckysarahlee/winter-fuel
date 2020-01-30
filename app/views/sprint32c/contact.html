@@ -1,11 +1,11 @@
 {% extends "layout.html" %}
 
-{% block pageTitle %}
-GOV.UK Prototype Kit
+{% block header %}
+  {% include './_header-manage.html' %}
 {% endblock %}
 
-{% block beforeContent %}
-{% include './_find-someone.html' %}
+{% block pageTitle %}
+GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
@@ -141,6 +141,10 @@ GOV.UK Prototype Kit
             </tbody>
           </table>
 
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+        {% include './_action-history.html' %}
       </div>
 
     </div>
