@@ -17,7 +17,20 @@ GOV.UK Prototype Kit
 
       <form method="post">
 
-        {% include './_bar.html' %}
+    <!--    {% include './_bar.html' %}  -->
+
+    <h1 class="govuk-heading-xl">
+      Can uou confirm your full name?<br>
+                      <span class="govuk-body-l">
+                        Theodora Best<br>
+                        {% if data['nino'] %}
+                          {{data['nino']}}
+                        {% else %}
+                          XX 12 34 56
+                        {% endif %}
+
+                      </span>
+    </h1>
 
         <button type="submit" class="govuk-button">
           Confirm name
