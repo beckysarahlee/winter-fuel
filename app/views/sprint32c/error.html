@@ -1,16 +1,17 @@
 {% extends "layout.html" %}
 
+{% block header %}
+  {% include './_header.html' %}
+{% endblock %}
+
 {% block content %}
 
 <div class="govuk-breadcrumbs">
   <ol class="govuk-breadcrumbs__list">
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="manage-jobs2">Check and update</a>
+      <a class="govuk-breadcrumbs__link" href="check-cases">Check and update cases</a>
     </li>
-    <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="check-cases">Check cases</a>
-    </li>
-    <li class="govuk-breadcrumbs__list-item" aria-current="page">Error</li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Cases in error</li>
   </ol>
 </div>
 
