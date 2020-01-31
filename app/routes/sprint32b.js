@@ -32,8 +32,14 @@ router.use((req, res, next) => {
   })
   ;
 
-  // Security into record with security confirmation box
+  // Security to extra security (failed question)
   router.post('/sprint32b/security', (req, res) => {
+    res.redirect('/sprint32b/security-extra')
+  })
+  ;
+
+  // Security into record with security confirmation box
+  router.post('/sprint32b/security-extra', (req, res) => {
     res.redirect('/sprint32b/overview-security')
   })
   ;
