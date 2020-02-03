@@ -126,9 +126,32 @@ router.use((req, res, next) => {
 
   router.post('/sprint32b/move-date', (req, res) => {
     res.redirect('/sprint32b/homephone-address')
+<<<<<<< HEAD
   })
   ;
 
+=======
+  })
+  ;
+
+  router.post('/sprint32b/homephone-address', (req, res) => {
+    res.redirect('/sprint32b/homephone-address-change')
+  })
+  ;
+
+  router.post('/sprint32b/homephone-address-change', (req, res) => {
+    res.redirect('/sprint32b/living-with')
+  })
+  ;
+
+  router.post('/sprint32b/living-with', (req, res) => {
+    res.redirect('/sprint32b/poa')
+  })
+  ;
+
+
+  // Change of address and home phone number
+>>>>>>> 1037e787de38c5433f0df82774c9ede33bb04911
   router.post('/sprint32b/homephone-address', function(req, res) {
     if ( req.body['homephone-address'] === 'Yes' ) {
       res.redirect('homephone-address-change');
