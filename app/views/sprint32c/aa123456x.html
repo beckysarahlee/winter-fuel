@@ -23,7 +23,10 @@ GOV.UK Prototype Kit
 
     <div class="govuk-grid-column-two-thirds">
 
-      <a href="/sprint22/exceptions-result" class="govuk-back-link">Back</a>
+      {{ govukBackLink({
+        text: "Back",
+        href: back
+      }) }}
 
       <main id="content" role="main">
         <div class="grid-row">
