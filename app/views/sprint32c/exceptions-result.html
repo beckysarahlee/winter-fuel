@@ -4,7 +4,10 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
-<a href="/sprint22/exceptions" class="govuk-back-link">Back</a>
+    {{ govukBackLink({
+      text: "Back",
+      href: back
+    }) }}
 
 <br>
 <br>
@@ -19,10 +22,6 @@
 </div>
 
   <br>
-
-<p class="govuk-body govuk-!-font-size-24"><b>Filtered by</b> </p>
-<p class="govuk-body govuk-!-font-size-19">   <b>Stage:</b> Verify address, Calculate eligibility, Send letter, Evaluate related cases, Update case <a href="#" class="govuk-link">Change</a><br>
-<b>Status:</b> Decision needed, Suspended, Error  <a href="#" class="govuk-link">Change</a></p>
 
 <nav class="moj-pagination" id="pagination-label">
 
@@ -69,7 +68,7 @@
 
                   <th scope="row" class="govuk-table__header">
 
-                    <a href="/sprint22/aa123456x">
+                    <a href="aa123456x">
                       AA 12 34 56 X</a></th>
 
                   <td class="govuk-table__cell">19 August 2019</td>
@@ -103,7 +102,7 @@
 
                   <td class="govuk-table__cell">Suspended</td>
 
-                  <td class="govuk-table__cell">Calculate eligibility</td>
+                  <td class="govuk-table__cell">Verify address</td>
 
                 </tr>
 
@@ -115,7 +114,7 @@
 
                   <td class="govuk-table__cell">Decision needed</td>
 
-                  <td class="govuk-table__cell">Calculate eligibility</td>
+                  <td class="govuk-table__cell">Verify address</td>
 
                 </tr>
 
@@ -128,7 +127,7 @@
 
                   <td class="govuk-table__cell">Error</td>
 
-                  <td class="govuk-table__cell">Send letter</td>
+                  <td class="govuk-table__cell">Verify address</td>
 
                 </tr>
 
@@ -153,7 +152,7 @@
 
                   <td class="govuk-table__cell">Decision needed</td>
 
-                  <td class="govuk-table__cell">Evaluate related cases</td>
+                  <td class="govuk-table__cell">Verify address</td>
 
                 </tr>
 
@@ -179,7 +178,7 @@
 
                   <td class="govuk-table__cell">Error</td>
 
-                  <td class="govuk-table__cell">Calculate eligibility</td>
+                  <td class="govuk-table__cell">Verify address</td>
 
                 </tr>
 
@@ -192,7 +191,7 @@
 
                   <td class="govuk-table__cell">Suspended</td>
 
-                  <td class="govuk-table__cell">Update case</td>
+                  <td class="govuk-table__cell">Verify address</td>
 
                 </tr>
 
