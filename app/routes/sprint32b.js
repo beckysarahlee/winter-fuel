@@ -125,10 +125,24 @@ router.use((req, res, next) => {
   ;
 
   router.post('/sprint32b/move-date', (req, res) => {
+    res.redirect('/sprint32b/homephone-address')
+  })
+  ;
+
+  router.post('/sprint32b/homephone-address', (req, res) => {
+    res.redirect('/sprint32b/homephone-address-change')
+  })
+  ;
+
+  router.post('/sprint32b/homephone-address-change', (req, res) => {
     res.redirect('/sprint32b/living-with')
   })
   ;
 
+  router.post('/sprint32b/living-with', (req, res) => {
+    res.redirect('/sprint32b/poa')
+  })
+  ;
 
 
   // Change of address and home phone number
