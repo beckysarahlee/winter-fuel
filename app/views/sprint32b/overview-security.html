@@ -38,76 +38,58 @@ GOV.UK Prototype Kit
             </table>
 
 
-              <table class="govuk-table">
-              <h2 class="govuk-heading-m">Qualification details</h2>
-                <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Age</th>
-                    <td class="govuk-table__cell">66</td>
-                    <td class="govuk-table__cell">
-                      <a href="address">
-                        <span class="govuk-visually-hidden">Change address</span>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Date of birth</th>
-                    <td class="govuk-table__cell">9 August 1953</td>
-                    <td class="govuk-table__cell">
-                      <a href="address">
-                        <span class="govuk-visually-hidden">Change address</span>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Address</th>
-                    <td class="govuk-table__cell">
-                      {% if data['address-change'] %}
-                      {{data['address-change'].split(', ').join('<br />') | safe }}
-                      {% elif data.address %}
-                      {{data.address.split(', ').join('<br />') | safe}}
+            <table class="govuk-table">
+                  <h2 class="govuk-heading-m">Qualification details</h2>
+              <a href="address" <span class="govuk-link govuk-!-font-size-19" style="margin-left: 90%">Change</span>
+              </a>
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header"></th>
+                  <th scope="col" class="govuk-table__header"></th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Age</th>
+                  <td class="govuk-table__cell">66</td>
+                  <td class="govuk-table__cell"></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Date of birth</th>
+                  <td class="govuk-table__cell">9 August 1953</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Address</th>
+                  <td class="govuk-table__cell">
+                    {% if data['address-change'] %}
+                    {{data['address-change'].split(', ').join('<br />') | safe }}
+                    {% elif data.address %}
+                    {{data.address.split(', ').join('<br />') | safe}}
+                    {% else %}
+                    1 Victoria Road<br>
+                    FALKIRK<br>
+                    FK55 8XN
+                    {% endif %}
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Occupancy</th>
+                  <td class="govuk-table__cell">
+                    {% if data['living-with'] %}
+                    {{data['living-with']}}
                       {% else %}
-                      1 Victoria Road<br>
-                      FALKIRK<br>
-                      FK55 8XN
-                      {% endif %}
-                    </td>
-                    <td class="govuk-table__cell">
-                      <a href="address">
-                        Change
-                        <span class="govuk-visually-hidden">Change address</span>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Occupancy</th>
-                    <td class="govuk-table__cell">
-                      {% if data['living-with'] %}
-                      {{data['living-with']}}
-                        {% else %}
-                        Lives with someone else of State Pension age
-                      {% endif %}</td>
-                      <td class="govuk-table__cell">
-                        <a href="address">
-
-                          <span class="govuk-visually-hidden">Change address</span>
-                        </a>
-                      </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Date they moved in</th>
-                    <td class="govuk-table__cell">
-                      6 March 2016
-                    </td>
-                    <td class="govuk-table__cell">
-                      <a href="address">
-                        Change
-                        <span class="govuk-visually-hidden">Change address</span>
-                      </a>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                      Lives with someone else of State Pension age
+                    {% endif %}
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Date they moved in</th>
+                  <td class="govuk-table__cell">
+                    6 March 2016
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
       </div>
 
