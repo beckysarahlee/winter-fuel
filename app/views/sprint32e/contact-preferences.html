@@ -4,73 +4,63 @@
 GOV.UK Prototype Kit
 {% endblock %}
 
-{% block header %}
-{% include "includes/cookie-banner.html" %}
-{# Set serviceName in config.js. #}
-{{ govukHeader({
-  serviceName: serviceName,
-  serviceUrl: "/"
-}) }}
-
-{% block headEnd %}
-{% include 'includes/remove-blue-bar.html' %}
+{% block beforeContent %}
+{% include './_blue_bar.html' %}
 {% endblock %}
 
-{% include './_find-someone.html' %}
-
+{% block content %}
 
 <div class="govuk-width-container">
-
   <main class="govuk-main-wrapper">
-
+    <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        <main id="content" role="main">
-          <div class="grid-row">
-            <div class="column-full">
+        <div class="moj-banner moj-banner--success">
+          <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/1000/svg" viewBox="0 0 25 25" height="25" width="25">
+            <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
 
-{% include './_bar.html' %}
-
-{% include './_tab-contact.html' %}
-
-            </div>
-          </div>
-        </main>
-
-        <br>
-
-        <div>
-          <a href="contact" class="govuk-back-link">Back</a>
+          <div class="moj-banner__message">
+            <span class="moj-banner__assistive">Success</span>Passed security</div>
         </div>
 
-        <br>
-
-        <h1 class="govuk-heading-l">Update contact preferences</h1>
         <form method="post">
-          <div class="govuk-form-group">
 
-            <p>Select new contact preferences</p>
+          <h1 class="govuk-heading-xl">Contacted?</h1>
 
-            <div class="govuk-checkboxes">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="contact-1" name="contactpreference" type="checkbox" value="Large print">
-                <label class="govuk-label govuk-checkboxes__label" for="contact-1">
-                  Large print
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="contact-2" name="contactpreference" type="checkbox" value="Braille">
-                <label class="govuk-label govuk-checkboxes__label" for="contact-2">
-                  Braille
-                </label>
-              </div>
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                Text message
+              </label>
             </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                Telephone call?
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                Email
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Post
+              </label>
+            </div>
+            <div>
 
-          </div>
+              <br>
+              <br>
 
-          <button type="submit" class="govuk-button">
-            Save
-          </button>
+              <button type="submit" class="govuk-button">
+                Continue
+              </button>
+
         </form>
 
 
@@ -78,19 +68,9 @@ GOV.UK Prototype Kit
 
     </div>
 
-  </div>
-
 </div>
 
-</main>        </div>
-</div>
-{% endblock %}
-
-{% block content %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
-  </div>
+</main>
 </div>
 
 {% endblock %}

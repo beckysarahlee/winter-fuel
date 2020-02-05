@@ -32,9 +32,15 @@ router.use((req, res, next) => {
   })
   ;
 
-  // Security to extra security (failed question)
+  // Security to contact preferences
   router.post('/sprint32e/security', (req, res) => {
-    res.redirect('/sprint32e/overview-security')
+    res.redirect('/sprint32e/contact-preferences')
+  })
+  ;
+
+  // Contact preferences to overview security
+  router.post('/sprint32e/contact-preferences', (req, res) => {
+    res.redirect('/sprint32e/overview')
   })
   ;
 
