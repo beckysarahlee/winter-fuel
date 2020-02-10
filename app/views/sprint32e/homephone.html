@@ -43,11 +43,15 @@ GOV.UK Prototype Kit
               <input class="govuk-input govuk-input--width-20" id="homephone" name="homephone" type="tel">
             </div>
 
-              {% if data.homephone %}
             <div>
-            <a href="homephone-remove" class="govuk-link govuk-!-font-size-19">Remove 01665 720 871</a>
+            <a href="homephone-remove" class="govuk-link govuk-!-font-size-19">
+              Remove
+              {% if data['homephone'] %}
+                  {{data['homephone']}}
+                {% else %}
+                	01665 720 871
+                {% endif %}</a>
             </div>
-              {% endif %}
 
 
             <br>

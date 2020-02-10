@@ -38,7 +38,14 @@ GOV.UK Prototype Kit
                 </td>
                 <td class="govuk-table__cell">
                   <a href="homephone">
-                    Change<span class="govuk-visually-hidden"> home phone number</span>
+                    {% if data['homephone-remove'] === 'Yes' %}
+                    Add
+                    {% elseif data.homephone %}
+                    Change
+                    {% else %}
+                    Change
+                    {% endif %}
+                    <span class="govuk-visually-hidden"> home phone number</span>
                   </a>
                 <!--    Change
                     <span class="govuk-visually-hidden">Change home phone number</span> -->
@@ -57,10 +64,12 @@ GOV.UK Prototype Kit
                 </td>
                 <td class="govuk-table__cell">
                   <a href="mobilephone">
-                    {% if not data.mobilenumber %}
-                    Change<span class="govuk-visually-hidden"> mobile number</span>
+                    {% if data['homephone-remove'] === 'Yes' %}
+                    Add
+                    {% elseif data.homephone %}
+                    Change
                     {% else %}
-                    Change<span class="govuk-visually-hidden"> mobile number</span>
+                    Change
                     {% endif %}
                   </a>
                 </td>
