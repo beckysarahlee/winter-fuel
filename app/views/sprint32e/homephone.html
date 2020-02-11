@@ -27,9 +27,8 @@ GOV.UK Prototype Kit
             <br>
             <br>
 
-
-            {% if not data.homephone %}
-            <h1 class="govuk-heading-l">Add home telephone</h1>
+            {% if data['homephone-remove'] === 'Yes' %}
+              <h1 class="govuk-heading-l">Add home telephone</h1>
             {% else %}
             <h1 class="govuk-heading-l">Change home telephone</h1>
             {% endif %}
