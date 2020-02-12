@@ -36,7 +36,7 @@ GOV.UK Prototype Kit
             <form method="post">
             <div class="govuk-form-group">
               <label class="govuk-label" for="telephone-number">
-                Telephone number
+                New number
 
               </label>
               <input class="govuk-input govuk-input--width-20" id="homephone" name="homephone" type="tel">
@@ -44,11 +44,11 @@ GOV.UK Prototype Kit
 
             <div>
             <a href="homephone-remove" class="govuk-link govuk-!-font-size-19">
-              Remove
+              Remove old number
               {% if data['homephone'] %}
                   {{data['homephone']}}
                 {% else %}
-                	01665 720 871
+                	(01665 720 871)
                 {% endif %}</a>
             </div>
 
