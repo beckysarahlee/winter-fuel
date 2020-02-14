@@ -31,11 +31,36 @@ router.use((req, res, next) => {
   })
   ;
 
+
+//
   router.post('/sprint32c/comparison-filter-ineligible', (req, res) => {
     res.redirect('/sprint32c/results-ineligible')
   })
   ;
 
+// Get next verify address to account
+  router.post('/sprint32c/verify-address', (req, res) => {
+    res.redirect('/sprint32c/overview-verify-address')
+  })
+  ;
+
+// Postcode look up to address results
+  router.post('/sprint32c/address', (req, res) => {
+    res.redirect('/sprint32c/address-1')
+  })
+  ;
+
+// Return to queue back to verify address
+  router.post('/sprint32c/return-queue', (req, res) => {
+    res.redirect('/sprint32c/verify-address')
+  })
+  ;
+
+// New address to overview
+  router.post('/sprint32c/address-1', (req, res) => {
+    res.redirect('/sprint32c/overview-fixed')
+  })
+  ;
 
   // See cases, eligible or ineligible
 

@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include './_header.html' %}
+{% endblock %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include './_blue_bar.html' %}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+
+                  <form method="post">
+
+                    {% include './_bar-address.html' %}
+
+                        {{ govukBackLink({
+                            text: "Back",
+                            href: back
+                          }) }}
+
+                        <br>
+                        <br>
+
+                        <form method="post">
+
+                              <h2 class="govuk-heading-l">Select the nice new? address</h2>
+
+                              <p>
+                                <b>Current address</b><br>
+                                Victoria Road<br>
+                                FALKIRK<br>
+                                FK55</p>
+
+                                <div class="govuk-form-group">
+                                  <fieldset class="govuk-fieldset">
+                                    <div class="govuk-radios">
+                                      <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="where-do-you-live" name="address-change" type="radio" value="27 Victoria Road, FALKIRK, FK55 0LZ">
+                                        <label class="govuk-label govuk-radios__label" for="address">
+                                          27 Victoria Road, FALKIRK, FK55 0LZ
+                                        </label>
+                                      </div>
+                                      <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="where-do-you-live-3" name="address-change" type="radio" value="Address not found">
+                                        <label class="govuk-label govuk-radios__label" for="address-3">
+                                          The address has not been found
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </fieldset>
+                                </div>
+
+                          <button type="submit" class="govuk-button">
+                            Continue
+                          </button>
+
+                        </form>
+
+
+
+
+
+<br>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  </main>
+  </div>
+
+  {% endblock %}
