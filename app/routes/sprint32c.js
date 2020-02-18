@@ -45,7 +45,7 @@ router.use((req, res, next) => {
   ;
 
 // Postcode look up to address results
-  router.post('/sprint32c/address', (req, res) => {
+  router.post('/sprint32c/overview-verify-address', (req, res) => {
     res.redirect('/sprint32c/address-1')
   })
   ;

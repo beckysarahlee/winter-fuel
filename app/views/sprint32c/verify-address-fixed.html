@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include './_header.html' %}
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="check-cases">Check and update cases</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="error">Cases in error</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Unverified addresses</li>
+  </ol>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <br>
+    <br>
+
+
+<div class="moj-banner moj-banner--success">
+
+<svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/1000/svg" viewBox="0 0 25 25" height="25" width="25">
+<path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
+
+<div class="moj-banner__message">
+<span class="moj-banner__assistive">Success</span>The address has been fixed
+*and will be...*</div>
+
+</div>
+
+
+<form method="post">
+
+
+        <h1 class="govuk-heading-xl">Unverified addresses</h1>
+
+        <h3 class="govuk-heading-l"> 598,185
+        <p class="govuk-body govuk-!-font-size-24">Total cases</p></h3>
+
+        <button href="overview-verify-address" class="govuk-button" data-module="govuk-button">
+          Verify an address
+        </button>
+
+</div>
+</div>
+
+</form>
+
+
+{% endblock %}

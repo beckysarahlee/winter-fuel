@@ -22,103 +22,54 @@ GOV.UK Prototype Kit
 
       <form method="post">
 
-        <div class="hmcts-banner">
 
-          <div class="hmcts-banner__message">
 
-            <h2 class="govuk-heading-m">This address is not complete</h2>
+                    {% include './_bar-address.html' %}
+
+                    {{ govukBackLink({
+                        text: "Back",
+                        href: back
+                      }) }}
+
+                      <br>
+
+            <h2 class="govuk-heading-l">This address is not complete</h2>
+
+
             <p><b>Current address details</b><br>
               Victoria Road<br>
               FALKIRK<br>
               FK55</p>
-            <p><a href="address"> Fix this address </a></p>
+            <p></p>
 
-          </div>
+            <h2 class="govuk-heading-m">Enter house number and postcode</h2>
 
-        </div>
-
-            {% include './_bar-address.html' %}
-
-            {% include './_tab-overview.html' %}
-
-            <br>
-            <br>
-
-            <table class="govuk-table">
-            <h2 class="govuk-heading-m">2019 payment</h2>
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header"></th>
-                <th scope="col" class="govuk-table__header"></th>
-              </tr>
-            </thead>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Payment date</th>
-                  <td class="govuk-table__cell">Monday, 4 November 2019</td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Amount</th>
-                  <td class="govuk-table__cell">£100</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
 
 
-<br>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="width-10">
+                    House number or name
+                  </label>
+                  <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+                </div>
 
-            <table class="govuk-table">
-                  <h2 class="govuk-heading-m">Qualification details</h2>
-              <a href="address" <span class="govuk-link govuk-!-font-size-19" style="margin-left: 80%">Update details</span>
-              </a>
-              <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                  <th scope="col" class="govuk-table__header"></th>
-                  <th scope="col" class="govuk-table__header"></th>
-                </tr>
-              </thead>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Age</th>
-                  <td class="govuk-table__cell">79</td>
-                  <td class="govuk-table__cell"></td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Date of birth</th>
-                  <td class="govuk-table__cell">9 June 1940</td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Address</th>
-                  <td class="govuk-table__cell">
-                    {% if data['address-change'] %}
-                    {{data['address-change'].split(', ').join('<br />') | safe }}
-                    {% elif data.address %}
-                    {{data.address.split(', ').join('<br />') | safe}}
-                    {% else %}
-                    Victoria Road<br>
-                    FALKIRK<br>
-                    FK55
-                    {% endif %}
-                  </td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Occupancy</th>
-                  <td class="govuk-table__cell">
-                    {% if data['living-with'] %}
-                    {{data['living-with']}}
-                      {% else %}
-                      Lives with someone else of State Pension age
-                    {% endif %}
-                  </td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Date they moved in</th>
-                  <td class="govuk-table__cell">
-                    6 March 2016
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="width-5">
+                    Postcode
+                  </label>
+                  <input class="govuk-input govuk-input--width-5" id="postcode" name="postcode" type="postcode">
+                </div>
+
+              </fieldset>
+            </div>
+
+            <button type="submit" class="govuk-button">
+              Find address
+            </button>
+
+
 
       </div>
 
