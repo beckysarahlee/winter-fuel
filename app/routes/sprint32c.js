@@ -58,7 +58,7 @@ router.use((req, res, next) => {
 
 // New address to overview
   router.post('/sprint32c/address-1', (req, res) => {
-    res.redirect('/sprint32c/overview-fixed')
+    res.redirect('/sprint32c/verify-address-fixed')
   })
   ;
 
