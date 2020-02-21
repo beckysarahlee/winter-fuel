@@ -1,15 +1,15 @@
 {% extends "layout.html" %}
 
-{% block header %}
-  {% include './_header.html' %}
-{% endblock %}
-
 {% block pageTitle %}
 GOV.UK Prototype Kit
 {% endblock %}
 
+{% block beforeContent %}
+{% include './_find-someone.html' %}
+{% endblock %}
 
 {% block content %}
+
 
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
@@ -18,9 +18,28 @@ GOV.UK Prototype Kit
 
         <form method="post">
 
-          {% include './_bar.html' %}
+          <div class="moj-banner">
 
-          {% include './_tab-payment.html' %}
+            <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+              <path d="M13.7,18.5h-2.4v-2.4h2.4V18.5z M12.5,13.7c-0.7,0-1.2-0.5-1.2-1.2V7.7c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2v4.8
+              C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S19.1,0.5,12.5,0.5z" /></svg>
+
+            <div class="moj-banner__message">
+              <span class="moj-banner__assistive">information</span>
+              <strong>This address is not complete</strong><br>
+              Victoria Road<br>
+              FALKIRK<br>
+              FK55<br>
+
+              <a href="#" class="govuk-link">Complete this address</a>
+
+            </div>
+
+          </div>
+
+          {% include './_bar_address.html' %}
+
+          {% include './_tab-payment-verify-address.html' %}
 
           <br>
           <br>
@@ -72,20 +91,6 @@ GOV.UK Prototype Kit
               </tr>
             </tbody>
           </table>
-
-          <br>
-
-          <h3 class="govuk-heading-m">Next payment</h3>
-          <table class="govuk-table">
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">November 2020</td>
-                <td class="govuk-table__cell"> <a href="stop-payments" <span class="govuk-link govuk-!-font-size-19" style="margin-left: 33%">Cancel this and future payments</span>
-                  </a></td>
-              </tr>
-            </tbody>
-          </table>
-
 
       </div>
 

@@ -28,7 +28,9 @@ GOV.UK Prototype Kit
               <strong>This address is not complete</strong><br>
               Victoria Road<br>
               FALKIRK<br>
-              FK55
+              FK55<br>
+
+              <a href="address" class="govuk-link">Complete this address</a>
 
             </div>
 
@@ -36,7 +38,7 @@ GOV.UK Prototype Kit
 
           {% include './_bar_address.html' %}
 
-          {% include './_tab-overview.html' %}
+          {% include './_tab-overview-verify-address.html' %}
 
           <br>
 
@@ -71,9 +73,9 @@ GOV.UK Prototype Kit
                   {% elif data.address %}
                   {{data.address.split(', ').join('<br />') | safe}}
                   {% else %}
-                  1 Victoria Road<br>
+                  Victoria Road<br>
                   FALKIRK<br>
-                  FK55 8XN
+                  FK55
                   {% endif %}
                 </td>
               </tr>
