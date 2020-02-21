@@ -40,12 +40,12 @@ router.use((req, res, next) => {
 
 // Get next verify address to account
   router.post('/sprint32c/verify-address', (req, res) => {
-    res.redirect('/sprint32c/overview-verify-address')
+    res.redirect('/sprint32c/address')
   })
   ;
 
 // Postcode look up to address results
-  router.post('/sprint32c/overview-verify-address', (req, res) => {
+  router.post('/sprint32c/address', (req, res) => {
     res.redirect('/sprint32c/address-1')
   })
   ;
