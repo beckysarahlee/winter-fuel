@@ -59,11 +59,17 @@ router.use((req, res, next) => {
     })
     ;
 
-// Contact to bank details
+// Phone number & email to contact requirements
   router.post('/sprint33a/contact', (req, res) => {
-    res.redirect('/sprint33a/bank-details')
+    res.redirect('/sprint33a/contact-requirements')
   })
   ;
+
+  // Contact requirements to bank account details
+    router.post('/sprint33a/contact-requirements', (req, res) => {
+      res.redirect('/sprint33a/bank-details')
+    })
+    ;
 
   // Bank details to declaration
     router.post('/sprint33a/bank-details', (req, res) => {

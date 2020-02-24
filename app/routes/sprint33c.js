@@ -14,4 +14,10 @@ router.use((req, res, next) => {
   })
   ;
 
+  // Find someone to find result
+  router.post('/sprint33c/address-1', (req, res) => {
+    res.redirect('/sprint33c/overview')
+  })
+  ;
+
   module.exports = router;
