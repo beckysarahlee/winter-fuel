@@ -46,10 +46,29 @@ router.use((req, res, next) => {
   })
   ;
 
-  router.post('/sprint32c/address-1', (req, res) => {
-    res.redirect('/sprint32c/verify-address-fixed')
+  router.post('/sprint32c/address-1', function(req, res) {
+  if ( req.body['address-fix-1'] === 'Address not found' ) {
+    res.redirect('/sprint32c/verify-address-manual-1');
+  } else {
+    res.redirect('/sprint32c/verify-address-fixed');
+  }
+  });
+  ;
+
+  router.post('/sprint32c/verify-address-manual-1', (req, res) => {
+    res.redirect('/sprint32c/address-1b')
   })
   ;
+
+  router.post('/sprint32c/address-1b', function(req, res) {
+  if ( req.body['address-fix-1'] === 'Address not found' ) {
+    res.redirect('/sprint32c/verify-address-not-fixed');
+  } else {
+    res.redirect('/sprint32c/verify-address-fixed');
+  }
+  });
+  ;
+
 
   router.post('/sprint32c/return-queue', (req, res) => {
     res.redirect('/sprint32c/verify-address')
@@ -64,10 +83,11 @@ router.use((req, res, next) => {
     })
     ;
 
-    router.post('/sprint32c/address-2', (req, res) => {
-      res.redirect('/sprint32c/verify-address-fixed-2')
+    router.post('/sprint32c/verify-address-not-fixed', (req, res) => {
+      res.redirect('/sprint32c/address-2')
     })
     ;
+
 
     router.post('/sprint32c/address-2', function(req, res) {
     if ( req.body['address-fix-2'] === 'Address not found' ) {
@@ -78,25 +98,64 @@ router.use((req, res, next) => {
     });
     ;
 
-// Scenario 3
-
-    router.post('/sprint32c/verify-address-fixed-2', (req, res) => {
-      res.redirect('/sprint32c/address-3')
+    router.post('/sprint32c/verify-address-manual-2', (req, res) => {
+      res.redirect('/sprint32c/address-2b')
     })
     ;
 
-
-    router.post('/sprint32c/address-3', function(req, res) {
-    if ( req.body['address-fix-3'] === 'Address not found' ) {
-      res.redirect('/sprint32c/verify-address-manual-3');
+    router.post('/sprint32c/address-2b', function(req, res) {
+    if ( req.body['address-fix-2'] === 'Address not found' ) {
+      res.redirect('/sprint32c/verify-address-not-fixed-2');
     } else {
-      res.redirect('/sprint32c/verify-address-fixed-3');
+      res.redirect('/sprint32c/verify-address-fixed-2');
     }
     });
     ;
 
+
+// Scenario 3
+
+router.post('/sprint32c/verify-address-fixed-2', (req, res) => {
+  res.redirect('/sprint32c/address-3')
+})
+;
+
+router.post('/sprint32c/verify-address-not-fixed-2', (req, res) => {
+  res.redirect('/sprint32c/address-3')
+})
+;
+
+
+router.post('/sprint32c/address-3', function(req, res) {
+if ( req.body['address-fix-3'] === 'Address not found' ) {
+  res.redirect('/sprint32c/verify-address-manual-3');
+} else {
+  res.redirect('/sprint32c/verify-address-fixed-3');
+}
+});
+;
+
+router.post('/sprint32c/verify-address-manual-3', (req, res) => {
+  res.redirect('/sprint32c/address-3b')
+})
+;
+
+router.post('/sprint32c/address-3b', function(req, res) {
+if ( req.body['address-fix-3'] === 'Address not found' ) {
+  res.redirect('/sprint32c/verify-address-not-fixed-3');
+} else {
+  res.redirect('/sprint32c/verify-address-fixed-3');
+}
+});
+;
+
 // Scenario 4
     router.post('/sprint32c/verify-address-fixed-3', (req, res) => {
+      res.redirect('/sprint32c/address-4')
+    })
+    ;
+
+    router.post('/sprint32c/verify-address-not-fixed-3', (req, res) => {
       res.redirect('/sprint32c/address-4')
     })
     ;
@@ -113,6 +172,15 @@ router.use((req, res, next) => {
     router.post('/sprint32c/verify-address-manual-4', (req, res) => {
       res.redirect('/sprint32c/address-4b')
     })
+    ;
+
+    router.post('/sprint32c/address-4b', function(req, res) {
+    if ( req.body['address-fix-4'] === 'Address not found' ) {
+      res.redirect('/sprint32c/verify-address-not-fixed-4');
+    } else {
+      res.redirect('/sprint32c/verify-address-fixed-4');
+    }
+    });
     ;
 
   // See cases, eligible or ineligible
