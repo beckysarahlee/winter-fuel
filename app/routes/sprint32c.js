@@ -62,6 +62,49 @@ router.use((req, res, next) => {
   })
   ;
 
+  // Get next verify address to account
+    router.post('/sprint32c/verify-address-fixed', (req, res) => {
+      res.redirect('/sprint32c/address-2')
+    })
+    ;
+
+  // Postcode look up to address results
+    router.post('/sprint32c/address-2', (req, res) => {
+      res.redirect('/sprint32c/address-2b')
+    })
+    ;
+
+
+  // New address to overview
+    router.post('/sprint32c/address-2b', (req, res) => {
+      res.redirect('/sprint32c/verify-address-fixed-2')
+    })
+    ;
+
+    router.post('/sprint32c/verify-address-fixed-2', (req, res) => {
+      res.redirect('/sprint32c/address-3')
+    })
+    ;
+
+    router.post('/sprint32c/address-3', (req, res) => {
+      res.redirect('/sprint32c/address-3b')
+    })
+    ;
+
+    router.post('/sprint32c/address-3b', (req, res) => {
+      res.redirect('/sprint32c/verify-address-fixed-3')
+    })
+    ;
+
+    router.post('/sprint32c/verify-address-fixed-3', (req, res) => {
+      res.redirect('/sprint32c/address-4')
+    })
+    ;
+
+
+
+
+
   // See cases, eligible or ineligible
 
   router.post('/sprint32c/comparison-filter-eligibility', (req, res) => {
