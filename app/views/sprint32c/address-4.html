@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block header %}
-  {% include './_header.html' %}
+{% include './_header.html' %}
 {% endblock %}
 
 {% block pageTitle %}
@@ -20,21 +20,22 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-      <form method="post">
 
-                    {% include './_bar_4.html' %}
+        <form method="post">
 
-                    {{ govukBackLink({
-                        text: "Back",
-                        href: back
-                      }) }}
+          {% include './_bar_4.html' %}
 
-                      <br>
-                      <br>
+          {{ govukBackLink({
+                            text: "Back",
+                            href: back
+                          }) }}
 
-            <h2 class="govuk-heading-l">Address cannot be verified</h2>
+          <br>
+          <br>
 
-<br>
+          <form method="post">
+
+            <h2 class="govuk-heading-l">Select a verified address</h2>
 
             <table class="govuk-table">
               <tbody class="govuk-table__body">
@@ -43,65 +44,75 @@ GOV.UK Prototype Kit
                   <td class="govuk-table__cell govuk-!-width-one-half">
                     Sandhills<br>
                     Lower Road<br>
-                    Stalbridge<br>
+                    Stallbridge<br>
                     Dorset<br>
-                    DT10 2NY
-                  </td>
+                    DT10 2NY</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Mobile number</th>
+                  <td class="govuk-table__cell">07771 900 900</td>
                 </tr>
               </tbody>
             </table>
 
-            <br>
-
-            <h2 class="govuk-heading-m">Enter address details</h2>
 
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset">
-
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="address-line-1">
-                    Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
-                  </label>
-                  <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="address-fix-4-1" name="address-fix-4" type="radio" value="1 Raleigh Road, Stalbridge, Sturminister Newton, DT10 2NY">
+                    <label class="govuk-label govuk-radios__label" for="address-1">
+                      1 Raleigh Road, Stalbridge, Sturminister Newton, DT10 2NY
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="address-fix-4-1" name="address-fix-4" type="radio" value="2 Raleigh Road, Stalbridge, Sturminister Newton, DT10 2NY">
+                    <label class="govuk-label govuk-radios__label" for="address-1">
+                      2 Raleigh Road, Stalbridge, Sturminister Newton, DT10 2NY
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="address-fix-4-1" name="address-fix-4" type="radio" value="3 Raleigh Road, Stalbridge, Sturminister Newton, DT10 2NY">
+                    <label class="govuk-label govuk-radios__label" for="address-1">
+                      3 Raleigh Road, Stalbridge, Sturminister Newton, DT10 2NY
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="address-fix-4-1" name="address-fix-4" type="radio" value="4 Raleigh Road, Stalbridge, Sturminister Newton, DT10 2NY">
+                    <label class="govuk-label govuk-radios__label" for="address-1">
+                      4 Raleigh Road, Stalbridge, Sturminister Newton, DT10 2NY
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="address-fix-4-2" name="address-fix-4" type="radio" value="Address not found">
+                    <label class="govuk-label govuk-radios__label" for="address-2">
+                      Address not found
+                    </label>
+                  </div>
                 </div>
-
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="address-town">
-                    Town or city
-                  </label>
-                  <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2">
-                </div>
-
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="address-county">
-                    County
-                  </label>
-                  <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
-                </div>
-
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="address-postcode">
-                    Postcode
-                  </label>
-                  <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
-                </div>
-
               </fieldset>
             </div>
 
             <button type="submit" class="govuk-button">
-              Find address
+              Continue
             </button>
 
+          </form>
+
+
+
+
+
+          <br>
 
 
       </div>
 
     </div>
 
-  </div>
+</div>
 
-  </main>
-  </div>
+</main>
+</div>
 
-  {% endblock %}
+{% endblock %}
