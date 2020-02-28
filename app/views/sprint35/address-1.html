@@ -9,7 +9,7 @@ GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-{% include './_blue_bar.html' %}
+<!-- {% include './_blue_bar.html' %}  -->
 {% endblock %}
 
 {% block content %}
@@ -37,27 +37,16 @@ GOV.UK Prototype Kit
 
                               <h2 class="govuk-heading-l">Verify an address</h2>
 
-                              <table class="govuk-table">
-                                <tbody class="govuk-table__body">
-                                  <tr class="govuk-table__row">
-                                    <th scope="row" class="govuk-table__header">Unverified address</th>
-                                    <td class="govuk-table__cell govuk-!-width-one-half">
-                                      Flat D<br>
-                                      104 Boundary Lane<br>
-                                      Hulme<br>
-                                      Manchester<br>
-                                      M15 6FD</td>
-                                  </tr>
-                                  <tr class="govuk-table__row">
-                                    <th scope="row" class="govuk-table__header">Home telephone number</th>
-                                    <td class="govuk-table__cell">01324 800 900</td>
-                                  </tr>
-                                  <tr class="govuk-table__row">
-                                    <th scope="row" class="govuk-table__header">Mobile number</th>
-                                    <td class="govuk-table__cell">07771 900 900</td>
-                                  </tr>
-                                </tbody>
-                              </table>
+                              <h2 class="govuk-heading-m">Unverified address</h2>
+                              <p>Flat D<br>
+                              104 Boundary Lane<br>
+                              Hulme<br>
+                              Manchester<br>
+                              M15 6FD</p>
+
+                              <h2 class="govuk-heading-m">Contact numbers</h2>
+                              <p>Home telephone: 01324 800 900<br>
+                                 Mobile: 07771 900 900</p>
 
                               <h2 class="govuk-heading-m">Select a verified address</h2>
                                 <div class="govuk-form-group">
@@ -87,15 +76,18 @@ GOV.UK Prototype Kit
                                           104C Boundary Lane, Manchester, M15 6FD
                                         </label>
                                       </div>
-                                      <div class="govuk-radios__item">
+                            <!--          <div class="govuk-radios__item">
                                         <input class="govuk-radios__input" id="address-fix-5" name="address-fix-1" type="radio" value="Address not found">
                                         <label class="govuk-label govuk-radios__label" for="address-3">
-                                          The address cannot be verified
+                                          Search for another address
                                         </label>
-                                      </div>
+                                      </div>   -->
                                     </div>
                                   </fieldset>
                                 </div>
+
+                          <p>  <a href="verify-address-manual-1" class="govuk-link">Search for another address</a> </p>
+                          <br>
 
                           <button type="submit" class="govuk-button">
                             Continue
