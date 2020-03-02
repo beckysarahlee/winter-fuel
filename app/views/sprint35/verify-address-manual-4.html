@@ -9,7 +9,7 @@ GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-{% include './_blue_bar.html' %}
+<!-- {% include './_blue_bar.html' %}  -->
 {% endblock %}
 
 {% block content %}
@@ -35,9 +35,16 @@ GOV.UK Prototype Kit
 
           <form method="post">
 
-            <h2 class="govuk-heading-l">Verify an address</h2>
+            <h2 class="govuk-heading-l">Search for another address</h2>
 
-            <table class="govuk-table">
+            <h2 class="govuk-heading-m">Unverified address</h2>
+            <p>Sandhills<br>
+            Lower Road<br>
+            Stallbridge<br>
+            Dorset<br>
+            DT10 2NY</p>
+
+  <!--          <table class="govuk-table">
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Unverified address</th>
@@ -53,14 +60,18 @@ GOV.UK Prototype Kit
                   <td class="govuk-table__cell">07771 900 900</td>
                 </tr>
               </tbody>
-            </table>
+            </table>   -->
 
+<br>
             <fieldset class="govuk-fieldset">
 
   <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
     <h1 class="govuk-fieldset__heading">
-      Enter address details
+      Enter address search details
     </h1>
+    <span id="email-hint" class="govuk-hint">
+      Try different searches, like 'building and street' and 'postcode' or 'building and street' and 'county'.
+    </span>
   </legend>
 
   <div class="govuk-form-group">
@@ -94,7 +105,7 @@ GOV.UK Prototype Kit
 </fieldset>
 
             <button type="submit" class="govuk-button">
-              Find address
+              Search
             </button>
 
           </form>
