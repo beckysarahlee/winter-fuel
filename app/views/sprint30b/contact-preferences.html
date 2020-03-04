@@ -39,9 +39,10 @@ GOV.UK Prototype Kit
 
         <br>
 
-        <div>
-          <a href="contact" class="govuk-back-link">Back</a>
-        </div>
+        {{ govukBackLink({
+            text: "Back",
+            href: back
+          }) }}
 
         <br>
 
