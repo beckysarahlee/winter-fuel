@@ -8,6 +8,21 @@ router.use((req, res, next) => {
     next()
   })
 
+// Date of birth to benefits
+    router.post('/sprint35b/date-of-birth', (req, res) => {
+      res.redirect('/sprint35b/benefits')
+    })
+    ;
+
+// Benefits to find someone
+router.post('/sprint35b/benefits', function(req, res) {
+  if ( req.body['benefits'] === 'yes' ) {
+    res.redirect('no-claim');
+  } else {
+    res.redirect('find');
+  }
+});
+
 // Find someone to confirm full name
   router.post('/sprint35b/find', (req, res) => {
     res.redirect('/sprint35b/find-1')
