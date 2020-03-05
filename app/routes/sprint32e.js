@@ -32,15 +32,9 @@ router.use((req, res, next) => {
   })
   ;
 
-  // Security to contact preferences
+  // Security to o
   router.post('/sprint32e/security', (req, res) => {
-    res.redirect('/sprint32e/contact-preferences')
-  })
-  ;
-
-  // Contact preferences to overview security
-  router.post('/sprint32e/contact-preferences', (req, res) => {
-    res.redirect('/sprint32e/overview')
+    res.redirect('/sprint32e/overview-security')
   })
   ;
 
