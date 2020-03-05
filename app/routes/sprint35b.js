@@ -8,6 +8,15 @@ router.use((req, res, next) => {
     next()
   })
 
+  // Teleclaim or postal claim
+  router.post('/sprint35b/telephone-or-post', function(req, res) {
+    if ( req.body['phone-post'] === 'phone' ) {
+      res.redirect('date-of-birth');
+    } else {
+      res.redirect('find');
+    }
+  });
+
 // Date of birth to benefits
     router.post('/sprint35b/date-of-birth', (req, res) => {
       res.redirect('/sprint35b/benefits')
@@ -34,6 +43,7 @@ router.post('/sprint35b/benefits', function(req, res) {
     res.redirect('/sprint35b/security')
   })
   ;
+
 
 // Security questions to house number and postcode
   router.post('/sprint35b/security', (req, res) => {

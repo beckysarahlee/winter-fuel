@@ -5,9 +5,14 @@ GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-{% include './_blue_bar.html' %}
-{% endblock %}
 
+{% if data['phone-post'] === 'phone' %}
+{% include './_blue_bar.html' %}
+{% else %}
+{% include './_blue_bar-2.html' %}
+{% endif %}
+
+{% endblock %}
 {% block content %}
 
 <div class="govuk-width-container">
