@@ -40,7 +40,7 @@ router.use((req, res, next) => {
 
   //
   router.post('/sprint33b/security-extra', (req, res) => {
-    res.redirect('/sprint33b/contact-preferences')
+    res.redirect('/sprint33b/overview-security')
   })
   ;
 
