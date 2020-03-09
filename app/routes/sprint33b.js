@@ -52,6 +52,18 @@ router.use((req, res, next) => {
 
   // CONTACT CHANGES -----------------------------------------------------------
 
+  // Correspondence address to address found
+  router.post('/sprint33b/correspondence-address', (req, res) => {
+    res.redirect('/sprint33b/correspondence-address-1')
+  })
+  ;
+
+  // Correspondence address to address found
+  router.post('/sprint33b/correspondence-address-1', (req, res) => {
+    res.redirect('/sprint33b/contact')
+  })
+  ;
+
   // Home phone number change back to contact
   router.post('/sprint33b/homephone', (req, res) => {
     res.redirect('/sprint33b/contact')
