@@ -69,6 +69,13 @@ router.post('/sprint35b/benefits', function(req, res) {
   })
   ;
 
+  // No fixed abode to address results
+    router.post('/sprint35b/no-fixed-abode', (req, res) => {
+      res.redirect('/sprint35b/no-fixed-abode-1')
+    })
+    ;
+
+
   //
   router.post('/sprint35b/living-with', function(req, res) {
     if ( req.body['living-with'] === 'yes' ) {
