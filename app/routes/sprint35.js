@@ -31,7 +31,7 @@ router.use((req, res, next) => {
 
   router.post('/sprint35/address-1b', function(req, res) {
   if ( req.body['address-fix-1'] === 'Address not found' ) {
-    res.redirect('/sprint35/cannot-verify-1');
+    res.redirect('/sprint35/verify-address-manual-1');
   } else {
     res.redirect('/sprint35/verify-address-fixed');
   }
@@ -79,7 +79,7 @@ router.use((req, res, next) => {
 
     router.post('/sprint35/address-2b', function(req, res) {
     if ( req.body['address-fix-2'] === 'Address not found' ) {
-      res.redirect('/sprint35/cannot-verify-2');
+      res.redirect('/sprint35/verify-address-manual-2');
     } else {
       res.redirect('/sprint35/verify-address-fixed-2');
     }
@@ -121,7 +121,7 @@ router.post('/sprint35/verify-address-manual-3', (req, res) => {
 
 router.post('/sprint35/address-3b', function(req, res) {
 if ( req.body['address-fix-3'] === 'Address not found' ) {
-  res.redirect('/sprint35/cannot-verify-3');
+  res.redirect('/sprint35/verify-address-manual-3');
 } else {
   res.redirect('/sprint35/verify-address-fixed-3');
 }
@@ -160,7 +160,7 @@ router.post('/sprint35/cannot-verify-3', (req, res) => {
 
     router.post('/sprint35/address-4b', function(req, res) {
     if ( req.body['address-fix-4'] === 'Address not found' ) {
-      res.redirect('/sprint35/cannot-verify-4');
+      res.redirect('/sprint35/verify-address-manual-4');
     } else {
       res.redirect('/sprint35/verify-address-fixed-4');
     }
