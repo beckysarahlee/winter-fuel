@@ -26,7 +26,7 @@ GOV.UK Prototype Kit
 
                       <br>
 
-            <h2 class="govuk-heading-l">This address is not complete</h2>
+            <h2 class="govuk-heading-l">This address is not verified</h2>
 
 <br>
 
@@ -35,12 +35,14 @@ GOV.UK Prototype Kit
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Address</th>
                   <td class="govuk-table__cell govuk-!-width-one-half">
-                    Victoria Road<br>
-                    FALKIRK<br>
-                    FK55</td>
+                    Flat D<br>
+                    104 Boundary Lane<br>
+                    Hulme<br>
+                    Manchester<br>
+                    M15 6FD</td>
                 </tr>
                 <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Home telephone number</th>
+                  <th scope="row" class="govuk-table__header">Home number</th>
                   <td class="govuk-table__cell">01010 010101</td>
                 </tr>
                 <tr class="govuk-table__row">
@@ -52,28 +54,59 @@ GOV.UK Prototype Kit
 
             <br>
 
-            <h2 class="govuk-heading-m">Enter house number and postcode</h2>
+            <h2 class="govuk-heading-m">Select a verified address</h2>
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <div class="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="address-fix-1" name="address-fix-1" type="radio" value="104D Boundary Lane, Manchester, M15 6FD">
+                      <label class="govuk-label govuk-radios__label" for="address">
+                        104D Boundary Lane<br>
+                        Manchester<br>
+                        M15 6FD<br>
+                        <strong class="govuk-tag app-c-tag--dead">
+                          Residential
+                        </strong>
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="address-fix-2" name="address-fix-1" type="radio" value="104A Boundary Lane, Manchester, M15 6FD">
+                      <label class="govuk-label govuk-radios__label" for="address">
+                        104A Boundary Lane<br>
+                        Manchester<br>
+                        M15 6FD<br>
+                        <strong class="govuk-tag app-c-tag--dead">
+                          Residential
+                        </strong>
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="address-fix-3" name="address-fix-1" type="radio" value="104B Boundary Lane, Manchester, M15 6FD">
+                      <label class="govuk-label govuk-radios__label" for="address">
+                        104B Boundary Lane<br>
+                        Manchester<br>
+                        M15 6FD<br>
+                        <strong class="govuk-tag app-c-tag--dead">
+                          Residential
+                        </strong>
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="address-fix-4" name="address-fix-1" type="radio" value="104C Boundary Lane, Manchester, M15 6FD">
+                      <label class="govuk-label govuk-radios__label" for="address">
+                        104C Boundary Lane<br>
+                        Manchester<br>
+                        M15 6FD<br>
+                        <strong class="govuk-tag app-c-tag--dead">
+                          Residential
+                        </strong>
+                      </label>
+                    </div>
 
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                  </div>
+                </fieldset>
+              </div>
 
-
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="width-10">
-                    House number or name
-                  </label>
-                  <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
-                </div>
-
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="width-5">
-                    Postcode
-                  </label>
-                  <input class="govuk-input govuk-input--width-5" id="postcode" name="postcode" type="postcode">
-                </div>
-
-              </fieldset>
-            </div>
 
             <button type="submit" class="govuk-button">
               Find address

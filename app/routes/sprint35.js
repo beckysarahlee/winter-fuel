@@ -31,11 +31,16 @@ router.use((req, res, next) => {
 
   router.post('/sprint35/address-1b', function(req, res) {
   if ( req.body['address-fix-1'] === 'Address not found' ) {
-    res.redirect('/sprint35/verify-address-not-fixed');
+    res.redirect('/sprint35/cannot-verify-1');
   } else {
     res.redirect('/sprint35/verify-address-fixed');
   }
   });
+  ;
+
+  router.post('/sprint35/cannot-verify-1', (req, res) => {
+    res.redirect('/sprint35/verify-address-not-fixed')
+  })
   ;
 
 
@@ -74,11 +79,16 @@ router.use((req, res, next) => {
 
     router.post('/sprint35/address-2b', function(req, res) {
     if ( req.body['address-fix-2'] === 'Address not found' ) {
-      res.redirect('/sprint35/verify-address-not-fixed-2');
+      res.redirect('/sprint35/cannot-verify-2');
     } else {
       res.redirect('/sprint35/verify-address-fixed-2');
     }
     });
+    ;
+
+    router.post('/sprint35/cannot-verify-2', (req, res) => {
+      res.redirect('/sprint35/verify-address-not-fixed-2')
+    })
     ;
 
 
@@ -111,11 +121,16 @@ router.post('/sprint35/verify-address-manual-3', (req, res) => {
 
 router.post('/sprint35/address-3b', function(req, res) {
 if ( req.body['address-fix-3'] === 'Address not found' ) {
-  res.redirect('/sprint35/verify-address-not-fixed-3');
+  res.redirect('/sprint35/cannot-verify-3');
 } else {
   res.redirect('/sprint35/verify-address-fixed-3');
 }
 });
+;
+
+router.post('/sprint35/cannot-verify-3', (req, res) => {
+  res.redirect('/sprint35/verify-address-not-fixed-3')
+})
 ;
 
 // Scenario 4
@@ -145,12 +160,16 @@ if ( req.body['address-fix-3'] === 'Address not found' ) {
 
     router.post('/sprint35/address-4b', function(req, res) {
     if ( req.body['address-fix-4'] === 'Address not found' ) {
-      res.redirect('/sprint35/verify-address-not-fixed-4');
+      res.redirect('/sprint35/cannot-verify-4');
     } else {
       res.redirect('/sprint35/verify-address-fixed-4');
     }
     });
     ;
 
+    router.post('/sprint35/cannot-verify-4', (req, res) => {
+      res.redirect('/sprint35/verify-address-not-fixed-4')
+    })
+    ;
 
   module.exports = router;
