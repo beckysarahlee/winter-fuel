@@ -39,10 +39,13 @@ router.post('/sprint35b/benefits', function(req, res) {
   ;
 
 // Confirm full name to security questions
-  router.post('/sprint35b/find-1', (req, res) => {
-    res.redirect('/sprint35b/security')
-  })
-  ;
+  router.post('/sprint35b/find-1', function(req, res) {
+      if ( req.session.data['phone-post'] === 'post' ) {
+        res.redirect('address');
+      } else {
+        res.redirect('security');
+      }
+  });
 
 
 // Security questions to house number and postcode
