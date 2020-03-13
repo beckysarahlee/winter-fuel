@@ -45,29 +45,21 @@ GOV.UK Prototype Kit
           }) }}
 
         {% if not data.mobilenumber %}
-        <h1 class="govuk-heading-l">Add mobile</h1>
+        <h1 class="govuk-heading-l">What is your mobile phone number?</h1>
         {% else %}
-        <h1 class="govuk-heading-l">Change mobile</h1>
+        <h1 class="govuk-heading-l">What is your mobile phone number?</h1>
         {% endif %}
 
       <form method="post">
         <div class="govuk-form-group">
           <label class="govuk-label" for="telephone-number">
-            Mobile number
+            Phone number
 
           </label>
           <input class="govuk-input govuk-input--width-20" id="mobilenumber" name="mobilenumber" type="tel">
         </div>
 
-        {% if data.mobilenumber %}
-        <div>
-        <a href="mobilephone-remove" class="govuk-link govuk-!-font-size-19">Remove mobile number</a>
-      </div>
-        {% endif %}
-
-
-
-        <br>
+        <p><a href="mobilephone-remove" class="govuk-link">Delete number</a></p>
 
         <button type="submit" class="govuk-button">
           Save
