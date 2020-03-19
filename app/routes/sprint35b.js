@@ -72,9 +72,20 @@ router.post('/sprint35b/benefits', function(req, res) {
   })
   ;
 
-  // No fixed abode to address results
-    router.post('/sprint35b/no-fixed-abode', (req, res) => {
-      res.redirect('/sprint35b/no-fixed-abode-1')
+
+  // No permanent address to address for letters
+  router.post('/sprint35b/no-permanent-address', function(req, res) {
+    if ( req.body['address-for-letters'] === 'yes' ) {
+      res.redirect('/sprint35b/address-for-letters');
+    } else {
+      res.redirect('no-address-for-letters');
+    }
+  });
+
+
+  // Address for letters to address for letters results
+    router.post('/sprint35b/address-for-letters', (req, res) => {
+      res.redirect('/sprint35b/address-for-letters-1')
     })
     ;
 
