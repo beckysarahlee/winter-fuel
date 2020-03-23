@@ -79,9 +79,11 @@ GOV.UK Prototype Kit
                   {% elif data.address %}
                   {{data.address.split(', ').join('<br />') | safe}}
                   {% else %}
-                  1 Victoria Road<br>
-                  FALKIRK<br>
-                  FK55 8XN
+                  Dolphin View Care Home<br>
+                  Harbour Road<br>
+                  Amble<br>
+                  Northumberland<br>
+                  NE65 0AP
                   {% endif %}
                 </td>
               </tr>
@@ -91,7 +93,7 @@ GOV.UK Prototype Kit
                   {% if data['living-with'] %}
                   {{data['living-with']}}
                   {% else %}
-                  Lives with someone else of State Pension age
+                  Living in a care or nursing home
                   {% endif %}
                 </td>
               </tr>
@@ -99,6 +101,12 @@ GOV.UK Prototype Kit
                 <th scope="row" class="govuk-table__header">Date they moved in</th>
                 <td class="govuk-table__cell">
                   6 March 2016
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Benefit details</th>
+                <td class="govuk-table__cell">
+                  Receiving Pension Credit
                 </td>
               </tr>
             </tbody>
