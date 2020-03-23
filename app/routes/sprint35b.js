@@ -60,19 +60,6 @@ router.post('/sprint35b/benefits', function(req, res) {
   })
   ;
 
-// Confirm first line of address to move date
-  router.post('/sprint35b/address-1', (req, res) => {
-    res.redirect('/sprint35b/move-date')
-  })
-  ;
-
-// Confirm first line of address to move date
-  router.post('/sprint35b/move-date', (req, res) => {
-    res.redirect('/sprint35b/living-with')
-  })
-  ;
-
-
   // No permanent address to address for letters
   router.post('/sprint35b/no-permanent-address', function(req, res) {
     if ( req.body['address-for-letters'] === 'yes' ) {
@@ -82,12 +69,23 @@ router.post('/sprint35b/benefits', function(req, res) {
     }
   });
 
-
   // Address for letters to address for letters results
     router.post('/sprint35b/address-for-letters', (req, res) => {
       res.redirect('/sprint35b/address-for-letters-1')
     })
     ;
+
+// Confirm first line of address to move date
+  router.post('/sprint35b/address-1', (req, res) => {
+    res.redirect('/sprint35b/move-date')
+  })
+  ;
+
+// Move date to living with
+  router.post('/sprint35b/move-date', (req, res) => {
+    res.redirect('/sprint35b/living-with')
+  })
+  ;
 
 
   //
@@ -104,6 +102,27 @@ router.post('/sprint35b/benefits', function(req, res) {
       res.redirect('/sprint35b/contact')
     })
     ;
+
+
+    // Care home date to contact details
+      router.post('/sprint35b/carehome', (req, res) => {
+        res.redirect('/sprint35b/contact')
+      })
+      ;
+
+
+    // Prison date to contact details
+      router.post('/sprint35b/prison', (req, res) => {
+        res.redirect('/sprint35b/contact')
+      })
+      ;
+
+
+      // Hospital date to contact details
+        router.post('/sprint35b/hospital', (req, res) => {
+          res.redirect('/sprint35b/contact')
+        })
+        ;
 
 // Phone number & email to contact requirements
   router.post('/sprint35b/contact', (req, res) => {
