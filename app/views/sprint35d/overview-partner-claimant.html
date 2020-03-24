@@ -25,48 +25,36 @@ GOV.UK Prototype Kit
                 {{data['nino']}}
                 {% else %}
                 XX 12 34 56
-                {% endif %}
-<br>
-                <strong class="govuk-tag govuk-tag--grey">
-                  Dead
+                {% endif %}<br>
+                <strong class="govuk-tag govuk-tag--yellow">
+                  Care home receiving benefits
                 </strong>
 
               </span>
             </h1>
           </div>
 
-
           {% include './_tab-overview.html' %}
 
           <br>
           <br>
 
-          <table class="govuk-table">
-            <h2 class="govuk-heading-m">2019 payment</h2>
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header"></th>
-                <th scope="col" class="govuk-table__header"></th>
-              </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Payment date</th>
-                <td class="govuk-table__cell">Monday, 4 November 2019</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Amount</th>
-                <td class="govuk-table__cell">£100</td>
-              </tr>
-            </tbody>
-          </table>
+          <h2 class="govuk-heading-m">2019 payment</h2>
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              Paid to partner
+            </strong>
+          </div>
 
 
           <br>
 
           <table class="govuk-table">
             <h2 class="govuk-heading-m">Qualification details</h2>
-
+            <a href="address" <span class="govuk-link govuk-!-font-size-19" style="margin-left: 80%">Update details</span>
+            </a>
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header"></th>
@@ -84,12 +72,6 @@ GOV.UK Prototype Kit
                 <td class="govuk-table__cell">9 August 1953</td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Date of death 👷</th>
-                <td class="govuk-table__cell">
-                  10 April 2020
-                </td>
-              </tr>
-              <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Address</th>
                 <td class="govuk-table__cell">
                   {% if data['address-change'] %}
@@ -97,9 +79,11 @@ GOV.UK Prototype Kit
                   {% elif data.address %}
                   {{data.address.split(', ').join('<br />') | safe}}
                   {% else %}
-                  1 Victoria Road<br>
-                  FALKIRK<br>
-                  FK55 8XN
+                  Dolphin View Care Home<br>
+                  Harbour Road<br>
+                  Amble<br>
+                  Northumberland<br>
+                  NE65 0AP
                   {% endif %}
                 </td>
               </tr>
@@ -109,7 +93,7 @@ GOV.UK Prototype Kit
                   {% if data['living-with'] %}
                   {{data['living-with']}}
                   {% else %}
-                  Lives with someone else of State Pension age
+                  Living in a care or nursing home
                   {% endif %}
                 </td>
               </tr>
@@ -117,6 +101,12 @@ GOV.UK Prototype Kit
                 <th scope="row" class="govuk-table__header">Date they moved in</th>
                 <td class="govuk-table__cell">
                   6 March 2016
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Benefit details</th>
+                <td class="govuk-table__cell">
+                  Receiving Pension Credit
                 </td>
               </tr>
             </tbody>

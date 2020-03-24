@@ -25,16 +25,13 @@ GOV.UK Prototype Kit
                 {{data['nino']}}
                 {% else %}
                 XX 12 34 56
-                {% endif %}
-<br>
-                <strong class="govuk-tag govuk-tag--grey">
-                  Dead
+                {% endif %}<br>
+                <strong class="govuk-tag govuk-tag--yellow">
+                  In hospital
                 </strong>
-
               </span>
             </h1>
           </div>
-
 
           {% include './_tab-overview.html' %}
 
@@ -66,7 +63,8 @@ GOV.UK Prototype Kit
 
           <table class="govuk-table">
             <h2 class="govuk-heading-m">Qualification details</h2>
-
+            <a href="address" <span class="govuk-link govuk-!-font-size-19" style="margin-left: 80%">Update details</span>
+            </a>
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header"></th>
@@ -82,12 +80,6 @@ GOV.UK Prototype Kit
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Date of birth</th>
                 <td class="govuk-table__cell">9 August 1953</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Date of death 👷</th>
-                <td class="govuk-table__cell">
-                  10 April 2020
-                </td>
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Address</th>
