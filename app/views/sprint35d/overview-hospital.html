@@ -38,28 +38,14 @@ GOV.UK Prototype Kit
           <br>
           <br>
 
-          <table class="govuk-table">
-            <h2 class="govuk-heading-m">2019 payment</h2>
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header"></th>
-                <th scope="col" class="govuk-table__header"></th>
-              </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Payment date</th>
-                <td class="govuk-table__cell">Monday, 4 November 2019</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Amount</th>
-                <td class="govuk-table__cell">£100</td>
-              </tr>
-            </tbody>
-          </table>
-
-
-          <br>
+          <h2 class="govuk-heading-m">2019 payment</h2>
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              Hospital over 52 weeks, reason
+            </strong>
+          </div>
 
           <table class="govuk-table">
             <h2 class="govuk-heading-m">Qualification details</h2>
@@ -89,26 +75,18 @@ GOV.UK Prototype Kit
                   {% elif data.address %}
                   {{data.address.split(', ').join('<br />') | safe}}
                   {% else %}
-                  1 Victoria Road<br>
-                  FALKIRK<br>
-                  FK55 8XN
+                  In hospital OR <br>
+                  Royal Victoria Infirmary<br>
+                  Queen Victoria Road<br>
+                  Newcastle Upon Tyne<br>
+                  NE1 4LP
                   {% endif %}
                 </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Occupancy</th>
+                <th scope="row" class="govuk-table__header">Date they were admitted 👷</th>
                 <td class="govuk-table__cell">
-                  {% if data['living-with'] %}
-                  {{data['living-with']}}
-                  {% else %}
-                  Lives with someone else of State Pension age
-                  {% endif %}
-                </td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Date they moved in</th>
-                <td class="govuk-table__cell">
-                  6 March 2016
+                  6 March 2018
                 </td>
               </tr>
             </tbody>
