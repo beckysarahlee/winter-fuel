@@ -55,6 +55,7 @@ const sprint33d = require('./routes/sprint33d');
 const sprint35 = require('./routes/sprint35');
 const sprint35b = require('./routes/sprint35b');
 const sprint35c = require('./routes/sprint35c');
+const sprint35e = require('./routes/sprint35e');
 const emergencypayments = require('./routes/emergencypayments');
 
 
@@ -112,6 +113,7 @@ router.use(sprint33d);
 router.use(sprint35);
 router.use(sprint35b);
 router.use(sprint35c);
+router.use(sprint35e);
 router.use(emergencypayments);
 
 router.use((req, res, next) => {
