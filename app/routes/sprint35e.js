@@ -35,7 +35,7 @@ router.use((req, res, next) => {
 
   router.post('/sprint35e/residency', function(req, res) {
     if ( req.body['living'] === 'united-kingdom' ) {
-      res.redirect('receiving-sp');
+      res.redirect('residency-type');
     } else {
       res.redirect('overseas');
     }
