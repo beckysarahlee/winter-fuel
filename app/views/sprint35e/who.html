@@ -10,6 +10,9 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
+<br>
+<br>
+
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
@@ -17,17 +20,18 @@ GOV.UK Prototype Kit
 
         <form method="post">
 
-          <a href="/sprint22b/residency-type" class="govuk-back-link">Back</a>
+          {{ govukBackLink({
+          text: "Back",
+          href: "javascript:history.go(-1)"
+          }) }}
+
           <br>
           <br>
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
 
-                  <h1 class="govuk-heading-l">Were you living with anyone during
-                     the week of 16 to 22 September 2019?</h1>
-
-              <br>
+                  <h1 class="govuk-heading-xl">Do you live with anyone?</h1>
 
               <div class="govuk-radios govuk-radios--inline">
                 <div class="govuk-radios__item">

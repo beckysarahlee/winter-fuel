@@ -15,12 +15,16 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        <form method="post">
+
 
           {{ govukBackLink({
               text: "Back",
               href: "javascript:history.go(-1)"
             }) }}
+
+<br>
+<br>
+<form method="post">
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
@@ -29,7 +33,7 @@ GOV.UK Prototype Kit
 
                 </div>
 
-                <h1 class="govuk-heading-l">What is your date of birth?</h1>
+                <h1 class="govuk-heading-xl">What is your date of birth?</h1>
 
               </legend>
               <span id="dob-hint" class="govuk-hint">
