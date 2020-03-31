@@ -5,9 +5,7 @@ GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-
-{% include './_start_again.html' %}
-
+{% include './_find-someone.html' %}
 {% endblock %}
 
 {% block content %}
@@ -19,26 +17,19 @@ GOV.UK Prototype Kit
 
         <form method="post">
 
-
           {{ govukBackLink({
-                text: "Back",
-                href: "javascript:history.go(-1)"
-              }) }}
-
-          <br>
-          <br>
-
-          <form method="post">
+              text: "Back",
+              href: "javascript:history.go(-1)"
+            }) }}
 
             <h1 class="govuk-heading-xl">You do not qualify for a Winter Fuel Payment</h1>
 
-<p>
-  To qualify for a Winter Fuel Payment you must have been born on or before 5 April 1954.
-  </p>
-
-          </form>
+            <p>You do not qualify because you are in prison.</p>
+          <h3 class="govuk-heading-m">Changes of circumstance</h3>
+          <p>Your future entitlement may be affected if your circumstances change, such as if you leave prison.</p>
 
       </div>
+
 
     </div>
 

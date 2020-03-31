@@ -14,12 +14,65 @@ router.use((req, res, next) => {
   next()
 })
 
+
   // Date of birth
 
   router.post('/sprint35e/date-of-birth', (req, res) => {
     res.redirect('/sprint35e/residency')
   })
   ;
+
+
+  // Living
+
+  router.post('/sprint35e/residency', function(req, res) {
+    if ( req.body['living'] === 'united-kingdom' ) {
+      res.redirect('residency-type');
+    } else {
+      res.redirect('overseas');
+    }
+  });
+
+
+  // Residency type SP
+
+  router.post('/sprint35e/residency-type', function(req, res) {
+    if ( req.body['where-were-you-living'] === 'hospital' ) {
+      res.redirect('hospital');
+    } else if ( req.body['where-were-you-living'] === 'carehome' ) {
+      res.redirect('care-home');
+    } else if ( req.body['where-were-you-living'] === 'no-abode' ) {
+      res.redirect('no-abode');
+    } else if ( req.body['where-were-you-living'] === 'prison' ) {
+      res.redirect('prison');
+    } else {
+      res.redirect('pension-credit');
+    }
+  });
+
+
+  // Pension Credit
+
+router.post('/sprint35e/pension-credit', function(req, res) {
+  if ( req.body['pension-credit'] === 'yes' ) {
+    res.redirect('full-payment-pension-credit');
+  } else {
+    res.redirect('state-pension');
+  }
+});
+
+
+// State Pension
+
+router.post('/sprint35e/state-pension', (req, res) => {
+  res.redirect('/sprint35e/who')
+})
+;
+
+
+
+
+
 
   // Claimed Winter Fuel Payment
 
@@ -31,15 +84,7 @@ router.use((req, res, next) => {
     }
   });
 
-  // Living
 
-  router.post('/sprint35e/residency', function(req, res) {
-    if ( req.body['living'] === 'united-kingdom' ) {
-      res.redirect('residency-type');
-    } else {
-      res.redirect('overseas');
-    }
-  });
 
   // Benefits SP or PC?
 
@@ -57,15 +102,7 @@ router.use((req, res, next) => {
 
 
 
-  // Benefits
 
-router.post('/sprint35e/benefits', function(req, res) {
-  if ( req.body['benefits'] === 'yes' ) {
-    res.redirect('receiving-benefits');
-  } else {
-    res.redirect('residency-type');
-  }
-});
 
 // Query
 
@@ -79,21 +116,7 @@ if ( req.body['query'] === 'eligibility' ) {
 
 
 
-  // Residency type SP
 
-  router.post('/sprint35e/residency-type', function(req, res) {
-    if ( req.body['where-were-you-living'] === 'hospital' ) {
-      res.redirect('hospital');
-    } else if ( req.body['where-were-you-living'] === 'carehome' ) {
-      res.redirect('care-home');
-    } else if ( req.body['where-were-you-living'] === 'no-abode' ) {
-      res.redirect('no-abode');
-    } else if ( req.body['where-were-you-living'] === 'prison' ) {
-      res.redirect('prison');
-    } else {
-      res.redirect('who');
-    }
-  });
 
   // Residency type PC
 
