@@ -15,6 +15,8 @@ router.use((req, res, next) => {
 })
 
 
+//-----STANDARD JOURNEY-----//
+
   // Date of birth
 
   router.post('/sprint35e/date-of-birth', (req, res) => {
@@ -44,7 +46,7 @@ router.use((req, res, next) => {
     } else if ( req.body['where-were-you-living'] === 'no-abode' ) {
       res.redirect('no-abode');
     } else if ( req.body['where-were-you-living'] === 'prison' ) {
-      res.redirect('prison');
+      res.redirect('prison-pre');
     } else {
       res.redirect('pension-credit');
     }
@@ -68,6 +70,21 @@ router.post('/sprint35e/state-pension', (req, res) => {
   res.redirect('/sprint35e/who')
 })
 ;
+
+
+
+//-----HOSPITAL-----//
+
+// Hospital
+
+router.post('/sprint35e/hospital', function(req, res) {
+  if ( req.body['hospital-admission'] === 'yes' ) {
+    res.redirect('pension-credit');
+  } else {
+    res.redirect('hospital-pre');
+  }
+});
+
 
 
 
@@ -104,15 +121,6 @@ router.post('/sprint35e/state-pension', (req, res) => {
 
 
 
-// Query
-
-router.post('/sprint35e/query', function(req, res) {
-if ( req.body['query'] === 'eligibility' ) {
-  res.redirect('date-of-birth');
-} else {
-  res.redirect('/sprint29b/find');
-}
-});
 
 
 
@@ -135,15 +143,7 @@ if ( req.body['query'] === 'eligibility' ) {
   });
 
 
-  // Hospital
 
-  router.post('/sprint35e/hospital', function(req, res) {
-    if ( req.body['hospital-admission'] === 'yes' ) {
-      res.redirect('who');
-    } else {
-      res.redirect('hospital-over-year');
-    }
-  });
 
   // Hospital PC
 
