@@ -15,7 +15,7 @@ router.use((req, res, next) => {
 })
 
 
-//-----STANDARD JOURNEY-----//
+//-----STANDARD JOURNEY-----
 
   // Date of birth
 
@@ -44,7 +44,7 @@ router.use((req, res, next) => {
     } else if ( req.body['where-were-you-living'] === 'carehome' ) {
       res.redirect('care-home');
     } else if ( req.body['where-were-you-living'] === 'no-abode' ) {
-      res.redirect('no-abode');
+      res.redirect('benefits');
     } else if ( req.body['where-were-you-living'] === 'prison' ) {
       res.redirect('prison-pre');
     } else {
@@ -57,7 +57,7 @@ router.use((req, res, next) => {
 
 router.post('/sprint35e/pension-credit', function(req, res) {
   if ( req.body['pension-credit'] === 'yes' ) {
-    res.redirect('full-payment-pension-credit');
+    res.redirect('full-payment');
   } else {
     res.redirect('state-pension');
   }
@@ -73,7 +73,7 @@ router.post('/sprint35e/state-pension', (req, res) => {
 
 
 
-//-----HOSPITAL-----//
+//-----HOSPITAL-----
 
 // Hospital
 
@@ -87,6 +87,36 @@ router.post('/sprint35e/hospital', function(req, res) {
 
 
 
+//-----HOMELESS-----
+
+router.post('/sprint35e/benefits', function(req, res) {
+  if ( req.body['benefits'] === 'yes' ) {
+    res.redirect('full-payment');
+  } else {
+    res.redirect('full-payment-no-benefits');
+  }
+});
+
+
+
+//-----CAREHOME-----
+
+router.post('/sprint35e/care-home', function(req, res) {
+  if ( req.body['care-home-admission'] === 'yes' ) {
+    res.redirect('pension-credit');
+  } else {
+    res.redirect('pension-credit-ch');
+  }
+});
+
+
+router.post('/sprint35e/pension-credit-ch', function(req, res) {
+  if ( req.body['pension-credit-ch'] === 'yes' ) {
+    res.redirect('full-payment-pension-credit');
+  } else {
+    res.redirect('state-pension');
+  }
+});
 
 
 
@@ -155,15 +185,7 @@ router.post('/sprint35e/hospital', function(req, res) {
     }
   });
 
-    // Care or nursing home 13 weeks
 
-    router.post('/sprint35e/care-home', function(req, res) {
-      if ( req.body['care-home-admission'] === 'yes' ) {
-        res.redirect('care-home-full');
-      } else {
-        res.redirect('care-home-shared');
-      }
-    });
 
 
     // Care or nursing home PC 13 weeks
