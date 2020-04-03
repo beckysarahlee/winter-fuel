@@ -80,6 +80,22 @@ GOV.UK Prototype Kit
                   {% endif %}
                 </td>
               </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Date moved in? Started?</th>
+                <td class="govuk-table__cell">
+                  12 May 2009
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Occupancy?</th>
+                <td class="govuk-table__cell">
+                  {% if data['living-with'] %}
+                  {{data['living-with']}}
+                  {% else %}
+                  Lives with someone else of State Pension age
+                  {% endif %}
+                </td>
+              </tr>
             </tbody>
           </table>
 
