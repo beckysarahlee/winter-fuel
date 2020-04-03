@@ -19,7 +19,7 @@ GOV.UK Prototype Kit
 
           <div>
             <h1 class="govuk-heading-xl">
-              Theodora Best<br>
+              Frazer Norman<br>
               <span class="govuk-body-l">
                 {% if data['nino'] %}
                 {{data['nino']}}
@@ -28,7 +28,7 @@ GOV.UK Prototype Kit
                 {% endif %}
               </span>
               <br>
-              <strong class="govuk-tag govuk-tag--red">
+              <strong class="govuk-tag govuk-tag--yellow">
                 In prison
               </strong>
             </h1>
@@ -53,8 +53,6 @@ GOV.UK Prototype Kit
 
           <table class="govuk-table">
             <h2 class="govuk-heading-m">Qualification details</h2>
-            <a href="address" <span class="govuk-link govuk-!-font-size-19" style="margin-left: 80%">Update details</span>
-            </a>
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header"></th>
@@ -79,8 +77,10 @@ GOV.UK Prototype Kit
                   {% elif data.address %}
                   {{data.address.split(', ').join('<br />') | safe}}
                   {% else %}
-                  In prison...<br>
-                  Not sure if we have or need the prison address?
+                  HMP Northumberland<br>
+                  Wansbeck Road<br>
+                  Morpeth<br>
+                  NE65 9XG
                   {% endif %}
                 </td>
               </tr>

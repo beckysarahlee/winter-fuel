@@ -14,7 +14,7 @@
     <li class="govuk-breadcrumbs__list-item">
       <a class="govuk-breadcrumbs__link" href="ineligible">Ineligible cases</a>
     </li>
-    <li class="govuk-breadcrumbs__list-item" aria-current="page">In prison</li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">In hospital over 52 weeks</li>
   </ol>
 </div>
 
@@ -28,12 +28,10 @@
   <br>
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
+  <div class="govuk-grid-column-two-thirds">
 
-        <h1 class="govuk-heading-xl">In prison</h1>
+        <h1 class="govuk-heading-xl">In hospital over 52 weeks</h1>
 
-  </div>
-</div>
 
 <table class="govuk-table">
 
@@ -41,8 +39,6 @@
     <tr class="govuk-table__row">
 
       <th scope="col" class="govuk-table__header">Case</th>
-
-      <th scope="col" class="govuk-table__header">Reason ineligible?</th>
 
     </tr>
   </thead>
@@ -53,38 +49,29 @@
 
       <th scope="row" class="govuk-table__header">
 
-        <a href="/sprint22/aa123456x">
+        <a href="/sprint35d/overview-hospital">
           AA 12 34 56 X</a></th>
 
-      <td class="govuk-table__cell">No correspondence address</td>
+    </tr>
 
+    <tr class="govuk-table__row">
+
+      <th scope="row" class="govuk-table__header">
+        <a href="/sprint35d/overview-hospital">BB 12 34 56 X</a></th>
 
     </tr>
 
     <tr class="govuk-table__row">
 
       <th scope="row" class="govuk-table__header">
-        <a href="/sprint22/bb123456x">BB 12 34 56 X</a></th>
-
-      <td class="govuk-table__cell">Unverified date of birth</td>
-
-    </tr>
-
-    <tr class="govuk-table__row">
-
-      <th scope="row" class="govuk-table__header">
-        <a href="#">
+        <a href="/sprint35d/overview-hospital">
           CC 12 34 56 X</a></th>
-
-      <td class="govuk-table__cell">Resident outside EEA</td>
 
     </tr>
 
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">
         <a href="#">DD 12 34 56 X</a></th>
-
-      <td class="govuk-table__cell">Unverified date of birth</td>
 
     </tr>
 
@@ -93,15 +80,11 @@
       <th scope="row" class="govuk-table__header">
         <a href="#">EE 12 34 56 X</a></th>
 
-      <td class="govuk-table__cell">Unverified date of birth</td>
-
     </tr>
 
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header"><a href="#">
           FF 12 34 56 X</a></th>
-
-      <td class="govuk-table__cell">No correspondence address</td>
 
     </tr>
 
@@ -110,16 +93,12 @@
       <th scope="row" class="govuk-table__header">
         <a href="#">GG 12 34 56 X</a></th>
 
-      <td class="govuk-table__cell">PO box not approved</td>
-
     </tr>
 
     <tr class="govuk-table__row">
 
       <th scope="row" class="govuk-table__header">
         <a href="#">HH 12 34 56 X</a></th>
-
-      <td class="govuk-table__cell">Dead</td>
 
     </tr>
 
@@ -128,16 +107,12 @@
       <th scope="row" class="govuk-table__header">
         <a href="#">II 12 34 56 X</a></th>
 
-      <td class="govuk-table__cell">Unverified date of birth</td>
-
     </tr>
 
     <tr class="govuk-table__row">
 
       <th scope="row" class="govuk-table__header">
         <a href="#">JJ 12 34 56 X</a></th>
-
-      <td class="govuk-table__cell">Resident outside EEA</td>
 
     </tr>
 
@@ -166,5 +141,7 @@
 </ul>
 <p class="moj-pagination__results">Showing <b>1</b> to <b>10</b> of <b>38,448</b> results</p>
 </nav>
+
+</div>
 
 {% endblock %}

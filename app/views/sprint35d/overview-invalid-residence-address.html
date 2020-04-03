@@ -19,15 +19,15 @@ GOV.UK Prototype Kit
 
           <div>
             <h1 class="govuk-heading-xl">
-              Theodora Best<br>
+              Robin Bouvet<br>
               <span class="govuk-body-l">
                 {% if data['nino'] %}
                 {{data['nino']}}
                 {% else %}
                 XX 12 34 56
                 {% endif %}<br>
-                <strong class="govuk-tag govuk-tag--red">
-                  ??
+                <strong class="govuk-tag govuk-tag--yellow">
+                  Invalid residence address
                 </strong>
               </span>
             </h1>
@@ -38,33 +38,19 @@ GOV.UK Prototype Kit
           <br>
           <br>
 
-          <table class="govuk-table">
-            <h2 class="govuk-heading-m">2019 payment</h2>
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header"></th>
-                <th scope="col" class="govuk-table__header"></th>
-              </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Payment date</th>
-                <td class="govuk-table__cell">Monday, 4 November 2019</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Amount</th>
-                <td class="govuk-table__cell">£100</td>
-              </tr>
-            </tbody>
-          </table>
-
+          <h2 class="govuk-heading-m">2019 payment</h2>
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              Reason
+            </strong>
+          </div>
 
           <br>
 
           <table class="govuk-table">
             <h2 class="govuk-heading-m">Qualification details</h2>
-            <a href="address" <span class="govuk-link govuk-!-font-size-19" style="margin-left: 80%">Update details</span>
-            </a>
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header"></th>
@@ -96,6 +82,12 @@ GOV.UK Prototype Kit
                 </td>
               </tr>
               <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Date they moved in</th>
+                <td class="govuk-table__cell">
+                  6 March 2016
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Occupancy</th>
                 <td class="govuk-table__cell">
                   {% if data['living-with'] %}
@@ -103,12 +95,6 @@ GOV.UK Prototype Kit
                   {% else %}
                   Lives with someone else of State Pension age
                   {% endif %}
-                </td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Date they moved in</th>
-                <td class="govuk-table__cell">
-                  6 March 2016
                 </td>
               </tr>
             </tbody>

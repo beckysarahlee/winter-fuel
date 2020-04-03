@@ -19,7 +19,7 @@ GOV.UK Prototype Kit
 
           <div>
             <h1 class="govuk-heading-xl">
-              Theodora Best<br>
+              Tasha Velasquez<br>
               <span class="govuk-body-l">
                 {% if data['nino'] %}
                 {{data['nino']}}
@@ -28,6 +28,7 @@ GOV.UK Prototype Kit
                 {% endif %}<br>
                 <strong class="govuk-tag govuk-tag--red">
                   Immigration controls
+
                 </strong>
               </span>
             </h1>
@@ -54,8 +55,6 @@ GOV.UK Prototype Kit
 
           <table class="govuk-table">
             <h2 class="govuk-heading-m">Qualification details</h2>
-            <a href="address" <span class="govuk-link govuk-!-font-size-19" style="margin-left: 80%">Update details</span>
-            </a>
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header"></th>
@@ -87,6 +86,12 @@ GOV.UK Prototype Kit
                 </td>
               </tr>
               <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Date they moved in</th>
+                <td class="govuk-table__cell">
+                  6 March 2016
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Occupancy</th>
                 <td class="govuk-table__cell">
                   {% if data['living-with'] %}
@@ -94,12 +99,6 @@ GOV.UK Prototype Kit
                   {% else %}
                   Lives with someone else of State Pension age
                   {% endif %}
-                </td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Date they moved in</th>
-                <td class="govuk-table__cell">
-                  6 March 2016
                 </td>
               </tr>
             </tbody>

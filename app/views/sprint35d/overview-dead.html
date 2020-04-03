@@ -19,7 +19,7 @@ GOV.UK Prototype Kit
 
           <div>
             <h1 class="govuk-heading-xl">
-              Theodora Best<br>
+              Joyce Burris<br>
               <span class="govuk-body-l">
                 {% if data['nino'] %}
                 {{data['nino']}}
@@ -104,6 +104,12 @@ GOV.UK Prototype Kit
                 </td>
               </tr>
               <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Date they moved in</th>
+                <td class="govuk-table__cell">
+                  6 March 2016
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Occupancy</th>
                 <td class="govuk-table__cell">
                   {% if data['living-with'] %}
@@ -111,12 +117,6 @@ GOV.UK Prototype Kit
                   {% else %}
                   Lives with someone else of State Pension age
                   {% endif %}
-                </td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Date they moved in</th>
-                <td class="govuk-table__cell">
-                  6 March 2016
                 </td>
               </tr>
             </tbody>
