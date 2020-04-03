@@ -31,22 +31,26 @@ Emergency ‘Top up’ Payments (COVID19)
 
           <h2 class="govuk-heading-l">Has this payment been returned?</h2>
 
-          {% from "govuk/components/radios/macro.njk" import govukRadios %}
+          <br>
+          <br>
 
-          {{ govukRadios({
-            classes: "govuk-radios--inline",
+          <div class="govuk-radios govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="returned-payment" name="returned-payment" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="returned-payment">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="returned-payment-2" name="returned-payment" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="returned-payment-2">
+                    No
+                  </label>
+                </div>
+              </div>
 
-            items: [
-              {
-                value: "yes",
-                text: "Yes"
-              },
-              {
-                value: "no",
-                text: "No"
-              }
-            ]
-          }) }}
+              <br>
+              <br>
 
           {% from "govuk/components/button/macro.njk" import govukButton %}
 
