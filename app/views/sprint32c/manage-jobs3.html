@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block header %}
-  {% include './_header-manage.html' %}
+{% include './_header-manage.html' %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -24,130 +24,138 @@
 
 
       <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-grid-column-two-thirds">
 
-      <ol class="app-task-list">
-        <li>
-          <h2 class="app-task-list__section">
-            Load files
-          </h2>
-          <ul class="app-task-list__items govuk-!-padding-left-0">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="da-file" aria-describedby="eligibility-completed">
-                  Data and analytics file
-                </a>
-              </span>
-              <span class="app-task-list__task-time">
-                  <strong class="app-c-tag app-c-tag--success app-task-list__task-completed" id="eligibility-completed">Complete</strong>
-              </span>
-              <span class="app-task-list__task-time">
-                19 October 2019
-              </span>
+          <ol class="app-task-list">
+            <li>
+              <h2 class="app-task-list__section">
+                Load files
+              </h2>
+              <ul class="app-task-list__items govuk-!-padding-left-0">
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="da-file" aria-describedby="eligibility-completed">
+                      Data and analytics file
+                    </a>
+                  </span>
+                  <span class="app-task-list__task-time">
+                    <strong class="govuk-tag govuk-tag--green">
+                      Complete
+                    </strong>
+                  </span>
+                  <span class="app-task-list__task-time">
+                    19 October 2019
+                  </span>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="gysp" aria-describedby="read-declaration-completed">
+                      Get your State Pension file
+                    </a>
+                  </span>
+                  <span class="app-task-list__task-time">
+                    <strong class="govuk-tag govuk-tag--green">
+                      Complete
+                    </strong>
+                  </span>
+                  <span class="app-task-list__task-time">
+                    19 October 2019
+                  </span>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="war-pensions" aria-describedby="read-declaration-completed">
+                      War pension file
+                    </a>
+                  </span>
+                  <span class="app-task-list__task-time">
+                    <strong class="govuk-tag govuk-tag--blue">
+                      In progress
+                    </strong>
+                  </span>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="" aria-describedby="read-declaration-completed">
+                      Winter Fuel Payment System file
+                    </a>
+                  </span>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="" aria-describedby="read-declaration-completed">
+                      Legacy file
+                    </a>
+                  </span>
+                </li>
+              </ul>
             </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="gysp" aria-describedby="read-declaration-completed">
-                Get your State Pension file
-                </a>
-              </span>
-              <span class="app-task-list__task-time">
-                  <strong class="app-c-tag app-c-tag--success app-task-list__task-completed" id="eligibility-completed">Complete</strong>
-              </span>
-              <span class="app-task-list__task-time">
-                19 October 2019
-              </span>
+
+
+            <li>
+              <h2 class="app-task-list__section">
+                Calculate entitlement
+              </h2>
+              <ul class="app-task-list__items govuk-!-padding-left-0">
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="calculate-entitlement" aria-describedby="company-information-completed">
+                      Calculate entitlement
+                    </a>
+                  </span>
+
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="sweep" aria-describedby="company-information-completed">
+                      Clean up
+                    </a>
+                  </span>
+              </ul>
             </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="war-pensions" aria-describedby="read-declaration-completed">
-                  War pension file
-                </a>
-              </span>
-  <strong class="app-c-tag app-task-list__task-completed" id="eligibility-completed">In progress</strong>
+
+            <li>
+              <h2 class="app-task-list__section">
+                Send letters
+              </h2>
+              <ul class="app-task-list__items govuk-!-padding-left-0">
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="letters" aria-describedby="company-information-completed">
+                      Send letters
+                    </a>
+                  </span>
+              </ul>
             </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="" aria-describedby="read-declaration-completed">
-                  Winter Fuel Payment System file
-                </a>
-              </span>
+
+            <li>
+              <h2 class="app-task-list__section">
+                Secure data
+              </h2>
+              <ul class="app-task-list__items govuk-!-padding-left-0">
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="calculate-entitlement" aria-describedby="company-information-completed">
+                      Encrypt data
+                    </a>
+                  </span>
+
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="sweep" aria-describedby="company-information-completed">
+                      Decrypt data
+                    </a>
+                  </span>
+              </ul>
             </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="war-pensions" aria-describedby="read-declaration-completed">
-                  Legacy file
-                </a>
-              </span>
-            </li>
-          </ul>
-        </li>
 
+          </ol>
 
-        <li>
-          <h2 class="app-task-list__section">
-            Calculate entitlement
-          </h2>
-          <ul class="app-task-list__items govuk-!-padding-left-0">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="calculate-entitlement" aria-describedby="company-information-completed">
-                  Calculate entitlement
-                </a>
-              </span>
-
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="sweep" aria-describedby="company-information-completed">
-                  Clean up
-                </a>
-              </span>
-          </ul>
-        </li>
-
-        <li>
-          <h2 class="app-task-list__section">
-          Send letters
-          </h2>
-          <ul class="app-task-list__items govuk-!-padding-left-0">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="letters" aria-describedby="company-information-completed">
-                  Send letters
-                </a>
-              </span>
-          </ul>
-        </li>
-
-        <li>
-          <h2 class="app-task-list__section">
-            Secure data
-          </h2>
-          <ul class="app-task-list__items govuk-!-padding-left-0">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="calculate-entitlement" aria-describedby="company-information-completed">
-                  Encrypt data
-                </a>
-              </span>
-
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="sweep" aria-describedby="company-information-completed">
-                  Decrypt data
-                </a>
-              </span>
-          </ul>
-        </li>
-
-      </ol>
-
-    </div>
-  </div>
+        </div>
+      </div>
 
 
 
-</form>
+    </form>
 
   </div>
 </div>
