@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block header %}
+{% include './_header.html' %}
+{% endblock %}
+
+
+{% block pageTitle %}
+Emergency ‘Top up’ Payments (COVID19)
+{% endblock %}
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-two-thirds">
+
+        <form method="post">
+
+
+          {% include './_bar.html' %}
+
+          {{ govukBackLink({
+                text: "Back",
+                href: "javascript:history.go(-1)"
+              }) }}
+
+          <br>
+          <br>
+
+          <h2 class="govuk-heading-l">Do you want to reissue the payment to the same bank account?</h2>
+
+          <table class="govuk-table">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Bank or building society</th>
+                <td class="govuk-table__cell">TSB</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Account number</th>
+                <td class="govuk-table__cell">
+                  {% if data['accountnumber'] %}
+                  {{data['accountnumber']}}
+                  {% else %}
+                  ****5678
+                  {% endif %}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+          {{ govukRadios({
+            classes: "govuk-radios--inline",
+
+            items: [
+              {
+                value: "yes",
+                text: "Yes"
+              },
+              {
+                value: "no",
+                text: "No"
+              }
+            ]
+          }) }}
+
+          {% from "govuk/components/button/macro.njk" import govukButton %}
+
+          {{ govukButton({
+            text: "Confirm"
+          }) }}
+
+      </div>
+
+
+    </div>
+
+</div>
+
+
+{% endblock %}

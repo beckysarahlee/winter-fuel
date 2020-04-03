@@ -17,11 +17,21 @@ router.use((req, res, next) => {
   })
   ;
 
-  // Find someone to find result
+  // Change payment status to returned
   router.post('/emergency-topup-payments/change-payment-status', (req, res) => {
     res.redirect('/emergency-topup-payments/overview-payment-returned')
   })
   ;
 
+  // Reissue a returned payment
+  router.post('/emergency-topup-payments/reissue-payment', (req, res) => {
+    res.redirect('/emergency-topup-payments/reissue-payment-confirm')
+  })
+  ;
+
+  router.post('/emergency-topup-payments/reissue-payment-confirm', (req, res) => {
+    res.redirect('/emergency-topup-payments/overview-payment-reissued')
+  })
+  ;
 
   module.exports = router;
