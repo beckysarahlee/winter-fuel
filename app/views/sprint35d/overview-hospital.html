@@ -43,7 +43,7 @@ GOV.UK Prototype Kit
             <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
             <strong class="govuk-warning-text__text">
               <span class="govuk-warning-text__assistive">Warning</span>
-              Hospital over 52 weeks, reason
+              This person does not qualify because they were admitted to hospital on 6 March 2018.
             </strong>
           </div>
 
@@ -73,16 +73,12 @@ GOV.UK Prototype Kit
                   {% elif data.address %}
                   {{data.address.split(', ').join('<br />') | safe}}
                   {% else %}
-                  In hospital OR <br>
-                  Royal Victoria Infirmary<br>
-                  Queen Victoria Road<br>
-                  Newcastle Upon Tyne<br>
-                  NE1 4LP
+                  In hospital
                   {% endif %}
                 </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Date they were admitted 👷</th>
+                <th scope="row" class="govuk-table__header">Date of admission</th>
                 <td class="govuk-table__cell">
                   6 March 2018
                 </td>
