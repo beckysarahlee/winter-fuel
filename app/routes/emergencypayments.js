@@ -17,5 +17,11 @@ router.use((req, res, next) => {
   })
   ;
 
+  // Find someone to find result
+  router.post('/emergency-topup-payments/change-payment-status', (req, res) => {
+    res.redirect('/emergency-topup-payments/overview-payment-returned')
+  })
+  ;
+
 
   module.exports = router;
