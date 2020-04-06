@@ -27,7 +27,7 @@ GOV.UK Prototype Kit
                 XX 12 34 56
                 {% endif %}<br>
                 <strong class="govuk-tag govuk-tag--yellow">
-                  Care home receiving benefits
+                  Partner claimant
                 </strong>
 
               </span>
@@ -74,11 +74,9 @@ GOV.UK Prototype Kit
                   {% elif data.address %}
                   {{data.address.split(', ').join('<br />') | safe}}
                   {% else %}
-                  Dolphin View Care Home<br>
-                  Harbour Road<br>
-                  Amble<br>
-                  Northumberland<br>
-                  NE65 0AP
+                  133 Bath Road<br>
+                  Woodbeck<br>
+                  DN22 3QZ
                   {% endif %}
                 </td>
               </tr>
@@ -94,7 +92,7 @@ GOV.UK Prototype Kit
                   {% if data['living-with'] %}
                   {{data['living-with']}}
                   {% else %}
-                  Living in a care or nursing home
+                  Lives with someone else of State Pension age
                   {% endif %}
                 </td>
               </tr>
