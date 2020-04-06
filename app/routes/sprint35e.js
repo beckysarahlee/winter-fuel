@@ -57,7 +57,7 @@ router.use((req, res, next) => {
 
   router.post('/sprint35e/pension-credit', function(req, res) {
     if ( req.body['pension-credit'] === 'yes' ) {
-      res.redirect('full-payment');
+      res.redirect('pension-credit-payment');
     } else {
       res.redirect('state-pension');
     }
