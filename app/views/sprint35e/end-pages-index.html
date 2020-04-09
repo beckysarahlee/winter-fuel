@@ -1,4 +1,3 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
@@ -18,51 +17,79 @@ GOV.UK Prototype Kit
 
 
 
-          {{ govukBackLink({
+        {{ govukBackLink({
               text: "Back",
               href: "javascript:history.go(-1)"
             }) }}
 
-<br>
-<br>
-<form method="post">
+        <br>
+        <br>
+        <form method="post">
 
-<a href="/sprint35e/date-of-birth" class="govuk-button govuk-button--start">Start eligibility journey</a>
+          <h2 class="govuk-heading-m">Prototype</h2>
 
-  <h2 class="govuk-heading-m">End pages</h2>
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-third">
-      <h3 class="govuk-heading-s">Under 80, receiving benefits</h3>
-      <p class="govuk-body-m"><strong><a href="/sprint35e/pension-credit-payment" class="govuk-link">Pension credit</a></strong></p>
-      <p class="govuk-body-m"><strong><a href="/sprint35e/full-payment" class="govuk-link">Full payment</a></strong></p>
-      <p class="govuk-body-m"><strong><a href="/sprint35e/shared-payment" class="govuk-link">Shared payment</a></strong></p>
-      <p class="govuk-body-m"><strong><a href="/sprint35e/under-80-care-home-no-pc" class="govuk-link">Care home, not getting Pension Credit</a></strong></p>
-    </div>
-    <div class="govuk-grid-column-one-third">
-      <h3 class="govuk-heading-s">Over 80, receiving benefits</h3>
-      <p class="govuk-body-m"><strong><a href="/sprint35e/over-80-pension-credit-payment" class="govuk-link">Pension credit</a></strong></p>
-      <p class="govuk-body-m"><strong><a href="/sprint35e/over-80-full" class="govuk-link">Full payment</a></strong></p>
-      <p class="govuk-body-m"><strong><a href="/sprint35e/over-80-shared" class="govuk-link">Shared payment, partner under 80</a></strong></p>
-      <p class="govuk-body-m"><strong><a href="/sprint35e/over-80-shared-over-80" class="govuk-link">Shared payment, partner over 80</a></strong></p>
-      <p class="govuk-body-m"><strong><a href="/sprint35e/over-80-care-home-no-pc" class="govuk-link">Care home, not getting Pension Credit</a></strong></p>
-    </div>
-    <div class="govuk-grid-column-one-third">
-      <h3 class="govuk-heading-s">Other scenarios</h3>
-      <p class="govuk-body-m"><strong><a href="/sprint35e/make-a-claim" class="govuk-link">No benefits, need to claim</a></strong></p>
-      <p class="govuk-body-m"><strong><a href="/sprint35e/overseas" class="govuk-link">Overseas</a></strong></p>
-    </div>
-  </div>
+          <a href="/sprint35e/date-of-birth" class="govuk-button govuk-button--start">Start eligibility journey</a>
 
+          <br>
+          <br>
+
+          <h3 class="govuk-heading-m">End pages</h3>
+          <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button govuk-!-font-size-19" id="accordion-default-heading-1">
+                    Under 80, receiving benefits
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                <p class="govuk-body-m"><strong><a href="/sprint35e/pension-credit-payment" class="govuk-link">Pension credit</a></strong></p>
+                <p class="govuk-body-m"><strong><a href="/sprint35e/full-payment" class="govuk-link">Full payment</a></strong></p>
+                <p class="govuk-body-m"><strong><a href="/sprint35e/shared-payment" class="govuk-link">Shared payment</a></strong></p>
+                <p class="govuk-body-m"><strong><a href="/sprint35e/under-80-care-home-no-pc" class="govuk-link">Care home, not getting Pension Credit</a></strong></p>
+              </div>
+              <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                  <h2 class="govuk-accordion__section-heading">
+                    <span class="govuk-accordion__section-button govuk-!-font-size-19" id="accordion-default-heading-2">
+                      Over 80, receiving benefits
+                    </span>
+                  </h2>
+                </div>
+                <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                  <p class="govuk-body-m"><strong><a href="/sprint35e/over-80-pension-credit-payment" class="govuk-link">Pension credit</a></strong></p>
+                  <p class="govuk-body-m"><strong><a href="/sprint35e/over-80-full" class="govuk-link">Full payment</a></strong></p>
+                  <p class="govuk-body-m"><strong><a href="/sprint35e/over-80-shared" class="govuk-link">Shared payment, partner under 80</a></strong></p>
+                  <p class="govuk-body-m"><strong><a href="/sprint35e/over-80-shared-over-80" class="govuk-link">Shared payment, partner over 80</a></strong></p>
+                  <p class="govuk-body-m"><strong><a href="/sprint35e/over-80-care-home-no-pc" class="govuk-link">Care home, not getting Pension Credit</a></strong></p>
+                </div>
+              </div>
+              <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                  <h2 class="govuk-accordion__section-heading">
+                    <span class="govuk-accordion__section-button govuk-!-font-size-19" id="accordion-default-heading-3">
+                      Other scenarios
+                    </span>
+                  </h2>
+                </div>
+                <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                  <p class="govuk-body-m"><strong><a href="/sprint35e/make-a-claim" class="govuk-link">No benefits, need to claim</a></strong></p>
+                  <p class="govuk-body-m"><strong><a href="/sprint35e/overseas" class="govuk-link">Overseas</a></strong></p>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
 
 
       </div>
 
-
     </div>
 
-</div>
-
-</main>
+  </main>
 </div>
 
 {% endblock %}
