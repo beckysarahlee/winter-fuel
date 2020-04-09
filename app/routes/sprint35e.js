@@ -27,13 +27,10 @@ router.use((req, res, next) => {
 
   // Living
 
-  router.post('/sprint35e/residency', function(req, res) {
-    if ( req.body['living'] === 'united-kingdom' ) {
-      res.redirect('residency-type');
-    } else {
-      res.redirect('overseas');
-    }
-  });
+  router.post('/sprint35e/residency', (req, res) => {
+    res.redirect('/sprint35e/residency-type')
+  })
+  ;
 
 
   // Residency type SP
