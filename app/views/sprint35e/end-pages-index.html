@@ -1,0 +1,68 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include './_find-someone.html' %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+
+
+          {{ govukBackLink({
+              text: "Back",
+              href: "javascript:history.go(-1)"
+            }) }}
+
+<br>
+<br>
+<form method="post">
+
+<a href="/sprint35e/date-of-birth" class="govuk-button govuk-button--start">Start eligibility journey</a>
+
+  <h2 class="govuk-heading-m">End pages</h2>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <h3 class="govuk-heading-s">Under 80, receiving benefits</h3>
+      <p class="govuk-body-m"><strong><a href="/sprint35e/pension-credit-payment" class="govuk-link">Pension credit</a></strong></p>
+      <p class="govuk-body-m"><strong><a href="/sprint35e/full-payment" class="govuk-link">Full payment</a></strong></p>
+      <p class="govuk-body-m"><strong><a href="/sprint35e/shared-payment" class="govuk-link">Shared payment</a></strong></p>
+      <p class="govuk-body-m"><strong><a href="/sprint35e/under-80-care-home-no-pc" class="govuk-link">Care home, not getting Pension Credit</a></strong></p>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <h3 class="govuk-heading-s">Over 80, receiving benefits</h3>
+      <p class="govuk-body-m"><strong><a href="/sprint35e/over-80-pension-credit-payment" class="govuk-link">Pension credit</a></strong></p>
+      <p class="govuk-body-m"><strong><a href="/sprint35e/over-80-full" class="govuk-link">Full payment</a></strong></p>
+      <p class="govuk-body-m"><strong><a href="/sprint35e/over-80-shared" class="govuk-link">Shared payment, partner under 80</a></strong></p>
+      <p class="govuk-body-m"><strong><a href="/sprint35e/over-80-shared-over-80" class="govuk-link">Shared payment, partner over 80</a></strong></p>
+      <p class="govuk-body-m"><strong><a href="/sprint35e/over-80-care-home-no-pc" class="govuk-link">Care home, not getting Pension Credit</a></strong></p>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <h3 class="govuk-heading-s">Other scenarios</h3>
+      <p class="govuk-body-m"><strong><a href="/sprint35e/make-a-claim" class="govuk-link">No benefits, need to claim</a></strong></p>
+      <p class="govuk-body-m"><strong><a href="/sprint35e/overseas" class="govuk-link">Overseas</a></strong></p>
+    </div>
+  </div>
+
+
+
+      </div>
+
+
+    </div>
+
+</div>
+
+</main>
+</div>
+
+{% endblock %}
