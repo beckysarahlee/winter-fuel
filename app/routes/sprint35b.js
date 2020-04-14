@@ -9,19 +9,22 @@ router.use((req, res, next) => {
   })
 
   // Teleclaim or postal claim
-  router.post('/sprint35b/type-of-application', function(req, res) {
-    if ( req.body['phone-post'] === 'phone' ) {
-      res.redirect('date-of-birth');
-    } else {
-      res.redirect('find');
-    }
-  });
+  router.post('/sprint35b/type-of-application', (req, res) => {
+    res.redirect('/sprint35b/date-of-birth')
+  })
+  ;
 
-// Date of birth to benefits
-    router.post('/sprint35b/date-of-birth', (req, res) => {
-      res.redirect('/sprint35b/benefits')
-    })
-    ;
+  // DOB to phone/postal journey
+
+  router.post('/sprint35b/date-of-birth', function(req, res) {
+      if ( req.session.data['phone-post'] === 'phone' ) {
+        res.redirect('benefits');
+      } else if (req.body["dob-year"] === "1960") {
+        res.redirect('post-too-young');
+      } else {
+        res.redirect('find');
+      }
+  });
 
 // Benefits to find someone
 router.post('/sprint35b/benefits', function(req, res) {
