@@ -23,32 +23,38 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        <form action="/sprint20/benefits" method="post">
+    <form method="post">
 
-          <a href="/sprint20/date-of-birth" class="govuk-back-link">Back</a>
+          <a href="/sprint1-21/sprint20/residency" class="govuk-back-link">Back</a>
           <br>
           <br>
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <h1 class="govuk-fieldset__heading">
-                  Where were you living between 16 and 22 September 2018?
+                  Are you receiving any of the following benefits?
                 </h1>
               </legend>
 
-<br>
+              <br>
 
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Pension Credit</li>
+                <li>Income Support</li>
+                <li>Income based Job Seeker's Allowance</li>
+                <li>Income related Employment and Support Allowance</li>
+              </ul>
               <div class="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
-                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
-                    United Kingdom
+                  <input class="govuk-radios__input" id="yes" name="benefits" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="benefits-yes">
+                    Yes
                   </label> </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-                    Overseas
+                  <input class="govuk-radios__input" id="no" name="benefits" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="benefits-no">
+                    No
                   </label> </div>
               </div>
             </fieldset>
