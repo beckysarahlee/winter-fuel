@@ -10,30 +10,22 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
+
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
         {{ govukBackLink({
-          text: "Back",
-          href: "javascript:history.go(-1)"
-        }) }}
+            text: "Back",
+            href: "javascript:history.go(-1)"
+          }) }}
 
         <br>
         <br>
+
+        <h1 class="govuk-heading-xl">What is your address? 👷</h1>
         <form method="post">
-
-          <h1 class="govuk-heading-xl">do not qualify for a Winter Fuel Payment</h1>
-
-          <p>Provide deets to send a notification to citizen</p>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="full-name">
-              Full name
-            </label>
-            <input class="govuk-input" id="full-name" name="full-name" type="text" autocomplete="name" spellcheck="false">
-          </div>
 
           <fieldset class="govuk-fieldset">
             <div class="govuk-form-group">
@@ -80,11 +72,39 @@ GOV.UK Prototype Kit
 
           </fieldset>
 
-          <button type="submit" class="govuk-button">
-            Send notification
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="living-q-week-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                  Were you living at this address during (qualifying week)?👷
+                </h1>
+              </legend>
+              <span id="living-q-week-hint" class="govuk-hint">
+                If post q week👷
+              </span>
+              <div class="govuk-radios govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="living-q-week" name="living-q-week" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="living-q-week">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="living-q-week-2" name="living-q-week" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="living-q-week-2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
           </button>
 
         </form>
+
 
 
       </div>
@@ -92,7 +112,6 @@ GOV.UK Prototype Kit
     </div>
 
 </div>
-
 </main>
 </div>
 

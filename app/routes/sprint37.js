@@ -27,6 +27,19 @@ router.use((req, res, next) => {
       }
   });
 
+  // Find to name
+  router.post('/sprint37-international/find', (req, res) => {
+    res.redirect('/sprint37-international/name')
+  })
+  ;
+
+  // Name to address
+  router.post('/sprint37-international/name', (req, res) => {
+    res.redirect('/sprint37-international/address')
+  })
+  ;
+
+
 
 
   module.exports = router;
