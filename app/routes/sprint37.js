@@ -39,6 +39,24 @@ router.use((req, res, next) => {
   })
   ;
 
+  // Address during Q week
+  router.post('/sprint37-international/address', function(req, res) {
+      if (req.body["living-q-week"] === "yes") {
+        res.redirect('living-with');
+      } else {
+        res.redirect('address-q-week');
+      }
+  });
+
+  // Address during Q week
+  router.post('/sprint37-international/living-with', function(req, res) {
+      if (req.body["living-with"] === "yes") {
+        res.redirect('living-with-about');
+      } else {
+        res.redirect('contact');
+      }
+  });
+
 
 
 
