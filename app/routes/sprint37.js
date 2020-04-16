@@ -63,6 +63,20 @@ router.use((req, res, next) => {
       }
   });
 
+  // Contact to type of account
+  router.post('/sprint37-international/contact', (req, res) => {
+    res.redirect('/sprint37-international/type-of-account')
+  })
+  ;
+
+  // Type of account to UK or International
+  router.post('/sprint37-international/type-of-account', function(req, res) {
+      if (req.body["bank-type"] === "uk-bank-account") {
+        res.redirect('uk-bank-details');
+      } else {
+        res.redirect('international-bank-details');
+      }
+  });
 
 
 
