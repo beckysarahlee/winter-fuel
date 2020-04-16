@@ -63,6 +63,13 @@ router.use((req, res, next) => {
       }
   });
 
+  // Living with about
+  router.post('/sprint37-international/living-with-about', (req, res) => {
+    res.redirect('/sprint37-international/contact')
+  })
+  ;
+
+
   // Contact to type of account
   router.post('/sprint37-international/contact', (req, res) => {
     res.redirect('/sprint37-international/type-of-account')
