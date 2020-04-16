@@ -38,35 +38,35 @@ GOV.UK Prototype Kit
           </div>
 
           <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
       <h1 class="govuk-fieldset__heading">
         Their date of birth
       </h1>
     </legend>
-    <div class="govuk-date-input" id="passport-issued">
+    <div class="govuk-date-input" id="dob">
       <div class="govuk-date-input__item">
         <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+          <label class="govuk-label govuk-date-input__label" for="dob-day">
             Day
           </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric">
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="text" pattern="[0-9]*" inputmode="numeric">
         </div>
       </div>
       <div class="govuk-date-input__item">
         <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+          <label class="govuk-label govuk-date-input__label" for="dob-month">
             Month
           </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric">
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="text" pattern="[0-9]*" inputmode="numeric">
         </div>
       </div>
       <div class="govuk-date-input__item">
         <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+          <label class="govuk-label govuk-date-input__label" for="dob-year">
             Year
           </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric">
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="text" pattern="[0-9]*" inputmode="numeric">
         </div>
       </div>
     </div>
@@ -77,7 +77,7 @@ GOV.UK Prototype Kit
   <fieldset class="govuk-fieldset" aria-describedby="living-with-conditional-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
      <h1 class="govuk-fieldset__heading">
-       Have they had WF before
+       Have they had WF before? 👷
      </h1>
    </legend>
     <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
@@ -88,7 +88,33 @@ GOV.UK Prototype Kit
         </label>
       </div>
       <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-living-with-conditional">
-
+        <div class="govuk-form-group">
+<fieldset class="govuk-fieldset" role="group" aria-describedby="wf-date-living-with-hint">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+    <h1 class="govuk-fieldset__heading">
+      When did they last get WF?👷🧐
+    </h1>
+  </legend>
+  <div class="govuk-date-input" id="wf-date-living-with">
+    <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-date-input__label" for="wf-date-living-with-month">
+          Month
+        </label>
+        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="wf-date-living-with-month" name="wf-date-living-with-month" type="text" pattern="[0-9]*" inputmode="numeric">
+      </div>
+    </div>
+    <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-date-input__label" for="wf-date-living-with-year">
+          Year
+        </label>
+        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="wf-date-living-with-year" name="wf-date-living-with-year" type="text" pattern="[0-9]*" inputmode="numeric">
+      </div>
+    </div>
+  </div>
+</fieldset>
+</div>
       </div>
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="living-with-conditional-2" name="living-with" type="radio" value="no" data-aria-controls="conditional-living-with-conditional-2">
