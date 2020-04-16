@@ -29,12 +29,12 @@ router.use((req, res, next) => {
 
   // Find to name
   router.post('/sprint37-international/find', (req, res) => {
-    res.redirect('/sprint37-international/name')
+    res.redirect('/sprint37-international/confirm-name')
   })
   ;
 
   // Name to address
-  router.post('/sprint37-international/name', (req, res) => {
+  router.post('/sprint37-international/confirm-name', (req, res) => {
     res.redirect('/sprint37-international/address')
   })
   ;
@@ -42,11 +42,17 @@ router.use((req, res, next) => {
   // Address during Q week
   router.post('/sprint37-international/address', function(req, res) {
       if (req.body["living-q-week"] === "yes") {
-        res.redirect('living-with');
+        res.redirect('move-date');
       } else {
         res.redirect('address-q-week');
       }
   });
+
+  // Name to address
+  router.post('/sprint37-international/move-date', (req, res) => {
+    res.redirect('/sprint37-international/living-with')
+  })
+  ;
 
   //
   router.post('/sprint37-international/living-with', function(req, res) {
