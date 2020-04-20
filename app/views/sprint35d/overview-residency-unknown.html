@@ -27,7 +27,7 @@ GOV.UK Prototype Kit
                 XX 12 34 56
                 {% endif %}
                 <br>
-                <strong class="govuk-tag govuk-tag--red">
+                <strong class="govuk-tag govuk-tag--yellow">
                   Unknown address
                 </strong>
 
@@ -45,7 +45,7 @@ GOV.UK Prototype Kit
               <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
               <strong class="govuk-warning-text__text">
                 <span class="govuk-warning-text__assistive">Warning</span>
-                This person cannot get a payment because DWP does not have any address details for them.
+                This person cannot get a payment because their current residential address is unknown.
               </strong>
             </div>
 
@@ -75,13 +75,7 @@ GOV.UK Prototype Kit
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Address</th>
                 <td class="govuk-table__cell">
-                  {% if data['address-change'] %}
-                  {{data['address-change'].split(', ').join('<br />') | safe }}
-                  {% elif data.address %}
-                  {{data.address.split(', ').join('<br />') | safe}}
-                  {% else %}
-                  No address
-                  {% endif %}
+                  Address unknown
                 </td>
               </tr>
             </tbody>
