@@ -131,11 +131,13 @@ router.use((req, res, next) => {
   ;
 
   // Address -----------------------------
-
-  router.post('/sprint37b/address', (req, res) => {
-    res.redirect('/sprint37b/address-1')
-  })
-  ;
+  router.post('/sprint37b/address', function(req, res) {
+    if ( req.body['postcode'] === 'NE2 FYL' ) {
+      res.redirect('address-no-result');
+    } else {
+      res.redirect('address-1');
+    }
+  });
 
 // Address select, yes or search address
   router.post('/sprint37b/address-1', function(req, res) {
