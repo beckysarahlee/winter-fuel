@@ -14,22 +14,18 @@ GOV.UK Prototype Kit
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+          {% include './_bar_2.html' %}
+          <h1 class="govuk-heading-l">Search for a different address</h1>
+        </div>
+
       <div class="govuk-grid-column-two-thirds">
 
-
-        <form method="post">
-
-          {% include './_bar_2.html' %}
-
           <form method="post">
-
-            <h2 class="govuk-heading-l">Search for a different address</h2>
-
             <h2 class="govuk-heading-m">Unverified address</h2>
             <p>The Beeches<br>
             Lower Heyford<br>
             Oxford</p>
-
 <br>
             <fieldset class="govuk-fieldset">
 
@@ -76,21 +72,11 @@ GOV.UK Prototype Kit
 
 </fieldset>
 
-
-
             <button type="submit" class="govuk-button">
               Search
             </button>
 
           </form>
-
-
-
-
-
-          <br>
-
-
       </div>
 
     </div>

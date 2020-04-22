@@ -14,75 +14,68 @@ GOV.UK Prototype Kit
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-full">
+        {% include './_bar_2.html' %}
+        <h1 class="govuk-heading-l">Verify an address</h1>
+      </div>
+
       <div class="govuk-grid-column-two-thirds">
 
+        <form method="post">
+          <h2 class="govuk-heading-m">Unverified address</h2>
+          <p>The Beeches<br>
+            Lower Heyford<br>
+            Oxford</p>
 
-                  <form method="post">
+          <h2 class="govuk-heading-m">Select a verified address</h2>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-fix" name="address-fix-2" type="radio" value="27 Victoria Road, FALKIRK, FK55 0LZ">
+                  <label class="govuk-label govuk-radios__label" for="address">
+                    The Beeches<br>
+                    Heyford Road<br>
+                    Steeple Aston<br>
+                    Bicester<br>
+                    OX25 4SN<br>
+                    <strong class="govuk-tag govuk-tag--blue">
+                      Residential
+                    </strong>
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-fix-2" name="address-fix-2" type="radio" value="Address not found">
+                  <label class="govuk-label govuk-radios__label" for="address-1">
+                    Search for a different address
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
 
-                    {% include './_bar_2.html' %}
+          <p> <a href="cannot-verify-2" class="govuk-link">This address cannot be verified</a> </p>
+          <br>
 
-                        <form method="post">
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
 
-                              <h2 class="govuk-heading-l">Verify an address</h2>
+        </form>
 
-                              <h2 class="govuk-heading-m">Unverified address</h2>
-                              <p>The Beeches<br>
-                              Lower Heyford<br>
-                              Oxford</p>
+      </div>
 
-                              <h2 class="govuk-heading-m">Contact number</h2>
-                              <p><strong>Mobile phone:</strong> 07771 900 900</p>
-
-                              <h2 class="govuk-heading-m">Select a verified address</h2>
-                                <div class="govuk-form-group">
-                                  <fieldset class="govuk-fieldset">
-                                    <div class="govuk-radios">
-                                      <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="address-fix" name="address-fix-2" type="radio" value="27 Victoria Road, FALKIRK, FK55 0LZ">
-                                        <label class="govuk-label govuk-radios__label" for="address">
-                                          The Beeches<br>
-                                          Heyford Road<br>
-                                          Steeple Aston<br>
-                                          Bicester<br>
-                                          OX25 4SN<br>
-                                          <strong class="govuk-tag govuk-tag--blue">
-                                            Residential
-                                          </strong>
-                                        </label>
-                                      </div>
-                                      <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="address-fix-2" name="address-fix-2" type="radio" value="Address not found">
-                                        <label class="govuk-label govuk-radios__label" for="address-1">
-                                          Search for a different address
-                                        </label>
-                                      </div>
-                                    </div>
-                                  </fieldset>
-                                </div>
-
-                                <p>  <a href="cannot-verify-2" class="govuk-link">This address cannot be verified</a> </p>
-                                <br>
-
-                          <button type="submit" class="govuk-button">
-                            Continue
-                          </button>
-
-                        </form>
-
-
-
-
-
-<br>
-
-
+      <div class="govuk-grid-column-one-third">
+        <h2 class="govuk-heading-m">Contact number</h2>
+        <p><strong>Mobile phone:</strong> 07771 900 900</p>
       </div>
 
     </div>
 
-  </div>
+</div>
 
-  </main>
-  </div>
+</main>
+</div>
 
-  {% endblock %}
+{% endblock %}
