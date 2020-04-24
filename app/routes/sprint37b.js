@@ -130,7 +130,7 @@ router.use((req, res, next) => {
   })
   ;
 
-  // Address -----------------------------
+  // Address -------------------------------------------------------------------
   router.post('/sprint37b/address', function(req, res) {
     if ( req.body['postcode'] === 'NE2 1YL' ) {
       res.redirect('address-no-result');
@@ -147,6 +147,26 @@ router.use((req, res, next) => {
       res.redirect('address-search');
     }
   });
+
+
+// Address search
+router.post('/sprint37b/address-search', function(req, res) {
+  if ( req.body['address-search-postcode'] === 'NE2 1YL' ) {
+    res.redirect('address-search-no-result');
+  } else {
+    res.redirect('address-search-result');
+  }
+});
+
+// Address search select, yes or search address
+  router.post('/sprint37b/address-search-result', function(req, res) {
+    if ( req.body['address-search-change'] === '27 Kent Street, Amble, NE65 0LZ' ) {
+      res.redirect('move-date');
+    } else {
+      res.redirect('TBC');
+    }
+  });
+
 
   router.post('/sprint37b/move-date', (req, res) => {
     res.redirect('/sprint37b/homephone-address')
@@ -212,6 +232,8 @@ router.use((req, res, next) => {
   ;
 
 
+
+
   // PAYMENT CHANGES -----------------------------------------------------------
 
   // Bank details change to bank confirm
@@ -234,16 +256,6 @@ router.use((req, res, next) => {
     res.redirect('/sprint37b/payment-confirmation')
   })
   ;
-
-
-  // Stopping payments
-  router.post('/sprint37b/stop-payments', function(req, res) {
-    if ( req.body['stop-payments'] === 'Yes' ) {
-      res.redirect('payment-stopped');
-    } else {
-      res.redirect('payment');
-    }
-  });
 
   // Starting payments
   router.post('/sprint37b/start-payments', function(req, res) {

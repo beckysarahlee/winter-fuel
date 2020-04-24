@@ -29,21 +29,21 @@ GOV.UK Prototype Kit
 
           <form method="post">
 
-            <h2 class="govuk-heading-l">No addresses found</h2>
+            <h2 class="govuk-heading-l">No addresses found x</h2>
 
-            <p>No addresses found for <b>"{% if data['house-number'] %}
-                {{data['house-number']}}
+            <p>No addresses found for <b>"{% if data['address-search-line-1'] %}
+                {{data['address-search-line-1']}}
                 {% else %}
                 27
                 {% endif %}"
-              </b> and <b>"{% if data['postcode'] %}
-                {{data['postcode']}}
+              </b>, <b>"Newcastle Upon Tyne"</b> and <b>"{% if data['ddress-search-postcode'] %}
+                {{data['ddress-search-postcode']}}
                 {% else %}
                 NE3 1YL
                 {% endif %}"</b> <br>
-              <a href="address" class="govuk-link">Change</a></p>
+              <a href="address-search" class="govuk-link">Change</a></p>
 
-            <p><a href="address-search" class="govuk-link">Search for the address manually</a>
+            <p><a href="" class="govuk-link"><b>*DO SOMETHING WITH*</b></a>
 
           </form>
 
