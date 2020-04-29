@@ -199,10 +199,18 @@ router.post('/sprint37b/living-with-q-week', function(req, res) {
   }
 });
 
-router.post('/sprint37b/poa', (req, res) => {
-  res.redirect('/sprint37b/declaration')
+// Power of attourney
+router.post('/sprint37b/poa', function(req, res) {
+  if (req.body['poa'] === 'Yes') {
+    res.redirect('poa-people');
+  } else {
+    res.redirect('declaration');
+  }
 });
 
+router.post('/sprint37b/poa-people', (req, res) => {
+  res.redirect('/sprint37b/declaration')
+});
 
 // Declaration
 
