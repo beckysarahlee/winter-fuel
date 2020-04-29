@@ -203,8 +203,15 @@ router.post('/sprint37b/poa', (req, res) => {
   res.redirect('/sprint37b/declaration')
 });
 
-router.post('/sprint37b/declaration', (req, res) => {
-  res.redirect('/sprint37b/make-payment')
+
+// Declaration
+
+router.post('/sprint37b/declaration', function(req, res) {
+    if (req.session.data["movemonth"] === "08") {
+      res.redirect('make-payment');
+    } else {
+      res.redirect('overview-changed');
+    }
 });
 
 // Check to payments
