@@ -172,12 +172,19 @@ router.post('/sprint37b/move-date', (req, res) => {
   res.redirect('/sprint37b/homephone-address')
 });
 
+// Care home move date
+router.post('/sprint37b/carehome-move-date', (req, res) => {
+  res.redirect('/sprint37b/declaration')
+});
+
 
 router.post('/sprint37b/homephone-address', function(req, res) {
     if (req.body["homephone-address"] === "Yes") {
       res.redirect('homephone-address-change');
     }
     else if (req.session.data["movemonth"] === "08") {
+      res.redirect('living-with-q-week');
+    } else if (req.session.data["movemonth"] === "07") {
       res.redirect('living-with-q-week');
     } else {
       res.redirect('living-with');
