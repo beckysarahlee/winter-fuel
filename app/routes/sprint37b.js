@@ -122,6 +122,8 @@ router.post('/sprint37b/contact-preferences', (req, res) => {
 router.post('/sprint37b/address', function(req, res) {
   if (req.body['postcode'] === 'NE2 1YL') {
     res.redirect('address-no-result');
+  } else if (req.body['postcode'] === "NE65 0AP") {
+    res.redirect('address-carehome');
   } else {
     res.redirect('address-1');
   }
@@ -136,6 +138,15 @@ router.post('/sprint37b/address-1', function(req, res) {
   }
 });
 
+
+// Care home address select, yes or search address
+router.post('/sprint37b/address-carehome', function(req, res) {
+  if (req.body['address-change'] === 'Dolphin View Care Home, Harbour Road, Amble, NE65 0AP') {
+    res.redirect('carehome-move-date');
+  } else {
+    res.redirect('address-search');
+  }
+});
 
 // Address search
 router.post('/sprint37b/address-search', function(req, res) {
