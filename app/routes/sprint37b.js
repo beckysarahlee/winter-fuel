@@ -235,9 +235,21 @@ router.post('/sprint37b/poa-people', (req, res) => {
 router.post('/sprint37b/declaration', function(req, res) {
     if (req.session.data["movemonth"] === "08") {
       res.redirect('make-payment');
+    } else if (req.session.data["movemonth"] === "07") {
+      res.redirect('over-payment');
     } else {
       res.redirect('overview-changed');
     }
+});
+
+
+// Overpayment recoverable?
+router.post('/sprint37b/over-payment', function(req, res) {
+  if (req.body['recoverable'] === 'yes') {
+    res.redirect('recoverable-payment');
+  } else {
+    res.redirect('overview-changed');
+  }
 });
 
 // Check to payments
