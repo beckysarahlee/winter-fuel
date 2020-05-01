@@ -253,6 +253,11 @@ router.post('/sprint37b/over-payment', function(req, res) {
 });
 
 // Check to payments
+router.post('/sprint37b/recoverable-payment', (req, res) => {
+  res.redirect('/sprint37b/overview-recoverable')
+});
+
+// Check to payments
 router.post('/sprint37b/check', (req, res) => {
   res.redirect('/sprint37b/make-payment')
 });
