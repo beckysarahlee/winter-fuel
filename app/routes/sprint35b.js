@@ -52,10 +52,13 @@ router.post('/sprint35b/benefits', function(req, res) {
 
 
 // Security questions to house number and postcode
-  router.post('/sprint35b/security', (req, res) => {
-    res.redirect('/sprint35b/address')
-  })
-  ;
+  router.post('/sprint35b/security', function(req, res) {
+      if ( req.session.data['nino'] === 'PX 12 43 56' ) {
+        res.redirect('overview');
+      } else {
+        res.redirect('address');
+      }
+  });
 
 // Address look up to confirm the first line of the address
   router.post('/sprint35b/address', (req, res) => {
