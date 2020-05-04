@@ -10,7 +10,7 @@ router.use((req, res, next) => {
 
   // Teleclaim or postal claim
   router.post('/sprint35b/type-of-application', (req, res) => {
-    res.redirect('/sprint35b/date-of-birth')
+    res.redirect('/sprint35b/find')
   })
   ;
 
