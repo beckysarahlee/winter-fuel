@@ -61,8 +61,8 @@ router.post('/sprint35b/benefits', function(req, res) {
   });
 
 // Address look up to confirm the first line of the address
-  router.post('/sprint35b/address', (req, res) => {
-    res.redirect('/sprint35b/address-1')
+  router.post('/sprint35b/address-for-letters-1', (req, res) => {
+    res.redirect('/sprint35b/contact')
   })
   ;
 
