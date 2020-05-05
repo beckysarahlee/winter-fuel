@@ -60,11 +60,18 @@ router.post('/sprint35b/benefits', function(req, res) {
       }
   });
 
-// Address look up to confirm the first line of the address
-  router.post('/sprint35b/address-for-letters-1', (req, res) => {
-    res.redirect('/sprint35b/contact')
-  })
-  ;
+
+// Address
+
+router.post('/sprint35b/address', function(req, res) {
+  if (req.body['postcode'] === 'NE2 1YL') {
+    res.redirect('address-no-result');
+  } else if (req.body['postcode'] === "NE65 0AP") {
+    res.redirect('address-carehome');
+  } else {
+    res.redirect('address-1');
+  }
+});
 
   // No permanent address to address for letters
   router.post('/sprint35b/no-permanent-address', function(req, res) {
@@ -80,6 +87,12 @@ router.post('/sprint35b/benefits', function(req, res) {
       res.redirect('/sprint35b/address-for-letters-1')
     })
     ;
+
+    // Address look up to confirm the first line of the address
+      router.post('/sprint35b/address-for-letters-1', (req, res) => {
+        res.redirect('/sprint35b/contact')
+      })
+      ;
 
 // Confirm first line of address to move date
   router.post('/sprint35b/address-1', (req, res) => {
@@ -151,6 +164,12 @@ router.post('/sprint35b/benefits', function(req, res) {
   // Declaration to completion
   router.post('/sprint35b/declaration', (req, res) => {
     res.redirect('/sprint35b/complete-pre')
+  })
+  ;
+
+  // Start again back to beginning
+  router.post('/sprint35b/start-again', (req, res) => {
+    res.redirect('/sprint35b/type-of-application')
   })
   ;
 

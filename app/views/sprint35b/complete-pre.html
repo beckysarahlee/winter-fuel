@@ -6,11 +6,24 @@ GOV.UK Prototype Kit
 
 {% block beforeContent %}
 
-{% if data['phone-post'] === 'phone' %}
-{% include './_blue_bar.html' %}
-{% else %}
-{% include './_blue_bar-2.html' %}
-{% endif %}
+<div class="moj-identity-bar">
+  <div class="moj-identity-bar__container">
+    <div class="moj-identity-bar__details">
+      <span class="moj-identity-bar__title"><b>
+        {% if data['phone-post'] === 'phone' %}
+        Theodora Best
+        {% else %}
+        Samira Mcgill
+        {% endif %}</b></span>
+    </div>
+    <div class="moj-identity-bar__details">
+      <span class="moj-identity-bar__title">
+        <a href="type-of-application" class="govuk-link">Start again</a>
+      </span>
+    </div>
+  </div>
+</div>
+
 
 {% endblock %}
 

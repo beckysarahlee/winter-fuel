@@ -36,6 +36,17 @@ GOV.UK Prototype Kit
 
               <h2 class="govuk-heading-xl">Can you confirm your full address?</h2>
 
+              <p><b>1</b> address found for <b>"{% if data['house-number'] %}
+                                  {{data['house-number']}}
+                                {% else %}
+                                27
+                                {% endif %}"
+                              </b> and <b>"{% if data['postcode'] %}
+                                                  {{data['postcode']}}
+                                                {% else %}
+                                                NE65 0LZ
+                                                {% endif %}"</b></p>
+
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                   <div class="govuk-radios">
