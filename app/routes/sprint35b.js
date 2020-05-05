@@ -14,17 +14,6 @@ router.use((req, res, next) => {
   })
   ;
 
-  // DOB to phone/postal journey
-
-  router.post('/sprint35b/date-of-birth', function(req, res) {
-      if ( req.session.data['phone-post'] === 'phone' ) {
-        res.redirect('benefits');
-      } else if (req.body["dob-year"] === "1960") {
-        res.redirect('post-too-young');
-      } else {
-        res.redirect('find');
-      }
-  });
 
 // Benefits to find someone
 router.post('/sprint35b/benefits', function(req, res) {
@@ -36,19 +25,39 @@ router.post('/sprint35b/benefits', function(req, res) {
 });
 
 // Find someone to confirm full name
-  router.post('/sprint35b/find', (req, res) => {
-    res.redirect('/sprint35b/find-1')
-  })
-  ;
+
+  router.post('/sprint35b/find', function(req, res) {
+    if (req.session.data['nino'] === 'PX 12 24 32 A') {
+      res.redirect('date-of-birth');
+    } else if (req.session.data['nino'] === "PX122432A") {
+      res.redirect('date-of-birth');
+    } else if (req.session.data['nino'] === "px122432A") {
+      res.redirect('date-of-birth');
+    } else if (req.session.data['nino'] === "px 12 24 32 A") {
+      res.redirect('date-of-birth');
+    } else {
+      res.redirect('find-1');
+    }
+  });
 
 // Confirm full name to security questions
   router.post('/sprint35b/find-1', function(req, res) {
       if ( req.session.data['phone-post'] === 'post' ) {
-        res.redirect('address');
+        res.redirect('date-of-birth');
       } else {
         res.redirect('security');
       }
   });
+
+  // DOB (letter) to address or too young
+    router.post('/sprint35b/date-of-birth', function(req, res) {
+        if ( req.session.data['dob-year'] === '1959' ) {
+          res.redirect('too-young-letter');
+        } else {
+          res.redirect('address');
+        }
+    });
+
 
 
 // Security questions to house number and postcode
@@ -170,6 +179,12 @@ router.post('/sprint35b/address', function(req, res) {
   // Start again back to beginning
   router.post('/sprint35b/start-again', (req, res) => {
     res.redirect('/sprint35b/type-of-application')
+  })
+  ;
+
+  // Start again back to beginning
+  router.post('/sprint35b/too-young-letter', (req, res) => {
+    res.redirect('/sprint35b/type-of-application-letter-sent')
   })
   ;
 
