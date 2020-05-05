@@ -82,6 +82,18 @@ router.post('/sprint35b/address', function(req, res) {
   }
 });
 
+// Address for letters to address for letters results
+  router.post('/sprint35b/address-carehome', (req, res) => {
+    res.redirect('/sprint35b/carehome-move-date')
+  })
+  ;
+
+  // Carehome move date to contact
+    router.post('/sprint35b/carehome-move-date', (req, res) => {
+      res.redirect('/sprint35b/contact')
+    })
+    ;
+
   // No permanent address to address for letters
   router.post('/sprint35b/no-permanent-address', function(req, res) {
     if ( req.body['address-for-letters'] === 'yes' ) {
