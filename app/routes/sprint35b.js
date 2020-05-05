@@ -183,10 +183,13 @@ router.post('/sprint35b/address', function(req, res) {
     ;
 
   // Declaration to completion
-  router.post('/sprint35b/declaration', (req, res) => {
-    res.redirect('/sprint35b/complete-pre')
-  })
-  ;
+  router.post('/sprint35b/declaration', function(req, res) {
+      if ( req.session.data['address-change'] === 'Dolphin View, Harbour Road, Amble, NE65 0AP' ) {
+        res.redirect('complete-carehome-successful-pre');
+      } else {
+        res.redirect('complete-pre');
+      }
+  });
 
   // Start again back to beginning
   router.post('/sprint35b/start-again', (req, res) => {
