@@ -53,7 +53,19 @@ router.post('/sprint37b/correspondence-address', (req, res) => {
 });
 
 // Correspondence address to address found
-router.post('/sprint37b/correspondence-address-1', (req, res) => {
+router.post('/sprint37b/correspondence-address-1', function(req, res) {
+  if (req.body['correspondence-address-change'] === 'no address found') {
+    res.redirect('correspondence-address-search');
+  } else {
+    res.redirect('contact');
+  }
+});
+
+router.post('/sprint37b/correspondence-address-search', (req, res) => {
+  res.redirect('/sprint37b/correspondence-address-search-result')
+});
+
+router.post('/sprint37b/correspondence-address-search-result', (req, res) => {
   res.redirect('/sprint37b/contact')
 });
 
