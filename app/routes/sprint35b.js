@@ -168,15 +168,10 @@ router.post('/sprint35b/address', function(req, res) {
 
 // Phone number & email to contact requirements
   router.post('/sprint35b/contact', (req, res) => {
-    res.redirect('/sprint35b/contact-requirements')
+    res.redirect('/sprint35b/bank-details')
   })
   ;
 
-  // Contact requirements to bank account details
-    router.post('/sprint35b/contact-requirements', (req, res) => {
-      res.redirect('/sprint35b/bank-details')
-    })
-    ;
 
   // Bank details to declaration
     router.post('/sprint35b/bank-details', (req, res) => {
