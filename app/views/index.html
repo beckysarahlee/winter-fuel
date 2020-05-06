@@ -10,22 +10,42 @@ Winter Fuel Payments
 {% endblock %}
 {% block content %}
 
-
 <div class="govuk-width-container">
 
   <h1 class="govuk-heading-xl">
     Prototype
   </h1>
 
+  <h2 class=" govuk-heading-l">Sprint 39</h2>
+
   <main class="govuk-main-wrapper">
     <div class="prototype-write-up">
+
       <div class="govuk-grid-row">
 
-        <div class="govuk-grid-column-two-thirds"">
-                  <h2 class=" govuk-heading-l">Sprint 39</h2>
+        <div class="govuk-grid-column-one-half"">
+      <h5 class=" govuk-heading-m">Record view</h5>
+          <div class="app-most-recent">
+            {% include 'notes/wf-sprint39.html' %}
+          </div>
         </div>
 
         <div class="govuk-grid-column-one-half"">
+      <h5 class=" govuk-heading-m">New claims</h5>
+          <div class="app-most-recent">
+            {% include 'notes/wf-sprint39b.html' %}
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds"">
+        </div>
+
+        <div class=" govuk-grid-column-one-half"">
 
           <h5 class=" govuk-heading-m">Record view</h5>
           <div class="app-most-recent">
@@ -38,20 +58,6 @@ Winter Fuel Payments
           <h5 class=" govuk-heading-m">New claims</h5>
           <div class="app-most-recent">
             {% include 'notes/wf-sprint37.html' %}
-          </div>
-        </div>
-
-      </div>
-
-      <br>
-
-      <div class="govuk-grid-row">
-
-        <div class="govuk-grid-column-one-half"">
-
-  <h5 class=" govuk-heading-m">Record view</h5>
-          <div class="app-most-recent">
-            {% include 'notes/wf-sprint39.html' %}
           </div>
         </div>
 
