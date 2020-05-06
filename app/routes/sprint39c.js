@@ -132,7 +132,7 @@ router.post('/sprint39c/contact-preferences', (req, res) => {
 
 // Address -------------------------------------------------------------------
 router.post('/sprint39c/address', function(req, res) {
-  if (req.body['postcode'] === 'NE2 1YL') {
+  if (req.body['postcode'] === 'NE3 1QD') {
     res.redirect('address-no-result');
   } else if (req.body['postcode'] === "NE65 0AP") {
     res.redirect('address-carehome');
