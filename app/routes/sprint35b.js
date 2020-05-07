@@ -79,6 +79,10 @@ router.post('/sprint35b/address', function(req, res) {
     res.redirect('address-carehome');
   } else if (req.body['postcode'] === "ne65 0ap") {
     res.redirect('address-carehome');
+  } else if (req.body['postcode'] === "ne650ap") {
+    res.redirect('address-carehome');
+  } else if (req.body['postcode'] === "NE650AP") {
+    res.redirect('address-carehome');
   } else {
     res.redirect('address-1');
   }
