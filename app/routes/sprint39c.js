@@ -32,13 +32,9 @@ router.post('/sprint39c/find-1', (req, res) => {
 
 // Security to extra security (failed question)
 router.post('/sprint39c/security', (req, res) => {
-  res.redirect('/sprint39c/security-extra')
-});
-
-//
-router.post('/sprint39c/security-extra', (req, res) => {
   res.redirect('/sprint39c/overview-security')
 });
+
 
 //
 router.post('/sprint39c/contact-preferences', (req, res) => {
@@ -256,12 +252,8 @@ router.post('/sprint39c/declaration', function(req, res) {
 
 
 // Overpayment recoverable?
-router.post('/sprint39c/over-payment', function(req, res) {
-  if (req.body['recoverable'] === 'yes') {
-    res.redirect('recoverable-payment');
-  } else {
-    res.redirect('overview-changed');
-  }
+router.post('/sprint39c/over-payment', (req, res) => {
+  res.redirect('/sprint39c/overview-overpayment')
 });
 
 // Check to payments
