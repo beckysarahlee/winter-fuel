@@ -268,7 +268,7 @@ router.post('/sprint39c/check', (req, res) => {
 
 // Make payment to contact
 router.post('/sprint39c/make-payment', (req, res) => {
-  res.redirect('/sprint39c/overview-topup-1')
+  res.redirect('/sprint39c/overview-topup')
 });
 
 
