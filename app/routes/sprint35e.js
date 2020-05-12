@@ -138,4 +138,18 @@ router.post('/sprint35e/pension-credit-ch', function(req, res) {
 });
 
 
+// full payment to find someone
+router.post('/sprint35e/full-payment', (req, res) => {
+  res.redirect('/sprint39c/find')
+})
+;
+
+// shared payment to find someone
+router.post('/sprint35e/shared-payment', (req, res) => {
+  res.redirect('/sprint39c/find')
+})
+;
+
+
+
   module.exports = router;
