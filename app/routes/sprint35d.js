@@ -9,6 +9,11 @@ router.use((req, res, next) => {
   })
 
   // Address to address found
+  router.post('/sprint35d/fix-po-box', (req, res) => {
+    res.redirect('/sprint35d/overview-po-box')
+  });
+
+  // Address to address found
   router.post('/sprint35d/address', (req, res) => {
     res.redirect('/sprint35d/address-1')
   });
