@@ -96,7 +96,7 @@ router.use((req, res, next) => {
 
   // Cannot fix PO now
   router.post('/sprint35d/cannot-fix-po', (req, res) => {
-    res.redirect('/sprint35d/fix-po-box')
+    res.redirect('/sprint35d/fix-po-box-not-fixed')
   });
 
 
