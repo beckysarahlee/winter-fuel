@@ -5,7 +5,7 @@ GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-{% include './_find-someone.html' %}
+{% include './_fix-po-box.html' %}
 {% endblock %}
 
 {% block content %}
@@ -22,36 +22,30 @@ GOV.UK Prototype Kit
         <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
 
         <div class="moj-banner__message">
-        <span class="moj-banner__assistive">Success</span>Record details updated</div>
+        <span class="moj-banner__assistive">Success</span>Record details updated 🚧<br>
+                <a href="fix-po-box" class="govuk-link">Get next case 🚧</a></div>
 
         </div>
 
       <form method="post">
 
-{% include './_bar.html' %}
+            <div>
+              <h1 class="govuk-heading-xl">
+                Izabela Regan<br>
+                <span class="govuk-body-l">
+                  {% if data['nino'] %}
+                  {{data['nino']}}
+                  {% else %}
+                  XX 12 34 56
+                  {% endif %}<br>
+                </span>
+              </h1>
+            </div>
+
 
             {% include './_tab-overview.html' %}
 
             <br>
-            <br>
-
-                        <table class="govuk-table">
-                        <h2 class="govuk-heading-m">2019 payment</h2>
-                        <tbody class="govuk-table__body">
-                            <tr class="govuk-table__row">
-                              <th scope="col" class="govuk-table__header">Payment date</th>
-                              <th scope="col" class="govuk-table__header">Amount</th>
-                              <th scope="col" class="govuk-table__header">Status</th>
-                            </tr>
-                            <tr class="govuk-table__row">
-                              <td class="govuk-table__cell">Monday, 4 November 2019</td>
-                              <td class="govuk-table__cell">£100</td>
-                              <td class="govuk-table__cell">Paid</td>
-                            </tr>
-                          </tbody>
-                        </table>
-
-
             <br>
 
             <table class="govuk-table">
