@@ -15,7 +15,7 @@ router.use((req, res, next) => {
 
   // Home phone number change to living with q
   router.post('/sprint35d/approve-po-box', (req, res) => {
-    res.redirect('/sprint35d/overview-po-box-approved')
+    res.redirect('/sprint35d/living-with-po')
   });
 
 
@@ -43,12 +43,27 @@ router.use((req, res, next) => {
     }
   });
 
-  // Living with age back to contact
+  // Living with anyone at PO box
+  router.post('/sprint35d/living-with-po', function(req, res) {
+    if (req.body['living-with'] === 'Lives with someone else of State Pension age') {
+      res.redirect('living-with-age-po');
+    } else {
+      res.redirect('declaration-po');
+    }
+  });
+
+
+  // Living with age to POA
+  router.post('/sprint35d/living-with-age-po', (req, res) => {
+    res.redirect('/sprint35d/poa-po')
+  });
+
+  // Living with age to POA
   router.post('/sprint35d/living-with-age', (req, res) => {
     res.redirect('/sprint35d/poa')
   });
 
-  // Living with age back to contact
+  // Declaration to overview
   router.post('/sprint35d/declaration', (req, res) => {
     res.redirect('/sprint35d/overview-changed')
   });
@@ -61,6 +76,16 @@ router.use((req, res, next) => {
     } else {
       res.redirect('declaration');
     }
+  });
+
+  // POA to
+  router.post('/sprint35d/poa-po', (req, res) => {
+    res.redirect('/sprint35d/declaration-po')
+  });
+
+  // POA to
+  router.post('/sprint35d/declaration-po', (req, res) => {
+    res.redirect('/sprint35d/overview-po-box-approved')
   });
 
 
