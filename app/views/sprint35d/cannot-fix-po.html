@@ -18,7 +18,21 @@ GOV.UK Prototype Kit
 
                   <form method="post">
 
-                    {% include './_bar.html' %}
+                    <div>
+                      <h1 class="govuk-heading-xl">
+                        Izabela Regan<br>
+                        <span class="govuk-body-l">
+                          {% if data['nino'] %}
+                          {{data['nino']}}
+                          {% else %}
+                          XX 12 34 56
+                          {% endif %}<br>
+                          <strong class="govuk-tag govuk-tag--orange">
+                            PO box not approved
+                          </strong>
+                        </span>
+                      </h1>
+                    </div>
 
                         {{ govukBackLink({
                             text: "Back",

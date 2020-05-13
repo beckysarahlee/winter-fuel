@@ -53,7 +53,7 @@ router.use((req, res, next) => {
     if (req.body['living-with'] === 'Lives with someone else of State Pension age') {
       res.redirect('living-with-age-po');
     } else {
-      res.redirect('declaration-po');
+      res.redirect('poa-po');
     }
   });
 
@@ -91,6 +91,12 @@ router.use((req, res, next) => {
   // POA to
   router.post('/sprint35d/declaration-po', (req, res) => {
     res.redirect('/sprint35d/overview-po-box-approved')
+  });
+
+
+  // Cannot fix PO now
+  router.post('/sprint35d/cannot-fix-po', (req, res) => {
+    res.redirect('/sprint35d/fix-po-box')
   });
 
 
