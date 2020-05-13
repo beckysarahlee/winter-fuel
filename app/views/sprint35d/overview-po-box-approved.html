@@ -5,7 +5,7 @@ GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-{% include './_find-someone.html' %}
+{% include './_fix-po-box.html' %}
 {% endblock %}
 
 {% block content %}
@@ -21,7 +21,8 @@ GOV.UK Prototype Kit
 <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
 
 <div class="moj-banner__message">
-<span class="moj-banner__assistive">Success</span>PO Box approved</div>
+<span class="moj-banner__assistive">Success</span>PO Box approved <br>
+        <a href="fix-po-box" class="govuk-link">Get next case</a></div>
 
 </div>
 
@@ -100,6 +101,16 @@ GOV.UK Prototype Kit
                   {% else %}
                   ABC Innovation Inc<br>
                   PO Box 2033<br>
+                  {% endif %}
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Occupancy</th>
+                <td class="govuk-table__cell">
+                  {% if data['living-with'] %}
+                  {{data['living-with']}}
+                    {% else %}
+                    Lives with someone else of State Pension age
                   {% endif %}
                 </td>
               </tr>
