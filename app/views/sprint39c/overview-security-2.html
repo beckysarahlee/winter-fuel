@@ -28,48 +28,52 @@ GOV.UK Prototype Kit
 
 {% include './_bar.html' %}
 
-            {% include './_tab-overview-topup.html' %}
+            {% include './_tab-overview.html' %}
 
             <br>
             <br>
 
             <table class="govuk-table">
             <h2 class="govuk-heading-m">2019 payment</h2>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header"></th>
+              </tr>
+            </thead>
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Monday, 4 November 2019</th>
-                  <td class="govuk-table__cell">£100</td>
-                  <td class="govuk-table__cell">Paid</td>
+                  <th scope="row" class="govuk-table__header">Payment date</th>
+                  <td class="govuk-table__cell">Monday, 4 November 2019</td>
                 </tr>
                 <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Friday, 24 January 2020</th>
-                  <td class="govuk-table__cell">£100 (top-up)</td>
-                  <td class="govuk-table__cell">Sent</td>
+                  <th scope="row" class="govuk-table__header">Amount</th>
+                  <td class="govuk-table__cell">£200</td>
                 </tr>
               </tbody>
             </table>
 
+<br>
 
             <table class="govuk-table">
-            <h2 class="govuk-heading-m">Qualification details</h2>
+                  <h2 class="govuk-heading-m">Qualification details</h2>
+              <a href="address" <span class="govuk-link govuk-!-font-size-19" style="margin-left: 80%">Update details</span>
+              </a>
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header"></th>
+                  <th scope="col" class="govuk-table__header"></th>
+                </tr>
+              </thead>
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Age</th>
                   <td class="govuk-table__cell">66</td>
-                  <td class="govuk-table__cell">
-                    <a href="address">
-                      <span class="govuk-visually-hidden">Change address</span>
-                    </a>
-                  </td>
+                  <td class="govuk-table__cell"></td>
                 </tr>
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Date of birth</th>
                   <td class="govuk-table__cell">9 August 1953</td>
-                  <td class="govuk-table__cell">
-                    <a href="address">
-                      <span class="govuk-visually-hidden">Change address</span>
-                    </a>
-                  </td>
                 </tr>
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Address</th>
@@ -84,12 +88,6 @@ GOV.UK Prototype Kit
                     FK55 8XN
                     {% endif %}
                   </td>
-                  <td class="govuk-table__cell">
-                    <a href="address">
-                      Change
-                      <span class="govuk-visually-hidden">Change address</span>
-                    </a>
-                  </td>
                 </tr>
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Occupancy</th>
@@ -97,34 +95,19 @@ GOV.UK Prototype Kit
                     {% if data['living-with'] %}
                     {{data['living-with']}}
                       {% else %}
-                      Lives with someone else of State Pension age
-                    {% endif %}</td>
-                    <td class="govuk-table__cell">
-                      <a href="address">
-
-                        <span class="govuk-visually-hidden">Change address</span>
-                      </a>
-                    </td>
+                      Does not live with anyone else of State Pension age
+                    {% endif %}
+                  </td>
                 </tr>
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Date they moved in</th>
                   <td class="govuk-table__cell">
                     6 March 2016
                   </td>
-                  <td class="govuk-table__cell">
-                    <a href="address">
-                      Change
-                      <span class="govuk-visually-hidden">Change address</span>
-                    </a>
-                  </td>
                 </tr>
               </tbody>
             </table>
 
-      </div>
-
-      <div class="govuk-grid-column-one-third">
-        {% include './_action-history2.html' %}
       </div>
 
     </div>

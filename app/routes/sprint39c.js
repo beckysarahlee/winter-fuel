@@ -30,9 +30,14 @@ router.post('/sprint39c/find-1', (req, res) => {
   res.redirect('/sprint39c/security')
 });
 
-// Security to extra security (failed question)
-router.post('/sprint39c/security', (req, res) => {
-  res.redirect('/sprint39c/overview-security')
+// security to record
+
+router.post('/sprint39c/security', function(req, res) {
+  if (req.session.data['nino'] === 'AX 04 99 84 C') {
+    res.redirect('overview-security-2');
+  } else {
+    res.redirect('overview-security');
+  }
 });
 
 
@@ -192,7 +197,11 @@ router.post('/sprint39c/homephone-address', function(req, res) {
     }
     else if (req.session.data["movemonth"] === "08") {
       res.redirect('living-with-q-week');
+    } else if (req.session.data["movemonth"] === "8") {
+      res.redirect('living-with-q-week');
     } else if (req.session.data["movemonth"] === "07") {
+      res.redirect('living-with-q-week');
+    } else if (req.session.data["movemonth"] === "7") {
       res.redirect('living-with-q-week');
     } else {
       res.redirect('living-with');
@@ -243,7 +252,11 @@ router.post('/sprint39c/poa-people', (req, res) => {
 router.post('/sprint39c/declaration', function(req, res) {
     if (req.session.data["movemonth"] === "08") {
       res.redirect('make-payment');
+    } else if (req.session.data["movemonth"] === "8") {
+      res.redirect('make-payment');
     } else if (req.session.data["movemonth"] === "07") {
+      res.redirect('over-payment');
+    } else if (req.session.data["movemonth"] === "7") {
       res.redirect('over-payment');
     } else {
       res.redirect('overview-changed');
