@@ -256,6 +256,10 @@ router.post('/sprint39c/declaration', function(req, res) {
       res.redirect('make-payment');
     } else if (req.session.data["movemonth"] === "8") {
       res.redirect('make-payment');
+    } else if (req.session.data["movemonth"] === "06") {
+      res.redirect('new-payment');
+    } else if (req.session.data["movemonth"] === "6") {
+      res.redirect('new-payment');
     } else if (req.session.data["movemonth"] === "07") {
       res.redirect('over-payment');
     } else if (req.session.data["movemonth"] === "7") {
@@ -290,6 +294,12 @@ router.post('/sprint39c/make-payment', function(req, res) {
     } else {
       res.redirect('overview-topup');
     }
+});
+
+
+// new payment to overview
+router.post('/sprint39c/new-payment', (req, res) => {
+  res.redirect('/sprint39c/overview-new-payment')
 });
 
 
