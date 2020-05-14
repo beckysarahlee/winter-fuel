@@ -35,6 +35,8 @@ router.post('/sprint39c/find-1', (req, res) => {
 router.post('/sprint39c/security', function(req, res) {
   if (req.session.data['nino'] === 'AX 04 99 84 C') {
     res.redirect('overview-security-2');
+  } else if (req.session.data['nino'] === "JH 34 66 19 D") {
+    res.redirect('overview-security-3');
   } else {
     res.redirect('overview-security');
   }
@@ -280,8 +282,14 @@ router.post('/sprint39c/check', (req, res) => {
 });
 
 // Make payment to contact
-router.post('/sprint39c/make-payment', (req, res) => {
-  res.redirect('/sprint39c/overview-topup')
+router.post('/sprint39c/make-payment', function(req, res) {
+    if (req.session.data["movemonth"] === "06") {
+      res.redirect('overview-new-payment');
+    } else if (req.session.data["movemonth"] === "6") {
+      res.redirect('overview-new-payment');
+    } else {
+      res.redirect('overview-topup');
+    }
 });
 
 
