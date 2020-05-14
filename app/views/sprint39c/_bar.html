@@ -5,7 +5,16 @@
 
         <div>
           <h1 class="govuk-heading-xl">
-            Carmel Bouvet<br>
+            {% if data['nino'] === 'MB 22 41 44 C' %}
+            Carmel Bouvet
+            {% endif %}
+            {% if data['nino'] === 'AX 04 99 84 C' %}
+                Olivia Christie
+            {% elseif data['nino'] === 'JH 34 66 19 D' %}
+            Asim Picket
+            {% else %}
+            Becky Smith
+            {% endif %}<br>
                             <span class="govuk-body-l">
                               {% if data['nino'] %}
                                 {{data['nino']}}

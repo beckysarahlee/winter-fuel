@@ -2,7 +2,16 @@
   <div class="moj-identity-bar__container">
     <div class="moj-identity-bar__details">
       <span class="moj-identity-bar__title"><b>
-        Carmel Bouvet</b></span>
+        {% if data['nino'] === 'MB 22 41 44 C' %}
+        Carmel Bouvet
+        {% endif %}
+        {% if data['nino'] === 'AX 04 99 84 C' %}
+            Olivia Christie
+        {% elseif data['nino'] === 'JH 34 66 19 D' %}
+        Asim Picket
+        {% else %}
+        Becky Smith
+        {% endif %}</b></span>
     </div>
     <div class="moj-identity-bar__details">
       <span class="moj-identity-bar__title">

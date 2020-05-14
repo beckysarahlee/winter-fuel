@@ -23,10 +23,18 @@ GOV.UK Prototype Kit
       Can you confirm your full name?<br>
     </h1>
 
-
-      <p class="govuk-body-l">Carmel Bouvet</p>
-
-      <br>
+    <p class="govuk-body-l">Name:
+    {% if data['nino'] === 'MB 22 41 44 C' %}
+    Carmel Bouvet
+    {% endif %}
+    {% if data['nino'] === 'AX 04 99 84 C' %}
+        Olivia Christie
+    {% elseif data['nino'] === 'JH 34 66 19 D' %}
+    Asim Picket
+    {% else %}
+    Becky Smith
+    {% endif %}
+    </p>
 
         <button type="submit" class="govuk-button">
           Confirm name

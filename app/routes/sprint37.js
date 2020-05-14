@@ -45,15 +45,10 @@ router.use((req, res, next) => {
 
   // Address during Q week
   router.post('/sprint37-international/address', (req, res) => {
-    res.redirect('/sprint37-international/move-date')
-  })
-  ;
-
-  // Name to address
-  router.post('/sprint37-international/move-date', (req, res) => {
     res.redirect('/sprint37-international/living-with')
   })
   ;
+
 
   //
   router.post('/sprint37-international/living-with', function(req, res) {
