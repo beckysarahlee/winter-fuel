@@ -27,10 +27,13 @@ router.use((req, res, next) => {
 
   // Living
 
-  router.post('/sprint40a/residency', (req, res) => {
-    res.redirect('/sprint40a/residency-type')
-  })
-  ;
+  router.post('/sprint40a/residency', function(req, res) {
+    if ( req.body['living'] === 'overseas' ) {
+      res.redirect('overseas-1');
+    } else {
+      res.redirect('residency-type');
+    }
+  });
 
 
   // Residency type SP
