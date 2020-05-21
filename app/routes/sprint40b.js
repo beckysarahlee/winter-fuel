@@ -49,8 +49,16 @@ router.use((req, res, next) => {
     res.redirect('/sprint40b/homephone-address')
   });
 
-  // Home phone number change to living with q
-  router.post('/sprint40b/homephone-address', (req, res) => {
+  // Home phone number change
+  router.post('/sprint40b/homephone-address', function(req, res) {
+    if (req.body['homephone-address'] === 'Yes') {
+      res.redirect('homephone-address-change');
+    } else {
+      res.redirect('living-with');
+    }
+  });
+
+  router.post('/sprint40b/homephone-address-change', (req, res) => {
     res.redirect('/sprint40b/living-with')
   });
 
@@ -85,7 +93,7 @@ router.use((req, res, next) => {
 
   // Declaration to overview
   router.post('/sprint40b/declaration', (req, res) => {
-    res.redirect('/sprint40b/overview-changed')
+    res.redirect('/sprint40b/make-payment')
   });
 
 
@@ -105,15 +113,13 @@ router.use((req, res, next) => {
 
   // POA to
   router.post('/sprint40b/declaration-po', (req, res) => {
-    res.redirect('/sprint40b/overview-po-box-approved')
+    res.redirect('/sprint40b/make-payment')
   });
 
-
-  // Cannot fix PO now
-  router.post('/sprint40b/cannot-fix-po', (req, res) => {
-    res.redirect('/sprint40b/fix-po-box-not-fixed')
-  });
-
+// Make the payment back to view of the record
+router.post('/sprint40b/make-payment', (req, res) => {
+  res.redirect('/sprint40b/overview-changed')
+});
 
 
   module.exports = router;
