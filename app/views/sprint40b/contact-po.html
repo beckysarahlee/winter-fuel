@@ -96,13 +96,8 @@ GOV.UK Prototype Kit
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Correspondence address</th>
                 <td class="govuk-table__cell">
-                  {% if data['correspondence-address-change'] %}
-                  {{data['correspondence-address-change'].split(', ').join('<br />') | safe }}
-                  {% elif data.address %}
-                  {{data.address.split(', ').join('<br />') | safe}}
-                  {% else %}
-
-                  {% endif %}
+                  ABC Innovation Inc<br>
+                  PO Box 2033
                 </td>
                 <td class="govuk-table__cell">
                   <a href="correspondence-address">
