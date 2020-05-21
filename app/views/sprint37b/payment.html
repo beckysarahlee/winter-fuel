@@ -45,18 +45,18 @@ GOV.UK Prototype Kit
                 <th scope="row" class="govuk-table__header">Name on the account</th>
                 <td class="govuk-table__cell">
                   {% if data['accountholder'] %}
-                    {{data['accountholder']}}
+                  {{data['accountholder']}}
                   {% else %}
-                    T Best
+                  T Best
                   {% endif %}
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Sort code</th>
                 <td class="govuk-table__cell">
                   {% if data['sortcode'] %}
-                    {{data['sortcode']}}
+                  {{data['sortcode']}}
                   {% else %}
-                    00 11 22
+                  00 11 22
                   {% endif %}
                 </td>
               </tr>
@@ -64,7 +64,7 @@ GOV.UK Prototype Kit
                 <th scope="row" class="govuk-table__header">Account number</th>
                 <td class="govuk-table__cell">
                   {% if data['accountnumber'] %}
-                    {{data['accountnumber']}}
+                  {{data['accountnumber']}}
                   {% else %}
                   ****5678
                   {% endif %}
@@ -75,55 +75,37 @@ GOV.UK Prototype Kit
 
           <br>
 
-        <h2 class="govuk-heading-m">Payment history</h2>
 
-<p><a href="stop-payments" class="govuk-link">Opty outy paymentos?</a></p>
+          <table class="govuk-table">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Payment date</th>
+                <th scope="col" class="govuk-table__header">Amount</th>
+                <th scope="col" class="govuk-table__header">Status</th>
+                <th scope="col" class="govuk-table__header"></th>
+              </tr>
 
-        <table class="govuk-table">
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Payment date</th>
-              <th scope="col" class="govuk-table__header">Amount</th>
-              <th scope="col" class="govuk-table__header">Status</th>
-              <th scope="col" class="govuk-table__header"></th>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">2 November 2020</td>
-              <td class="govuk-table__cell">£100</td>
-              <td class="govuk-table__cell">Pending</td>
-              <td class="govuk-table__cell"><a href="previous-payment-pending" class="govuk-link">Details</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">29 October 2019</td>
-              <td class="govuk-table__cell">£100</td>
-              <td class="govuk-table__cell">Paid</td>
-              <td class="govuk-table__cell"><a href="previous-payment" class="govuk-link">Details</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">29 October 2019</td>
-              <td class="govuk-table__cell">£200</td>
-              <td class="govuk-table__cell">Cancelled</td>
-              <td class="govuk-table__cell"><a href="cancelled-payment" class="govuk-link">Details</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">29 October 2018</td>
-              <td class="govuk-table__cell">£200</td>
-              <td class="govuk-table__cell">Paid</td>
-              <td class="govuk-table__cell"><a href="previous-payment" class="govuk-link">Details</a></td>
-            </tr>
-          </tbody>
-        </table>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Monday, 4 November 2020</td>
+                <td class="govuk-table__cell">£200</td>
+                <td class="govuk-table__cell">Paid</td>
+                <td class="govuk-table__cell"><a href="previous-payment-pending" class="govuk-link">Details</a></td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Wedneday, 20 November 2019</td>
+                <td class="govuk-table__cell">£200</td>
+                <td class="govuk-table__cell">Paid</td>
+                <td class="govuk-table__cell"><a href="previous-payment-pending" class="govuk-link">Details</a></td>
+              </tr>
+            </tbody>
+          </table>
 
       </div>
 
-      <div class="govuk-grid-column-one-third">
-          {% include './_history.html' %}
-        </div>
-
-
     </div>
 
-    </div>
+</div>
 
 </div>
 

@@ -38,17 +38,15 @@ GOV.UK Prototype Kit
                         <table class="govuk-table">
                         <h2 class="govuk-heading-m">2019 payment</h2>
                         <tbody class="govuk-table__body">
-                            <tr class="govuk-table__row">
-                              <th scope="col" class="govuk-table__header">Payment date</th>
-                              <th scope="col" class="govuk-table__header">Amount</th>
-                              <th scope="col" class="govuk-table__header">Status</th>
-                            </tr>
-                            <tr class="govuk-table__row">
-                              <td class="govuk-table__cell">Monday, 4 November 2019</td>
-                              <td class="govuk-table__cell">£100</td>
-                              <td class="govuk-table__cell">Paid</td>
-                            </tr>
-                          </tbody>
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Payment date</th>
+                            <td class="govuk-table__cell">Monday, 4 November 2020</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Amount</th>
+                            <td class="govuk-table__cell">£200</td>
+                          </tr>
+                        </tbody>
                         </table>
 
 
@@ -101,7 +99,12 @@ GOV.UK Prototype Kit
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Date they moved in</th>
                   <td class="govuk-table__cell">
-                    8 August 2019
+                    {% if data['moveday'] %}
+                    {{data['moveday']}} July 2020
+                      {% else %}
+                      15 July 2020
+                    {% endif %}
+                  </td>
                   </td>
                 </tr>
               </tbody>
