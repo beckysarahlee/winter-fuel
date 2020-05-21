@@ -109,7 +109,11 @@ GOV.UK Prototype Kit
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Date they moved in</th>
                   <td class="govuk-table__cell">
-                    8 August 2019
+                    {% if data['moveday'] %}
+                    {{data['moveday']}} June 2012
+                      {% else %}
+                      8 June 2012
+                    {% endif %}
                   </td>
                 </tr>
               </tbody>
