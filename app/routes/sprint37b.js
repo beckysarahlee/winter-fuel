@@ -32,14 +32,8 @@ router.post('/sprint37b/find-1', (req, res) => {
 
 // Security to extra security (failed question)
 router.post('/sprint37b/security', (req, res) => {
-  res.redirect('/sprint37b/security-extra')
-});
-
-//
-router.post('/sprint37b/security-extra', (req, res) => {
   res.redirect('/sprint37b/overview-security')
 });
-
 //
 router.post('/sprint37b/contact-preferences', (req, res) => {
   res.redirect('/sprint37b/overview')
