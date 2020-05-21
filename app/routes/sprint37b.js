@@ -192,6 +192,8 @@ router.post('/sprint37b/homephone-address', function(req, res) {
       res.redirect('living-with-q-week');
     } else if (req.session.data["movemonth"] === "07") {
       res.redirect('living-with-q-week');
+    } else if (req.session.data["movemonth"] === "7") {
+      res.redirect('living-with-q-week');
     } else {
       res.redirect('living-with');
     }
