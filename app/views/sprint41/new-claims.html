@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block header %}
+{% include './_header-agent-claim.html' %}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">New claim</h1>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+              UK or international claim? 🏗️
+              </h1>
+            </legend>
+            <div class="govuk-radios govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="changed-name">
+                  UK
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                  International
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+    {% endblock %}
