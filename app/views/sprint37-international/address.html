@@ -24,7 +24,7 @@ GOV.UK Prototype Kit
         <br>
         <br>
 
-        <h1 class="govuk-heading-xl">What is your address? 👷</h1>
+        <h1 class="govuk-heading-xl">Address</h1>
         <form method="post">
 
           <fieldset class="govuk-fieldset">
@@ -73,25 +73,61 @@ GOV.UK Prototype Kit
           </fieldset>
 
           <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="living-q-week-hint">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                 <h1 class="govuk-fieldset__heading">
-                  Were you living at this address during (qualifying week)?👷
+                  When did you move to this address?
                 </h1>
               </legend>
-              <span id="living-q-week-hint" class="govuk-hint">
-                If post q week👷
+              <span id="passport-issued-hint" class="govuk-hint">
+                For example, 27 3 2007
               </span>
+              <div class="govuk-date-input" id="move-day">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="move-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="move-day" name="move-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="move-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="move-month" name="move-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="move-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="move-year" name="move-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="living-with-anyone-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                  Do you live with anyone at this address?
+                </h1>
+              </legend>
               <div class="govuk-radios govuk-radios--inline">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="living-q-week" name="living-q-week" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="living-q-week">
+                  <input class="govuk-radios__input" id="living-with-anyone" name="living-with-anyone" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="living-with-anyone">
                     Yes
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="living-q-week-2" name="living-q-week" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="living-q-week-2">
+                  <input class="govuk-radios__input" id="living-with-anyone-2" name="living-with-anyone" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="living-with-anyone-2">
                     No
                   </label>
                 </div>
