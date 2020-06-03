@@ -58,16 +58,24 @@ router.post('/sprint37-international/address', function(req, res) {
 });
 
 // Living with details to contact or q week address
-router.post('/sprint37-international/address', function(req, res) {
-  if (req.session.data["living-with-anyone"] === "yes") {
-    res.redirect('living-with');
-  } else if (req.session.data['move-month'] === "10") {
+router.post('/sprint37-international/living-with', function(req, res) {
+  if (req.session.data["move-month"] === "10") {
     res.redirect('address-q-week');
   } else {
     res.redirect('contact');
   }
 });
 
+// Address Q week to contact details
+router.post('/sprint37-international/address-q-week', (req, res) => {
+  res.redirect('/sprint37-international/contact')
+});
+
+
+// Contact details to bank details
+router.post('/sprint37-international/contact', (req, res) => {
+  res.redirect('/sprint37-international/bank-details')
+});
 
 
 

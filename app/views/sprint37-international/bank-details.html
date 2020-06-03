@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include './_start_again.html' %}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        {{ govukBackLink({
+            text: "Back",
+            href: "javascript:history.go(-1)"
+          }) }}
+
+        <br>
+        <br>
+
+        <h1 class="govuk-heading-xl">What are your bank or building society account details?</h1>
+
+        <p>This is the account we'll pay your Winter Fuel Payment into.</p>
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+</div>
+</main>
+</div>
+
+{% endblock %}
