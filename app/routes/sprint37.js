@@ -117,6 +117,26 @@ router.post('/sprint37-international/q-week', (req, res) => {
   res.redirect('/sprint37-international/returning-to-uk')
 });
 
+// Returning to the UK to benefits questions
+router.post('/sprint37-international/returning-to-uk', (req, res) => {
+  res.redirect('/sprint37-international/benefits')
+});
+
+// Benefit and pension information to any other links
+router.post('/sprint37-international/benefits', (req, res) => {
+  res.redirect('/sprint37-international/any-other-links')
+});
+
+// Any other links to declaration
+router.post('/sprint37-international/any-other-links', (req, res) => {
+  res.redirect('/sprint37-international/declaration')
+});
+
+// Declaration to THE END!
+router.post('/sprint37-international/declaration', (req, res) => {
+  res.redirect('/sprint37-international/complete')
+});
+
 
 
 
