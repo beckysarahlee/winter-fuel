@@ -104,7 +104,17 @@ router.post('/sprint37-international/other-nationalities', (req, res) => {
 
 // Work periods to information about links to UK
 router.post('/sprint37-international/work', (req, res) => {
-  res.redirect('/sprint37-international/work')
+  res.redirect('/sprint37-international/uk-info')
+});
+
+// Work periods to information about links to UK
+router.post('/sprint37-international/uk-info', (req, res) => {
+  res.redirect('/sprint37-international/q-week')
+});
+
+// Q week questions to reasons for returning to the UK
+router.post('/sprint37-international/q-week', (req, res) => {
+  res.redirect('/sprint37-international/returning-to-uk')
 });
 
 
