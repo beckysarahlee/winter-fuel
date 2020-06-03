@@ -77,6 +77,35 @@ router.post('/sprint37-international/contact', (req, res) => {
   res.redirect('/sprint37-international/bank-details')
 });
 
+// Bank details to info about living in UK
+router.post('/sprint37-international/bank-details', (req, res) => {
+  res.redirect('/sprint37-international/living-in-uk')
+});
+
+// Info about UK to info about living outside the UK
+router.post('/sprint37-international/living-in-uk', (req, res) => {
+  res.redirect('/sprint37-international/living-outside-uk')
+});
+
+// Info about living outside the UK to UK family details
+router.post('/sprint37-international/living-outside-uk', (req, res) => {
+  res.redirect('/sprint37-international/uk-family')
+});
+
+// UK family to other nationalities
+router.post('/sprint37-international/uk-family', (req, res) => {
+  res.redirect('/sprint37-international/other-nationalities')
+});
+
+// Other nationalities to work dates
+router.post('/sprint37-international/other-nationalities', (req, res) => {
+  res.redirect('/sprint37-international/work')
+});
+
+// Work periods to information about links to UK
+router.post('/sprint37-international/work', (req, res) => {
+  res.redirect('/sprint37-international/work')
+});
 
 
 
