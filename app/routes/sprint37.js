@@ -15,14 +15,14 @@ router.post('/sprint37-international/application-type', (req, res) => {
 });
 
 // Find to name
-router.post('/sprint37-international/find', (req, res) => {
-  res.redirect('/sprint37-international/confirm-name')
+router.post('/sprint37-international/find', function(req, res) {
+  if (req.session.data["nino"] === "HU 12 34 57") {
+    res.redirect('date-of-birth');
+  } else {
+    res.redirect('confirm-name');
+  }
 });
 
-// Confirm name to address
-router.post('/sprint37-international/find', (req, res) => {
-  res.redirect('/sprint37-international/confirm-name')
-});
 
 // Confirm name to DOB/international record/address
 router.post('/sprint37-international/confirm-name', function(req, res) {
@@ -37,9 +37,9 @@ router.post('/sprint37-international/confirm-name', function(req, res) {
 
 // Date of birth to address/too young
 router.post('/sprint37-international/date-of-birth', function(req, res) {
-  if (req.session.data["birth-year"] === "1965") {
+  if (req.session.data["dob-year"] === "1965") {
     res.redirect('too-young-post');
-  } else if (req.session.data['birth-year'] === "1964") {
+  } else if (req.session.data['dob-year'] === "1964") {
     res.redirect('too-young-phone');
   } else {
     res.redirect('address');
