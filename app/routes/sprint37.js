@@ -140,32 +140,4 @@ router.post('/sprint37-international/declaration', (req, res) => {
 
 
 
-
-// DOB to phone/postal journey
-router.post('/sprint37-international/date-of-birth', function(req, res) {
-  if (req.body["dob-year"] === "1960") {
-    res.redirect('post-too-young');
-  } else if (req.body["dob-year"] === "1959") {
-    res.redirect('phone-too-young');
-  } else {
-    res.redirect('address');
-  }
-});
-
-
-
-// Confi
-router.post('/sprint37-international/confirm-name', function(req, res) {
-  if (req.session.data["nino"] === "AB 12 34 57") {
-    res.redirect('international-record');
-  } else {
-    res.redirect('date-of-birth');
-  }
-});
-
-
-
-
-
-
 module.exports = router;
