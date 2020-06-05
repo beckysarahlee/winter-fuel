@@ -66,6 +66,20 @@ GOV.UK Prototype Kit
 
             </form>
 
+            {% if data['prototype-mode'] === 'dev' %}
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  DEV info
+                </span>
+              </summary>
+
+              <div class="govuk-details__text">
+                <p><b>Error message</b><br>
+                  Hello you need to select a bloody radio</p>
+            </details>
+            {% endif %}
+
       </div>
 
     </div>

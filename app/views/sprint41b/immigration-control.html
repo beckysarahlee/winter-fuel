@@ -10,11 +10,11 @@ GOV.UK Prototype Kit
   <div class="moj-identity-bar__container">
     <div class="moj-identity-bar__details">
       <span class="moj-identity-bar__title"><b>
-        {% if data['phone-post'] === 'phone' %}
-        Theodora Best
-        {% else %}
-        Samira Mcgill
-        {% endif %}</b></span>
+          {% if data['phone-post'] === 'phone' %}
+          Theodora Best
+          {% else %}
+          Samira Mcgill
+          {% endif %}</b></span>
     </div>
     <div class="moj-identity-bar__details">
       <span class="moj-identity-bar__title">
@@ -34,28 +34,42 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-            <form method="post">
+        <form method="post">
 
 
-<h1 class="govuk-heading-xl">Immigration control</h1>
+          <h1 class="govuk-heading-xl">Immigration control</h1>
 
 
 
 
 
-<button class="govuk-button" data-module="govuk-button">
-Continue
-</button>
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
 
-            </form>
+        </form>
+
+        {% if data['prototype-mode'] === 'dev' %}
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              DEV info
+            </span>
+          </summary>
+
+          <div class="govuk-details__text">
+            <p><b>Error message</b><br>
+              Hello you need to select a bloody radio</p>
+        </details>
+        {% endif %}
 
       </div>
 
     </div>
 
-  </div>
+</div>
 
-  </main>
-  </div>
+</main>
+</div>
 
-  {% endblock %}
+{% endblock %}
