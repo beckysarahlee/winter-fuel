@@ -8,6 +8,13 @@ router.use((req, res, next) => {
     next()
   })
 
+  // Prototype mode
+  router.post('/sprint41b/mode', (req, res) => {
+    res.redirect('/sprint41b/type-of-application')
+  })
+  ;
+
+
   // Teleclaim or postal claim
   router.post('/sprint41b/type-of-application', (req, res) => {
     res.redirect('/sprint41b/find')
