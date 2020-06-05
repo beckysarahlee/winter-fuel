@@ -33,8 +33,16 @@ GOV.UK Prototype Kit
 
             <h1 class="govuk-heading-xl">Citizen cannot be found</h1>
 
-            <p> This will say something helpful... at some point in the near future 💁🏻
-            <br>we can hope it doesn't happen until then</p>
+            <p>No citizen was found using National Insurance number 
+              {% if data['nino'] %}
+                  {{data['nino']}}
+                  {% else %}
+                  <span class="govuk-!-font-weight-bold">AB123456C</span>.
+                  {% endif %}
+            </p>
+            <button type="submit" class="govuk-button">
+              Enter National Insurance number again
+            </button>
 
 
           </form>
