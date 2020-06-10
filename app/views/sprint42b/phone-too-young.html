@@ -5,11 +5,10 @@ GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-{% include './_name_bar.html' %}
+{% include './_start_again.html' %}
 {% endblock %}
 
 {% block content %}
-
 
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
@@ -17,31 +16,25 @@ GOV.UK Prototype Kit
       <div class="govuk-grid-column-two-thirds">
 
         {{ govukBackLink({
-            text: "Back",
-            href: "javascript:history.go(-1)"
-          }) }}
+          text: "Back",
+          href: "javascript:history.go(-1)"
+        }) }}
 
         <br>
         <br>
 
-        <form method="post">
+        <h1 class="govuk-heading-xl">You do not qualify for a Winter Fuel Payment</h1>
 
-          <div class="govuk-panel govuk-panel--confirmation">
-                    <h1 class="govuk-panel__title">
-                      The end
-                    </h1>
-                  </div>
-
-
-        </form>
-
-
+      <p>
+      To qualify for a Winter Fuel Payment you must have been born on or before 5 April 1954.
+      </p>
 
       </div>
 
     </div>
 
 </div>
+
 </main>
 </div>
 

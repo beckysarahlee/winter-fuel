@@ -5,7 +5,7 @@ GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-{% include './_name_bar.html' %}
+{% include './_start_again.html' %}
 {% endblock %}
 
 {% block content %}
@@ -24,14 +24,16 @@ GOV.UK Prototype Kit
         <br>
         <br>
 
+        <h1 class="govuk-heading-xl">Can you confirm your name?</h1>
         <form method="post">
 
-          <div class="govuk-panel govuk-panel--confirmation">
-                    <h1 class="govuk-panel__title">
-                      The end
-                    </h1>
-                  </div>
+          <p class="govuk-body-l">Name: Terence Ward</p>
 
+<br>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Confirm name
+          </button>
 
         </form>
 
