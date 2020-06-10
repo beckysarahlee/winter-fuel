@@ -120,6 +120,17 @@ router.post('/sprint42b/living-outside-uk', function(req, res) {
   }
 });
 
+// living outside the uk, add more countries or moce to uk family
+router.post('/sprint42b/living-outside-about', function(req, res) {
+  if (req.session.data["living-outside-about"] === "yes") {
+    res.redirect('living-outside-about');
+  } else {
+    res.redirect('uk-family');
+  }
+});
+
+
+
 // UK family to other nationalities
 router.post('/sprint42b/uk-family', (req, res) => {
   res.redirect('/sprint42b/other-nationalities')
