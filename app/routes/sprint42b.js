@@ -157,18 +157,30 @@ router.post('/sprint42b/other-nationalities-about', function(req, res) {
 });
 
 
-// EEA partner details to work
+// EEA partner details to w
 router.post('/sprint42b/eea-partner', (req, res) => {
   res.redirect('/sprint42b/work')
 });
 
 
 
-// Work periods to information about links to UK
-router.post('/sprint42b/work', (req, res) => {
-  res.redirect('/sprint42b/uk-info')
+// Work periods to information about links to UK or info about working in UK
+router.post('/sprint42b/work', function(req, res) {
+  if (req.session.data["uk-work"] === "yes") {
+    res.redirect('work-in-uk');
+  } else {
+    res.redirect('uk-info');
+  }
 });
 
+// Working in the UK periods to uk info
+router.post('/sprint42b/work-in-uk', function(req, res) {
+  if (req.session.data["working-in-uk-another"] === "yes") {
+    res.redirect('work-in-uk');
+  } else {
+    res.redirect('uk-info');
+  }
+});
 
 
 // information about the UK - if owns property get info, if not go to q week questions
