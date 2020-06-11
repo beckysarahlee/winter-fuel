@@ -202,7 +202,7 @@ router.post('/sprint42c/work-in-uk', function(req, res) {
   if (req.session.data["working-in-uk"] === "yes") {
     res.redirect('work-in-uk-about');
   } else {
-    res.redirect('uk-info');
+    res.redirect('uk-business');
   }
 });
 
