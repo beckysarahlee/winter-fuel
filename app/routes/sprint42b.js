@@ -158,24 +158,44 @@ router.post('/sprint42b/other-nationalities-about', function(req, res) {
 
 
 
-
 // Work periods to information about links to UK
 router.post('/sprint42b/work', (req, res) => {
   res.redirect('/sprint42b/uk-info')
 });
 
-// Work periods to information about links to UK
-router.post('/sprint42b/uk-info', (req, res) => {
+
+
+// information about the UK - if owns property get info, if not go to q week questions
+router.post('/sprint42b/uk-info', function(req, res) {
+  if (req.session.data["property"] === "yes") {
+    res.redirect('uk-property-about');
+  } else {
+    res.redirect('q-week');
+  }
+});
+
+// UK property info input to work
+router.post('/sprint42b/uk-property-about', (req, res) => {
   res.redirect('/sprint42b/q-week')
 });
+
 
 // Q week questions to reasons for returning to the UK
 router.post('/sprint42b/q-week', (req, res) => {
   res.redirect('/sprint42b/returning-to-uk')
 });
 
-// Returning to the UK to benefits questions
-router.post('/sprint42b/returning-to-uk', (req, res) => {
+// Returning to the UK to more info or benefits questions
+router.post('/sprint42b/returning-to-uk', function(req, res) {
+  if (req.session.data["returned-again"] === "yes") {
+    res.redirect('returning-to-uk');
+  } else {
+    res.redirect('benefits');
+  }
+});
+
+// info about visits to the uk to benefits
+router.post('/sprint42b/returning-to-uk-about', (req, res) => {
   res.redirect('/sprint42b/benefits')
 });
 
