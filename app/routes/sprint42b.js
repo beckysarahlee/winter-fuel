@@ -157,6 +157,12 @@ router.post('/sprint42b/other-nationalities-about', function(req, res) {
 });
 
 
+// EEA partner details to work
+router.post('/sprint42b/eea-partner', (req, res) => {
+  res.redirect('/sprint42b/work')
+});
+
+
 
 // Work periods to information about links to UK
 router.post('/sprint42b/work', (req, res) => {
@@ -187,21 +193,39 @@ router.post('/sprint42b/q-week', (req, res) => {
 
 // Returning to the UK to more info or benefits questions
 router.post('/sprint42b/returning-to-uk', function(req, res) {
-  if (req.session.data["returned-again"] === "yes") {
-    res.redirect('returning-to-uk');
+  if (req.session.data["return"] === "yes") {
+    res.redirect('returning-to-uk-about');
   } else {
     res.redirect('benefits');
   }
 });
 
 // info about visits to the uk to benefits
-router.post('/sprint42b/returning-to-uk-about', (req, res) => {
-  res.redirect('/sprint42b/benefits')
+router.post('/sprint42b/returning-to-uk-About', function(req, res) {
+  if (req.session.data["returned-again"] === "yes") {
+    res.redirect('returning-to-uk-about');
+  } else {
+    res.redirect('benefits');
+  }
 });
 
 // Benefit and pension information to any other links
-router.post('/sprint42b/benefits', (req, res) => {
-  res.redirect('/sprint42b/any-other-links')
+router.post('/sprint42b/benefits', function(req, res) {
+  if (req.session.data["benefits-pensions"] === "yes") {
+    res.redirect('benefits-outside');
+  } else {
+    res.redirect('any-other-links');
+  }
+});
+
+
+// benefits outside the UK, more show screen again or no continue to any other links
+router.post('/sprint42b/benefits-outside', function(req, res) {
+  if (req.session.data["benefits-outside-add"] === "yes") {
+    res.redirect('benefits-outside');
+  } else {
+    res.redirect('any-other-links');
+  }
 });
 
 // Any other links to declaration
