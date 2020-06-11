@@ -136,10 +136,28 @@ router.post('/sprint42b/uk-family', (req, res) => {
   res.redirect('/sprint42b/other-nationalities')
 });
 
-// Other nationalities to work dates
-router.post('/sprint42b/other-nationalities', (req, res) => {
-  res.redirect('/sprint42b/work')
+// Other nationalities to more info work dates
+router.post('/sprint42b/other-nationalities', function(req, res) {
+  if (req.session.data['other-nationalities'] === "yes") {
+    res.redirect('other-nationalities-about');
+  } else if (req.session.data["no-nationality"] === "parter-eea") {
+  res.redirect('eea-partner');
+  } else {
+    res.redirect('work');
+  }
 });
+
+// Other nationalities about to add another or to work info
+router.post('/sprint42b/other-nationalities-about', function(req, res) {
+  if (req.session.data["more-nationalities"] === "yes") {
+    res.redirect('other-nationalities-about');
+  } else {
+    res.redirect('work');
+  }
+});
+
+
+
 
 // Work periods to information about links to UK
 router.post('/sprint42b/work', (req, res) => {
