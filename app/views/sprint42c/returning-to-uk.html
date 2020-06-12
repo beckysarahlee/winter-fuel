@@ -44,6 +44,16 @@ GOV.UK Prototype Kit
                   </label>
                 </div>
 
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-return-conditional">
+                  <p>We need <b>dates of any visits to the UK in the past 3 years</b> and <b>reasons for the visits</b>.</p>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="more-detail">
+                    Details
+                  </label>
+                  
+                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+                </div>
+                </div>
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="visit-conditional-2" name="return" type="radio" value="no" data-aria-controls="conditional-return-conditional-2">
                   <label class="govuk-label govuk-radios__label" for="return-conditional-2">

@@ -30,21 +30,21 @@ GOV.UK Prototype Kit
 
             <h1 class="govuk-heading-xl">About the people you live with</h1>
 
+            <p>We need the <b>full name, National Insurance number</b> and <b>date of birth</b> of anyone else in the house born before 5 April 1954.</p>
+
             <label class="govuk-label" for="more-detail">
-              Provide the <b>full name, National Insurance number</b> and <b>date of birth</b> of all the people you live with...
-              <br>I got over excited with the bold - sorry.
+               Details             
             </label>
-            <span id="more-detail-hint" class="govuk-hint">
-              Maybe a example here? Who knows.
-            </span>
+            
             <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="15" aria-describedby="more-detail-hint"></textarea>
           </div>
+          <br>
 
           <div class="govuk-form-group">
       <fieldset class="govuk-fieldset" aria-describedby="living-with-wf-conditional-hint">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
           <h1 class="govuk-fieldset__heading">
-            Has anyone you live with had a Winter Fuel payment?
+            Does anyone else in the household get a Winter Fuel Payment?
           </h1>
         </legend>
         <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
@@ -59,12 +59,10 @@ GOV.UK Prototype Kit
               <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                   <h1 class="govuk-fieldset__heading">
-                    When did they last get dollar?
+                    When did they last get a Winter Fuel Payment?
                   </h1>
                 </legend>
-                <span id="passport-issued-hint" class="govuk-hint">
-                  For example, 3 2019
-                </span>
+                
                 <div class="govuk-date-input" id="passport-issued">
                   <div class="govuk-date-input__item">
                     <div class="govuk-form-group">
@@ -83,6 +81,10 @@ GOV.UK Prototype Kit
                     </div>
                   </div>
                 </div>
+                <br>
+              <span id="move-hint" class="govuk-hint">
+                For example, 11 2007
+              </span>
               </fieldset>
             </div>
 

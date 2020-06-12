@@ -212,13 +212,9 @@ router.post('/sprint42c/work-in-uk-about', (req, res) => {
 });
 
 
-// UK business? if yes business info, if no UK property
+// UK business to UK property
 router.post('/sprint42c/uk-business', function(req, res) {
-  if (req.session.data["business"] === "yes") {
-    res.redirect('uk-business-about');
-  } else {
-    res.redirect('uk-property');
-  }
+    res.redirect('uk-property');  
 });
 
 // UK property info input to work
@@ -226,13 +222,9 @@ router.post('/sprint42c/uk-business-about', (req, res) => {
   res.redirect('/sprint42c/uk-property')
 });
 
-// UK property? if yes property info, if no q week
+// UK property to q week
 router.post('/sprint42c/uk-property', function(req, res) {
-  if (req.session.data["property"] === "yes") {
-    res.redirect('uk-property-about');
-  } else {
     res.redirect('q-week');
-  }
 });
 
 // UK property info input to work
@@ -247,13 +239,9 @@ router.post('/sprint42c/q-week', (req, res) => {
   res.redirect('/sprint42c/returning-to-uk')
 });
 
-// Returning to the UK to more info or benefits questions
+// Returning to the UK to benefits questions
 router.post('/sprint42c/returning-to-uk', function(req, res) {
-  if (req.session.data["return"] === "yes") {
-    res.redirect('returning-to-uk-about');
-  } else {
     res.redirect('benefits');
-  }
 });
 
 // info about visits to the uk to benefits
@@ -267,11 +255,7 @@ router.post('/sprint42c/returning-to-uk-About', function(req, res) {
 
 // Benefit and pension information to any other links
 router.post('/sprint42c/benefits', function(req, res) {
-  if (req.session.data["benefits-pensions"] === "yes") {
-    res.redirect('benefits-outside');
-  } else {
     res.redirect('any-other-links');
-  }
 });
 
 
