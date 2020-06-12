@@ -26,14 +26,12 @@ GOV.UK Prototype Kit
 
         <form method="post">
 
-          <h1 class="govuk-heading-xl">Benefits</h1>
-
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="uk-benefits-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                 <h1 class="govuk-fieldset__heading">
-                Were you getting UK State Pension or any other UK social security benefit during Q week?
+                Were you getting UK State Pension or any other UK social security benefit between 16 September and 22 September 2019?
                 </h1>
               </legend>
               <div class="govuk-radios govuk-radios">
@@ -67,6 +65,17 @@ GOV.UK Prototype Kit
                     Yes
                   </label>
                 </div>
+
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-benefits-pensions-conditional">
+                <div class="govuk-form-group">
+                  <p>We need the <b>name of the benefit or pension</b>, the <b>date you started getting it</b> and the <b>country that pays you it</b>.</p>      
+                  <label class="govuk-label" for="more-detail">
+                    Details
+                  </label>
+                  
+                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+                </div>
+              </div>
 
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="benefits-pensions-conditional-2" name="benefits-pensions" type="radio" value="phone" data-aria-controls="conditional-benefits-pensions-conditional-2">

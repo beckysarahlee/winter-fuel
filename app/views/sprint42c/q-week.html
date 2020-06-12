@@ -26,13 +26,13 @@ GOV.UK Prototype Kit
 
         <form method="post">
 
-          <h1 class="govuk-heading-xl">Throughout Q week...</h1>
+          <h1 class="govuk-heading-xl">Between 16 September and 22 September 2019, were you</h1>
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="hospital-conditional-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                 <h2 class="govuk-fieldset__heading">
-                Will you be/were you in hospital getting free treatment?
+                in hospital getting free treatment?
                 </h2>
               </legend>
               <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
@@ -51,9 +51,6 @@ GOV.UK Prototype Kit
                           From
                         </h3>
                       </legend>
-                      <span id="hospital-details-hint" class="govuk-hint">
-                        For example, 27 3 2007
-                      </span>
                       <div class="govuk-date-input" id="hospital-details">
                         <div class="govuk-date-input__item">
                           <div class="govuk-form-group">
@@ -80,6 +77,10 @@ GOV.UK Prototype Kit
                           </div>
                         </div>
                       </div>
+                      <br>
+                      <span id="hospital-details-hint" class="govuk-hint" style="margin-bottom: 10px;">
+                        For example, 27 3 2007
+                      </span>
                     </fieldset>
                   </div>
 
@@ -136,12 +137,12 @@ GOV.UK Prototype Kit
             <fieldset class="govuk-fieldset" aria-describedby="custody-conditional-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                 <h1 class="govuk-fieldset__heading">
-                Will you be/were you in custody or serving a sentence imposed by court?
+                in custody or serving a sentence imposed by court?
                 </h1>
               </legend>
               <span id="changed-name-hint" class="govuk-hint">
-In the UK or a EEA country
-</span>
+                Either in the UK or a EEA country
+              </span>
               <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="custody-conditional" name="custody" type="radio" value="yes" data-aria-controls="conditional-custody-conditional">
@@ -153,12 +154,10 @@ In the UK or a EEA country
 
 
                   <div class="govuk-form-group">
+                    <p>We need the <b>address of the institution you were detained in</b>, and the <b>name of the authority which imposed the sentence</b></p>
                     <label class="govuk-label" for="more-detail">
-                      Provide the address of the institution detained in and the name of the authority
+                      Details
                     </label>
-                    <span id="more-detail-hint" class="govuk-hint">
-                      For example, lol
-                    </span>
                     <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
                   </div>
 
@@ -179,7 +178,7 @@ In the UK or a EEA country
             <fieldset class="govuk-fieldset" aria-describedby="carehome-conditional-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                 <h1 class="govuk-fieldset__heading">
-                Will you be/were you in a care home?
+                in a care home?
                 </h1>
               </legend>
               <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
@@ -193,14 +192,12 @@ In the UK or a EEA country
 
                   <div class="govuk-form-group">
                     <fieldset class="govuk-fieldset" role="group" aria-describedby="healthcare-hint">
-                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                        <h1 class="govuk-fieldset__heading">
-                          Date entered the care home
-                        </h1>
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                        <h3 class="govuk-fieldset__heading">
+                          Date you entered the care home
+                        </h3>
                       </legend>
-                      <span id="healthcare-hint" class="govuk-hint">
-                        For example, 3 2007
-                      </span>
+                      
                       <div class="govuk-date-input" id="healthcare">
 
                         <div class="govuk-date-input__item">
@@ -228,13 +225,18 @@ In the UK or a EEA country
                           </div>
                         </div>
                       </div>
+                      <br>
+                      <span id="healthcare-hint" class="govuk-hint">
+                        For example, 26 10 2007
+                      </span>
                     </fieldset>
                   </div>
 
-          <h5 class="govuk-heading-m">Care home address</h5>
+          <h5 class="govuk-heading-s">Care home address</h5>
 
                   <div class="govuk-form-group">
                     <label class="govuk-label" for="address-line-1">
+                      Line 1
                      <span class="govuk-visually-hidden">line 1 of 4</span>
                     </label>
                     <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
@@ -242,6 +244,7 @@ In the UK or a EEA country
 
                   <div class="govuk-form-group">
                     <label class="govuk-label" for="address-line-2">
+                      Line 2
                       <span class="govuk-visually-hidden">Building and street line 2 of 4</span>
                     </label>
                     <input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2">
@@ -249,6 +252,7 @@ In the UK or a EEA country
 
                   <div class="govuk-form-group">
                     <label class="govuk-label" for="address-line-3">
+                      Line 3
                       <span class="govuk-visually-hidden">Building and street line 3 of 4</span>
                     </label>
                     <input class="govuk-input" id="address-line-3" name="address-line-3" type="text" autocomplete="address-line3">
@@ -256,9 +260,18 @@ In the UK or a EEA country
 
                   <div class="govuk-form-group">
                     <label class="govuk-label" for="address-line-4">
+                      Line 4
                       <span class="govuk-visually-hidden">Building and street line 4 of 4</span>
                     </label>
                     <input class="govuk-input" id="address-line-4" name="address-line-4" type="text" autocomplete="address-line4">
+                  </div>
+
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="address-line-5">
+                      Line 5
+                      <span class="govuk-visually-hidden">Building and street line 5 of 6</span>
+                    </label>
+                    <input class="govuk-input" id="address-line-5" name="address-line-5" type="text" autocomplete="address-line5">
                   </div>
 
 
