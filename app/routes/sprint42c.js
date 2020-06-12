@@ -59,9 +59,7 @@ router.post('/sprint42c/move-date', (req, res) => {
 
 // Living with details to contact or q week address
 router.post('/sprint42c/living-with', function(req, res) {
-  if (req.session.data["living-with"] === "yes") {
-    res.redirect('living-with-age');
-  } else if (req.session.data['move-month'] === "10") {
+  if (req.session.data['move-month'] === "10") {
     res.redirect('address-q-week');
   } else {
     res.redirect('contact');
