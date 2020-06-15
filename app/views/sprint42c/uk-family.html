@@ -41,6 +41,27 @@ GOV.UK Prototype Kit
                     Yes
                   </label>
                 </div>
+
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-uk-family-conditional">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="width-20" style="font-size:24px">
+                      <b>Which family members do you have in the UK?</b>
+                    </label>
+                    <span id="more-detail-hint" class="govuk-hint">
+                      For example "brother" or "cousin".
+                    </span>
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                  </div>
+        
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="width-20" style="font-size:24px">
+                    <b>How many times have you been to the UK to visit family in the last 3 years?</b>
+                  </label>
+                  
+                  <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+                </div>
+                </div>
+
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="uk-family-conditional-2" name="uk-family" type="radio" value="no" data-aria-controls="conditional-uk-family-conditional-2">
                   <label class="govuk-label govuk-radios__label" for="uk-family-conditional-2">

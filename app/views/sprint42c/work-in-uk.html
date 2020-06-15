@@ -30,7 +30,7 @@ GOV.UK Prototype Kit
                       <fieldset class="govuk-fieldset" aria-describedby="working-in-uk-conditional-hint">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                           <h1 class="govuk-fieldset__heading">
-                          Have you worked in the UK?
+                          Have you worked in the UK in the past?
                           </h1>
                         </legend>
                         <br>
@@ -40,6 +40,17 @@ GOV.UK Prototype Kit
                             <label class="govuk-label govuk-radios__label" for="working-in-uk-conditional">
                             Yes
                             </label>
+                          </div>
+
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-working-in-uk-conditional">
+                            <p>We need the <b>start and end dates</b> for each work period.</p>
+
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="more-detail">
+                                Details
+                              </label>
+                              <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                            </div>
                           </div>
 
                           <div class="govuk-radios__item">
