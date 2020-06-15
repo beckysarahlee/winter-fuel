@@ -43,14 +43,14 @@ GOV.UK Prototype Kit
 
                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-living-with-conditional">
 
-                <div class="govuk-form-group">      
-                  <p>We need the <b>full name, National Insurance number</b> and <b>date of birth</b> of anyone else in the house born before 5 April 1954.</p>      
+                <div class="govuk-form-group">
+                  <p>We need the <b>full name, National Insurance number</b> and <b>date of birth</b> of anyone else in the house born before 5 April 1954.</p>
                   <label class="govuk-label" for="more-detail">
-                     Details             
-                  </label>                  
-                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+                     Details
+                  </label>
+                  <textarea class="govuk-textarea" id="livingwith" name="livingwith" rows="10" aria-describedby="more-detail-hint"></textarea>
                 </div>
-              
+
 
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="living-with-wf-conditional-hint">
@@ -59,15 +59,15 @@ GOV.UK Prototype Kit
                       If anyone else in the household gets a Winter Fuel Payment, when did they last get it?
                     </h1>
                   </legend>
-                  
-                          
+
+
                           <div class="govuk-date-input" id="passport-issued">
                             <div class="govuk-date-input__item">
                               <div class="govuk-form-group">
                                 <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
                                   Month
                                 </label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="paymentmonth" name="paymentmonth" type="text" pattern="[0-9]*" inputmode="numeric">
                               </div>
                             </div>
                             <div class="govuk-date-input__item">
@@ -75,7 +75,7 @@ GOV.UK Prototype Kit
                                 <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
                                   Year
                                 </label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="paymentyear" name="paymentyear" type="text" pattern="[0-9]*" inputmode="numeric">
                               </div>
                             </div>
                           </div>
@@ -85,12 +85,12 @@ GOV.UK Prototype Kit
                         </span>
                         </fieldset>
                       </div>
-          
+
                     </div>
-                    
-                 
-              
-            
+
+
+
+
 
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="living-with-conditional-2" name="living-with" type="radio" value="phone" data-aria-controls="conditional-living-with-conditional-2">
@@ -101,7 +101,7 @@ GOV.UK Prototype Kit
               </div>
             </fieldset>
           </div>
-          
+
 
 
           <button class="govuk-button" data-module="govuk-button">
