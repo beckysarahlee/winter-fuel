@@ -26,13 +26,37 @@ GOV.UK Prototype Kit
 
         <form method="post">
 
-          
+          {% if data['bank-account-type'] === 'international-bank' %}
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="uk-bank-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                  Do you have also have a UK bank account?
+                </h1>
+              </legend>
+              <div class="govuk-radios govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="uk-bank" name="uk-bank" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="uk-bank">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="uk-bank-2" name="uk-bank" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="uk-bank-2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+            {% endif %}
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="uk-residence-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                 <h1 class="govuk-fieldset__heading">
-                  Do you have a residence in the UK?
+                  Do you own any property in the UK?
                 </h1>
               </legend>
               <div class="govuk-radios govuk-radios">
@@ -53,31 +77,7 @@ GOV.UK Prototype Kit
           </div>
 
 
-          {% if data['bank-account-type'] === 'international-bank' %}
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="uk-bank-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                <h1 class="govuk-fieldset__heading">
-                  Do you have a UK bank account?
-                </h1>
-              </legend>
-              <div class="govuk-radios govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="uk-bank" name="uk-bank" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="uk-bank">
-                    Yes
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="uk-bank-2" name="uk-bank" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="uk-bank-2">
-                    No
-                  </label>
-                </div>
-              </div>
-            </fieldset>
-          </div>
-            {% endif %}
+          
 
 
             <div class="govuk-form-group">
