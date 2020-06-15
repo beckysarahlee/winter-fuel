@@ -121,11 +121,7 @@ router.post('/sprint42c/living-in-uk', function(req, res) {
 
 // Info about living outside the UK to UK family details
 router.post('/sprint42c/living-outside-uk', function(req, res) {
-  if (req.session.data["outside-uk"] === "yes") {
-    res.redirect('living-outside-about');
-  } else {
     res.redirect('uk-family');
-  }
 });
 
 // living outside the uk, add more countries or moce to uk family
@@ -141,11 +137,7 @@ router.post('/sprint42c/living-outside-about', function(req, res) {
 
 // UK family to other nationalities
 router.post('/sprint42c/uk-family', function(req, res) {
-  if (req.session.data["uk-family"] === "yes") {
-    res.redirect('uk-family-about');
-  } else {
     res.redirect('other-nationalities');
-  }
 });
 
 router.post('/sprint42c/uk-family-about', (req, res) => {
@@ -155,9 +147,7 @@ router.post('/sprint42c/uk-family-about', (req, res) => {
 
 // Other nationalities to more info work dates
 router.post('/sprint42c/other-nationalities', function(req, res) {
-  if (req.session.data['other-nationalities'] === "yes") {
-    res.redirect('other-nationalities-about');
-  } else if (req.session.data["no-nationality"] === "parter-eea") {
+  if (req.session.data["no-nationality"] === "parter-eea") {
   res.redirect('eea-partner');
   } else {
     res.redirect('work-outside-uk');
@@ -183,11 +173,7 @@ router.post('/sprint42c/eea-partner', (req, res) => {
 
 // Work periods to information about links to UK or info about working in UK
 router.post('/sprint42c/work-outside-uk', function(req, res) {
-  if (req.session.data["international-work"] === "yes") {
-    res.redirect('work-outside-uk-about');
-  } else {
     res.redirect('work-in-uk');
-  }
 });
 
 // Working outside the UK details to working in the UK
@@ -197,11 +183,7 @@ router.post('/sprint42c/work-outside-uk-about', (req, res) => {
 
 // Working in the UK to info about working in UK to UK info
 router.post('/sprint42c/work-in-uk', function(req, res) {
-  if (req.session.data["working-in-uk"] === "yes") {
-    res.redirect('work-in-uk-about');
-  } else {
     res.redirect('uk-business');
-  }
 });
 
 // Working in the UK info to UK info
