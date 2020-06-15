@@ -133,46 +133,7 @@ GOV.UK Prototype Kit
 
 
 
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="custody-conditional-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                <h1 class="govuk-fieldset__heading">
-                in custody or serving a sentence imposed by court?
-                </h1>
-              </legend>
-              <span id="changed-name-hint" class="govuk-hint">
-                Either in the UK or a EEA country
-              </span>
-              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="custody-conditional" name="custody" type="radio" value="yes" data-aria-controls="conditional-custody-conditional">
-                  <label class="govuk-label govuk-radios__label" for="custody-conditional">
-                    Yes
-                  </label>
-                </div>
-                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-custody-conditional">
-
-
-                  <div class="govuk-form-group">
-                    <p>We need the <b>address of the institution you were detained in</b>, and the <b>name of the authority which imposed the sentence</b></p>
-                    <label class="govuk-label" for="more-detail">
-                      Details
-                    </label>
-                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
-                  </div>
-
-
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="custody-conditional-2" name="custody" type="radio" value="no" data-aria-controls="conditional-custody-conditional-2">
-                  <label class="govuk-label govuk-radios__label" for="custody-conditional-2">
-                    No
-                  </label>
-                </div>
-
-              </div>
-            </fieldset>
-          </div>
+          
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="carehome-conditional-hint">
@@ -291,6 +252,47 @@ GOV.UK Prototype Kit
                   </label>
                 </div>
 
+
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="custody-conditional-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                in custody or serving a sentence imposed by court?
+                </h1>
+              </legend>
+              <span id="changed-name-hint" class="govuk-hint">
+                Either in the UK or a EEA country
+              </span>
+              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="custody-conditional" name="custody" type="radio" value="yes" data-aria-controls="conditional-custody-conditional">
+                  <label class="govuk-label govuk-radios__label" for="custody-conditional">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-custody-conditional">
+
+
+                  <div class="govuk-form-group">
+                    <p>We need the <b>address of the institution you were detained in</b>, and the <b>name of the authority which imposed the sentence</b></p>
+                    <label class="govuk-label" for="more-detail">
+                      Details
+                    </label>
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+                  </div>
+
+
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="custody-conditional-2" name="custody" type="radio" value="no" data-aria-controls="conditional-custody-conditional-2">
+                  <label class="govuk-label govuk-radios__label" for="custody-conditional-2">
+                    No
+                  </label>
+                </div>
 
               </div>
             </fieldset>
