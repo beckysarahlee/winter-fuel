@@ -212,7 +212,7 @@ router.post('/sprint42c/work-in-uk-about', (req, res) => {
 
 // UK business to UK property
 router.post('/sprint42c/uk-business', function(req, res) {
-    res.redirect('uk-property');  
+    res.redirect('uk-property');
 });
 
 // UK property info input to work
@@ -268,6 +268,11 @@ router.post('/sprint42c/benefits-outside', function(req, res) {
 
 // Any other links to declaration
 router.post('/sprint42c/any-other-links', (req, res) => {
+  res.redirect('/sprint42c/check-change')
+});
+
+// Any other links to declaration
+router.post('/sprint42c/check-change', (req, res) => {
   res.redirect('/sprint42c/declaration')
 });
 
