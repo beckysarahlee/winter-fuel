@@ -10,6 +10,11 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
+<style>
+  .govuk-accordion__icon {
+  display:none;
+  }  
+</style>
 
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
@@ -34,9 +39,12 @@ GOV.UK Prototype Kit
                     Your details
                   </span>
                 </h2>
-                <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+                <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-m" style="font-size:16px">
                   Address, phone numbers, email.
                 </div>
+                <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1_5" style="padding-top:10px;font-weight:normal;font-size:16px; text-decoration:underline;">
+                  Show
+                </span>
               </div>
               <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
                 <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -48,9 +56,7 @@ GOV.UK Prototype Kit
                       Sarah Philips
                     </dd>
                     <dd class="govuk-summary-list__actions">
-                      <a class="govuk-link" href="#">
-                        Change<span class="govuk-visually-hidden"> name</span>
-                      </a>
+                      
                     </dd>
                   </div>
                   <div class="govuk-summary-list__row">
@@ -61,9 +67,7 @@ GOV.UK Prototype Kit
                       5 January 1978
                     </dd>
                     <dd class="govuk-summary-list__actions">
-                      <a class="govuk-link" href="#">
-                        Change<span class="govuk-visually-hidden"> date of birth</span>
-                      </a>
+                     
                     </dd>
                   </div>
                   <div class="govuk-summary-list__row">
@@ -103,11 +107,14 @@ GOV.UK Prototype Kit
                     Who you live with
                   </span>
                 </h2>
-                <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-2">
+                <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-2" style="font-size:16px">
                   People over 65 in your household, Winter Fuel Payments they've had.
                 </div>
+                <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-2_5" style="padding-top:10px;font-weight:normal;font-size:16px; text-decoration:underline;">
+                  Show
+                </span>
               </div>
-              <div id="accordion-with-summary-sections-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-2">
+              <div id="accordion-with-summary-sections-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-2_5">
                 <ul class="govuk-list">
                   <li>
                     <a class="govuk-link" href="#">Creating an agile working environment</a>
@@ -140,11 +147,14 @@ GOV.UK Prototype Kit
                     Where you've lived and worked
                   </span>
                 </h2>
-                <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3">
+                <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3" style="font-size:16px">
                   Residential and work history.
                 </div>
+                <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1_5" style="padding-top:10px;font-weight:normal;font-size:16px; text-decoration:underline;">
+                  Show
+                </span>
               </div>
-              <div id="accordion-with-summary-sections-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-3">
+              <div id="accordion-with-summary-sections-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-3_5">
                 <ul class="govuk-list">
                   <li>
                     <a class="govuk-link" href="#">Governance principles for agile service delivery</a>
@@ -170,15 +180,18 @@ GOV.UK Prototype Kit
             <div class="govuk-accordion__section ">
               <div class="govuk-accordion__section-header">
                 <h2 class="govuk-accordion__section-heading">
-                  <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-4">
+                  <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-3">
                     Bank details
                   </span>
                 </h2>
-                <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-4">
+                <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3" style="font-size:16px">
                   Bank or building society account details.
                 </div>
+                <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-3_5" style="padding-top:10px;font-weight:normal;font-size:16px; text-decoration:underline;">
+                  Show
+                </span>
               </div>
-              <div id="accordion-with-summary-sections-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-4">
+              <div id="accordion-with-summary-sections-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-3_5">
                 <ul class="govuk-list">
                   <li>
                     <a class="govuk-link" href="#">How the discovery phase works</a>
@@ -205,11 +218,14 @@ GOV.UK Prototype Kit
                     Links to the UK
                   </span>
                 </h2>
-                <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-4">
-                  Family, property and businesses in the UK.
+                <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-4" style="font-size:16px">
+                  Family, property and businesses in the UK, your previous Winter Fuel payments
                 </div>
+                <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-4_5" style="padding-top:10px;font-weight:normal;font-size:16px; text-decoration:underline;">
+                  Show
+                </span>
               </div>
-              <div id="accordion-with-summary-sections-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-4">
+              <div id="accordion-with-summary-sections-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-4_5">
                 <ul class="govuk-list">
                   <li>
                     <a class="govuk-link" href="#">How the discovery phase works</a>
@@ -236,9 +252,12 @@ GOV.UK Prototype Kit
                     Links to other countries
                   </span>
                 </h2>
-                <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-4">
+                <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-4" style="font-size:16px">
                   Other nationalities, foreign benefits you receive.
                 </div>
+                <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1_5" style="padding-top:10px;font-weight:normal;font-size:16px; text-decoration:underline;">
+                  Show
+                </span>
               </div>
               <div id="accordion-with-summary-sections-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-4">
                 <ul class="govuk-list">
@@ -263,15 +282,18 @@ GOV.UK Prototype Kit
             <div class="govuk-accordion__section ">
               <div class="govuk-accordion__section-header">
                 <h2 class="govuk-accordion__section-heading">
-                  <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-4">
+                  <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-5">
                     Qualifying week
                   </span>
                 </h2>
-                <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-4">
+                <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-5" style="font-size:16px">
                   Where you were 16 to 22 September, benefits you were getting.
                 </div>
+                <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-5_5" style="padding-top:10px;font-weight:normal;font-size:16px; text-decoration:underline;">
+                  Show
+                </span>
               </div>
-              <div id="accordion-with-summary-sections-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-4">
+              <div id="accordion-with-summary-sections-content-5" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-5_5">
                 <ul class="govuk-list">
                   <li>
                     <a class="govuk-link" href="#">How the discovery phase works</a>
