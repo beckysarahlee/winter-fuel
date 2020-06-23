@@ -1,15 +1,18 @@
 {% extends "layout.html" %}
 
-{% block pageTitle %}
-GOV.UK Prototype Kit
+{% block header %}
+{% include './_header-international.html' %}
 {% endblock %}
 
 {% block beforeContent %}
 {% include './_name_bar.html' %}
 {% endblock %}
 
-{% block content %}
 
+{% block pageTitle %}
+Winter Fuel Payments
+{% endblock %}
+{% block content %}
 
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
@@ -77,7 +80,7 @@ GOV.UK Prototype Kit
                         </span>
                       </fieldset>
                     </div>
-                    
+
                   </div>
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="healthcare-conditional-2" name="healthcare" type="radio" value="no" data-aria-controls="conditional-healthcare-conditional-2">
