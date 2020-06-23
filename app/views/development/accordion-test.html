@@ -155,26 +155,182 @@ GOV.UK Prototype Kit
                 </span>
               </div>
               <div id="accordion-with-summary-sections-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-3_5">
-                <ul class="govuk-list">
-                  <li>
-                    <a class="govuk-link" href="#">Governance principles for agile service delivery</a>
-                  </li>
-                  <li>
-                    <a class="govuk-link" href="#">Measuring and reporting progress</a>
-                  </li>
-                  <li>
-                    <a class="govuk-link" href="#">Spend controls: check if you need approval to spend money on a service</a>
-                  </li>
-                  <li>
-                    <a class="govuk-link" href="#">Spend controls: apply for approval to spend money on a service</a>
-                  </li>
-                  <li>
-                    <a class="govuk-link" href="#">Spend controls: the new pipeline process</a>
-                  </li>
-                  <li>
-                    <a class="govuk-link" href="#">Working across organisational boundaries</a>
-                  </li>
-                </ul>
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                    Do you have also have a UK bank account?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Yes
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="bank-details">
+                        Change<span class="govuk-visually-hidden"> previous application number</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                    Have you ever returned to the UK to see a healthcare professional?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                    No
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="about-uk">
+                        Change<span class="govuk-visually-hidden"> previous application number</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Have you ever had a Winter Fuel Payment?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      No
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> licence type</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Are you still a UK national?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Yes
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> home address</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      When did you live in the UK?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{data.livinguk}}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> home address</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Apart from where you currently live, have you lived anywhere else outside the UK?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{data.livingoutside}}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> home address</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Do you have family who live in the UK?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{data.ukfamily}}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> home address</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      How many times have you been to the UK to visit family in the last 3 years?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{data.familyvisit}}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> home address</span>
+                      </a>
+                    </dd>
+                  </div>
+      
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Are you a national of any other countries?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{data.national}}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> home address</span>
+                      </a>
+                    </dd>
+                  </div>
+      
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+      Have you ever worked outside of the UK?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{data.workoutside}}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> home address</span>
+                      </a>
+                    </dd>
+                  </div>
+      
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+      Have you worked in the UK in the past?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{data.workuk}}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> home address</span>
+                      </a>
+                    </dd>
+                  </div>
+      
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+      Do you have a business registered in the UK?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{data.business}}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> home address</span>
+                      </a>
+                    </dd>
+                  </div>
+      
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Do you own property in the UK?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{data.property}}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> home address</span>
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
               </div>
             </div>
             <div class="govuk-accordion__section ">
