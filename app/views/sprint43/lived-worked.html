@@ -26,15 +26,22 @@ GOV.UK Prototype Kit
 
         <form method="post">
 
-          <h1 class="govuk-heading-xl">When did you work in the UK?</h1>
-
-          <p>We need the <b>start and end dates</b> for each work period.</p>
-
           <div class="govuk-form-group">
-            <label class="govuk-label" for="more-detail">
-              Details
-            </label>
-            <textarea class="govuk-textarea" id="workuk" name="workuk" rows="15" aria-describedby="more-detail-hint"></textarea>
+            <fieldset class="govuk-fieldset" aria-describedby="outside-uk-conditional-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  all countries you have lived and worked in
+
+                  (including the UK)
+
+                  (with time periods)
+                </h1>
+              </legend>
+              <br>
+
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="20" aria-describedby="more-detail-hint"></textarea>
+
+            </fieldset>
           </div>
 
 
