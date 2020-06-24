@@ -1,14 +1,19 @@
 {% extends "layout.html" %}
 
-{% block pageTitle %}
-GOV.UK Prototype Kit
+{% block header %}
+{% include './_header.html' %}
 {% endblock %}
 
 {% block beforeContent %}
-{% include './_start_again.html' %}
+{% include './_blue_bar.html' %}
 {% endblock %}
 
+
+{% block pageTitle %}
+Winter Fuel Payments
+{% endblock %}
 {% block content %}
+
 
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
