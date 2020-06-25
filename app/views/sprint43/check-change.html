@@ -1,20 +1,24 @@
 {% extends "layout.html" %}
 
-{% block pageTitle %}
-GOV.UK Prototype Kit
+{% block header %}
+{% include './_header-international.html' %}
 {% endblock %}
 
 {% block beforeContent %}
 {% include './_name_bar.html' %}
 {% endblock %}
 
-{% block content %}
 
-<style>
+
   .govuk-accordion__icon {
   display:none;
   }  
-</style>
+
+{% block pageTitle %}
+Winter Fuel Payments
+{% endblock %}
+{% block content %}
+
 
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">

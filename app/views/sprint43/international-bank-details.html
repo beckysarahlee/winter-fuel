@@ -1,15 +1,18 @@
 {% extends "layout.html" %}
 
-{% block pageTitle %}
-GOV.UK Prototype Kit
+{% block header %}
+{% include './_header-international.html' %}
 {% endblock %}
 
 {% block beforeContent %}
-{% include './_start_again.html' %}
+{% include './_name_bar.html' %}
 {% endblock %}
 
-{% block content %}
 
+{% block pageTitle %}
+Winter Fuel Payments
+{% endblock %}
+{% block content %}
 
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
@@ -35,7 +38,7 @@ GOV.UK Prototype Kit
     </label>
     <input class="govuk-input" id="name-on-the-account" name="name-on-the-account" type="text" spellcheck="false">
   </div>
-  
+
   <div class="govuk-form-group">
   <label class="govuk-label" for="bic-code">
     BIC or SWIFT code

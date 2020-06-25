@@ -24,6 +24,15 @@ router.post('/sprint35b/benefits', function(req, res) {
   }
 });
 
+// are you sure (start again)
+router.post('/sprint35b/are-you-sure', function(req, res) {
+  if ( req.body['are-you-sure'] === 'yes' ) {
+    res.redirect('type-of-application');
+  } else {
+    res.redirect('move-date');
+  }
+});
+
 // Find someone to confirm full name
 
   router.post('/sprint35b/find', function(req, res) {

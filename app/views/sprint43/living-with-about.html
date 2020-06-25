@@ -1,15 +1,18 @@
 {% extends "layout.html" %}
 
-{% block pageTitle %}
-GOV.UK Prototype Kit
+{% block header %}
+{% include './_header-international.html' %}
 {% endblock %}
 
 {% block beforeContent %}
 {% include './_name_bar.html' %}
 {% endblock %}
 
-{% block content %}
 
+{% block pageTitle %}
+Winter Fuel Payments
+{% endblock %}
+{% block content %}
 
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
@@ -33,9 +36,9 @@ GOV.UK Prototype Kit
             <p>We need the <b>full name, National Insurance number</b> and <b>date of birth</b> of anyone else in the house born before 5 April 1954.</p>
 
             <label class="govuk-label" for="more-detail">
-               Details             
+               Details
             </label>
-            
+
             <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="15" aria-describedby="more-detail-hint"></textarea>
           </div>
           <br>
@@ -62,7 +65,7 @@ GOV.UK Prototype Kit
                     When did they last get a Winter Fuel Payment?
                   </h1>
                 </legend>
-                
+
                 <div class="govuk-date-input" id="passport-issued">
                   <div class="govuk-date-input__item">
                     <div class="govuk-form-group">

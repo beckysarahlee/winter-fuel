@@ -1,15 +1,18 @@
 {% extends "layout.html" %}
 
-{% block pageTitle %}
-GOV.UK Prototype Kit
+{% block header %}
+{% include './_header-international.html' %}
 {% endblock %}
 
 {% block beforeContent %}
 {% include './_name_bar.html' %}
 {% endblock %}
 
-{% block content %}
 
+{% block pageTitle %}
+Winter Fuel Payments
+{% endblock %}
+{% block content %}
 
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
@@ -27,7 +30,7 @@ GOV.UK Prototype Kit
         <h1 class="govuk-heading-xl">What are your contact details?</h1>
         <form method="post">
 
-          
+
           <div class="govuk-inset-text"><span style="font-weight: bold">We need at least one phone number.<br/><br/>Include the country code for international numbers.</span></div>
 
           <div class="govuk-form-group">

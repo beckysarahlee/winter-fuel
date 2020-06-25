@@ -29,24 +29,33 @@ Winter Fuel Payments
 
         <form method="post">
 
-        <h1 class="govuk-heading-xl">Visits to the UK in the past 3 years</h1>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="outside-uk-conditional-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  all countries you have lived and worked in
 
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="more-detail">
-            Provide dates of any visits to the UK in the past 3 years and reasons for the visits
-          </label>
-          <span id="more-detail-hint" class="govuk-hint">
-            For example, now this is a challenge for you isn't it?
-          </span>
-          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="20" aria-describedby="more-detail-hint"></textarea>
-        </div>
+                  (including the UK)
+
+                  (with time periods)
+                </h1>
+              </legend>
+              <br>
+
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="20" aria-describedby="more-detail-hint"></textarea>
+
+            </fieldset>
+          </div>
+
 
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
 
-</div>
-</div>
+        </form>
+
+
+
       </div>
 
     </div>
