@@ -17,7 +17,14 @@
 {% block pageTitle %}
 Winter Fuel Payments
 {% endblock %}
+
 {% block content %}
+
+<style>
+  .govuk-accordion__icon {
+  display:none;
+  }  
+</style>
 
 
 <div class="govuk-width-container">
@@ -55,7 +62,7 @@ Winter Fuel Payments
                 </span>
               </div>
               <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
-                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9" style="margin-bottom: 0px !important;">
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
                       Name
@@ -92,14 +99,14 @@ Winter Fuel Payments
                     </dd>
                   </div>
                   <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
+                    <dt class="govuk-summary-list__key" style="border-bottom: none;">
                       Contact details
                     </dt>
-                    <dd class="govuk-summary-list__value">
+                    <dd class="govuk-summary-list__value" style="border-bottom: none;">
                       <p class="govuk-body">07700 900457</p>
                       <p class="govuk-body">sarah.phillips@example.com</p>
                     </dd>
-                    <dd class="govuk-summary-list__actions">
+                    <dd class="govuk-summary-list__actions" style="border-bottom: none;">
                       <a class="govuk-link" href="#">
                         Change<span class="govuk-visually-hidden"> contact details</span>
                       </a>
@@ -123,29 +130,34 @@ Winter Fuel Payments
                 </span>
               </div>
               <div id="accordion-with-summary-sections-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-2_5">
-                <ul class="govuk-list">
-                  <li>
-                    <a class="govuk-link" href="#">Creating an agile working environment</a>
-                  </li>
-                  <li>
-                    <a class="govuk-link" href="#">Agile tools and techniques</a>
-                  </li>
-                  <li>
-                    <a class="govuk-link" href="#">Set up a team wall</a>
-                  </li>
-                  <li>
-                    <a class="govuk-link" href="#">Writing user stories</a>
-                  </li>
-                  <li>
-                    <a class="govuk-link" href="#">Planning in agile</a>
-                  </li>
-                  <li>
-                    <a class="govuk-link" href="#">Deciding on priorities</a>
-                  </li>
-                  <li>
-                    <a class="govuk-link" href="#">Developing a roadmap</a>
-                  </li>
-                </ul>
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9"style="margin-bottom: 0px !important;">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                    Is there anyone else living there who was born on or before 5 April 1954?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                                    {{data.livingwith}}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> address</span>
+                    </a>
+                  </dd>
+                </div>
+    
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key"style="border-bottom: none;">  If anyone else in the household gets a Winter Fuel Payment, when did they last get it?
+                  </dt>
+                  <dd class="govuk-summary-list__value"style="border-bottom: none;">
+                    {{data.paymentmonth}} {{data.paymentyear}}
+                  </dd>
+                  <dd class="govuk-summary-list__actions"style="border-bottom: none;">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> address</span>
+                    </a>
+                  </dd>
+                </div>
+                </dl>
               </div>
             </div>
             <div class="govuk-accordion__section ">
@@ -163,7 +175,7 @@ Winter Fuel Payments
                 </span>
               </div>
               <div id="accordion-with-summary-sections-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-3_5">
-                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9"style="margin-bottom: 0px !important;">
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
                     Do you also have a UK bank account?
@@ -326,13 +338,13 @@ Winter Fuel Payments
                   </div>
       
                   <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
+                    <dt class="govuk-summary-list__key"style="border-bottom: none;">
                       Do you own property in the UK?
                     </dt>
-                    <dd class="govuk-summary-list__value">
+                    <dd class="govuk-summary-list__value"style="border-bottom: none;">
                       {{data.property}}
                     </dd>
-                    <dd class="govuk-summary-list__actions">
+                    <dd class="govuk-summary-list__actions"style="border-bottom: none;">
                       <a class="govuk-link" href="#">
                         Change<span class="govuk-visually-hidden"> home address</span>
                       </a>
