@@ -35,7 +35,7 @@ Winter Fuel Payments
 
               <h2 class="govuk-heading-xl">Can you confirm your full address?</h2>
 
-              <p><b>1</b> address found for <b>"{% if data['house-number'] %}
+              <p><b>20</b> address found for <b>"{% if data['house-number'] %}
                                   {{data['house-number']}}
                                 {% else %}
                                 27
@@ -50,7 +50,7 @@ Winter Fuel Payments
                 <fieldset class="govuk-fieldset">
                   <div class="govuk-radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="where-do-you-live" name="address-change" type="radio" value="27 Kent Street, Amble, NE65 0LZ">
+                      <input class="govuk-radios__input" id="address" name="address-change" type="radio" value="27 Kent Street, Amble, NE65 0LZ">
                       <label class="govuk-label govuk-radios__label" for="address">
                         {% if data['phone-post'] === 'phone' %}
                         27 Kent Street, Amble, NE65 0LZ<br>
@@ -66,9 +66,81 @@ Winter Fuel Payments
                       </label>
                     </div>
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="where-do-you-live-2" name="address-change" type="radio" value="2 Kent Street, Amble, NE65 0LZ">
+                      <input class="govuk-radios__input" id="address-2" name="address-change" type="radio" value="29 Kent Street, Amble, NE65 0LZ">
                       <label class="govuk-label govuk-radios__label" for="address-2">
-                        Address not found
+                        29 Kent Street, Amble, NE65 0LZ<br>
+                        <strong class="govuk-tag govuk-tag--blue">
+                        Residential
+                        </strong>
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="address-3" name="address-change" type="radio" value="25 Kent Street, Amble, NE65 0LZ">
+                      <label class="govuk-label govuk-radios__label" for="address-3">
+                        25 Kent Street, Amble, NE65 0LZ<br>
+                        <strong class="govuk-tag govuk-tag--blue">
+                        Residential
+                        </strong>
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="address-4" name="address-change" type="radio" value="31 Kent Street, Amble, NE65 0LZ">
+                      <label class="govuk-label govuk-radios__label" for="address-4">
+                        31 Kent Street, Amble, NE65 0LZ<br>
+                        <strong class="govuk-tag govuk-tag--blue">
+                        Residential
+                        </strong>
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="address-5" name="address-change" type="radio" value="3 Kent Street, Amble, NE65 0LZ">
+                      <label class="govuk-label govuk-radios__label" for="address-5">
+                        3 Kent Street, Amble, NE65 0LZ<br>
+                        <strong class="govuk-tag govuk-tag--blue">
+                        Residential
+                        </strong>
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="address-6" name="address-change" type="radio" value="17 Kent Street, Amble, NE65 0LZ">
+                      <label class="govuk-label govuk-radios__label" for="address-6">
+                        17 Kent Street, Amble, NE65 0LZ<br>
+                        <strong class="govuk-tag govuk-tag--blue">
+                        Residential
+                        </strong>
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="address-7" name="address-change" type="radio" value="21 Kent Street, Amble, NE65 0LZ">
+                      <label class="govuk-label govuk-radios__label" for="address-7">
+                        21 Kent Street, Amble, NE65 0LZ<br>
+                        <strong class="govuk-tag govuk-tag--blue">
+                        Residential
+                        </strong>
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="address-8" name="address-change" type="radio" value="33-35 Kent Street, Amble, NE65 0LZ">
+                      <label class="govuk-label govuk-radios__label" for="address-8">
+                      Boots the Chemists Ltd, 33-35 Kent Street, Amble, NE65 0LZ<br>
+                      <strong class="govuk-tag govuk-tag--turquoise">
+                      Commercial
+                      </strong>
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="address-9" name="address-change" type="radio" value="1 Kent Street, Amble, NE65 0LZ">
+                      <label class="govuk-label govuk-radios__label" for="address-9">
+                        1 Kent Street, Amble, NE65 0LZ<br>
+                        <strong class="govuk-tag govuk-tag--blue">
+                        Residential
+                        </strong>
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="address-10" name="address-change" type="radio" value="see all">
+                      <label class="govuk-label govuk-radios__label" for="address-10">
+                        See all results
                       </label>
                     </div>
                   </div>
