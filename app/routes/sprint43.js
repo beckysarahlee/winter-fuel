@@ -166,6 +166,10 @@ router.post('/sprint43/declaration', (req, res) => {
   res.redirect('/sprint43/complete')
 });
 
+// THE END back to the start!
+router.post('/sprint43/complete', (req, res) => {
+  res.redirect('/sprint43/application-type')
+});
 
 
 
