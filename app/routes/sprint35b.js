@@ -138,6 +138,12 @@ router.post('/sprint35b/address-1', function(req, res) {
   }
 });
 
+// No address found to address
+router.post('/sprint35b/no-address-found', (req, res) => {
+  res.redirect('/sprint35b/address')
+});
+
+
 // See all results to move date
 router.post('/sprint35b/address-see-all', (req, res) => {
   res.redirect('/sprint35b/move-date')
