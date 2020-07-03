@@ -29,7 +29,12 @@ Winter Fuel Payments
         <form method="post">
 
 
-          <h1 class="govuk-heading-xl">Submit the application</h1>
+          <h1 class="govuk-heading-xl">Declaration</h1>
+
+          {% if data['phone-post'] === 'phone' %}
+            <div class="govuk-inset-text"><span style="font-weight: bold">Caller must agree to the following before you continue.</span></div>
+          {% endif %}
+         
 
           <p>By making this claim, you agree that:<br>
             <ul class="govuk-list govuk-list--bullet">
@@ -45,7 +50,7 @@ Winter Fuel Payments
           <br>
 
           <button class="govuk-button" data-module="govuk-button">
-            Accept and submit
+            Agree and continue
           </button>
 
         </form>
