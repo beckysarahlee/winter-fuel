@@ -35,16 +35,15 @@ Winter Fuel Payments
 
               <h2 class="govuk-heading-xl">No addresses found</h2>
 
-              <p>No address found for <b>"{% if data['house-number'] %}
-                                  {{data['house-number']}}
-                                {% else %}
-                                27
-                                {% endif %}"
-                              </b> and <b>"{% if data['postcode'] %}
-                                                  {{data['postcode']}}
-                                                {% else %}
-                                                NE65 0LZ
-                                                {% endif %}"</b></p>
+                                                <p>No addresses found for <b>{% if data['house-number'] %}
+                                                                    "{{data['house-number']}}"</b> and
+                                                                  {% else %}
+                                                                  {% endif %}
+                                                                 <b>"{% if data['postcode'] %}
+                                                                                    {{data['postcode']}}
+                                                                                  {% else %}
+                                                                                  NE65 0LZ
+                                                                                  {% endif %}"</b></p>
 
 <br>
 

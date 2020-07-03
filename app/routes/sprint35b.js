@@ -83,6 +83,8 @@ router.post('/sprint35b/security', function(req, res) {
 router.post('/sprint35b/address', function(req, res) {
   if (req.body['postcode'] === 'NE2 1YL') {
     res.redirect('address-no-result');
+  } else if (req.body['postcode'] === "NE65 0NO") {
+    res.redirect('no-address-found');
   } else if (req.body['postcode'] === "NE65 0AP") {
     res.redirect('address-carehome');
   } else if (req.body['postcode'] === "ne65 0ap") {
