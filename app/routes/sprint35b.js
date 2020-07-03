@@ -129,7 +129,11 @@ router.post('/sprint35b/address-for-letters-1', (req, res) => {
 router.post('/sprint35b/address-1', function(req, res) {
   if (req.body['address-change'] === 'see all') {
     res.redirect('/sprint35b/address-see-all');
-  } else {
+  }
+  else if (req.body['address-change'] === "address not found") {
+    res.redirect('address');
+  }
+  else {
     res.redirect('move-date');
   }
 });

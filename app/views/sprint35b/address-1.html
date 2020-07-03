@@ -35,12 +35,13 @@ Winter Fuel Payments
 
               <h2 class="govuk-heading-xl">Can you confirm your full address?</h2>
 
-              <p><b>20</b> address found for <b>"{% if data['house-number'] %}
-                                  {{data['house-number']}}
+              <p><b>{% if data['postcode'] === 'NE65 0AB' %}20
+                  {% else %}1  {% endif %}
+                </b> address found for <b>{% if data['house-number'] %}
+                                  "{{data['house-number']}}"</b> and
                                 {% else %}
-                                27
-                                {% endif %}"
-                              </b> and <b>"{% if data['postcode'] %}
+                                {% endif %}
+                               <b>"{% if data['postcode'] %}
                                                   {{data['postcode']}}
                                                 {% else %}
                                                 NE65 0LZ
@@ -52,16 +53,22 @@ Winter Fuel Payments
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="address" name="address-change" type="radio" value="27 Kent Street, Amble, NE65 0LZ">
                       <label class="govuk-label govuk-radios__label" for="address">
-                        27 Kent Street, Amble, NE65 0LZ<br>
+                        27 Kent Street, Amble, {% if data['postcode'] %}
+                                            {{data['postcode']}}
+                                          {% else %}
+                                          NE65 0LZ
+                                          {% endif %}<br>
                         <strong class="govuk-tag govuk-tag--blue">
                         Residential
                         </strong>
                       </label>
                     </div>
+
+                  {% if data['postcode'] === 'NE65 0AB' %}
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="address-2" name="address-change" type="radio" value="29 Kent Street, Amble, NE65 0LZ">
                       <label class="govuk-label govuk-radios__label" for="address-2">
-                        29 Kent Street, Amble, NE65 0LZ<br>
+                        29 Kent Street, Amble, NE65 0AB<br>
                         <strong class="govuk-tag govuk-tag--blue">
                         Residential
                         </strong>
@@ -70,7 +77,7 @@ Winter Fuel Payments
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="address-3" name="address-change" type="radio" value="25 Kent Street, Amble, NE65 0LZ">
                       <label class="govuk-label govuk-radios__label" for="address-3">
-                        25 Kent Street, Amble, NE65 0LZ<br>
+                        25 Kent Street, Amble, NE65 0AB<br>
                         <strong class="govuk-tag govuk-tag--blue">
                         Residential
                         </strong>
@@ -79,7 +86,7 @@ Winter Fuel Payments
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="address-4" name="address-change" type="radio" value="31 Kent Street, Amble, NE65 0LZ">
                       <label class="govuk-label govuk-radios__label" for="address-4">
-                        31 Kent Street, Amble, NE65 0LZ<br>
+                        31 Kent Street, Amble, NE65 0AB<br>
                         <strong class="govuk-tag govuk-tag--blue">
                         Residential
                         </strong>
@@ -88,7 +95,7 @@ Winter Fuel Payments
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="address-5" name="address-change" type="radio" value="3 Kent Street, Amble, NE65 0LZ">
                       <label class="govuk-label govuk-radios__label" for="address-5">
-                        3 Kent Street, Amble, NE65 0LZ<br>
+                        3 Kent Street, Amble, NE65 0AB<br>
                         <strong class="govuk-tag govuk-tag--blue">
                         Residential
                         </strong>
@@ -97,7 +104,7 @@ Winter Fuel Payments
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="address-6" name="address-change" type="radio" value="17 Kent Street, Amble, NE65 0LZ">
                       <label class="govuk-label govuk-radios__label" for="address-6">
-                        17 Kent Street, Amble, NE65 0LZ<br>
+                        17 Kent Street, Amble, NE65 0AB<br>
                         <strong class="govuk-tag govuk-tag--blue">
                         Residential
                         </strong>
@@ -106,7 +113,7 @@ Winter Fuel Payments
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="address-7" name="address-change" type="radio" value="21 Kent Street, Amble, NE65 0LZ">
                       <label class="govuk-label govuk-radios__label" for="address-7">
-                        21 Kent Street, Amble, NE65 0LZ<br>
+                        21 Kent Street, Amble, NE65 0AB<br>
                         <strong class="govuk-tag govuk-tag--blue">
                         Residential
                         </strong>
@@ -115,7 +122,7 @@ Winter Fuel Payments
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="address-8" name="address-change" type="radio" value="33-35 Kent Street, Amble, NE65 0LZ">
                       <label class="govuk-label govuk-radios__label" for="address-8">
-                      Boots the Chemists Ltd, 33-35 Kent Street, Amble, NE65 0LZ<br>
+                      Boots the Chemists Ltd, 33-35 Kent Street, Amble, NE65 0AB<br>
                       <strong class="govuk-tag govuk-tag--turquoise">
                       Commercial
                       </strong>
@@ -124,18 +131,37 @@ Winter Fuel Payments
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="address-9" name="address-change" type="radio" value="1 Kent Street, Amble, NE65 0LZ">
                       <label class="govuk-label govuk-radios__label" for="address-9">
-                        1 Kent Street, Amble, NE65 0LZ<br>
+                        1 Kent Street, Amble, NE65 0AB<br>
                         <strong class="govuk-tag govuk-tag--blue">
                         Residential
                         </strong>
                       </label>
                     </div>
+                    {% endif %}
+
+                    {% if data['postcode'] === 'NE65 0AB' %}
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="address-10" name="address-change" type="radio" value="see all">
                       <label class="govuk-label govuk-radios__label" for="address-10">
                         See all results
                       </label>
                     </div>
+                                      {% else %}
+
+                                      <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="address-11" name="address-change" type="radio" value="address not found">
+                                        <label class="govuk-label govuk-radios__label" for="address-11">
+                                          Address not found
+                                        </label>
+                                      </div>
+
+                                      {% endif %}
+
+
+
+
+
+
                   </div>
                 </fieldset>
               </div>
