@@ -211,5 +211,10 @@ router.post('/sprint41b/address', function(req, res) {
   })
   ;
 
+  // Start new claim button on confirmation page back to beginning
+router.post('/sprint41b/complete-pre', (req, res) => {
+  res.redirect('/sprint41b/type-of-application')
+});
+
 
   module.exports = router;
