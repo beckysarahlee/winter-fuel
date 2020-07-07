@@ -1,33 +1,22 @@
 {% extends "layout.html" %}
 
-{% block pageTitle %}
-GOV.UK Prototype Kit
+{% block header %}
+{% include './_header.html' %}
 {% endblock %}
 
 {% block beforeContent %}
-
-<div class="moj-identity-bar">
-  <div class="moj-identity-bar__container">
-    <div class="moj-identity-bar__details">
-      <span class="moj-identity-bar__title"><b>
-        {% if data['phone-post'] === 'phone' %}
-        Theodora Best
-        {% else %}
-        Samira Mcgill
-        {% endif %}</b></span>
-    </div>
-    <div class="moj-identity-bar__details">
-      <span class="moj-identity-bar__title">
-        <a href="type-of-application" class="govuk-link">Start again</a>
-      </span>
-    </div>
-  </div>
-</div>
-
-
+{% include './_blue_bar.html' %}
 {% endblock %}
 
+
+{% block pageTitle %}
+Winter Fuel Payments
+{% endblock %}
 {% block content %}
+
+
+
+
 
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
@@ -69,6 +58,10 @@ GOV.UK Prototype Kit
                 <p>
                   <strong>Telephone:</strong> 0800 731 0160<br>
                 </p>
+
+                <button class="govuk-button" data-module="govuk-button">
+                  Start a claim for someone else
+                </button>
 
             </form>
 
