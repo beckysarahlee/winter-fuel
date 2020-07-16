@@ -31,17 +31,8 @@ router.post('/sprint37b/find-1', (req, res) => {
 });
 
 // Security to extra security (failed question)
-<<<<<<< HEAD
-router.post('/sprint37b/security', function(req, res) {
-  if (req.body['security'] === 'fail') {
-    res.redirect('find-fail');
-  } else {
-    res.redirect('overview-security');
-  }
-=======
 router.post('/sprint37b/security', (req, res) => {
   res.redirect('/sprint37b/overview')
->>>>>>> 2a286325de2d3a1c8709c4690f876617533e7b4b
 });
 
 
