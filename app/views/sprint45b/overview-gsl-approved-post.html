@@ -26,9 +26,6 @@ GOV.UK Prototype Kit
                 {% else %}
                 XX 12 34 56
                 {% endif %}<br>
-                <strong class="govuk-tag govuk-tag--orange">
-                  Awaiting GSL decision
-                </strong>
 
               </span>
             </h1>
@@ -39,15 +36,25 @@ GOV.UK Prototype Kit
           <br>
           <br>
 
+          <table class="govuk-table">
           <h2 class="govuk-heading-m">2020 payment</h2>
-          <div class="govuk-warning-text">
-            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-            <strong class="govuk-warning-text__text">
-              <span class="govuk-warning-text__assistive">Warning</span>
-          This person does not qualify because their genuine and sufficient link assessment has not yet been reviewed. <a href="/sprint43b/gsl-task" class="govuk-link govuk-link--no-visited-state">Review GSL.</a>
-            </strong>
-          </div>
-
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header"></th>
+              <th scope="col" class="govuk-table__header"></th>
+            </tr>
+          </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Payment date</th>
+                <td class="govuk-table__cell">Monday, 4 November 2020</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Amount</th>
+                <td class="govuk-table__cell">£200</td>
+              </tr>
+            </tbody>
+          </table>
 
           <br>
 
@@ -73,22 +80,16 @@ GOV.UK Prototype Kit
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Genuine and sufficient link</th>
-                <td class="govuk-table__cell">Awaiting decision</td>
-                <td class="govuk-table__cell"><a href="/sprint43b/gsl-task" class="govuk-link govuk-link--no-visited-state">Make decision</a></td>
+                <td class="govuk-table__cell">Approved</td>
+                <td class="govuk-table__cell"></td>
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Address</th>
                 <td class="govuk-table__cell">
-                  {% if data['address-change'] %}
-                  {{data['address-change'].split(', ').join('<br />') | safe }}
-                  {% elif data.address %}
-                  {{data.address.split(', ').join('<br />') | safe}}
-                  {% else %}
-                  Rägetenstrasse 99<br>
-                  Hohentannen<br>
-                  9216<br>
-                  Switzerland
-                  {% endif %}
+                  1169  Flinderation Road<br>
+                  Blue Island<br>
+                  Illinois<br>
+                  60406
                 </td>
                 <td class="govuk-table__cell"></td>
               </tr>

@@ -79,17 +79,9 @@ GOV.UK Prototype Kit
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Address</th>
                 <td class="govuk-table__cell">
-                  {% if data['address-change'] %}
-                  {{data['address-change'].split(', ').join('<br />') | safe }}
-                  {% elif data.address %}
-                  {{data.address.split(', ').join('<br />') | safe}}
-                  {% else %}
-                  Dolphin View Care Home<br>
-                  Harbour Road<br>
-                  Amble<br>
-                  Northumberland<br>
-                  NE65 0AP
-                  {% endif %}
+                  42 Rue Du Commerce, L-3450<br>
+                  Dudelange<br>
+                  Luxembourg
                 </td>
                 <td class="govuk-table__cell"></td>
               </tr>
