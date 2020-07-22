@@ -10,7 +10,7 @@ router.use((req, res, next) => {
 
 
 router.post('/sprint43b/tasks', (req, res) => {
-  res.redirect('/sprint43b/verify-address')
+  res.redirect('/sprint32c/address-1')
 });
 
 
@@ -18,7 +18,6 @@ router.post('/sprint43b/tasks', (req, res) => {
 router.post('/sprint43b/tasks-3', (req, res) => {
   res.redirect('/sprint43b/gsl-task')
 });
-
 
 
 
