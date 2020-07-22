@@ -9,9 +9,6 @@ router.use((req, res, next) => {
 })
 
 
-router.post('/sprint45/verify-dob', (req, res) => {
-  res.redirect('/sprint45/verify-dob-confirm')
-});
 
 
 
