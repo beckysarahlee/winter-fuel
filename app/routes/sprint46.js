@@ -26,11 +26,13 @@ router.use((req, res, next) => {
 
 
   // Living
-
-  router.post('/sprint46/residency', (req, res) => {
-    res.redirect('/sprint46/residency-type')
-  })
-  ;
+  router.post('/sprint46/residency', function(req, res) {
+    if ( req.body['living'] === 'united-kingdom' ) {
+      res.redirect('pension-credit');
+    } else {
+      res.redirect('outside-UK');
+    }
+  });
 
 
   // Residency type SP
@@ -45,7 +47,7 @@ router.use((req, res, next) => {
     } else if ( req.body['where-were-you-living'] === 'prison' ) {
       res.redirect('prison-pre');
     } else {
-      res.redirect('pension-credit');
+      res.redirect('who');
     }
   });
 
@@ -63,12 +65,13 @@ router.use((req, res, next) => {
 
   // State Pension
 
-  router.post('/sprint46/state-pension', (req, res) => {
-    res.redirect('/sprint46/who')
-  })
-  ;
-
-
+  router.post('/sprint46/state-pension', function(req, res) {
+    if ( req.body['state-pension'] === 'yes' ) {
+      res.redirect('residency-type');
+    } else {
+      res.redirect('you-need-to-claim');
+    }
+  });
   // Living with anybody
 
   router.post('/sprint46/who', function(req, res) {
