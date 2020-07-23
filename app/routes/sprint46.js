@@ -69,7 +69,7 @@ router.use((req, res, next) => {
     if ( req.body['state-pension'] === 'yes' ) {
       res.redirect('residency-type');
     } else {
-      res.redirect('you-need-to-claim');
+      res.redirect('make-a-claim');
     }
   });
   // Living with anybody
