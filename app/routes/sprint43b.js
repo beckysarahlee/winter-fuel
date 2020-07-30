@@ -19,6 +19,10 @@ router.post('/sprint43b/tasks-3', (req, res) => {
   res.redirect('/sprint43b/gsl-task')
 });
 
+router.post('/sprint43b/tasks-4', (req, res) => {
+  res.redirect('/sprint47b/overpayment-referral')
+});
+
 
 router.post('/sprint43b/gsl-task', function(req, res) {
   if (req.session.data["gsl-decision"] === "approved") {
