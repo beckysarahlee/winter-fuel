@@ -1,5 +1,9 @@
 {% extends "layout.html" %}
 
+{% block header %}
+{% include './_header.html' %}
+{% endblock %}
+
 {% block pageTitle %}
 GOV.UK Prototype Kit
 {% endblock %}
@@ -31,7 +35,7 @@ GOV.UK Prototype Kit
         <h1 class="govuk-heading-xl">What are your contact details?</h1>
         <form method="post">
 
-          
+
           <div class="govuk-inset-text"><span style="font-weight: bold">We need at least one phone number.<br/><br/>Include the country code for international numbers.</span></div>
 
           <div class="govuk-form-group">

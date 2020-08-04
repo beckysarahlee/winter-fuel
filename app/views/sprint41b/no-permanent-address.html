@@ -1,5 +1,10 @@
 {% extends "layout.html" %}
 
+
+{% block header %}
+{% include './_header.html' %}
+{% endblock %}
+
 {% block pageTitle %}
 GOV.UK Prototype Kit
 {% endblock %}
@@ -75,7 +80,7 @@ GOV.UK Prototype Kit
               </button>
 
             </form>
-            
+
             {% if data['prototype-mode'] === 'dev' %}
             <details class="govuk-details" data-module="govuk-details">
               <summary class="govuk-details__summary">

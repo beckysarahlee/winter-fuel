@@ -1,5 +1,9 @@
 {% extends "layout.html" %}
 
+{% block header %}
+{% include './_header.html' %}
+{% endblock %}
+
 {% block pageTitle %}
 GOV.UK Prototype Kit
 {% endblock %}
@@ -33,7 +37,7 @@ GOV.UK Prototype Kit
 
             <h1 class="govuk-heading-xl">Citizen cannot be found</h1>
 
-            <p>No citizen was found using National Insurance number 
+            <p>No citizen was found using National Insurance number
               {% if data['nino'] %}
                   {{data['nino']}}
                   {% else %}
