@@ -29,8 +29,8 @@ router.use((req, res, next) => {
 
   // Recoverable to get next
 
-  router.post('/sprint47b/date-of-birth', (req, res) => {
-    res.redirect('/sprint47b/residency')
+  router.post('/sprint47b/recoverable-overpayment', (req, res) => {
+    res.redirect('/sprint47b/next-task')
   })
   ;
 
