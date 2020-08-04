@@ -14,5 +14,10 @@ router.post('/sprint45/verify-dob', (req, res) => {
 });
 
 
+router.post('/sprint45/dob-nv-request', (req, res) => {
+  res.redirect('/sprint41b/type-of-application')
+});
+
+
 
 module.exports = router;
