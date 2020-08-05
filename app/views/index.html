@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block header %}
-{% include './_header-prototypes.html' %}
+{% include './_header-latest.html' %}
 {% endblock %}
 
 
@@ -10,55 +10,170 @@ Winter Fuel Payments
 {% endblock %}
 {% block content %}
 
+
+
 <div class="govuk-width-container">
 
   <h1 class="govuk-heading-xl">
-    Prototype
+    Latest versions
   </h1>
-
-  <h2 class=" govuk-heading-l">Sprint 45</h2>
 
   <main class="govuk-main-wrapper">
     <div class="prototype-write-up">
-
       <div class="govuk-grid-row">
 
-        <div class="govuk-grid-column-one-half"">
-      <h5 class=" govuk-heading-m">International</h5>
-          <div class="app-most-recent">
-            {% include 'notes/wf-sprint45.html' %}
+        <div class="govuk-grid-column-full"">
+
+        <div class=" govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <section class="key-details-bar-light-blue" role="contentinfo" aria-label="Key details">
+              <dl class="key-details-bar-light-blue__key-details">
+                <h2 class="govuk-heading-m govuk-!-margin-bottom-0 govuk-!-margin-top-0">Winter Fuel Agent</h2>
+            </section>
+
+            <br>
+
+            <section class="key-details-bar-light-blue" role="contentinfo" aria-label="Key details">
+              <dl class="key-details-bar-light-blue__key-details">
+                <td class="govuk-table__cell">
+                  <strong class="govuk-tag">
+                    New claims
+                  </strong>
+                  <br>
+                  <br>
+                  <a href="/sprint35b/type-of-application" class="govuk-link govuk-!-font-size-19">UK new claims</a><br>
+                  <a href="/sprint43/application-type" class="govuk-link govuk-!-font-size-19">International new claims</a>
+              </dl>
+            </section>
+
+            <br>
+
+            <section class="key-details-bar-light-blue" role="contentinfo" aria-label="Key details">
+              <dl class="key-details-bar-light-blue__key-details">
+                <td class="govuk-table__cell">
+                  <strong class="govuk-tag">
+                    View a record
+                  </strong>
+                  <br>
+                  <br>
+                  <a href="/sprint37b/find" class="govuk-link govuk-!-font-size-19">Eligible</a><br>
+                  <a href="/sprint35d/ineligible" class="govuk-link govuk-!-font-size-19">Ineligible</a>
+              </dl>
+            </section>
+
+            <br>
+
+            <section class="key-details-bar-light-blue" role="contentinfo" aria-label="Key details">
+              <dl class="key-details-bar-light-blue__key-details">
+                <td class="govuk-table__cell">
+                  <strong class="govuk-tag">
+                    Get a task
+                  </strong>
+                  <br>
+                  <br>
+                  <a href="/sprint43b/tasks" class="govuk-link govuk-!-font-size-19">Tasks</a><br>
+                  <a href="/sprint45b/record-task-views" class="govuk-link govuk-!-font-size-19">Records with a task</a>
+              </dl>
+            </section>
+
           </div>
 
-      <h5 class=" govuk-heading-m">Task lists</h5>
-          <div class="app-most-recent">
-            {% include 'notes/wf-sprint43b.html' %}
+
+
+
+
+          <div class="govuk-grid-column-one-third">
+            <section class="key-details-bar-dark-blue" role="contentinfo" aria-label="Key details">
+              <dl class="key-details-bar-dark-blue__key-details">
+                <h2 class="govuk-heading-m govuk-!-margin-bottom-0 govuk-!-margin-top-">G4S Agent</h2>
+              </dl>
+            </section>
+
+            <br>
+
+            <section class="key-details-bar-dark-blue" role="contentinfo" aria-label="Key details">
+              <dl class="key-details-bar-dark-blue__key-details">
+                <strong class="govuk-tag app-c-tag--warning">
+                  Eligibility & referral
+                </strong>
+                <br>
+                <br>
+                <a href="/sprint35e/end-pages-index" class="govuk-link govuk-!-font-size-19">Eligibility checker with referral</a>
+              </dl>
+            </section>
+
+            <br>
+
+            <section class="key-details-bar-dark-blue" role="contentinfo" aria-label="Key details">
+              <dl class="key-details-bar-dark-blue__key-details">
+                <strong class="govuk-tag app-c-tag--warning">
+                  View a record
+                </strong>
+                <br>
+                <br>
+                <a href="/sprint39c/find" class="govuk-link govuk-!-font-size-19">Eligible</a><br>
+              </dl>
+            </section>
+
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <section class="key-details-bar-purple" role="contentinfo" aria-label="Key details">
+              <dl class="key-details-bar-purple__key-details">
+                <h2 class="govuk-heading-m govuk-!-margin-bottom-0 govuk-!-margin-top-">Winter Fuel Dev team</h2>
+              </dl>
+            </section>
+
+            <br>
+
+            <section class="key-details-bar-purple" role="contentinfo" aria-label="Key details">
+              <dl class="key-details-bar-purple__key-details">
+                <strong class="govuk-tag app-c-tag--purple">
+                  Manage things
+                </strong>
+                <br>
+                <br>
+                <a href="/sprint32c/manage-jobs3" class="govuk-link govuk-!-font-size-19">Manage Winter Fuel Payments</a><br>
+              </dl>
+            </section>
+
+            <br>
+            <br>
+
+            <section class="key-details-bar-light-purple" role="contentinfo" aria-label="Key details">
+              <dl class="key-details-bar-light-purple__key-details">
+                <h2 class="govuk-heading-m govuk-!-margin-bottom-0 govuk-!-margin-top-">GOV.UK</h2>
+              </dl>
+            </section>
+
+            <br>
+
+            <section class="key-details-bar-light-purple" role="contentinfo" aria-label="Key details">
+              <dl class="key-details-bar-light-purple__key-details">
+                <strong class="govuk-tag app-c-tag--otherpurple">
+                  Eligibility
+                </strong>
+                <br>
+                <br>
+                <a href="/sprint46/date-of-birth" class="govuk-link govuk-!-font-size-19">Eligibility checker</a><br>
+              </dl>
+            </section>
+
+          </div>
+
           </div>
         </div>
 
-
-        <div class="govuk-grid-column-one-half"">
-
-                  <h5 class=" govuk-heading-m">New claims</h5>
-          <div class="app-most-recent">
-            {% include 'notes/wf-sprint41b.html' %}
-          </div>
-
-<br>
-
-      <h5 class=" govuk-heading-m">GOV.UK eligibility</h5>
-          <div class="app-most-recent">
-            {% include 'notes/wf-sprint46.html' %}
-          </div>
-        </div>
+        <br>
 
       </div>
 
 
-    </div>
 
 
 
-  </main>
+</div>
+
+</main>
 </div>
 
 {% endblock %}
