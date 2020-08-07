@@ -18,18 +18,8 @@ router.use((req, res, next) => {
 
 
 
-  // Referral, to be recovered or not to be recovered?
-  router.post('/sprint47b/overpayment-referral', function(req, res) {
-    if ( req.body['recoverable'] === 'yes' ) {
-      res.redirect('recoverable-overpayment');
-    } else {
-      res.redirect('next-task');
-    }
-  });
-
-  // Recoverable to get next
-
-  router.post('/sprint47b/recoverable-overpayment', (req, res) => {
+  // Referral to get next
+  router.post('/sprint47b/overpayment-referral', (req, res) => {
     res.redirect('/sprint47b/next-task')
   })
   ;

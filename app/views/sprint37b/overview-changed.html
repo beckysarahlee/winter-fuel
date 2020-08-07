@@ -22,7 +22,7 @@ Winter Fuel Payments
         <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
 
         <div class="moj-banner__message">
-        <span class="moj-banner__assistive">Success</span>Record details updated</div>
+        <span class="moj-banner__assistive">Success</span>Case updated</div>
 
         </div>
 
@@ -40,7 +40,7 @@ Winter Fuel Payments
                         <tbody class="govuk-table__body">
                           <tr class="govuk-table__row">
                             <th scope="row" class="govuk-table__header">Payment date</th>
-                            <td class="govuk-table__cell">Monday, 4 November 2020</td>
+                            <td class="govuk-table__cell">4 November 2020</td>
                           </tr>
                           <tr class="govuk-table__row">
                             <th scope="row" class="govuk-table__header">Amount</th>
@@ -87,17 +87,7 @@ Winter Fuel Payments
                   </td>
                 </tr>
                 <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Occupancy</th>
-                  <td class="govuk-table__cell">
-                    {% if data['living-with'] %}
-                    {{data['living-with']}}
-                      {% else %}
-                      Lives with someone else of State Pension age
-                    {% endif %}
-                  </td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Date they moved in</th>
+                  <th scope="row" class="govuk-table__header">Date moved in</th>
                   <td class="govuk-table__cell">
                     {% if data['moveday'] %}
                     {{data['moveday']}} July 2020
@@ -107,6 +97,17 @@ Winter Fuel Payments
                   </td>
                   </td>
                 </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Occupancy</th>
+                  <td class="govuk-table__cell">
+                    {% if data['living-with'] %}
+                    {{data['living-with']}}
+                      {% else %}
+                      Lives with someone else of State Pension age
+                    {% endif %}
+                  </td>
+                </tr>
+                
               </tbody>
             </table>
 

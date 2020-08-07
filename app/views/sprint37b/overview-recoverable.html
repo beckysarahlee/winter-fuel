@@ -44,7 +44,7 @@ Winter Fuel Payments
                               <th scope="col" class="govuk-table__header">Status</th>
                             </tr>
                             <tr class="govuk-table__row">
-                              <td class="govuk-table__cell">Monday, 4 November 2019</td>
+                              <td class="govuk-table__cell">4 November 2019</td>
                               <td class="govuk-table__cell">£200</td>
                               <td class="govuk-table__cell">Paid</td>
                             </tr>
@@ -89,6 +89,16 @@ Winter Fuel Payments
                   </td>
                 </tr>
                 <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Date moved in</th>
+                  <td class="govuk-table__cell">
+                    {% if data['moveday'] %}
+                    {{data['moveday']}} July 2020
+                      {% else %}
+                      15 July 2020
+                    {% endif %}
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Occupancy</th>
                   <td class="govuk-table__cell">
                     {% if data['living-with'] %}
@@ -98,16 +108,7 @@ Winter Fuel Payments
                     {% endif %}
                   </td>
                 </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Date they moved in</th>
-                  <td class="govuk-table__cell">
-                    {% if data['moveday'] %}
-                    {{data['moveday']}} July 2020
-                      {% else %}
-                      15 July 2020
-                    {% endif %}
-                  </td>
-                </tr>
+                
               </tbody>
             </table>
 
