@@ -46,7 +46,12 @@ Winter Fuel Payments
           <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
 
           <div class="moj-banner__message">
-          <span class="moj-banner__assistive">Success</span>Complete</div>
+            {% if data['recoverable'] === 'yes' %}
+              <span class="moj-banner__assistive">Success</span>Record of decision downloaded - you should now upload this to CAM<br><a href="">Download record of decision again</a></div>
+            {% else %}
+              <span class="moj-banner__assistive">Success</span>Case updated</div>
+            {% endif %}
+          
 
           </div>
 
