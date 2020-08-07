@@ -13,6 +13,7 @@ router.post('/sprint43b/tasks', (req, res) => {
   res.redirect('/sprint32c/address-1')
 });
 
+// GSL TASK ONEEEE
 
 
 router.post('/sprint43b/tasks-3', (req, res) => {
@@ -31,5 +32,47 @@ router.post('/sprint43b/gsl-task', function(req, res) {
     res.redirect('tasks-3-not-approved');
   }
 });
+
+
+// GSL TASK TWOOOOOO
+
+router.post('/sprint43b/tasks-3-approved', (req, res) => {
+  res.redirect('/sprint43b/gsl-task-2')
+});
+
+router.post('/sprint43b/tasks-3-not-approved', (req, res) => {
+  res.redirect('/sprint43b/gsl-task-2')
+});
+
+router.post('/sprint43b/gsl-task-2', function(req, res) {
+  if (req.session.data["gsl-decision"] === "approved") {
+    res.redirect('tasks-3-approved-2');
+  } else {
+    res.redirect('tasks-3-not-approved-2');
+  }
+});
+
+
+// GSL TASK THREEEEEE
+
+router.post('/sprint43b/tasks-3-approved-2', (req, res) => {
+  res.redirect('/sprint43b/gsl-task-3')
+});
+
+router.post('/sprint43b/tasks-3-not-approved-2', (req, res) => {
+  res.redirect('/sprint43b/gsl-task-3')
+});
+
+router.post('/sprint43b/gsl-task-3', function(req, res) {
+  if (req.session.data["gsl-decision"] === "approved") {
+    res.redirect('tasks-3-approved-3');
+  } else {
+    res.redirect('tasks-3-not-approved-3');
+  }
+});
+
+
+
+
 
 module.exports = router;
