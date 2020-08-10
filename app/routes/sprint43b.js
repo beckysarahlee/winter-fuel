@@ -13,6 +13,13 @@ router.post('/sprint43b/tasks', (req, res) => {
   res.redirect('/sprint32c/address-1')
 });
 
+// GSL return to queue
+
+router.post('/sprint43b/return-queue', (req, res) => {
+  res.redirect('/sprint43b/tasks-3-returned')
+});
+
+
 // GSL TASK ONEEEE
 
 
