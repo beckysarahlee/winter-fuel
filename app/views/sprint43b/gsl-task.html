@@ -92,8 +92,13 @@ Winter Fuel Payments
                         Contact details
                       </dt>
                       <dd class="govuk-summary-list__value" style="border-bottom: none;">
-                        <p class="govuk-body">07700 900457</p>
-                        <p class="govuk-body">sarah.phillips@example.com</p>
+                        <p class="govuk-body">
+                          {% if data['homenumber'] %}
+                    Home phone:  {{data.homenumber}}<br>
+                    Mobile phone:  {{data.mobilenumber}}
+                          {% endif %}
+                            </p>
+                        <p class="govuk-body">Email address:  {{data.email}}</p>
                       </dd>
                       </div>
                   </dl>
@@ -135,7 +140,8 @@ Winter Fuel Payments
                     <dt class="govuk-summary-list__key"style="border-bottom: none;">  If anyone else in the household gets a Winter Fuel Payment, when did they last get it?
                     </dt>
                     <dd class="govuk-summary-list__value"style="border-bottom: none;">
-                      {{data.paymentmonth}} {{data.paymentyear}}
+                        Yes:<br>
+                      {{data.lastpaymentmonth}} {{data.lastpaymentyear}}
                     </dd>
 
                   </div>
@@ -165,9 +171,7 @@ Winter Fuel Payments
                         Including the UK, which countries have you lived or worked in?
                       </dt>
                       <dd class="govuk-summary-list__value"style="border-bottom: none;">
-                        UK Jun 1970 to Dec 1988 (worked Mar 1986 to leaving)<br>
-                        Germany Dec 1988 to Jul 2012 (lived and worked)<br>
-                        Italy Jul 2012 to current date
+                        {{data.livedworked}}
                       </dd>
                       <dd class="govuk-summary-list__actions"style="border-bottom: none;">
 
@@ -197,7 +201,7 @@ Winter Fuel Payments
                       Type of account
                       </dt>
                       <dd class="govuk-summary-list__value">
-                        Bank account outside the UK
+                      UK bank or building society account
                       </dd>
                       <dd class="govuk-summary-list__actions">
 
@@ -216,33 +220,21 @@ Winter Fuel Payments
                     </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key">
-                        BIC or SWIFT code
+                        Sort code
                       </dt>
                       <dd class="govuk-summary-list__value">
-                        BITAITR1
+                        40 47 59
                       </dd>
                       <dd class="govuk-summary-list__actions">
 
                       </dd>
                     </div>
-                    <div class="govuk-summary-list__row">
-                      <dt class="govuk-summary-list__key">
-                        IBAN
-                      </dt>
-                      <dd class="govuk-summary-list__value">
-                        1253612377AD12
-                      </dd>
-                      <dd class="govuk-summary-list__actions">
-
-                      </dd>
-                    </div>
-
                       <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key"style="border-bottom: none;">
-                        Do you also have a UK bank account?
+                        Account number
                         </dt>
                         <dd class="govuk-summary-list__value"style="border-bottom: none;">
-                          No
+                        60382491
                         </dd>
 
                       </div>
@@ -303,6 +295,7 @@ Winter Fuel Payments
                         Do you have family who live in the UK?
                       </dt>
                       <dd class="govuk-summary-list__value">
+                        Yes:<br>
                         {{data.ukfamily}}
                       </dd>
                       <dd class="govuk-summary-list__actions">
@@ -325,7 +318,7 @@ Winter Fuel Payments
                         Do you own property in the UK?
                       </dt>
                       <dd class="govuk-summary-list__value">
-                        {{data.property}}
+                        No
                       </dd>
                       <dd class="govuk-summary-list__actions">
 
@@ -336,7 +329,7 @@ Winter Fuel Payments
         Do you have a business registered in the UK?
                       </dt>
                       <dd class="govuk-summary-list__value">
-                        {{data.business}}
+                        No
                       </dd>
                       <dd class="govuk-summary-list__actions">
 
@@ -347,7 +340,8 @@ Winter Fuel Payments
                         Have you returned to the UK for any other reason in the last 3 years?
                       </dt>
                       <dd class="govuk-summary-list__value">
-                        No
+                        No<br>
+                        {{data.othervisit}}
                       </dd>
                       <dd class="govuk-summary-list__actions">
 
@@ -464,7 +458,7 @@ Winter Fuel Payments
                         getting UK State Pension or any other UK social security benefit?
                       </dt>
                       <dd class="govuk-summary-list__value"style="border-bottom: none;">
-                        No
+                        Yes
                       </dd>
                       <dd class="govuk-summary-list__actions"style="border-bottom: none;">
 
