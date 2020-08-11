@@ -72,9 +72,9 @@ router.post('/sprint43b/tasks-3-not-approved-2', (req, res) => {
 
 router.post('/sprint43b/gsl-task-3', function(req, res) {
   if (req.session.data["gsl-decision"] === "approved") {
-    res.redirect('tasks-3-approved-3');
+    res.redirect('/sprint45b/overview-gsl-approved-pre');
   } else {
-    res.redirect('tasks-3-not-approved-3');
+    res.redirect('/sprint45b/overview-gsl-not-approved');
   }
 });
 
