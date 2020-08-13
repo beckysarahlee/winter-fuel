@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+
+{% block header %}
+{% include './_header-manage.html' %}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <br>
+    <br>
+
+    <h1 class="govuk-heading-xl">Manage Winter Fuel payments</h1>
+
+
+    <form method="post">
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+
+          <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+            <ul class="moj-sub-navigation__list">
+              <li class="moj-sub-navigation__item">
+                <a class="moj-sub-navigation__link" href="manage-jobs3">Manage things...</a>
+              </li>
+
+              <li class="moj-sub-navigation__item">
+                <a class="moj-sub-navigation__link" href="payments">Payments</a>
+              </li>
+
+              <li class="moj-sub-navigation__item">
+                <a class="moj-sub-navigation__link" aria-current="page" href="letters">Letters</a>
+              </li>
+
+
+          </nav>
+
+                                    <h1 class="govuk-heading-l">Letters</h1>
+
+</div>
+</div>
+
+
+
+<br>
+  <br>
+
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-third">
+
+          <h3 class="govuk-heading-l"> 382,029
+            <p class="govuk-body govuk-!-font-size-24">letters made<br>
+                            <a href="#" class="govuk-link govuk-!-font-size-24">Do something with them</a></p>
+          </h3>
+
+          <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+          <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+        </div>
+
+        <div class="govuk-grid-row">
+
+          <div class="govuk-grid-column-one-third">
+
+            <h3 class="govuk-heading-l"> 8.6 million
+              <p class="govuk-body govuk-!-font-size-24">letters to be made<br>
+                              <a href="#" class="govuk-link govuk-!-font-size-24">Do something with them</a></p>
+            </h3>
+
+            <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+            <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+          </div>
+
+
+          <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-one-third">
+
+              <h3 class="govuk-heading-l"> 1,302
+                <p class="govuk-body govuk-!-font-size-24">Returned letters<br>
+                                <a href="#" class="govuk-link govuk-!-font-size-24">Do something with them</a></p>
+              </h3>
+
+    <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+    <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+
+            </div>
+
+        </div>
+      </div>
+
+      <br>
+      <br>
+
+            <div class="govuk-grid-column-full">
+      <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+Stop sending letters
+</button>
+
+</div>
+
+
+
+
+    </form>
+
+  </div>
+</div>
+
+
+{% endblock %}
