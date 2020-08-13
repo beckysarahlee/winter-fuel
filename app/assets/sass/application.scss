@@ -608,6 +608,21 @@ span.status-tag-disabled {
   background-color: govuk-colour("purple");
 }
 
+// Centre text
+  .show-more {
+    margin: 10px 0 10px 0;
+    text-align: center;
+    display: block;
+  }
+.show-more span {
+    position: relative;
+    top: -11px;
+    outline: 10px solid #fff;
+    background: #fff;
+    display: inline-block;
+    border-bottom: 1px solid #2b8cc4;
+}
+
 //search
 
 .searchheader {
