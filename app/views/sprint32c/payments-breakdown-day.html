@@ -13,8 +13,8 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
-<br>
-<br>
+    <br>
+    <br>
     <h1 class="govuk-heading-xl">Manage Winter Fuel Payments</h1>
 
 
@@ -48,154 +48,121 @@
 
 
       <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
+        <div class="govuk-grid-column-full">
 
-        {{ govukBackLink({
+          {{ govukBackLink({
             text: "Back",
             href: "javascript:history.go(-1)"
           }) }}
 
-<br>
-<br>
+          <br>
+          <br>
 
           <h2 class="govuk-heading-l">Payments by day</h2>
 
           <br>
 
-        <div class="govuk-tabs" data-module="govuk-tabs">
-          <h2 class="govuk-tabs__title">
-            Contents
-          </h2>
-          <ul class="govuk-tabs__list">
-            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-              <a class="govuk-tabs__tab" href="#payments-sent">
-                <span class="govuk-caption-m"></span>
-                <h3 class="govuk-heading-m">Payments sent</h3>
-              </a>
-            </li>
-            <li class="govuk-tabs__list-item">
-              <a class="govuk-tabs__tab" href="#scheduled">
-                <span class="govuk-caption-m"></span>
-                <h3 class="govuk-heading-m">Payments scheduled</h3>
-              </a>
-            </li>
-          </ul>
-          <div class="govuk-tabs__panel" id="payments-sent">
-            <table class="govuk-table">
-              <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                  <th scope="col" class="govuk-table__header">Date</th>
-                  <th scope="col" class="govuk-table__header">Payments sent</th>
-                  <th scope="col" class="govuk-table__header">Payments returned</th>
-                </tr>
-              </thead>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell">Wednesday 28 November</td>
-                  <td class="govuk-table__cell">81,324</td>
-                  <td class="govuk-table__cell">392</td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell">Tuesday 27 November</td>
-                  <td class="govuk-table__cell">203,928</td>
-                  <td class="govuk-table__cell">105</td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell">Monday 26 November</td>
-                  <td class="govuk-table__cell">2</td>
-                  <td class="govuk-table__cell">0</td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="govuk-tabs" data-module="govuk-tabs">
+            <h2 class="govuk-tabs__title">
+              Contents
+            </h2>
+            <ul class="govuk-tabs__list">
+              <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                <a class="govuk-tabs__tab" href="#payments-sent">
+                  <span class="govuk-caption-m"></span>
+                  <h3 class="govuk-heading-m">Payments sent</h3>
+                </a>
+              </li>
+              <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#scheduled">
+                  <span class="govuk-caption-m"></span>
+                  <h3 class="govuk-heading-m">Payments scheduled</h3>
+                </a>
+              </li>
+            </ul>
+            <div class="govuk-tabs__panel" id="payments-sent">
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Date</th>
+                    <th scope="col" class="govuk-table__header">Payments sent</th>
+                    <th scope="col" class="govuk-table__header">Payments returned</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Wednesday 28 October</td>
+                    <td class="govuk-table__cell">81,324</td>
+                    <td class="govuk-table__cell">392</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Tuesday 27 October</td>
+                    <td class="govuk-table__cell">203,928</td>
+                    <td class="govuk-table__cell">105</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Monday 26 October</td>
+                    <td class="govuk-table__cell">2</td>
+                    <td class="govuk-table__cell">0</td>
+                  </tr>
+                </tbody>
+              </table>
 
-          </div>
-          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="scheduled">
-            <table class="govuk-table">
-              <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                  <th scope="col" class="govuk-table__header">Date</th>
-                  <th scope="col" class="govuk-table__header">Payments sent</th>
-                  <th scope="col" class="govuk-table__header">Payments returned</th>
-                </tr>
-              </thead>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell">David Francis</td>
-                  <td class="govuk-table__cell">24</td>
-                  <td class="govuk-table__cell">18</td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell">Paul Farmer</td>
-                  <td class="govuk-table__cell">16</td>
-                  <td class="govuk-table__cell">20</td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell">Rita Patel</td>
-                  <td class="govuk-table__cell">24</td>
-                  <td class="govuk-table__cell">27</td>
-                </tr>
-              </tbody>
-            </table>
+            </div>
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="scheduled">
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Date</th>
+                    <th scope="col" class="govuk-table__header">Number of payments</th>
 
-          </div>
-          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="payments-sent">
-            <h2 class="govuk-heading-l">Past month</h2>
-            <table class="govuk-table">
-              <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                  <th scope="col" class="govuk-table__header">Case manager</th>
-                  <th scope="col" class="govuk-table__header">Cases opened</th>
-                  <th scope="col" class="govuk-table__header">Cases closed</th>
-                </tr>
-              </thead>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell">David Francis</td>
-                  <td class="govuk-table__cell">98</td>
-                  <td class="govuk-table__cell">95</td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell">Paul Farmer</td>
-                  <td class="govuk-table__cell">122</td>
-                  <td class="govuk-table__cell">131</td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell">Rita Patel</td>
-                  <td class="govuk-table__cell">126</td>
-                  <td class="govuk-table__cell">142</td>
-                </tr>
-              </tbody>
-            </table>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Thursday 29 October</td>
+                    <td class="govuk-table__cell">16</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Friday 30 October</td>
+                    <td class="govuk-table__cell">16</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Monday 2 November</td>
+                    <td class="govuk-table__cell">24</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Tuesday 3 November</td>
+                    <td class="govuk-table__cell">24</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Wednesday 4 November</td>
+                    <td class="govuk-table__cell">24</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Thursday 5 November</td>
+                    <td class="govuk-table__cell">24</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Friday 6 November</td>
+                    <td class="govuk-table__cell">24</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Monday 9 November</td>
+                    <td class="govuk-table__cell">24</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Tuesday 10 November</td>
+                    <td class="govuk-table__cell">24</td>
+                  </tr>
+                </tbody>
+              </table>
 
-          </div>
-          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="scheduled">
-            <table class="govuk-table">
-              <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                  <th scope="col" class="govuk-table__header">Date</th>
-                  <th scope="col" class="govuk-table__header">Payments scheduled</th>
-                </tr>
-              </thead>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell">David Francis</td>
-                  <td class="govuk-table__cell">1380</td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell">Paul Farmer</td>
-                  <td class="govuk-table__cell">1129</td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell">Rita Patel</td>
-                  <td class="govuk-table__cell">1539</td>
-                </tr>
-              </tbody>
-            </table>
+            </div>
 
           </div>
         </div>
       </div>
-</div>
 
 
   </div>
