@@ -30,7 +30,7 @@ router.use((req, res, next) => {
     if ( req.body['living'] === 'united-kingdom' ) {
       res.redirect('pension-credit');
     } else {
-      res.redirect('outside-UK');
+      res.redirect('outside-uk');
     }
   });
 
