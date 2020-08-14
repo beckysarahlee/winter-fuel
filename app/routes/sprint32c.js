@@ -226,5 +226,13 @@ if ( req.body['address-fix-3'] === 'Address not found' ) {
 
 
 
+    // Payments to stop payments
+    router.post('/sprint32c/payments', (req, res) => {
+      res.redirect('/sprint32c/stop-payments')
+    })
+    ;
+
+
+
 
   module.exports = router;
