@@ -32,7 +32,7 @@ router.post('/sprint37b/find-1', (req, res) => {
 
 
 router.post('/sprint37b/security', (req, res) => {
-  res.redirect('/sprint37b/overview-awaiting-gsl')
+  res.redirect('/sprint37b/overview')
 });
 
 // THIS IS WHAT YOU NEED TO CHANGE BACK!!!!!! ---------------------------
