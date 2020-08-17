@@ -24,6 +24,21 @@ router.use((req, res, next) => {
   })
   ;
 
+  router.post('/sprint47b/next-task', (req, res) => {
+    res.redirect('/sprint47b/overpayment-referral-2')
+  })
+  ;
+
+  router.post('/sprint47b/overpayment-referral-2', (req, res) => {
+    res.redirect('/sprint47b/next-task-2')
+  })
+  ;
+
+  // Referral to get next
+  router.post('/sprint47b/next-task-2', (req, res) => {
+    res.redirect('/sprint47b/overpayment-referral-3')
+  })
+  ;
 
 
   module.exports = router;

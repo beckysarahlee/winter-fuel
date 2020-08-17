@@ -99,7 +99,7 @@ router.use((req, res, next) => {
 
 router.post('/sprint46/hospital', function(req, res) {
   if ( req.body['hospital-admission'] === 'yes' ) {
-    res.redirect('pension-credit');
+    res.redirect('who');
   } else {
     res.redirect('hospital-pre');
   }
