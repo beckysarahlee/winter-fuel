@@ -232,7 +232,11 @@ if ( req.body['address-fix-3'] === 'Address not found' ) {
     })
     ;
 
-
+// Letters to stop letters
+router.post('/sprint32c/letters', (req, res) => {
+  res.redirect('/sprint32c/stop-letters')
+})
+;
 
 
   module.exports = router;
