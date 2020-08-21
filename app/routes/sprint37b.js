@@ -180,7 +180,7 @@ router.post('/sprint37b/address-search-result', function(req, res) {
 
 // Move date
 router.post('/sprint37b/move-date', (req, res) => {
-  res.redirect('/sprint37b/homephone-address')
+  res.redirect('/sprint37b/living-with')
 });
 
 // Care home move date
@@ -228,16 +228,21 @@ router.post('/sprint37b/living-with', function(req, res) {
   if (req.body['living-with'] === 'Lives with someone else of State Pension age') {
     res.redirect('living-with-age');
   } else {
-    res.redirect('poa');
+    res.redirect('living-with-date');
   }
 });
+
+router.post('/sprint37b/living-with-date', (req, res) => {
+  res.redirect('/sprint37b/poa')
+});
+
 
 // Living with anyone at address change
 router.post('/sprint37b/living-with-q-week', function(req, res) {
   if (req.body['living-with-q-week'] === 'Lives with someone else of State Pension age') {
     res.redirect('living-with-age-q-week');
   } else {
-    res.redirect('poa');
+    res.redirect('living-with-date');
   }
 });
 
@@ -294,7 +299,7 @@ router.post('/sprint37b/make-payment', (req, res) => {
 
 // Living with age back to contact
 router.post('/sprint37b/living-with-age', (req, res) => {
-  res.redirect('/sprint37b/poa')
+  res.redirect('/sprint37b/living-with-date')
 });
 
 // Living with age back to contact
