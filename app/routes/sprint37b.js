@@ -20,19 +20,35 @@ router.post('/sprint37b/query', function(req, res) {
 
 // FIND SOMEONE AND SECURITY -------------------------------------------------
 
+
 // Find someone to find result
-router.post('/sprint37b/find', (req, res) => {
-  res.redirect('/sprint37b/find-1')
+router.post('/sprint37b/find', function(req, res) {
+  if (req.body['nino'] === 'XX987654X') {
+    res.redirect('/sprint37b/find-2');
+  } else if (req.body['nino'] === 'xx987654x') {
+    res.redirect('/sprint37b/find-2');
+  } else {
+    res.redirect('/sprint37b/find-1');
+  } 
 });
+
 
 // Find result to security
 router.post('/sprint37b/find-1', (req, res) => {
   res.redirect('/sprint37b/security')
 });
+// Find result to security
+router.post('/sprint37b/find-2', (req, res) => {
+  res.redirect('/sprint37b/security-2')
+});
 
 
 router.post('/sprint37b/security', (req, res) => {
   res.redirect('/sprint37b/overview')
+});
+
+router.post('/sprint37b/security-2', (req, res) => {
+  res.redirect('/sprint37b/overview-2')
 });
 
 // THIS IS WHAT YOU NEED TO CHANGE BACK!!!!!! ---------------------------
@@ -264,9 +280,13 @@ router.post('/sprint37b/poa-people', (req, res) => {
 router.post('/sprint37b/declaration', function(req, res) {
     if (req.session.data["movemonth"] === "08") {
       res.redirect('make-payment');
+    } else if (req.session.data["movemonth"] === "8") {
+      res.redirect('make-payment');
     } else if (req.session.data["movemonth"] === "07") {
       res.redirect('over-payment');
     } else if (req.session.data["movemonth"] === "7") {
+      res.redirect('over-payment');
+    } else if (req.session.data["movemonth"] === "10") {
       res.redirect('over-payment');
     } else {
       res.redirect('overview-changed');
