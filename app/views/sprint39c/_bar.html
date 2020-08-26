@@ -3,31 +3,18 @@
 
     <div>
       <h1 class="govuk-heading-xl">
-        {% if data['nino'] === 'MB 22 41 44 C' %}
-        Carmel Bouvet
-        {% endif %}
-        {% if data['nino'] === 'AX 04 99 84 C' %}
+
         Olivia Christie
-        {% elseif data['nino'] === 'JH 34 66 19 D' %}
-        Asim Picket
-        {% endif %}<br>
+        <br>
+
         <span class="govuk-body-l">
           {% if data['nino'] %}
           {{data['nino']}}
           {% else %}
           XX 12 34 56
           {% endif %}
-
         </span>
 
-
-        {% if data['nino'] === 'JH 34 66 19 D' %}
-        <br>
-        <strong class="govuk-tag govuk-tag--orange">
-          CARE HOME RECEIVING BENEFITS
-        </strong>
-
-        {% endif %}
       </h1>
     </div>
 

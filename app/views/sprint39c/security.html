@@ -4,10 +4,6 @@
 GOV.UK Prototype Kit
 {% endblock %}
 
-{% block beforeContent %}
-{% include './_blue_bar.html' %}
-{% endblock %}
-
 {% block content %}
 
 <div class="govuk-width-container">
@@ -19,13 +15,19 @@ GOV.UK Prototype Kit
 
       <form method="post">
 
-                <h1 class="govuk-heading-xl">Security questions</h1>
+        <h1 class="govuk-heading-xl">Security questions</h1>
 
-        <p><a href="#" class="govuk-link govuk-link--no-visited-state"></a></p>
+        <div class="govuk-inset-text"><span style="font-weight: bold">If you need to ask security questions to verify the caller's identity, do it now before continuing.</span></div>
 
-        <button type="submit" class="govuk-button">
-          Continue
-        </button>
+
+      <button type="submit" class="govuk-button">
+      Continue
+      </button>
+
+
+      <br>
+                            <p>  <a href="../sprint41b/type-of-application" class="govuk-link">Start again</a></p>
+
 
       </form>
 

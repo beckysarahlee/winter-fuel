@@ -200,7 +200,7 @@ router.post('/sprint37b/homephone-address', function(req, res) {
     } else if (req.session.data["movemonth"] === "7") {
       res.redirect('living-with-q-week');
     } else {
-      res.redirect('living-with');
+      res.redirect('poa');
     }
 });
 
@@ -213,12 +213,8 @@ router.post('/sprint37b/homephone-address-change', function(req, res) {
     } else if (req.session.data["movemonth"] === "7") {
       res.redirect('living-with-q-week');
     } else {
-      res.redirect('living-with');
+      res.redirect('poa');
     }
-});
-
-router.post('/sprint37b/homephone-address-change', (req, res) => {
-  res.redirect('/sprint37b/living-with')
 });
 
 
@@ -233,7 +229,7 @@ router.post('/sprint37b/living-with', function(req, res) {
 });
 
 router.post('/sprint37b/living-with-date', (req, res) => {
-  res.redirect('/sprint37b/poa')
+  res.redirect('/sprint37b/homephone-address')
 });
 
 
