@@ -288,6 +288,10 @@ router.post('/sprint37b/declaration', function(req, res) {
       res.redirect('over-payment');
     } else if (req.session.data["movemonth"] === "10") {
       res.redirect('over-payment');
+    } else if (req.session.data["movemonth"] === "05") {
+      res.redirect('over-payment-2');
+    } else if (req.session.data["movemonth"] === "5") {
+      res.redirect('over-payment-2');
     } else {
       res.redirect('overview-changed');
     }
