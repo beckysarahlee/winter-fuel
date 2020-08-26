@@ -304,6 +304,12 @@ router.post('/sprint37b/over-payment', (req, res) => {
 })
 ;
 
+// Overpayment recoverable?
+router.post('/sprint37b/over-payment-2', (req, res) => {
+  res.redirect('/sprint37b/overview-changed')
+})
+;
+
 // Check to payments
 router.post('/sprint37b/recoverable-payment', (req, res) => {
   res.redirect('/sprint37b/overview-recoverable')
