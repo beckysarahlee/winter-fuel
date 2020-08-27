@@ -17,6 +17,15 @@ router.use((req, res, next) => {
 
 //-----STANDARD JOURNEY-----
 
+
+// Start to DOB
+
+router.post('/sprint35e/start', (req, res) => {
+  res.redirect('/sprint35e/date-of-birth')
+})
+;
+
+
   // Date of birth
 
   router.post('/sprint35e/date-of-birth', (req, res) => {
