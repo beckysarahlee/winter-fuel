@@ -369,7 +369,7 @@ router.post('/sprint49/start-payments', function(req, res) {
 
 // RETURNED PAYMENTS ---------------------------------------------------------
 router.post('/sprint49/change-payment-status', function(req, res) {
-  if (req.body['returned-reason'] === 'dead') {
+  if (req.body['returnedreason'] === 'dead') {
     res.redirect('dead-returned');
   } else {
     res.redirect('payment');
