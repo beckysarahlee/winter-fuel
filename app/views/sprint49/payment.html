@@ -103,13 +103,17 @@ Winter Fuel Payments
                 <td class="govuk-table__cell">Monday, 4 November 2020</td>
                 <td class="govuk-table__cell">£200</td>
                 <td class="govuk-table__cell">
-                                  {% if data.returnedreason %}
-                                  Returned
-                                  {% endif %}
-                                  {% if data.reissued %}
-                                  Reissued
-                                  {% endif %}</td>
-                <td class="govuk-table__cell"><a href="previous-payment-pending" class="govuk-link">Details</a></td>
+                  {% if data.reissued %}
+                  Reissued
+                  {% elseif data.returnedreason %}
+                  Returned
+                  {% else %}
+                  Sent
+                  {% endif %}</td>
+
+
+                <td class="govuk-table__cell"><a href="previous-payment-pending" class="govuk-link">
+                  Details</a></td>
               </tr>
 
               <tr class="govuk-table__row">
