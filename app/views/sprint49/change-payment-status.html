@@ -29,26 +29,49 @@ Winter Fuel Payments
           <br>
           <br>
 
-          <h2 class="govuk-heading-l">Has this payment been returned?</h2>
+          <h2 class="govuk-heading-l">Why has this payment been returned?</h2>
 
           <br>
 
-          <div class="govuk-radios govuk-radios--inline">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="returned-payment" name="returned-payment" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="returned-payment">
-                    Yes
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="returned-payment-2" name="returned-payment" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="returned-payment-2">
-                    No
-                  </label>
-                </div>
-              </div>
+          <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="returned-reason" name="returned-reason" type="radio" value="invalid">
+        <label class="govuk-label govuk-radios__label" for="returned-reason">
+            Invalid details
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="returned-reason-2" name="returned-reason" type="radio" value="dead">
+        <label class="govuk-label govuk-radios__label" for="returned-reason-2">
+          Citizen dead
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="returned-reason-3" name="returned-reason" type="radio" value="transferred">
+        <label class="govuk-label govuk-radios__label" for="returned-reason-3">
+            Account transferred
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="returned-reason-4" name="returned-reason" type="radio" value="noaccount">
+        <label class="govuk-label govuk-radios__label" for="returned-reason-4">
+          No account
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="returned-reason-5" name="returned-reason" type="radio" value="closed">
+        <label class="govuk-label govuk-radios__label" for="returned-reason-5">
+        Account closed
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="returned-reason-6" name="returned-reason" type="radio" value="requested">
+        <label class="govuk-label govuk-radios__label" for="returned-reason-6">
+        Requested by remitter
+        </label>
+      </div>
+    </div>
 
-              <br>
               <br>
 
           {% from "govuk/components/button/macro.njk" import govukButton %}
