@@ -17,8 +17,30 @@ Winter Fuel Payments
 
       <form method="post">
 
-            <br>
-            <br>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+
+            <div>
+              <h1 class="govuk-heading-xl">
+                Mica Bennett
+                <br>
+                <span class="govuk-body-l">
+                  {% if data['nino'] %}
+                  {{data['nino']}}
+                  {% else %}
+                  XX 12 34 56
+                  {% endif %}
+                </span>
+              </h1>
+            </div>
+
+          </div>
+        </div>
+
+                      {% include './_tab-history-2.html' %}
+
+                      <br>
+                      <br>
 
             <h2 class="govuk-heading-m">
               Action history

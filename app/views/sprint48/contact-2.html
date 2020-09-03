@@ -13,118 +13,124 @@ Winter Fuel Payments
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
-
       <div class="govuk-grid-column-two-thirds">
 
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-full">
+        <form method="post">
 
-            <div>
-              <h1 class="govuk-heading-xl">
-                Tai Stafford
-                <br>
-                <span class="govuk-body-l">
-                  {% if data['nino'] %}
-                  {{data['nino']}}
-                  {% else %}
-                  XX 12 34 56
-                  {% endif %}
-                </span>
-              </h1>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+
+              <div>
+                <h1 class="govuk-heading-xl">
+                  Mica Bennett
+                  <br>
+                  <span class="govuk-body-l">
+                    {% if data['nino'] %}
+                    {{data['nino']}}
+                    {% else %}
+                    XX 12 34 56
+                    {% endif %}
+                  </span>
+                </h1>
+              </div>
+
             </div>
-
           </div>
-        </div>
 
-
-          {% include './_tab-payment.html' %}
+          {% include './_tab-contact-2.html' %}
 
           <br>
           <br>
-          <h2 class="govuk-heading-m">Bank or building society account details </h2>
 
           <table class="govuk-table">
-            <a href="bankdetails" <span class="govuk-link govuk-!-font-size-19" style="margin-left: 90%">Change</span>
-            </a>
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header"></th>
-                <th scope="col" class="govuk-table__header"></th>
-              </tr>
-            </thead>
+            <h2 class="govuk-heading-m">Contact details</h2>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Bank or building society</th>
-                <td class="govuk-table__cell">HSBC</td>
-                <td class="govuk-table__cell"></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Name on the account</th>
+                <th scope="row" class="govuk-table__header">Home phone</th>
                 <td class="govuk-table__cell">
-                  {% if data['accountholder'] %}
-                  {{data['accountholder']}}
+                  {% if data['homephone-remove'] === 'Yes' %}
+                  {% elseif data.homephone %}
+                  {{data.homephone}}
                   {% else %}
-                  Miss T Stafford
+                  01632 960005
                   {% endif %}
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Sort code</th>
+                </td>
                 <td class="govuk-table__cell">
-                  {% if data['sortcode'] %}
-                  {{data['sortcode']}}
-                  {% else %}
-                  00 11 22
-                  {% endif %}
+                  <a href="homephone">
+                    Change<span class="govuk-visually-hidden"> home phone number</span>
+                  </a>
+
                 </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Account number</th>
+                <th scope="row" class="govuk-table__header">Mobile phone</th>
                 <td class="govuk-table__cell">
-                  {% if data['accountnumber'] %}
-                  {{data['accountnumber']}}
-                  {% else %}
-                  ****5678
-                  {% endif %}
+                  07728193826
+                </td>
+                <td class="govuk-table__cell">
+                  <a href="mobilephone">
+                    Change
+                  </a>
                 </td>
               </tr>
-            </tbody>
-          </table>
-
-          <br>
-
-        <h2 class="govuk-heading-m">Payments</h2>
-
-          <table class="govuk-table">
-            <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header">Payment date</th>
-                <th scope="col" class="govuk-table__header">Amount</th>
-                <th scope="col" class="govuk-table__header">Status</th>
-                <th scope="col" class="govuk-table__header"></th>
-              </tr>
-
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">Monday, 4 November 2020</td>
-                <td class="govuk-table__cell">£200</td>
+                <th scope="row" class="govuk-table__header">Work phone</th>
                 <td class="govuk-table__cell">
-                  {% if data.reissued %}
-                  Reissued
-                  {% elseif data.returnedreason %}
-                  Returned
-                  {% else %}
-                  Sent
-                  {% endif %}</td>
-
-
-                <td class="govuk-table__cell"><a href="previous-payment-pending" class="govuk-link">
-                  Details</a></td>
+                  {% if data.worknumber %}
+                  {{data.worknumber}}
+                  {% endif %}
+                  {% if data['workphone-remove'] === 'Yes' %}
+                  {% elseif data.workphone %}
+                  {{data.workphone}}
+                  {% endif %}
+                </td>
+                <td class="govuk-table__cell">
+                  <a href="workphone">
+                    {% if not data.worknumber %}
+                    Add<span class="govuk-visually-hidden"> work number</span>
+                    {% else %}
+                    Change<span class="govuk-visually-hidden"> work number</span>
+                    {% endif %}
+                  </a>
+                </td>
               </tr>
-
               <tr class="govuk-table__row">
-                <td class="govuk-table__cell">Wedneday, 20 November 2019</td>
-                <td class="govuk-table__cell">£200</td>
-                <td class="govuk-table__cell">Paid</td>
-                <td class="govuk-table__cell"><a href="previous-payment" class="govuk-link">Details</a></td>
+                <th scope="row" class="govuk-table__header">Email address</th>
+                <td class="govuk-table__cell">
+                  {% if data['email-remove'] === 'Yes' %}
+                  {% elseif data.email %}
+                  {{data.email}}
+                  {% else %}
+                  T-staff@hotmail.com
+                  {% endif %}
+                </td>
+                <td class="govuk-table__cell">
+                  <a href="email">
+                    Change<span class="govuk-visually-hidden">email</span>
+                  </a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Correspondence address</th>
+                <td class="govuk-table__cell">
+                  {% if data['correspondence-address-change'] %}
+                  {{data['correspondence-address-change'].split(', ').join('<br />') | safe }}
+                  {% elif data.address %}
+                  {{data.address.split(', ').join('<br />') | safe}}
+                  {% else %}
+
+                  {% endif %}
+                </td>
+                <td class="govuk-table__cell">
+                  <a href="correspondence-address">
+                    {% if not data['correspondence-address-change'] %}
+                    Add <span class="govuk-visually-hidden">contact preferences</span>
+                    {% else %}
+                    Change <span class="govuk-visually-hidden">contact preferences</span>
+                    {% endif %}
+                    <span class="govuk-visually-hidden">Change address</span>
+                  </a>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -218,8 +224,6 @@ Winter Fuel Payments
       </div>
 
     </div>
-
-</div>
 
 </div>
 
