@@ -83,6 +83,14 @@ Winter Fuel Payments
                   {% endif %}
                 </td>
               </tr>
+              {% if data['rollnumber'] %}
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Building society roll number (if there is one)</th>
+                <td class="govuk-table__cell">
+                  {{data['rollnumber']}}
+                </td>
+              </tr>
+              {% endif %}
             </tbody>
           </table>
 
