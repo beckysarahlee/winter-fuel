@@ -376,4 +376,13 @@ router.post('/sprint49/change-payment-status', function(req, res) {
   }
 });
 
+// STOP PAYMENTS - OPTED OUT ---------------------------------------------------------
+router.post('/sprint49/stop-payments', function(req, res) {
+  if (req.body['paymentstopped'] === 'dead') {
+    res.redirect('dead-stop');
+  } else {
+    res.redirect('payment-opted-out');
+  }
+});
+
 module.exports = router;
