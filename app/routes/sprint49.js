@@ -357,15 +357,6 @@ router.post('/sprint49/reissue-payment', (req, res) => {
   res.redirect('/sprint49/payment-confirmation')
 });
 
-// Starting payments
-router.post('/sprint49/start-payments', function(req, res) {
-  if (req.body['start-payments'] === 'Yes') {
-    res.redirect('payment');
-  } else {
-    res.redirect('payment-stopped');
-  }
-});
-
 
 // RETURNED PAYMENTS ---------------------------------------------------------
 router.post('/sprint49/change-payment-status', function(req, res) {
@@ -378,8 +369,17 @@ router.post('/sprint49/change-payment-status', function(req, res) {
 
 // STOP PAYMENTS - OPTED OUT ---------------------------------------------------------
 router.post('/sprint49/stop-payments', function(req, res) {
-  if (req.body['paymentstopped'] === 'dead') {
+  if (req.body['stop-payments'] === 'dead') {
     res.redirect('dead-stop');
+  } else {
+    res.redirect('payment-opted-out-1');
+  }
+});
+
+// START PAYMENTS - OPTED IN ---------------------------------------------------------
+router.post('/sprint49/start-payments', function(req, res) {
+  if (req.body['start-payments'] === 'yes') {
+    res.redirect('payment-opted-in');
   } else {
     res.redirect('payment-opted-out');
   }

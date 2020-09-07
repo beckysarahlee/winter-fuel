@@ -17,7 +17,7 @@ Winter Fuel Payments
 
       <form method="post">
 
-          {% include './_bar.html' %}
+          {% include './_bar-optout.html' %}
 
             {{ govukBackLink({
                 text: "Back",
@@ -36,14 +36,14 @@ Winter Fuel Payments
                   </legend>
                   <div class="govuk-radios govuk-radios--inline">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="stop-payments-yes" name="stop-payments" type="radio" value="Yes">
-                      <label class="govuk-label govuk-radios__label" for="stop-payments-1">
+                      <input class="govuk-radios__input" id="start-payments-yes" name="start-payments" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="start-payments-1">
                         Yes
                       </label>
                     </div>
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="stop-payments-no" name="stop-payments" type="radio" value="No">
-                      <label class="govuk-label govuk-radios__label" for="stop-payments-2">
+                      <input class="govuk-radios__input" id="start-payments-no" name="start-payments" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="start-payments-2">
                         No
                       </label>
                     </div>
