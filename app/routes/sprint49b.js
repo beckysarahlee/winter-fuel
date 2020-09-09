@@ -55,6 +55,14 @@ router.post('/sprint49b/check-eligibility', (req, res) => {
     }
   });
 
+  // living overseas
+
+  router.post('/sprint49b/overseas', (req, res) => {
+    res.redirect('/sprint49b/check-eligibility')
+  })
+  ;
+
+
   // Benefits SP or PC?
 
   router.post('/sprint49b/receiving-sp', function(req, res) {
