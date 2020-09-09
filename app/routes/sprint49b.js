@@ -169,7 +169,7 @@ if ( req.body['query'] === 'eligibility' ) {
 
       router.post('/sprint49b/care-home-pc', function(req, res) {
         if ( req.body['care-home-admission'] === 'yes' ) {
-          res.redirect('who-pc');
+          res.redirect('shared-payment-pc');
         } else {
           res.redirect('care-home-over-pc');
         }

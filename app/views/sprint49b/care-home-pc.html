@@ -1,13 +1,13 @@
 {% extends "layout.html" %}
 
+{% block header %}
+{% include './_header.html' %}
+{% endblock %}
+
+
 {% block pageTitle %}
-GOV.UK Prototype Kit
+Winter Fuel Payments
 {% endblock %}
-
-{% block beforeContent %}
-{% include './_find-someone.html' %}
-{% endblock %}
-
 {% block content %}
 
 <div class="govuk-width-container">
@@ -30,10 +30,8 @@ GOV.UK Prototype Kit
             <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
 
 
-              <h1 class="govuk-heading-l">Did you move into the care or nursing
-                home after 24 June 2019?</h1>
-
-<br>
+              <h1 class="govuk-heading-xl">Did you move into the care or nursing
+                home after 28 June 2020?</h1>
 
               <div class="govuk-radios govuk-radios--inline">
                 <div class="govuk-radios__item">

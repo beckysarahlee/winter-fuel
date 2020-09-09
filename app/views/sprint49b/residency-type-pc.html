@@ -1,15 +1,14 @@
 {% extends "layout.html" %}
 
+{% block header %}
+{% include './_header.html' %}
+{% endblock %}
+
+
 {% block pageTitle %}
-GOV.UK Prototype Kit
+Winter Fuel Payments
 {% endblock %}
-
-{% block beforeContent %}
-{% include './_find-someone.html' %}
-{% endblock %}
-
 {% block content %}
-
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
@@ -22,12 +21,13 @@ GOV.UK Prototype Kit
           href: "javascript:history.go(-1)"
         }) }}
 
+<br>
+<br>
+
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
 
-                <h1 class="govuk-heading-l">Which of the following describes your situation
-  during the week of 16 to 22 September 2020?</h1>
-<br>
+                <h1 class="govuk-heading-xl">Which of the following describes your situation during the week of 21 to 27 September 2020?</h1>
 
               <div class="govuk-radios">
         <!--        <div class="govuk-radios__item">

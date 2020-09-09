@@ -1,13 +1,13 @@
 {% extends "layout.html" %}
 
+{% block header %}
+{% include './_header.html' %}
+{% endblock %}
+
+
 {% block pageTitle %}
-GOV.UK Prototype Kit
+Winter Fuel Payments
 {% endblock %}
-
-{% block beforeContent %}
-{% include './_find-someone.html' %}
-{% endblock %}
-
 {% block content %}
 
 
@@ -39,6 +39,12 @@ GOV.UK Prototype Kit
               living with someone of State Pension age during qualifying week.</p>
 
             <p>You do not need to claim your Winter Fuel Payment and you'll get it every year.</p>
+
+<br>
+<button type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
+  Start again
+</button>
+
 
       </div>
 

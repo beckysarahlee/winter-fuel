@@ -1,13 +1,13 @@
 {% extends "layout.html" %}
 
+{% block header %}
+{% include './_header.html' %}
+{% endblock %}
+
+
 {% block pageTitle %}
-GOV.UK Prototype Kit
+Winter Fuel Payments
 {% endblock %}
-
-{% block beforeContent %}
-{% include './_find-someone.html' %}
-{% endblock %}
-
 {% block content %}
 
 
@@ -40,7 +40,7 @@ GOV.UK Prototype Kit
 
 
               <button type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
-                Find caller's record
+                Start again
               </button>
 
 
