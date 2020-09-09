@@ -1,22 +1,14 @@
 {% extends "layout.html" %}
 
-{% block pageTitle %}
-GOV.UK Prototype Kit
-{% endblock %}
-
 {% block header %}
-{% include "includes/cookie-banner.html" %}
-{# Set serviceName in config.js. #}
-{{ govukHeader({
-  serviceName: serviceName,
-  serviceUrl: "/"
-}) }}
-
-{% block headEnd %}
-{% include 'includes/remove-blue-bar.html' %}
+{% include './_header.html' %}
 {% endblock %}
 
-{% include './_find-someone.html' %}
+
+{% block pageTitle %}
+Winter Fuel Payments
+{% endblock %}
+{% block content %}
 
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
@@ -41,7 +33,7 @@ GOV.UK Prototype Kit
 
 <br>
 
-        <p>For winter 2019, we worked out your payment during the week
+        <p>For winter 2020, we worked out your payment during the week
            of 16 to 22 September 2020. This is called the 'qualifying week'.</p>
 
         <p>You get £200 because you had lived in a care or nursing home fewer than
@@ -55,14 +47,5 @@ GOV.UK Prototype Kit
 </div>
 
 </main>
-
-{% endblock %}
-
-{% block content %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
-  </div>
-</div>
 
 {% endblock %}
