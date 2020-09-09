@@ -29,7 +29,7 @@ router.post('/sprint37b/find', function(req, res) {
     res.redirect('/sprint37b/find-2');
   } else {
     res.redirect('/sprint37b/find-1');
-  } 
+  }
 });
 
 
@@ -225,9 +225,9 @@ router.post('/sprint37b/homephone-address-change', function(req, res) {
     if (req.session.data["movemonth"] === "08") {
       res.redirect('living-with-q-week');
     } else if (req.session.data["movemonth"] === "07") {
-      res.redirect('living-with-q-week');
+      res.redirect('poa');
     } else if (req.session.data["movemonth"] === "7") {
-      res.redirect('living-with-q-week');
+      res.redirect('poa');
     } else {
       res.redirect('poa');
     }
