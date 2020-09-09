@@ -73,7 +73,7 @@ router.post('/sprint49b/check-eligibility', (req, res) => {
     } else if ( req.body['benefit'] === 'both' ) {
       res.redirect('residency-type-pc');
     } else if ( req.body['benefit'] === 'none' ) {
-      res.redirect('deferral');
+      res.redirect('residency-type');
     }
   });
 
@@ -253,7 +253,7 @@ if ( req.body['query'] === 'eligibility' ) {
       // Full payment
 
       router.post('/sprint49b/full-payment', (req, res) => {
-        res.redirect('/sprint49b/find')
+        res.redirect('/sprint49b/check-eligibility')
       })
       ;
 

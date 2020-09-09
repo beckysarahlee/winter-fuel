@@ -1,13 +1,13 @@
 {% extends "layout.html" %}
 
+{% block header %}
+{% include './_header.html' %}
+{% endblock %}
+
+
 {% block pageTitle %}
-GOV.UK Prototype Kit
+Winter Fuel Payments
 {% endblock %}
-
-{% block beforeContent %}
-{% include './_find-someone.html' %}
-{% endblock %}
-
 {% block content %}
 
 <div class="govuk-width-container">
@@ -38,8 +38,13 @@ GOV.UK Prototype Kit
             <p>You qualify for £200 because you were under 80 years old and not
                living with anyone of State Pension age during qualifying week.</p>
 
+
+
+
+
+
             <button type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
-              Find the caller's record
+              Start again
             </button>
 
           </div>
