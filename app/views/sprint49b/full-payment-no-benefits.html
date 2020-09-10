@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include './_find-someone.html' %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <form method="post">
+
+          {{ govukBackLink({
+              text: "Back",
+              href: "javascript:history.go(-1)"
+            }) }}
+
+          <div class="govuk-form-group">
+
+            <div class="govuk-panel govuk-panel--confirmation">
+              <div class="govuk-panel__body">
+                <strong>You qualify for a Winter Fuel Payment of £200</strong>
+              </div>
+            </div>
+
+            <br>
+
+          <p>You qualify for £200 because you:</p>
+
+             <ul class="govuk-list govuk-list--bullet">
+               <li>were born on or before 5 October 1954</li>
+               <li>do not live with anyone who qualifies</li>
+             </ul>
+
+           <h3 class="govuk-heading-m">You need to make a claim</h3>
+           <p>Make a claim by calling the Winter Fuel Payment Centre.</p>
+            <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+              <strong class="govuk-warning-text__text">
+                <span class="govuk-warning-text__assistive">Warning</span>
+                You cannot make a claim until 1 August 2020.
+              </strong>
+            </div>
+
+           <h3 class="govuk-heading-s">Winter Fuel Payment Centre</h3>
+           <p><b>Telephone: </b>0800 731 0160<br>
+              <b>Textphone:</b> 0800 731 0464<br>
+              Monday to Friday, 8am to 6pm</p>
+
+           </form>
+          </div>
+      </div>
+    </div>
+
+</main>
+</div>
+
+{% endblock %}
