@@ -360,8 +360,8 @@ router.post('/sprint49/reissue-payment', (req, res) => {
 
 // RETURNED PAYMENTS ---------------------------------------------------------
 router.post('/sprint49/change-payment-status', function(req, res) {
-  if (req.body['returnedreason'] === 'dead') {
-    res.redirect('dead-returned');
+  if (req.body['returned'] === 'yes') {
+    res.redirect('payment-returned-1');
   } else {
     res.redirect('payment');
   }
