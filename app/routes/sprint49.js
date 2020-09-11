@@ -237,7 +237,7 @@ router.post('/sprint49/homephone-address-change', function(req, res) {
 
 // Living with anyone at address change
 router.post('/sprint49/living-with', function(req, res) {
-  if (req.body['living-with'] === 'Lives with someone else of State Pension age') {
+  if (req.body['living-with'] === 'Lives with someone else who gets Winter Fuel Payment') {
     res.redirect('living-with-age');
   } else {
     res.redirect('living-with-date');
@@ -251,7 +251,7 @@ router.post('/sprint49/living-with-date', (req, res) => {
 
 // Living with anyone at address change
 router.post('/sprint49/living-with-q-week', function(req, res) {
-  if (req.body['living-with-q-week'] === 'Lives with someone else of State Pension age') {
+  if (req.body['living-with-q-week'] === 'Lives with someone else who gets Winter Fuel Payment') {
     res.redirect('living-with-age-q-week');
   } else {
     res.redirect('living-with-date');
