@@ -209,13 +209,7 @@ router.post('/sprint37b/homephone-address', function(req, res) {
     if (req.body["homephone-address"] === "Yes") {
       res.redirect('homephone-address-change');
     }
-    else if (req.session.data["movemonth"] === "08") {
-      res.redirect('living-with-q-week');
-    } else if (req.session.data["movemonth"] === "07") {
-      res.redirect('living-with-q-week');
-    } else if (req.session.data["movemonth"] === "7") {
-      res.redirect('living-with-q-week');
-    } else {
+    else {
       res.redirect('poa');
     }
 });
