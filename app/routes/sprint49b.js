@@ -49,7 +49,7 @@ router.post('/sprint49b/check-eligibility', (req, res) => {
 
   router.post('/sprint49b/residency', function(req, res) {
     if ( req.body['living'] === 'united-kingdom' ) {
-      res.redirect('receiving-sp');
+      res.redirect('receiving-pc');
     } else {
       res.redirect('overseas');
     }
@@ -65,29 +65,25 @@ router.post('/sprint49b/check-eligibility', (req, res) => {
 
   // Benefits SP or PC?
 
+  router.post('/sprint49b/receiving-pc', function(req, res) {
+    if ( req.body['pension-credit'] === 'yes' ) {
+      res.redirect('residency-type-pc');
+    } else if ( req.body['pension-credit'] === 'no' ) {
+      res.redirect('receiving-sp');
+    }
+  });
+
+  // Benefits SP or PC?
+
   router.post('/sprint49b/receiving-sp', function(req, res) {
-    if ( req.body['benefit'] === 'sp' ) {
+    if ( req.body['state-pension'] === 'yes' ) {
       res.redirect('residency-type');
-    } else if ( req.body['benefit'] === 'pc' ) {
-      res.redirect('residency-type-pc');
-    } else if ( req.body['benefit'] === 'both' ) {
-      res.redirect('residency-type-pc');
-    } else if ( req.body['benefit'] === 'none' ) {
+    } else if ( req.body['state-pension'] === 'no' ) {
       res.redirect('residency-type');
     }
   });
 
 
-
-  // Benefits
-
-router.post('/sprint49b/benefits', function(req, res) {
-  if ( req.body['benefits'] === 'yes' ) {
-    res.redirect('receiving-benefits');
-  } else {
-    res.redirect('residency-type');
-  }
-});
 
 // Query
 
