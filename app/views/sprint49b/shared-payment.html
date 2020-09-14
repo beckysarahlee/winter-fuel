@@ -1,13 +1,13 @@
 {% extends "layout.html" %}
 
-{% block header %}
-{% include './_header.html' %}
-{% endblock %}
-
-
 {% block pageTitle %}
-Winter Fuel Payments
+GOV.UK Prototype Kit
 {% endblock %}
+
+{% block beforeContent %}
+{% include './_find-someone.html' %}
+{% endblock %}
+
 {% block content %}
 
 
@@ -23,28 +23,27 @@ Winter Fuel Payments
               href: "javascript:history.go(-1)"
             }) }}
 
-          <br>
-          <br>
-
           <div class="govuk-panel govuk-panel--confirmation">
-                    <div class="govuk-panel__body">
-                    <strong>If your circumstances stay the same, you'll qualify for a Winter Fuel Payment of £100</strong>
-                    </div>
-                  </div>
+            <div class="govuk-panel__body">
+              <strong>You qualify for a Winter Fuel Payment of £100</strong>
+            </div>
+          </div>
 
-                  <p>For winter 2019, we'll work out your payment during the week
-                     of 16 to 22 September 2020. This is called the 'qualifying week'.</p>
+          <br>
 
-            <p>Based on your answers, you'll get £100 because you'll be under 80 and
-              living with someone of State Pension age during qualifying week.</p>
+          <p>You qualify for £100 because you:</p>
 
-            <p>You do not need to claim your Winter Fuel Payment and you'll get it every year.</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>were born on or before 5 October 1954</li>
+            <li>live with someone else who qualifies</li>
+          </ul>
 
-<br>
-<button type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
-  Start again
-</button>
+          <button class="govuk-button" data-module="govuk-button">
+            Find record
+          </button>
 
+
+        </form>
 
       </div>
 
