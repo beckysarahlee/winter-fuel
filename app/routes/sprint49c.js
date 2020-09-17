@@ -44,7 +44,7 @@ router.post('/sprint49c/find-2', (req, res) => {
 
 
 router.post('/sprint49c/security', (req, res) => {
-  res.redirect('/sprint49c/overview')
+  res.redirect('/sprint49c/overview-returned')
 });
 
 router.post('/sprint49c/security-2', (req, res) => {
