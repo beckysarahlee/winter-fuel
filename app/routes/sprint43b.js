@@ -78,6 +78,13 @@ router.post('/sprint43b/gsl-task-3', function(req, res) {
   }
 });
 
+// TASK 5 - DEATH ARREARS
+
+router.post('/sprint43b/tasks-5', (req, res) => {
+  res.redirect('/sprint50/death-arrears-task-1')
+});
+
+
 
 
 
