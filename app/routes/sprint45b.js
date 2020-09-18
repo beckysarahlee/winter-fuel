@@ -69,5 +69,12 @@ router.post('/sprint45b/declaration', (req, res) => {
 })
 ;
 
+// New bank details to declaration
+
+router.post('/sprint45b/bank-details', (req, res) => {
+  res.redirect('/sprint45b/payment-changed')
+})
+;
+
 
 module.exports = router;
