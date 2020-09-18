@@ -28,10 +28,21 @@ router.post('/sprint45b/move-date', (req, res) => {
 ;
 
 
-// Living with to home phone change
+// Living with to occupancy date change, or to home phone
 
-router.post('/sprint45b/living-with', (req, res) => {
-  res.redirect('/sprint45b/homephone-address')
+router.post('/sprint45b/living-with', function(req, res) {
+  if (req.body["living-with"] === "yes" && req.session.data["move-month"] === "12") {
+    res.redirect('living-with-date');
+  }
+  else {
+    res.redirect('homephone-address');
+  }
+});
+
+// Occupancy change date to home phone
+
+router.post('/sprint45b/living-with-date', (req, res) => {
+  res.redirect('homephone-address')
 })
 ;
 
