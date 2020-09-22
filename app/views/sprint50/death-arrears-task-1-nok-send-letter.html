@@ -36,43 +36,36 @@ GOV.UK Prototype Kit
             </div>
           </div>
 
-          <h2 class="govuk-heading-l">Confirm the full address</h2>
 
-<p><b>4</b> addresses found for <b>"{% if data['house-number'] %}
-                {{data['house-number']}}
-              {% else %}
-              27
-              {% endif %}"
-            </b> and <b>"{% if data['postcode'] %}
-                                {{data['postcode']}}
-                              {% else %}
-                              NE65 0LZ
-                              {% endif %}"</b></p>
+                                  <h1 class="govuk-heading-l">Send (I can't remember it's name?)</h1>
 
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-              <div class="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="where-do-you-live" name="address-change" type="radio" value="27 Kent Street, Amble, NE65 0LZ">
-                  <label class="govuk-label govuk-radios__label" for="address">
-                    27 Kent Street, Amble, NE65 0LZ<br>
-                    <strong class="govuk-tag govuk-tag--blue">
-                      Residential
-                    </strong>
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="where-do-you-live-2" name="address-change" type="radio" value="address not found">
-                  <label class="govuk-label govuk-radios__label" for="address-2">
-                    The address has not been found
-                  </label>
-                </div>
-              </div>
-            </fieldset>
-          </div>
+                                  <form method="post">
+
+                                    <p>Maybe a little something about sending the thingy, or not?</p>
+
+                                    <table class="govuk-table">
+                                      <caption class="govuk-table__caption"></caption>
+                                      <thead class="govuk-table__head">
+                                        <tr class="govuk-table__row">
+                                          <th scope="col" class="govuk-table__header">Name of next of kin</th>
+                                          <td class="govuk-table__cell">Will make this work</td>
+                                        </tr>
+                                      </thead>
+                                      <thead class="govuk-table__head">
+                                        <tr class="govuk-table__row">
+                                          <th scope="col" class="govuk-table__header">Address</th>
+                                          <td class="govuk-table__cell">
+                                          22  Whitby Road<br>
+                                          DERBYHAVEN<br>
+                                          IM9 1QN</td>
+                                        </tr>
+                                      </thead>
+                                    </table>
+
+
 
             <button type="submit" class="govuk-button">
-              Continue
+              Send (What is it called?)
             </button>
 
           </form>
