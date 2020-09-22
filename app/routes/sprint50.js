@@ -70,8 +70,22 @@ router.post('/sprint50/death-arrears-task-1-nok-send-letter', (req, res) => {
 })
 ;
 
-// EXAMPLES
+// Record view - death arrears
 
+router.post('/sprint50/dap-name', (req, res) => {
+  res.redirect('/sprint50/dap-address')
+})
+;
+
+router.post('/sprint50/dap-address', (req, res) => {
+  res.redirect('/sprint50/dap-address-1')
+})
+;
+
+router.post('/sprint50/dap-address-1', (req, res) => {
+  res.redirect('/sprint50/dap-bank-details')
+})
+;
 
 
 

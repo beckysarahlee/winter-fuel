@@ -1,13 +1,13 @@
 {% extends "layout.html" %}
 
+{% block header %}
+{% include './_header.html' %}
+{% endblock %}
+
+
 {% block pageTitle %}
-GOV.UK Prototype Kit
+Winter Fuel Payments
 {% endblock %}
-
-{% block beforeContent %}
-{% include './_find-someone.html' %}
-{% endblock %}
-
 {% block content %}
 
 <div class="govuk-width-container">
@@ -47,7 +47,7 @@ GOV.UK Prototype Kit
             <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
             <strong class="govuk-warning-text__text">
               <span class="govuk-warning-text__assistive">Warning</span>
-              This person qualified for a 2020 Winter Fuel payment of £150<br> <a href="#" class="govuk-link">Enter death arrears payee information.
+              This person qualified for a 2020 Winter Fuel payment of £150<br> <a href="dap-name" class="govuk-link">Enter death arrears payee information.
             </strong></a>
           </div>
 
