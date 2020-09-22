@@ -31,7 +31,7 @@ router.post('/sprint45b/move-date', (req, res) => {
 // Living with to occupancy date change, or to home phone
 
 router.post('/sprint45b/living-with', function(req, res) {
-  if (req.body["living-with"] === "yes" && req.session.data["move-month"] === "12") {
+  if (req.body["living-with"] === "no" && req.session.data["move-month"] === "12") {
     res.redirect('living-with-date');
   }
   else {
