@@ -33,7 +33,7 @@ router.post('/sprint50/death-arrears-task-1-dap-address', (req, res) => {
 })
 ;
 
-router.post('/sprint50/death-arrears-task-1-dap-address1', (req, res) => {
+router.post('/sprint50/death-arrears-task-1-dap-address-1', (req, res) => {
   res.redirect('/sprint50/death-arrears-task-1-dap-bank-details')
 })
 ;
