@@ -96,9 +96,11 @@ Winter Fuel Payments
                     {% elif data.address %}
                     {{data.address.split(', ').join('<br />') | safe}}
                     {% else %}
-                    1 Victoria Road<br>
-                    FALKIRK<br>
-                    FK55 8XN
+                    113 Rue Francais<br>
+                    Samoens<br>
+                    Haute Savoie<br>
+                    123654<br>
+                    France
                     {% endif %}
                   </td>
                 </tr>
@@ -108,7 +110,7 @@ Winter Fuel Payments
                     {% if data['moveday'] %}
                     {{data['moveday']}} July 2020
                       {% else %}
-                      15 July 2020
+                      12 September 2019
                     {% endif %}
                   </td>
                   </td>
@@ -116,10 +118,8 @@ Winter Fuel Payments
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Occupancy</th>
                   <td class="govuk-table__cell">
-                    {% if data['before-1954'] == 'No' %}
+                    {% if data['living-with'] == 'no' %}
                       Does not live with anyone else of State Pension age
-                    {% elif data ['living-with'] == 'Does not live with anyone else of State Pension age'%}
-                      {{data ['living-with']}}
                     {% else %}
                       Lives with someone else of State Pension age
                     {% endif %}
