@@ -65,7 +65,7 @@ router.post('/sprint50/death-arrears-task-1-nok-address-1', (req, res) => {
 })
 ;
 
-router.post('/sprint50/death-arrears-task-1-nok-address-send-letter', (req, res) => {
+router.post('/sprint50/death-arrears-task-1-nok-send-letter', (req, res) => {
   res.redirect('/sprint50/tasks-5-2')
 })
 ;
