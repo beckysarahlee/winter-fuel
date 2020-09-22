@@ -8,40 +8,50 @@ router.use((req, res, next) => {
   next()
 })
 
-// Task one - are any details available?
+// Task to - DAP details, next of kin details or return to queue
+
 router.post('/sprint50/death-arrears-task-1', function(req, res) {
-  if (req.body['nino'] === 'XX987654X') {
-    res.redirect('/sprint49c/find-2');
-  } else if (req.body['nino'] === 'xx987654x') {
-    res.redirect('/sprint49c/find-2');
+  if ( req.body['dap'] === 'bank-details' ) {
+    res.redirect('death-arrears-task-1-dap-name');
+  } else if ( req.body['dap'] === 'contact-details' ) {
+    res.redirect('death-arrears-task-1-nok-name');
   } else {
-    res.redirect('/sprint49c/find-1');
+    res.redirect('death-arrears-task-2');
   }
 });
 
 
+// Death arrears payee details input
 
+router.post('/sprint50/death-arrears-task-1-dap-name', (req, res) => {
+  res.redirect('/sprint50/death-arrears-task-1-dap-address')
+})
+;
 
+router.post('/sprint50/death-arrears-task-1-dap-address', (req, res) => {
+  res.redirect('/sprint50/death-arrears-task-1-dap-address-1')
+})
+;
+
+router.post('/sprint50/death-arrears-task-1-dap-address1', (req, res) => {
+  res.redirect('/sprint50/death-arrears-task-1-dap-bank-details')
+})
+;
+
+// Send WF BR330 to next of kin
+
+router.post('/sprint50/death-arrears-task-1-nok-name', (req, res) => {
+  res.redirect('/sprint50/death-arrears-task-1-nok-address')
+})
+;
+
+router.post('/sprint50/death-arrears-task-1-nok-address', (req, res) => {
+  res.redirect('/sprint50/death-arrears-task-1-nok-address-1')
+})
+;
 
 // EXAMPLES
 
-
-// Power of attourney
-router.post('/sprint49c/poa', function(req, res) {
-  if (req.body['poa'] === 'Yes') {
-    res.redirect('poa-people');
-  } else {
-    res.redirect('declaration');
-  }
-});
-
-
-
-// Overpayment recoverable?
-router.post('/sprint49c/over-payment', (req, res) => {
-  res.redirect('/sprint49c/overview-changed')
-})
-;
 
 
 
