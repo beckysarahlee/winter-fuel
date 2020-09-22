@@ -16,7 +16,7 @@ router.post('/sprint50/death-arrears-task-1', function(req, res) {
   } else if ( req.body['dap'] === 'contact-details' ) {
     res.redirect('death-arrears-task-1-nok-name');
   } else {
-    res.redirect('death-arrears-task-2');
+    res.redirect('tasks-5-2');
   }
 });
 
@@ -35,6 +35,16 @@ router.post('/sprint50/death-arrears-task-1-dap-address', (req, res) => {
 
 router.post('/sprint50/death-arrears-task-1-dap-address-1', (req, res) => {
   res.redirect('/sprint50/death-arrears-task-1-dap-bank-details')
+})
+;
+
+router.post('/sprint50/death-arrears-task-1-dap-bank-details', (req, res) => {
+  res.redirect('/sprint50/death-arrears-task-1-dap-make-payment')
+})
+;
+
+router.post('/sprint50/death-arrears-task-1-dap-make-payment', (req, res) => {
+  res.redirect('/sprint50/tasks-5-2')
 })
 ;
 

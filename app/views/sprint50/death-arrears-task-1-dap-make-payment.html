@@ -40,40 +40,66 @@ GOV.UK Prototype Kit
           <form method="post">
 
 
-                        <h1 class="govuk-heading-l">Payee bank or building society account details</h1>
+                        <h1 class="govuk-heading-l">Make payment</h1>
 
                         <form method="post">
-                          <div class="govuk-form-group">
-                            <label class="govuk-label" for="width-20">
-                              Name on the account
-                            </label>
-                            <input class="govuk-input govuk-input--width-20" id="accountholder" name="accountholder" type="text">
-                          </div>
+
+                        <h2 class="govuk-heading-m">Payment</h2>
+
+                          <table class="govuk-table">
+                            <caption class="govuk-table__caption"></caption>
+                            <thead class="govuk-table__head">
+                              <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Amount</th>
+                                <td class="govuk-table__cell">£200</td>
+                              </tr>
+                            </thead>
+                            <thead class="govuk-table__head">
+                              <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Payment date</th>
+                                <td class="govuk-table__cell">27 November 2020</td>
+                              </tr>
+                            </thead>
+                          </table>
+
+                          <br>
+
+                        <h3 class="govuk-heading-m">Bank or building society account details</h3>
+
+                          <table class="govuk-table">
+                            <caption class="govuk-table__caption"></caption>
+                            <thead class="govuk-table__head">
+                              <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">
+                                  Bank or building society</th>
+                                <td class="govuk-table__cell">Halifax</td>
+                              </tr>
+                            </thead>
+                            <thead class="govuk-table__head">
+                              <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Name on the account</th>
+                                <td class="govuk-table__cell">K Rudd</td>
+                              </tr>
+                            </thead>
+                            <thead class="govuk-table__head">
+                              <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Sort code</th>
+                                <td class="govuk-table__cell">11 00 22</td>
+                              </tr>
+                            </thead>
+                            <thead class="govuk-table__head">
+                              <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Account number</th>
+                                <td class="govuk-table__cell">19204919</td>
+                              </tr>
+                            </thead>
+                          </table>
 
 
-                          <div class="govuk-form-group">
-                            <label class="govuk-label" for="sortcode">
-                              Sort code
-                            </label>
-                            <input class="govuk-input govuk-input--width-10" id="sortcode" name="sortcode" type="text">
-                          </div>
 
-                          <div class="govuk-form-group">
-                            <label class="govuk-label" for="width-20">
-                              Account number
-                            </label>
-                            <input class="govuk-input govuk-input--width-20" id="accountnumber" name="accountnumber" type="text">
-                          </div>
-
-                          <div class="govuk-form-group">
-                            <label class="govuk-label" for="rollnumber">
-                              Building society roll number (if there is one)
-                            </label>
-                            <input class="govuk-input govuk-input--width-10" id="rollnumber" name="rollnumber" type="text">
-                          </div>
 
             <button type="submit" class="govuk-button">
-              Continue
+              Make payment
             </button>
 
           </form>
