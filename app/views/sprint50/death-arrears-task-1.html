@@ -43,6 +43,12 @@ GOV.UK Prototype Kit
             <table class="govuk-table">
               <caption class="govuk-table__caption"></caption>
               <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Date of death</th>
+                    <td class="govuk-table__cell">29 August 1920</td>
+                  </tr>
+                </thead>
+              <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
                   <th scope="col" class="govuk-table__header">Date of death</th>
                   <td class="govuk-table__cell">30 September 2020</td>
@@ -68,7 +74,12 @@ GOV.UK Prototype Kit
                   <td class="govuk-table__cell">Lives with someone else who gets Winter Fuel Payment</td>
                 </tr>
               </thead>
-
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Payment amount</th>
+                  <td class="govuk-table__cell">£150</td>
+                </tr>
+                </thead>
             </table>
 
             <br>
@@ -85,21 +96,21 @@ GOV.UK Prototype Kit
                 </div>
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="recoverable" name="recoverable" type="radio" value="yes">
+                    <input class="govuk-radios__input" id="recoverable" name="recoverable" type="radio" value="bank-details">
                     <label class="govuk-label govuk-radios__label" for="recoverable">
-                      No next of kin or DAP details
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="recoverable-2" name="recoverable" type="radio" value="no">
-                    <label class="govuk-label govuk-radios__label" for="recoverable-2">
                       DAP bank details available
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="recoverable-2" name="recoverable" type="radio" value="no">
+                    <input class="govuk-radios__input" id="recoverable-2" name="recoverable" type="radio" value="contact-details">
                     <label class="govuk-label govuk-radios__label" for="recoverable-2">
                       Next of kin contact details available
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="recoverable-3" name="recoverable" type="radio" value="no-details">
+                    <label class="govuk-label govuk-radios__label" for="recoverable-3">
+                      No details available
                     </label>
                   </div>
                 </div>

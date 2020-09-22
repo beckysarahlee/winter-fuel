@@ -208,32 +208,15 @@ router.post('/sprint49/carehome-move-date', (req, res) => {
 router.post('/sprint49/homephone-address', function(req, res) {
     if (req.body["homephone-address"] === "Yes") {
       res.redirect('homephone-address-change');
-    }
-    else if (req.session.data["movemonth"] === "08") {
-      res.redirect('living-with-q-week');
-    } else if (req.session.data["movemonth"] === "07") {
-      res.redirect('living-with-q-week');
-    } else if (req.session.data["movemonth"] === "7") {
-      res.redirect('living-with-q-week');
     } else {
       res.redirect('poa');
     }
 });
 
 
-router.post('/sprint49/homephone-address-change', function(req, res) {
-    if (req.session.data["movemonth"] === "08") {
-      res.redirect('living-with-q-week');
-    } else if (req.session.data["movemonth"] === "07") {
-      res.redirect('living-with-q-week');
-    } else if (req.session.data["movemonth"] === "7") {
-      res.redirect('living-with-q-week');
-    } else {
-      res.redirect('poa');
-    }
+router.post('/sprint49/homephone-address-change', (req, res) => {
+  res.redirect('/sprint49/poa')
 });
-
-
 
 // Living with anyone at address change
 router.post('/sprint49/living-with', function(req, res) {
