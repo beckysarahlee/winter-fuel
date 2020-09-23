@@ -87,6 +87,16 @@ router.post('/sprint50/dap-address-1', (req, res) => {
 })
 ;
 
+router.post('/sprint50/dap-bank-details', (req, res) => {
+  res.redirect('/sprint50/dap-make-payment')
+})
+;
+
+router.post('/sprint50/dap-make-payment', (req, res) => {
+  res.redirect('/sprint50/overview-dead-dap-paid')
+})
+;
+
 
 
 module.exports = router;
