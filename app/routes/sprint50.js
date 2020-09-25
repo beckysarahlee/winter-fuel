@@ -97,6 +97,33 @@ router.post('/sprint50/dap-make-payment', (req, res) => {
 })
 ;
 
+// Record view - death arrears IG
+
+router.post('/sprint50/dap-name-ig', (req, res) => {
+  res.redirect('/sprint50/dap-address-ig')
+})
+;
+
+router.post('/sprint50/dap-address-ig', (req, res) => {
+  res.redirect('/sprint50/dap-address-1-ig')
+})
+;
+
+router.post('/sprint50/dap-address-1-ig', (req, res) => {
+  res.redirect('/sprint50/dap-bank-details-ig')
+})
+;
+
+router.post('/sprint50/dap-bank-details-ig', (req, res) => {
+  res.redirect('/sprint50/dap-make-payment-ig')
+})
+;
+
+router.post('/sprint50/dap-make-payment-ig', (req, res) => {
+  res.redirect('/sprint50/overview-dead-dap-paid-ig')
+})
+;
+
 
 
 module.exports = router;
