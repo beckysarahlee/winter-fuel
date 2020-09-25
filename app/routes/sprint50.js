@@ -78,11 +78,6 @@ router.post('/sprint50/dap-name', (req, res) => {
 ;
 
 router.post('/sprint50/dap-address', (req, res) => {
-  res.redirect('/sprint50/dap-address-1')
-})
-;
-
-router.post('/sprint50/dap-address-1', (req, res) => {
   res.redirect('/sprint50/dap-bank-details')
 })
 ;
@@ -104,12 +99,8 @@ router.post('/sprint50/dap-name-ig', (req, res) => {
 })
 ;
 
-router.post('/sprint50/dap-address-ig', (req, res) => {
-  res.redirect('/sprint50/dap-address-1-ig')
-})
-;
 
-router.post('/sprint50/dap-address-1-ig', (req, res) => {
+router.post('/sprint50/dap-address-ig', (req, res) => {
   res.redirect('/sprint50/dap-bank-details-ig')
 })
 ;
