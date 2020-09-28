@@ -15,6 +15,15 @@ Winter Fuel Payments
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
+        <div class="moj-banner moj-banner--success">
+          <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/1000/svg" viewBox="0 0 25 25" height="25" width="25">
+            <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
+
+          <div class="moj-banner__message">
+            <span class="moj-banner__assistive">Success</span>Passed security</div>
+        </div>
+
+
       <form method="post">
 
 {% include './_bar.html' %}
@@ -25,7 +34,7 @@ Winter Fuel Payments
             <br>
 
             <table class="govuk-table">
-            <h2 class="govuk-heading-m">Payment for winter 2020 to 2021</h2>
+            <h2 class="govuk-heading-m">2020 payment</h2>
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header"></th>
@@ -35,7 +44,7 @@ Winter Fuel Payments
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Payment date</th>
-                  <td class="govuk-table__cell">Wednesday 11 November 2020</td>
+                  <td class="govuk-table__cell">Monday, 4 November 2020</td>
                 </tr>
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Amount</th>
@@ -43,7 +52,6 @@ Winter Fuel Payments
                 </tr>
               </tbody>
             </table>
-
 
 <br>
 
@@ -87,7 +95,7 @@ Winter Fuel Payments
                     {% if data['living-with'] %}
                     {{data['living-with']}}
                       {% else %}
-                      Does not live with someone else who gets Winter Fuel Payment
+                      Does not live with anyone else of State Pension age
                     {% endif %}
                   </td>
                 </tr>
@@ -100,10 +108,6 @@ Winter Fuel Payments
               </tbody>
             </table>
 
-      </div>
-
-      <div class="govuk-grid-column-one-third">
-          {% include './_history.html' %}
       </div>
 
     </div>

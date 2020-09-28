@@ -19,7 +19,7 @@ Winter Fuel Payments
 
 {% include './_bar.html' %}
 
-            {% include './_tab-overview.html' %}
+            {% include './_tab-overview-returned.html' %}
 
             <br>
             <br>
@@ -35,14 +35,25 @@ Winter Fuel Payments
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Payment date</th>
-                  <td class="govuk-table__cell">Wednesday 11 November 2020</td>
+                  <td class="govuk-table__cell">Monday, 4 November 2020</td>
                 </tr>
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Amount</th>
                   <td class="govuk-table__cell">£200</td>
                 </tr>
               </tbody>
+
+
             </table>
+
+            <div class="govuk-warning-text">
+              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+              <strong class="govuk-warning-text__text">
+                <span class="govuk-warning-text__assistive">Warning</span>
+                This payment has been returned by the bank. <a href="reissue-bank-details" class="govuk-link">Reissue this payment</a>
+              </strong>
+            </div>
+
 
 
 <br>

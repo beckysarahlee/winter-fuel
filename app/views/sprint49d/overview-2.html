@@ -25,7 +25,7 @@ Winter Fuel Payments
             <br>
 
             <table class="govuk-table">
-            <h2 class="govuk-heading-m">Payment for winter 2020 to 2021</h2>
+            <h2 class="govuk-heading-m">2020 payment</h2>
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header"></th>
@@ -35,7 +35,7 @@ Winter Fuel Payments
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Payment date</th>
-                  <td class="govuk-table__cell">Wednesday 11 November 2020</td>
+                  <td class="govuk-table__cell">Monday, 4 November 2020</td>
                 </tr>
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Amount</th>
@@ -75,9 +75,9 @@ Winter Fuel Payments
                     {% elif data.address %}
                     {{data.address.split(', ').join('<br />') | safe}}
                     {% else %}
-                    1 Victoria Road<br>
-                    FALKIRK<br>
-                    FK55 8XN
+                    27 Kent Street<br>
+                    AMBLE<br>
+                    NE65 0LZ
                     {% endif %}
                   </td>
                 </tr>
@@ -87,7 +87,7 @@ Winter Fuel Payments
                     {% if data['living-with'] %}
                     {{data['living-with']}}
                       {% else %}
-                      Does not live with someone else who gets Winter Fuel Payment
+                      Lives with someone else of State Pension age
                     {% endif %}
                   </td>
                 </tr>

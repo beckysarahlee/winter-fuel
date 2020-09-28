@@ -33,34 +33,29 @@ Winter Fuel Payments
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Date</th>
-                <td class="govuk-table__cell">Wednesday 11 November 2020</td>
-                <td class="govuk-table__cell"></td>
-              </tr>
-              <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Amount</th>
-                <td class="govuk-table__cell">£200</td>
+                <td class="govuk-table__cell">£100</td>
                 <td class="govuk-table__cell"></td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Status</th>
-                <td class="govuk-table__cell">Sent</td>
+                <th scope="row" class="govuk-table__header">Reference number</th>
+                <td class="govuk-table__cell">13243546</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Date paid</th>
+                <td class="govuk-table__cell">Monday, 29 October 2018</td>
                 <td class="govuk-table__cell"></td>
               </tr>
             </tbody>
           </table>
-
-
-          <p><a href="change-payment-status" class="govuk-link">Mark payment as returned</a></p>
-
-          <br>
 
           <table class="govuk-table">
             <h2 class="govuk-heading-m">Qualification details</h2>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Age</th>
-                <td class="govuk-table__cell">66</td>
+                <td class="govuk-table__cell">79</td>
               </tr>
 
               <tr class="govuk-table__row">
@@ -71,9 +66,9 @@ Winter Fuel Payments
                   {% elif data.address %}
                   {{data.address.split(', ').join('<br />') | safe}}
                   {% else %}
-                  1 Victoria Road<br>
-                FALKIRK<br>
-                FK55 8XN
+                  78 Graham Road<br>
+                  Chelsham<br>
+                  CR6 9ND
                   {% endif %}
                 </td>
               </tr>
@@ -83,7 +78,7 @@ Winter Fuel Payments
                 <td class="govuk-table__cell"> {% if data['living-with'] %}
                   {{data['living-with']}}
                   {% else %}
-                Does not live with someone else who gets Winter Fuel Payment
+                  Lives with someone else of State Pension age
                   {% endif %}</td>
               </tr>
             </tbody>
@@ -102,7 +97,7 @@ Winter Fuel Payments
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Name on the account</th>
-                <td class="govuk-table__cell">T Best</td>
+                <td class="govuk-table__cell">Mrs M H Morrison</td>
                 <td class="govuk-table__cell"></td>
               </tr>
               <tr class="govuk-table__row">

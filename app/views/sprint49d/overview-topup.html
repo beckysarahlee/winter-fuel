@@ -9,7 +9,6 @@
 Winter Fuel Payments
 {% endblock %}
 {% block content %}
-
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
@@ -19,33 +18,34 @@ Winter Fuel Payments
 
 {% include './_bar.html' %}
 
-            {% include './_tab-overview.html' %}
+            {% include './_tab-overview-topup.html' %}
 
             <br>
             <br>
 
-            <table class="govuk-table">
-            <h2 class="govuk-heading-m">Payment for winter 2020 to 2021</h2>
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header"></th>
-                <th scope="col" class="govuk-table__header"></th>
-              </tr>
-            </thead>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Payment date</th>
-                  <td class="govuk-table__cell">Wednesday 11 November 2020</td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Amount</th>
-                  <td class="govuk-table__cell">£200</td>
-                </tr>
-              </tbody>
-            </table>
+                        <table class="govuk-table">
+                        <h2 class="govuk-heading-m">2019 payment</h2>
+                        <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                              <th scope="col" class="govuk-table__header">Payment date</th>
+                              <th scope="col" class="govuk-table__header">Amount</th>
+                              <th scope="col" class="govuk-table__header">Status</th>
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">Monday, 10 February 2020</td>
+                              <td class="govuk-table__cell">£100 (top-up)</td>
+                              <td class="govuk-table__cell">Sent</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">Monday, 4 November 2019</td>
+                              <td class="govuk-table__cell">£100</td>
+                              <td class="govuk-table__cell">Paid</td>
+                            </tr>
+                          </tbody>
+                        </table>
 
 
-<br>
+            <br>
 
             <table class="govuk-table">
                   <h2 class="govuk-heading-m">Qualification details</h2>
@@ -87,14 +87,14 @@ Winter Fuel Payments
                     {% if data['living-with'] %}
                     {{data['living-with']}}
                       {% else %}
-                      Does not live with someone else who gets Winter Fuel Payment
+                      Lives with someone else of State Pension age
                     {% endif %}
                   </td>
                 </tr>
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Date they moved in</th>
                   <td class="govuk-table__cell">
-                    6 March 2016
+                    8 August 2019
                   </td>
                 </tr>
               </tbody>
@@ -102,9 +102,6 @@ Winter Fuel Payments
 
       </div>
 
-      <div class="govuk-grid-column-one-third">
-          {% include './_history.html' %}
-      </div>
 
     </div>
 
