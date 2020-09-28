@@ -80,12 +80,27 @@ router.post('/sprint45b/declaration', (req, res) => {
 })
 ;
 
-// New bank details to declaration
+// Bank type to bank details
+router.post('/sprint45b/bank-type', function(req, res) {
+  if (req.body['bank-account-type'] === 'uk') {
+    res.redirect('bank-details-uk');
+  } else {
+    res.redirect('bank-details-ig');
+  }
+});
 
-router.post('/sprint45b/bank-details', (req, res) => {
+// Bank details to payment
+router.post('/sprint45b/bank-details-uk', (req, res) => {
   res.redirect('/sprint45b/payment-changed')
 })
 ;
+
+// Bank details to payment
+router.post('/sprint45b/bank-details-ig', (req, res) => {
+  res.redirect('/sprint45b/payment-changed')
+})
+;
+
 
 
 module.exports = router;
