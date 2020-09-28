@@ -360,7 +360,7 @@ router.post('/sprint49c/reissue-bank-details', (req, res) => {
 
 // Reissue payment to payment with confirmation and updated
 router.post('/sprint49c/reissue-payment', (req, res) => {
-  res.redirect('/sprint49c/payment-reissued')
+  res.redirect('/sprint49c/payment-reissued-banner')
 });
 
 
