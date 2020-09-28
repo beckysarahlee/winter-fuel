@@ -50,7 +50,7 @@ Winter Fuel Payments
               <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
               <strong class="govuk-warning-text__text">
                 <span class="govuk-warning-text__assistive">Warning</span>
-                This payment has been returned by the bank. <a href="reissue-bank-details" class="govuk-link">Reissue this payment</a>
+                Bank has returned payment. <a href="reissue-bank-details" class="govuk-link">Reissue this payment</a>
               </strong>
             </div>
 
@@ -93,6 +93,12 @@ Winter Fuel Payments
                   </td>
                 </tr>
                 <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Date moved in</th>
+                  <td class="govuk-table__cell">
+                    6 March 2016
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Occupancy</th>
                   <td class="govuk-table__cell">
                     {% if data['living-with'] %}
@@ -100,12 +106,6 @@ Winter Fuel Payments
                       {% else %}
                       Does not live with someone else who gets Winter Fuel Payment
                     {% endif %}
-                  </td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Date they moved in</th>
-                  <td class="govuk-table__cell">
-                    6 March 2016
                   </td>
                 </tr>
               </tbody>
