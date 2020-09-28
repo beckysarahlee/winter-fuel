@@ -353,15 +353,33 @@ router.post('/sprint49d/confirm-bank', function(req, res) {
 });
 
 
-// New bank details to reissue payment
-router.post('/sprint49d/reissue-bank-details', (req, res) => {
-  res.redirect('/sprint49d/reissue-payment')
+// Bank type to input
+router.post('/sprint49d/reissue-bank-type', function(req, res) {
+  if (req.body['bank-account-type'] === 'uk') {
+    res.redirect('reissue-bank-uk');
+  } else {
+    res.redirect('reissue-bank-ig');
+  }
+});
+
+// Bank details to reissue
+router.post('/sprint49d/reissue-bank-uk', (req, res) => {
+  res.redirect('/sprint49d/reissue-payment-uk')
+});
+
+router.post('/sprint49d/reissue-bank-ig', (req, res) => {
+  res.redirect('/sprint49d/reissue-payment-ig')
 });
 
 // Reissue payment to payment with confirmation and updated
-router.post('/sprint49d/reissue-payment', (req, res) => {
-  res.redirect('/sprint49d/payment-reissued')
+router.post('/sprint49d/reissue-payment-uk', (req, res) => {
+  res.redirect('/sprint49d/payment-reissued-1')
 });
+
+router.post('/sprint49d/reissue-payment-ig', (req, res) => {
+  res.redirect('/sprint49d/payment-reissued-1')
+});
+
 
 
 // RETURNED PAYMENTS ---------------------------------------------------------

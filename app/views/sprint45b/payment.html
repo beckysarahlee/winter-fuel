@@ -1,9 +1,12 @@
 {% extends "layout.html" %}
 
-{% block pageTitle %}
-GOV.UK Prototype Kit
+{% block header %}
+{% include './_header-international.html' %}
 {% endblock %}
 
+{% block pageTitle %}
+Winter Fuel Payments
+{% endblock %}
 {% block content %}
 
 
@@ -91,6 +94,10 @@ GOV.UK Prototype Kit
         </table>
 
         </div>
+
+              <div class="govuk-grid-column-one-third">
+                {% include './_history.html' %}
+              </div>
 
     </div>
 
