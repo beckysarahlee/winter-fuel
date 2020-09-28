@@ -58,59 +58,59 @@ Winter Fuel Payments
 
 <br>
 
-            <table class="govuk-table">
-                  <h2 class="govuk-heading-m">Qualification details</h2>
-              <a href="address" <span class="govuk-link govuk-!-font-size-19" style="margin-left: 80%">Update details</span>
-              </a>
-              <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                  <th scope="col" class="govuk-table__header"></th>
-                  <th scope="col" class="govuk-table__header"></th>
-                </tr>
-              </thead>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Age</th>
-                  <td class="govuk-table__cell">66</td>
-                  <td class="govuk-table__cell"></td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Date of birth</th>
-                  <td class="govuk-table__cell">9 August 1953</td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Address</th>
-                  <td class="govuk-table__cell">
-                    {% if data['address-change'] %}
-                    {{data['address-change'].split(', ').join('<br />') | safe }}
-                    {% elif data.address %}
-                    {{data.address.split(', ').join('<br />') | safe}}
-                    {% else %}
-                    1 Victoria Road<br>
-                    FALKIRK<br>
-                    FK55 8XN
-                    {% endif %}
-                  </td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Occupancy</th>
-                  <td class="govuk-table__cell">
-                    {% if data['living-with'] %}
-                    {{data['living-with']}}
-                      {% else %}
-                      Does not live with someone else who gets Winter Fuel Payment
-                    {% endif %}
-                  </td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Date they moved in</th>
-                  <td class="govuk-table__cell">
-                    6 March 2016
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+<table class="govuk-table">
+  <h2 class="govuk-heading-m">Qualification details</h2>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header"></th>
+      <th scope="col" class="govuk-table__header"></th>
+      <td class="govuk-table__cell"></td>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Age</th>
+      <td class="govuk-table__cell">69</td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Date of birth</th>
+      <td class="govuk-table__cell">5 March 1951</td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">GSL</th>
+      <td class="govuk-table__cell">Approved</td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Address</th>
+      <td class="govuk-table__cell">
+        Via Albarelle 6<br>
+        St-Pierre-de-Clages<br>
+        1955<br>
+        Switzerland
+      </td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Date moved in</th>
+      <td class="govuk-table__cell">
+        1992
+      </td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Occupancy</th>
+      <td class="govuk-table__cell">
+        Does not live with someone else who gets Winter Fuel Payment
+      </td>
+      <td class="govuk-table__cell"></td>
+    </tr>
 
+  </tbody>
+</table>
+            
       </div>
 
       <div class="govuk-grid-column-one-third">
