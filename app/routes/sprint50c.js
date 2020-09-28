@@ -16,5 +16,13 @@ router.post('/sprint50c/debt-management-task', (req, res) => {
 })
 ;
 
+router.post('/sprint50c/debt-management-task-1', function(req, res) {
+  if (req.body['task'] === 'complete') {
+    res.redirect('get-debt-management-task-2-complete');
+  } else {
+    res.redirect('get-debt-management-task-2-incomplete');
+  }
+});
+
 
 module.exports = router;
