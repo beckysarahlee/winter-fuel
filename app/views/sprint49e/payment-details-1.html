@@ -65,15 +65,9 @@ Winter Fuel Payments
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Address</th>
                 <td class="govuk-table__cell">
-                  {% if data['address-change'] %}
-                  {{data['address-change'].split(', ').join('<br />') | safe }}
-                  {% elif data.address %}
-                  {{data.address.split(', ').join('<br />') | safe}}
-                  {% else %}
-                  1 Victoria Road<br>
-                FALKIRK<br>
-                FK55 8XN
-                  {% endif %}
+                  101 Caxton Place<br>
+                BURWEN<br>
+                LL68 3GJ
                 </td>
               </tr>
 
@@ -101,7 +95,7 @@ Winter Fuel Payments
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Name on the account</th>
-                <td class="govuk-table__cell">T Best</td>
+                <td class="govuk-table__cell">A Noakes</td>
                 <td class="govuk-table__cell"></td>
               </tr>
               <tr class="govuk-table__row">
