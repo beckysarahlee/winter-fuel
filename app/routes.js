@@ -82,6 +82,7 @@ const sprint49d = require('./routes/sprint49d');
 const sprint50 = require('./routes/sprint50');
 const sprint50b = require('./routes/sprint50b');
 const sprint50c = require('./routes/sprint50c');
+const sprint49e = require('./routes/sprint49e');
 
 //copy the router use and update the sprint version
 router.use(sprint15);
@@ -164,6 +165,7 @@ router.use(sprint49d);
 router.use(sprint50);
 router.use(sprint50b);
 router.use(sprint50c);
+router.use(sprint49e);
 
 
 router.use((req, res, next) => {
