@@ -1,13 +1,13 @@
 {% extends "layout.html" %}
 
-{% block header %}
-{% include './_header.html' %}
-{% endblock %}
-
-
 {% block pageTitle %}
-Winter Fuel Payments
+GOV.UK Prototype Kit
 {% endblock %}
+
+{% block beforeContent %}
+{% include './_find-someone.html' %}
+{% endblock %}
+
 {% block content %}
 
 <div class="govuk-width-container">
@@ -27,55 +27,52 @@ Winter Fuel Payments
           <br>
           <br>
 
-                    <table class="govuk-table">
-                      <h2 class="govuk-heading-l">Payment details</h2>
-                      <thead class="govuk-table__head">
-                      </thead>
-                      <tbody class="govuk-table__body">
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-table__header">Date</th>
-                          <td class="govuk-table__cell">	Wednesday 6 November 2020</td>
-                          <td class="govuk-table__cell"></td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-table__header">Amount</th>
-                          <td class="govuk-table__cell">£100</td>
-                          <td class="govuk-table__cell"></td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-table__header">Status</th>
-                          <td class="govuk-table__cell">Returned</td>
-                          <td class="govuk-table__cell"></td>
-                        </tr>
-                      </tbody>
-                    </table>
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              This payment was cancelled and recalculated due to a change of address or occupancy.
+            </strong>
+          </div>
 
-                    <div class="govuk-warning-text">
-                      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-                      <strong class="govuk-warning-text__text">
-                        <span class="govuk-warning-text__assistive">Warning</span>
-                        This payment has been returned by the bank. <br>
-                        <a href="reissue-bank-details" class="govuk-link">Reissue this payment</a>
-                      </strong>
-                    </div>
-
-
-          <br>
+          <table class="govuk-table">
+            <h2 class="govuk-heading-l">Payment details</h2>
+            <thead class="govuk-table__head">
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Amount</th>
+                <td class="govuk-table__cell">£200</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Reference number</th>
+                <td class="govuk-table__cell">13243546</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+            </tbody>
+          </table>
 
           <table class="govuk-table">
             <h2 class="govuk-heading-m">Qualification details</h2>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Age</th>
-                <td class="govuk-table__cell">66</td>
+                <td class="govuk-table__cell">79</td>
               </tr>
 
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Address</th>
                 <td class="govuk-table__cell">
-                  101 Caxton Place<br>
-                BURWEN<br>
-                LL68 3GJ
+                  {% if data['address-change'] %}
+                  {{data['address-change'].split(', ').join('<br />') | safe }}
+                  {% elif data.address %}
+                  {{data.address.split(', ').join('<br />') | safe}}
+                  {% else %}
+                  78 Graham Road<br>
+                  Chelsham<br>
+                  CR6 9ND
+                  {% endif %}
                 </td>
               </tr>
 
@@ -84,7 +81,7 @@ Winter Fuel Payments
                 <td class="govuk-table__cell"> {% if data['living-with'] %}
                   {{data['living-with']}}
                   {% else %}
-              Lives with someone else who gets Winter Fuel Payment
+                  Does not live with anyone else of State Pension age
                   {% endif %}</td>
               </tr>
             </tbody>
@@ -98,12 +95,12 @@ Winter Fuel Payments
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Bank or building society</th>
-                <td class="govuk-table__cell">Lloyds</td>
+                <td class="govuk-table__cell">HSBC</td>
                 <td class="govuk-table__cell"></td>
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Name on the account</th>
-                <td class="govuk-table__cell">A Noakes</td>
+                <td class="govuk-table__cell">Mrs M H Morrison</td>
                 <td class="govuk-table__cell"></td>
               </tr>
               <tr class="govuk-table__row">
