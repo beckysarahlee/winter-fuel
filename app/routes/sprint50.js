@@ -70,6 +70,13 @@ router.post('/sprint50/death-arrears-task-1-nok-send-letter', (req, res) => {
 })
 ;
 
+
+router.post('/sprint50/tasks-5-2', (req, res) => {
+  res.redirect('/sprint50/death-arrears-task-2')
+})
+;
+
+
 // Record view - death arrears
 
 router.post('/sprint50/dap-name', (req, res) => {
