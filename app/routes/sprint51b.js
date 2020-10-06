@@ -13,14 +13,19 @@ router.post('/sprint51b/bank-task', function(req, res) {
   if (req.body['bank-details'] === 'yes') {
     res.redirect('bank-details');
   } else {
-    res.redirect('send-form');
+    res.redirect('get-next-task');
   }
 });
 
 
 // Find result to security
 router.post('/sprint51b/bank-details', (req, res) => {
-  res.redirect('/sprint51b/get-next-task')
+  res.redirect('/sprint51b/get-next-task-account-added')
+});
+
+// get next account details case to case page
+router.post('/sprint51b/get-next-task', (req, res) => {
+  res.redirect('/sprint51b/bank-task')
 });
 
 
