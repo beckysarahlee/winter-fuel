@@ -41,14 +41,10 @@ router.post('/sprint50/death-arrears-task-1-dap-name', (req, res) => {
 ;
 
 router.post('/sprint50/death-arrears-task-1-dap-address', (req, res) => {
-  res.redirect('/sprint50/death-arrears-task-1-dap-address-1')
-})
-;
-
-router.post('/sprint50/death-arrears-task-1-dap-address-1', (req, res) => {
   res.redirect('/sprint50/death-arrears-task-1-dap-bank-details')
 })
 ;
+
 
 router.post('/sprint50/death-arrears-task-1-dap-bank-details', (req, res) => {
   res.redirect('/sprint50/death-arrears-task-1-dap-make-payment')

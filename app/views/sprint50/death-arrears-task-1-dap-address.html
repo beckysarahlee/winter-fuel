@@ -42,26 +42,39 @@ GOV.UK Prototype Kit
                               <h2 class="govuk-heading-l">
 Address of the person dealing with Meera's estate</h2>
 
-                          <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+  <fieldset class="govuk-fieldset">
 
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-line-1">
+        Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+      </label>
+      <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1"></div>
 
-                              <div class="govuk-form-group">
-                                <label class="govuk-label" for="width-10">
-                                  Property number or name
-                                </label>
-                                <input class="govuk-input govuk-input--width-10" id="house-number" name="house-number" type="text">
-                              </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-line-2">
+        <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+      </label>
+      <input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2"></div>
 
-                              <div class="govuk-form-group">
-                                <label class="govuk-label" for="width-5">
-                                  Postcode
-                                </label>
-                                <input class="govuk-input govuk-input--width-5" id="postcode" name="postcode" type="postcode">
-                              </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-town">
+        Town or city
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2"></div>
 
-                            </fieldset>
-                          </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-county">
+        County
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text"></div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-postcode">
+        Postcode
+      </label>
+      <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code"></div>
+
+  </fieldset>
 
 
             <button type="submit" class="govuk-button">
