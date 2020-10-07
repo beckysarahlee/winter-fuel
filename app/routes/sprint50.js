@@ -172,7 +172,10 @@ router.post('/sprint50/tasks-5-3', (req, res) => {
 
 // TASK THREE -
 
-
+router.post('/sprint50/tasks-5-3', (req, res) => {
+  res.redirect('/sprint50/death-arrears-task-3')
+})
+;
 
 router.post('/sprint50/death-arrears-task-3', function(req, res) {
   if ( req.body['dap'] === 'yes' ) {
@@ -181,6 +184,30 @@ router.post('/sprint50/death-arrears-task-3', function(req, res) {
     res.redirect('death-arrears-task-3-nok');
   }
 });
+
+router.post('/sprint50/death-arrears-task-3-dap-name', (req, res) => {
+  res.redirect('/sprint50/death-arrears-task-3-dap-address')
+})
+;
+
+router.post('/sprint50/death-arrears-task-3-dap-address', (req, res) => {
+  res.redirect('/sprint50/death-arrears-task-3-dap-bank-details')
+})
+;
+
+
+router.post('/sprint50/death-arrears-task-3-dap-bank-details', (req, res) => {
+  res.redirect('/sprint50/death-arrears-task-3-dap-make-payment')
+})
+;
+
+router.post('/sprint50/death-arrears-task-3-dap-make-payment', (req, res) => {
+  res.redirect('/sprint50/tasks-5-4')
+})
+;
+
+
+
 
 router.post('/sprint50/death-arrears-task-3-nok', function(req, res) {
   if ( req.body['nok-details'] === 'yes' ) {
