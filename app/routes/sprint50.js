@@ -211,4 +211,12 @@ router.post('/sprint50/death-arrears-task-4', function(req, res) {
   }
 });
 
+router.post('/sprint50/death-arrears-task-4-nok', function(req, res) {
+  if ( req.body['nok-details'] === 'yes' ) {
+    res.redirect('send-wfpf100-4');
+  } else {
+    res.redirect('tasks-5-5');
+  }
+});
+
 module.exports = router;
