@@ -11,14 +11,26 @@ router.use((req, res, next) => {
 // Task to - DAP details, next of kin details or return to queue
 
 router.post('/sprint50/death-arrears-task-1', function(req, res) {
-  if ( req.body['dap'] === 'bank-details' ) {
+  if ( req.body['dap'] === 'yes' ) {
     res.redirect('death-arrears-task-1-dap-name');
-  } else if ( req.body['dap'] === 'contact-details' ) {
-    res.redirect('death-arrears-task-1-nok-name');
+  } else {
+    res.redirect('death-arrears-task-1-nok');
+  }
+});
+
+
+router.post('/sprint50/death-arrears-task-1-nok', function(req, res) {
+  if ( req.body['nok-details'] === 'yes' ) {
+    res.redirect('send-wfpf100');
   } else {
     res.redirect('tasks-5-2');
   }
 });
+
+router.post('/sprint50/send-wfpf100', (req, res) => {
+  res.redirect('/sprint50/tasks-5-2')
+})
+;
 
 
 // Death arrears payee details input

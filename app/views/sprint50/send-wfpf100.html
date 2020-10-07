@@ -36,19 +36,25 @@ GOV.UK Prototype Kit
             </div>
           </div>
 
+              {{ govukBackLink({
+                  text: "Back",
+                  href: "javascript:history.go(-1)"
+                }) }}
 
-          <form method="post">
+                <br>
+                <Br>
 
-            <h2 class="govuk-heading-l">Name of next of kin</h2>
+                                  <h1 class="govuk-heading-l">Send Nimbus 2000</h1>
 
-            <div class="govuk-form-group">
-      <label class="govuk-label" for="nextofkinname">
-        Full name
-      </label>
-      <input class="govuk-input" id="nextofkinname" name="nextofkinname" type="text" spellcheck="false" autocomplete="name"></div>
+                                  <form method="post">
+
+                                    <p>Tell them to go have a word with Hedwig at four lane ends and send the Nimbus 2000</p>
+
+
+
 
             <button type="submit" class="govuk-button">
-              Continue
+              Confirm I sent
             </button>
 
           </form>
