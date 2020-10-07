@@ -134,12 +134,41 @@ router.post('/sprint50/dap-make-payment-ig', (req, res) => {
 // TASK TWO - Nimbus has been sent
 
 router.post('/sprint50/death-arrears-task-2', function(req, res) {
-  if ( req.body['dap'] === 'yes' ) {
+  if ( req.body['dap-2'] === 'yes' ) {
     res.redirect('death-arrears-task-2-dap-name');
   } else {
-    res.redirect('death-arrears-task-3');
+    res.redirect('tasks-5-3');
   }
 });
+
+// Death arrears payee details input
+
+router.post('/sprint50/death-arrears-task-2-dap-name', (req, res) => {
+  res.redirect('/sprint50/death-arrears-task-2-dap-address')
+})
+;
+
+router.post('/sprint50/death-arrears-task-2-dap-address', (req, res) => {
+  res.redirect('/sprint50/death-arrears-task-2-dap-bank-details')
+})
+;
+
+
+router.post('/sprint50/death-arrears-task-2-dap-bank-details', (req, res) => {
+  res.redirect('/sprint50/death-arrears-task-2-dap-make-payment')
+})
+;
+
+router.post('/sprint50/death-arrears-task-2-dap-make-payment', (req, res) => {
+  res.redirect('/sprint50/tasks-5-3')
+})
+;
+
+router.post('/sprint50/tasks-5-3', (req, res) => {
+  res.redirect('/sprint50/death-arrears-task-3')
+})
+;
+
 
 // TASK THREE -
 
@@ -153,7 +182,33 @@ router.post('/sprint50/death-arrears-task-3', function(req, res) {
   }
 });
 
+router.post('/sprint50/death-arrears-task-3-nok', function(req, res) {
+  if ( req.body['nok-details'] === 'yes' ) {
+    res.redirect('send-wfpf100-3');
+  } else {
+    res.redirect('tasks-5-4');
+  }
+});
+
+router.post('/sprint50/send-wfpf100-3', (req, res) => {
+  res.redirect('/sprint50/tasks-5-4')
+})
+;
+
+
 // TASK FOUR
 
+router.post('/sprint50/tasks-5-4', (req, res) => {
+  res.redirect('/sprint50/death-arrears-task-4')
+})
+;
+
+router.post('/sprint50/death-arrears-task-4', function(req, res) {
+  if ( req.body['dap'] === 'yes' ) {
+    res.redirect('death-arrears-task-4-dap-name');
+  } else {
+    res.redirect('death-arrears-task-4-nok');
+  }
+});
 
 module.exports = router;

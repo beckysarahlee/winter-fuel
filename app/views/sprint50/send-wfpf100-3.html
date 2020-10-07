@@ -29,26 +29,34 @@ GOV.UK Prototype Kit
                 <h1 class="govuk-heading-xl">
                   XX 62 31 26 C<br>
                   <span class="govuk-body-l">
-                    Camilla Ward
+                    Roseanna Garza
                   </span>
               </div>
 
             </div>
           </div>
 
+              {{ govukBackLink({
+                  text: "Back",
+                  href: "javascript:history.go(-1)"
+                }) }}
 
-          <form method="post">
+                <br>
+                <Br>
 
-            <h2 class="govuk-heading-l">Name of the death arrears payee</h2>
+                                  <h1 class="govuk-heading-l">Request next of kin details</h1>
 
-            <div class="govuk-form-group">
-      <label class="govuk-label" for="payeename">
-        Full name
-      </label>
-      <input class="govuk-input" id="payeename" name="payeename" type="text" spellcheck="false" autocomplete="name"></div>
+                                  <form method="post">
+                                    <div class="govuk-inset-text">
+                                      <p>Send form WFPF001 to next of kin.</p>
+                                  </div>
+
+
+
+
 
             <button type="submit" class="govuk-button">
-              Continue
+              Confirm form has been sent
             </button>
 
           </form>
