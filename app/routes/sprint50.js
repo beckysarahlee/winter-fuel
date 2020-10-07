@@ -131,5 +131,29 @@ router.post('/sprint50/dap-make-payment-ig', (req, res) => {
 ;
 
 
+// TASK TWO - Nimbus has been sent
+
+router.post('/sprint50/death-arrears-task-2', function(req, res) {
+  if ( req.body['dap'] === 'yes' ) {
+    res.redirect('death-arrears-task-2-dap-name');
+  } else {
+    res.redirect('death-arrears-task-3');
+  }
+});
+
+// TASK THREE -
+
+
+
+router.post('/sprint50/death-arrears-task-3', function(req, res) {
+  if ( req.body['dap'] === 'yes' ) {
+    res.redirect('death-arrears-task-3-dap-name');
+  } else {
+    res.redirect('death-arrears-task-3-nok');
+  }
+});
+
+// TASK FOUR
+
 
 module.exports = router;
