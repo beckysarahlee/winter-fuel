@@ -63,25 +63,21 @@ router.post('/sprint49b/check-eligibility', (req, res) => {
   ;
 
 
-  // Benefits SP or PC?
+  // Benefits PC?
 
-  router.post('/sprint49b/receiving-pc', (req, res) => {
-   
-      res.redirect('residency-type-pc')
-   
-    
-  });
-
-  // Benefits SP or PC?
-
-  router.post('/sprint49b/receiving-sp', function(req, res) {
-    if ( req.body['state-pension'] === 'yes' ) {
-      res.redirect('residency-type');
-    } else if ( req.body['state-pension'] === 'no' ) {
-      res.redirect('residency-type');
+  router.post('/sprint49b/receiving-pc', function(req, res) {
+    if ( req.body['pension-credit'] === 'yes' ) {
+      res.redirect('residency-type-pc');
+    } else if ( req.body['pension-credit'] === 'no' ) {
+      res.redirect('receiving-sp');
     }
   });
 
+  // Benefits SP?
+
+  router.post('/sprint49b/receiving-sp', (req, res) =>  {
+      res.redirect('residency-type')
+  });
 
 
 // Query
