@@ -65,11 +65,12 @@ router.post('/sprint49b/check-eligibility', (req, res) => {
 
   // Benefits PC?
 
-  router.post('/sprint49b/receiving-pc', (req, res) => {
-   
-      res.redirect('residency-type-pc')
-   
-    
+  router.post('/sprint49b/receiving-pc', function(req, res) {
+    if ( req.body['pension-credit'] === 'yes' ) {
+      res.redirect('residency-type-pc');
+    } else if ( req.body['pension-credit'] === 'no' ) {
+      res.redirect('receiving-sp');
+    }
   });
 
   // Benefits SP?
