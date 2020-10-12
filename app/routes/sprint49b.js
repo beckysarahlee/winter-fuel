@@ -80,7 +80,6 @@ router.post('/sprint49b/check-eligibility', (req, res) => {
   });
 
 
-
 // Query
 
 router.post('/sprint49b/query', function(req, res) {
