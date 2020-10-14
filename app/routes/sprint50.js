@@ -46,8 +46,16 @@ router.post('/sprint50/death-arrears-task-1-dap-address', (req, res) => {
 ;
 
 
-router.post('/sprint50/death-arrears-task-1-dap-bank-details', (req, res) => {
-  res.redirect('/sprint50/death-arrears-task-1-dap-make-payment')
+router.post('/sprint50/death-arrears-task-1-dap-bank-details', function(req, res) {
+  if ( req.body['bank-account-type'] === 'international-bank' ) {
+    res.redirect('/sprint50/request-sop5');
+  } else {
+    res.redirect('/sprint50/death-arrears-task-1-dap-make-payment');
+  }
+}); 
+
+router.post('/sprint50/request-sop5', (req, res) => {
+  res.redirect('/sprint50/tasks-5-2')
 })
 ;
 
