@@ -18,7 +18,6 @@ Winter Fuel Payments
 
         <form method="post">
 
-          {% if data.returnedreason %}
           <div class="moj-banner moj-banner--success">
 
             <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/1000/svg" viewBox="0 0 25 25" height="25" width="25">
@@ -28,16 +27,13 @@ Winter Fuel Payments
               <span class="moj-banner__assistive">Success</span>Payment marked as returned</div>
 
           </div>
-          {% endif %}
 
 
-          {% include './_bar.html' %}
+          {% include './_bar-returned.html' %}
 
-          {% include './_tab-payment.html' %}
+          {% include './_tab-payment-returned.html' %}
 
-          <br>
-          <br>
-          <h2 class="govuk-heading-m" style="float:left;">Account details </h2>
+          <br><br><h2 class="govuk-heading-m" style="float:left;">Account details </h2>
 
           <table class="govuk-table">
             <a href="bankdetails" <span class="govuk-link govuk-!-font-size-19" style="margin-left: 60%; float:left">Change</span>
@@ -50,47 +46,26 @@ Winter Fuel Payments
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Bank or building society</th>
-                <td class="govuk-table__cell">TSB</td>
-                <td class="govuk-table__cell"></td>
-              </tr>
-              <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Name on the account</th>
                 <td class="govuk-table__cell">
                   {% if data['accountholder'] %}
-                  {{data['accountholder']}}
+                    {{data['accountholder']}}
                   {% else %}
-                  T Best
+                  Rebecca D'Amble
                   {% endif %}
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Sort code</th>
+                <th scope="row" class="govuk-table__header">BIC or SWIFT code</th>
                 <td class="govuk-table__cell">
-                  {% if data['sortcode'] %}
-                  {{data['sortcode']}}
-                  {% else %}
-                  00 11 22
-                  {% endif %}
+                  CTBAAU2S
                 </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Account number</th>
+                <th scope="row" class="govuk-table__header">IBAN</th>
                 <td class="govuk-table__cell">
-                  {% if data['accountnumber'] %}
-                  {{data['accountnumber']}}
-                  {% else %}
-                  ****5678
-                  {% endif %}
+                  CH93 0076 2011 6238 5295 7
                 </td>
               </tr>
-              {% if data['rollnumber'] %}
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Building society roll number (if there is one)</th>
-                <td class="govuk-table__cell">
-                  {{data['rollnumber']}}
-                </td>
-              </tr>
-              {% endif %}
             </tbody>
           </table>
 
@@ -113,13 +88,7 @@ Winter Fuel Payments
                 <td class="govuk-table__cell">Monday, 4 November 2020</td>
                 <td class="govuk-table__cell">£200</td>
                 <td class="govuk-table__cell">
-                  {% if data.reissued %}
-                  Reissued
-                  {% elseif data.returnedreason %}
-                  Returned
-                  {% else %}
-                  Sent
-                  {% endif %}</td>
+                  Returned</td>
 
 
                 <td class="govuk-table__cell"><a href="previous-payment-pending" class="govuk-link">
@@ -129,7 +98,7 @@ Winter Fuel Payments
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">Wedneday, 20 November 2019</td>
                 <td class="govuk-table__cell">£200</td>
-                <td class="govuk-table__cell">Sent</td>
+                <td class="govuk-table__cell">Paid</td>
                 <td class="govuk-table__cell"><a href="previous-payment" class="govuk-link">Details</a></td>
               </tr>
             </tbody>
@@ -138,7 +107,7 @@ Winter Fuel Payments
       </div>
 
       <div class="govuk-grid-column-one-third">
-          {% include './_history.html' %}
+          {% include './_history-returned.html' %}
       </div>
 
     </div>
