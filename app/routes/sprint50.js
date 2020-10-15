@@ -45,7 +45,7 @@ router.post('/sprint50/death-arrears-task-1-dap-address', (req, res) => {
 })
 ;
 
-
+// task view bank type to payment or SOP5
 router.post('/sprint50/death-arrears-task-1-dap-bank-details', function(req, res) {
   if ( req.body['bank-account-type'] === 'international-bank' ) {
     res.redirect('/sprint50/request-sop5');
@@ -54,8 +54,25 @@ router.post('/sprint50/death-arrears-task-1-dap-bank-details', function(req, res
   }
 }); 
 
+
+// record view bank type to payment or SOP5
+router.post('/sprint50/dap-bank-details', function(req, res) {
+  if ( req.body['rec-bank-account-type'] === 'international-bank' ) {
+    res.redirect('/sprint50/record-view-request-sop5');
+  } else {
+    res.redirect('/sprint50/dap-make-payment');
+  }
+}); 
+
+// task view request sop5 to task list
 router.post('/sprint50/request-sop5', (req, res) => {
   res.redirect('/sprint50/tasks-5-2')
+})
+;
+
+// record view request sop5 to overview
+router.post('/sprint50/record-view-request-sop5', (req, res) => {
+  res.redirect('/sprint50/overview-dead-request-sop5')
 })
 ;
 
