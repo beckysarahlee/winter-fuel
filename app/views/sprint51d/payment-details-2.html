@@ -90,31 +90,36 @@ Winter Fuel Payments
             </tbody>
           </table>
 
-          <h3 class="govuk-heading-m">Bank account details</h3>
+          <h3 class="govuk-heading-m">Account details</h3>
 
           <table class="govuk-table">
             <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header"></th>
+              </tr>
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Bank or building society</th>
-                <td class="govuk-table__cell">Lloyds</td>
-                <td class="govuk-table__cell"></td>
-              </tr>
-              <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Name on the account</th>
-                <td class="govuk-table__cell">A Noakes</td>
-                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell">
+                  {% if data['accountholder'] %}
+                    {{data['accountholder']}}
+                  {% else %}
+                  Alfie Noakes
+                  {% endif %}
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Sort code</th>
-                <td class="govuk-table__cell">00 11 22</td>
-                <td class="govuk-table__cell"></td>
+                <th scope="row" class="govuk-table__header">BIC or SWIFT code</th>
+                <td class="govuk-table__cell">
+                  CTBAAU2S
+                </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Account number</th>
-                <td class="govuk-table__cell">12345678</td>
-                <td class="govuk-table__cell"></td>
+                <th scope="row" class="govuk-table__header">IBAN</th>
+                <td class="govuk-table__cell">
+                  CH93 0076 2011 6238 5295 7
+                </td>
               </tr>
             </tbody>
           </table>
