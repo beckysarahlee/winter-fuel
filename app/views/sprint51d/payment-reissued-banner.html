@@ -43,36 +43,90 @@ Winter Fuel Payments
           <table class="govuk-table">
             <a href="bankdetails" <span class="govuk-link govuk-!-font-size-19" style="margin-left: 60%; float:left">Change</span>
             </a>
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header"></th>
-                <th scope="col" class="govuk-table__header"></th>
-              </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Name on the account</th>
-                <td class="govuk-table__cell">
-                  {% if data['accountholder'] %}
-                    {{data['accountholder']}}
+
+            <table class="govuk-table">
+  
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header"></th>
+                  <th scope="col" class="govuk-table__header"></th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                {% if data['rec-bank-account-type'] == 'uk-bank'%}
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Name on the account</th>
+                  <td class="govuk-table__cell">
+                    {% if data['name-on-the-account'] %}
+                      {{data['name-on-the-account']}}
+                    {% else %}
+                    Alfie Noakes
+                    {% endif %}
+                </tr>
+                
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Sort code</th>
+                  <td class="govuk-table__cell">
+                    {% if data['sort-code'] %}
+                      {{data['sort-code']}}
+                    {% else %}
+                      001122
+                    {% endif %}
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Account number</th>
+                  <td class="govuk-table__cell">
+                    {% if data['account-number'] %}
+                    {{data['account-number']}}
                   {% else %}
-                  Alfie Noakes
+                     98765432
                   {% endif %}
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">BIC or SWIFT code</th>
-                <td class="govuk-table__cell">
-                  CTBAAU2S
-                </td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">IBAN</th>
-                <td class="govuk-table__cell">
-                  CH93 0076 2011 6238 5295 7
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                  </td>
+                </tr>  
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Building society roll number <br>(if there is one)</th>
+                  <td class="govuk-table__cell">
+                    {% if data['roll-number'] %}
+                    {{data['roll-number']}}
+                  {% else %}
+                     2344353234234
+                  {% endif %}
+                  </td>
+                </tr>
+                  {% else %}
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Name on the account</th>
+                    <td class="govuk-table__cell">
+                      {% if data['nameaccount'] %}
+                        {{data['nameaccount']}}
+                      {% else %}
+                      Alfie Noakes
+                      {% endif %}
+                  </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">BIC or SWIFT code</th>
+                  <td class="govuk-table__cell">
+                    {% if data['swift'] %}
+                    {{data['swift']}}
+                  {% else %}
+                     2344353234234
+                  {% endif %}
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">IBAN</th>
+                  <td class="govuk-table__cell">
+                    {% if data['iban'] %}
+                    {{data['iban']}}
+                  {% else %}
+                     CH93 0076 2011 6238 5295 7
+                  {% endif %}
+                  </td>
+                </tr>
+                {% endif %}
+              </tbody>
+            </table>
 
           <br>
 
