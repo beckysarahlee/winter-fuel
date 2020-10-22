@@ -17,7 +17,7 @@ Winter Fuel Payments
 
         <form method="post">
 
-          {% include './_bar.html' %}
+          {% include './_bar-3.html' %}
 
           {{ govukBackLink({
                 text: "Back",
@@ -34,24 +34,29 @@ Winter Fuel Payments
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Date</th>
-                <td class="govuk-table__cell">Wednesday 11 November 2020</td>
+                <td class="govuk-table__cell">	Wednesday 6 November 2020</td>
                 <td class="govuk-table__cell"></td>
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Amount</th>
-                <td class="govuk-table__cell">£100</td>
+                <td class="govuk-table__cell">£200</td>
                 <td class="govuk-table__cell"></td>
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Status</th>
-                <td class="govuk-table__cell">Sent</td>
+                <td class="govuk-table__cell">Returned</td>
                 <td class="govuk-table__cell"></td>
               </tr>
             </tbody>
           </table>
 
-
-          <p><a href="change-payment-status" class="govuk-link">Mark payment as returned</a></p>
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              Bank has returned payment. <br><a href="reissue-account-3" class="govuk-link">Check account details and reissue payment</a>
+            </strong>
+          </div>
 
           <br>
 
@@ -60,15 +65,17 @@ Winter Fuel Payments
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Age</th>
-                <td class="govuk-table__cell">66</td>
+                <td class="govuk-table__cell">78</td>
               </tr>
 
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Address</th>
                 <td class="govuk-table__cell">
-                  101 Caxton Place<br>
-                BURWEN<br>
-                LL68 3GJ
+                  Piazza Giuseppe Garibaldi 76<br>
+                  Pieveottoville<br>
+                  Parma<br>
+                  43010<br>
+                  Italia
                 </td>
               </tr>
 
@@ -77,7 +84,7 @@ Winter Fuel Payments
                 <td class="govuk-table__cell"> {% if data['living-with'] %}
                   {{data['living-with']}}
                   {% else %}
-                Lives with someone else who gets Winter Fuel Payment
+                  Does not live with someone else who gets Winter Fuel Payment
                   {% endif %}</td>
               </tr>
             </tbody>
@@ -86,28 +93,32 @@ Winter Fuel Payments
           <h3 class="govuk-heading-m">Account details</h3>
 
           <table class="govuk-table">
+            
             <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header"></th>
+              </tr>
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Bank or building society</th>
-                <td class="govuk-table__cell">Halifax</td>
-                <td class="govuk-table__cell"></td>
-              </tr>
-              <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Name on the account</th>
-                <td class="govuk-table__cell">A Noakes</td>
-                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell">
+                 
+                 T. Best
+                 
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Sort code</th>
-                <td class="govuk-table__cell">00 11 22</td>
-                <td class="govuk-table__cell"></td>
+                <th scope="row" class="govuk-table__header">BIC or SWIFT code</th>
+                <td class="govuk-table__cell">
+                  BITAITR1
+                </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Account number</th>
-                <td class="govuk-table__cell">12345678</td>
-                <td class="govuk-table__cell"></td>
+                <th scope="row" class="govuk-table__header">IBAN</th>
+                <td class="govuk-table__cell">
+                  IT60X0542811101000000123456
+                </td>
               </tr>
             </tbody>
           </table>

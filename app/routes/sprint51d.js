@@ -27,6 +27,10 @@ router.post('/sprint51d/find', function(req, res) {
     res.redirect('/sprint51d/find-2');
   } else if (req.body['nino'] === 'xx987654x') {
     res.redirect('/sprint51d/find-2');
+  } else if (req.body['nino'] === 'AB123456C') {
+    res.redirect('/sprint51d/find-3');
+  } else if (req.body['nino'] === 'ab123456c') {
+    res.redirect('/sprint51d/find-3');
   } else {
     res.redirect('/sprint51d/find-1');
   }
@@ -42,6 +46,11 @@ router.post('/sprint51d/find-2', (req, res) => {
   res.redirect('/sprint51d/security-2')
 });
 
+// Find result to security
+router.post('/sprint51d/find-3', (req, res) => {
+  res.redirect('/sprint51d/security-3')
+});
+
 
 router.post('/sprint51d/security', (req, res) => {
   res.redirect('/sprint51d/overview-returned')
@@ -49,6 +58,10 @@ router.post('/sprint51d/security', (req, res) => {
 
 router.post('/sprint51d/security-2', (req, res) => {
   res.redirect('/sprint51d/overview-2')
+});
+
+router.post('/sprint51d/security-3', (req, res) => {
+  res.redirect('/sprint51d/overview-returned-3')
 });
 
 // THIS IS WHAT YOU NEED TO CHANGE BACK!!!!!! ---------------------------
@@ -361,15 +374,34 @@ router.post('/sprint51d/reissue-account', function(req, res) {
   }
 });
 
+// Reissueto same bank account?
+router.post('/sprint51d/reissue-account-3', function(req, res) {
+  if (req.body['reissue-account'] === 'yes') {
+    res.redirect('reissue-payment-3');
+  } else {
+    res.redirect('reissue-bank-details-3');
+  }
+});
+
 
 // New bank details to reissue payment
 router.post('/sprint51d/reissue-bank-details', (req, res) => {
   res.redirect('/sprint51d/reissue-payment')
 });
 
+// New bank details to reissue payment
+router.post('/sprint51d/reissue-bank-details-3', (req, res) => {
+  res.redirect('/sprint51d/reissue-payment-3')
+});
+
 // Reissue payment to payment with confirmation and updated
 router.post('/sprint51d/reissue-payment', (req, res) => {
   res.redirect('/sprint51d/payment-reissued-banner')
+});
+
+// Reissue payment to payment with confirmation and updated
+router.post('/sprint51d/reissue-payment-3', (req, res) => {
+  res.redirect('/sprint51d/payment-reissued-banner-3')
 });
 
 
