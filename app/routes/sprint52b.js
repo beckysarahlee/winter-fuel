@@ -1,0 +1,35 @@
+const express = require('express');
+const router = express.Router()
+
+router.use((req, res, next) => {
+  if (req.method === 'POST') {
+    console.log(JSON.stringify(req.session.data, null, 2))
+  }
+  next()
+})
+
+
+
+// Reissueto same bank account?
+router.post('/sprint52b/reissue-account', function(req, res) {
+  if (req.body['reissue-account'] === 'yes') {
+    res.redirect('reissue-payment');
+  } else {
+    res.redirect('reissue-bank-details');
+  }
+});
+
+
+// New bank details to reissue payment
+router.post('/sprint52b/reissue-bank-details', (req, res) => {
+  res.redirect('/sprint52b/reissue-payment')
+});
+
+// Reissue payment to payment with confirmation and updated
+router.post('/sprint52b/reissue-payment', (req, res) => {
+  res.redirect('/sprint52b/payment-reissued-banner')
+});
+
+
+
+module.exports = router;
