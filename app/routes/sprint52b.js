@@ -20,8 +20,13 @@ router.post('/sprint52b/reissue-account', function(req, res) {
 });
 
 
-// New bank details to reissue payment
+// New bank details to account details origin
 router.post('/sprint52b/reissue-bank-details', (req, res) => {
+  res.redirect('/sprint52b/account-details-origin')
+});
+
+// Account details origin to reissue payment
+router.post('/sprint52b/account-details-origin', (req, res) => {
   res.redirect('/sprint52b/reissue-payment')
 });
 
