@@ -62,8 +62,8 @@ Winter Fuel Payments
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Sort code</th>
                   <td class="govuk-table__cell">
-                    {% if data.rollnumber %}
-                    {{data.rollnumber}}
+                    {% if data.sortcode %}
+                    {{data.sortcode}}
                     {% else %}
                     00 11 22
                     {% endif %}</td>
@@ -77,6 +77,14 @@ Winter Fuel Payments
                     12345678
                     {% endif %}</td>
                 </tr>
+                {% if data.rollnumber %}
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Building society roll number</th>
+                  <td class="govuk-table__cell">
+                    {{data.rollnumber}}
+                    </td>
+                </tr>
+                {% endif %}
               </tbody>
             </tbody>
           </table>
