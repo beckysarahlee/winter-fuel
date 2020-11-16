@@ -27,44 +27,55 @@ Winter Fuel Payments
           <br>
           <br>
 
-          <table class="govuk-table">
-            <h2 class="govuk-heading-l">Payment details</h2>
-            <thead class="govuk-table__head">
-            </thead>
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Amount</th>
-                <td class="govuk-table__cell">£100</td>
-                <td class="govuk-table__cell"></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Date paid</th>
-                <td class="govuk-table__cell">Monday, 29 October 2018</td>
-                <td class="govuk-table__cell"></td>
-              </tr>
-            </tbody>
-          </table>
+
+                    <table class="govuk-table">
+                      <h2 class="govuk-heading-l">Payment details</h2>
+                      <thead class="govuk-table__head">
+                      </thead>
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">Date</th>
+                          <td class="govuk-table__cell">	Wednesday 6 November 2020</td>
+                          <td class="govuk-table__cell"></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">Amount</th>
+                          <td class="govuk-table__cell">£100</td>
+                          <td class="govuk-table__cell"></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">Status</th>
+                          <td class="govuk-table__cell">Returned</td>
+                          <td class="govuk-table__cell"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <div class="govuk-warning-text">
+                      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                      <strong class="govuk-warning-text__text">
+                        <span class="govuk-warning-text__assistive">Warning</span>
+                        Bank has returned payment. <br><a href="reissue-account" class="govuk-link">Check account details and reissue payment</a>
+                      </strong>
+                    </div>
+
+
+          <br>
 
           <table class="govuk-table">
             <h2 class="govuk-heading-m">Qualification details</h2>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Age</th>
-                <td class="govuk-table__cell">79</td>
+                <td class="govuk-table__cell">66</td>
               </tr>
 
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Address</th>
                 <td class="govuk-table__cell">
-                  {% if data['address-change'] %}
-                  {{data['address-change'].split(', ').join('<br />') | safe }}
-                  {% elif data.address %}
-                  {{data.address.split(', ').join('<br />') | safe}}
-                  {% else %}
-                  78 Graham Road<br>
-                  Chelsham<br>
-                  CR6 9ND
-                  {% endif %}
+                  101 Caxton Place<br>
+                BURWEN<br>
+                LL68 3GJ
                 </td>
               </tr>
 
@@ -73,13 +84,13 @@ Winter Fuel Payments
                 <td class="govuk-table__cell"> {% if data['living-with'] %}
                   {{data['living-with']}}
                   {% else %}
-                  Lives with someone else of State Pension age
+              Lives with someone else who gets Winter Fuel Payment
                   {% endif %}</td>
               </tr>
             </tbody>
           </table>
 
-          <h3 class="govuk-heading-m">Account details</h3>
+          <h3 class="govuk-heading-m">Bank account details</h3>
 
           <table class="govuk-table">
             <thead class="govuk-table__head">
@@ -87,12 +98,12 @@ Winter Fuel Payments
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Bank or building society</th>
-                <td class="govuk-table__cell">HSBC</td>
+                <td class="govuk-table__cell">Lloyds</td>
                 <td class="govuk-table__cell"></td>
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Name on the account</th>
-                <td class="govuk-table__cell">Mrs M H Morrison</td>
+                <td class="govuk-table__cell">A Noakes</td>
                 <td class="govuk-table__cell"></td>
               </tr>
               <tr class="govuk-table__row">
@@ -102,7 +113,7 @@ Winter Fuel Payments
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Account number</th>
-                <td class="govuk-table__cell">****5678</td>
+                <td class="govuk-table__cell">12345678</td>
                 <td class="govuk-table__cell"></td>
               </tr>
             </tbody>
