@@ -20,7 +20,7 @@ router.post('/sprint49/query', function(req, res) {
 
 // Find result to security
 router.post('/sprint55b/benefit-flag', (req, res) => {
-  res.redirect('/sprint43/bank-details')
+  res.redirect('/sprint49/overview-changed')
 });
 
 
