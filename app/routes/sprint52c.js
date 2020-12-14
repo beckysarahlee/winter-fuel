@@ -181,7 +181,7 @@ router.post('/sprint52c/not-care-home', function(req, res) {
   if (req.body['care-home'] === 'yes') {
     res.redirect('carehome-move-date');
   } else {
-    res.redirect('declaration');
+    res.redirect('/sprint49/move-date');
   }
 });
 
