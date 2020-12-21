@@ -123,9 +123,9 @@ router.post('/sprint55/benefits', function(req, res) {
 
 router.post('/sprint55/care-home', function(req, res) {
   if ( req.body['care-home-admission'] === 'yes' ) {
-    res.redirect('pension-credit');
+    res.redirect('under-80-care-home-full');
   } else {
-    res.redirect('pension-credit-ch');
+    res.redirect('under-80-care-home-no-pc');
   }
 });
 
