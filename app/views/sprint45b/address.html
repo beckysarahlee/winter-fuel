@@ -16,6 +16,20 @@ Winter Fuel Payments
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
+        <div>
+          <h1 class="govuk-heading-xl">
+            Dean Avery<br>
+            <span class="govuk-body-l">
+              {% if data['nino'] %}
+              {{data['nino']}}
+              {% else %}
+              XX 12 34 56
+              {% endif %}<br>
+
+            </span>
+          </h1>
+        </div>
+
         {{ govukBackLink({
             text: "Back",
             href: "javascript:history.go(-1)"
@@ -24,7 +38,7 @@ Winter Fuel Payments
         <br>
         <br>
 
-        <h1 class="govuk-heading-xl">What is your address?</h1>
+        <h1 class="govuk-heading-l">What is your/the address? 🏗️</h1>
         <form method="post">
 
           <fieldset class="govuk-fieldset">
