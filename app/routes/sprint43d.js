@@ -28,7 +28,7 @@ router.post('/sprint43d/tasks-2', (req, res) => {
 
 
 router.post('/sprint43d/tasks-3', (req, res) => {
-  res.redirect('/sprint43d/gsl-task')
+  res.redirect('/sprint43b/gsl-task')
 });
 
 router.post('/sprint43d/tasks-4', (req, res) => {
