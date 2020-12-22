@@ -14,9 +14,21 @@ Winter Fuel Payments
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-      <form method="post">
+        <div>
+          <h1 class="govuk-heading-xl">
+            Dean Avery<br>
+            <span class="govuk-body-l">
+              {% if data['nino'] %}
+              {{data['nino']}}
+              {% else %}
+              XX 12 34 56
+              {% endif %}<br>
 
-      
+            </span>
+          </h1>
+        </div>
+
+      <form method="post">
 
             {{ govukBackLink({
                 text: "Back",

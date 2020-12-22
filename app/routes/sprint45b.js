@@ -27,42 +27,20 @@ router.post('/sprint45b/move-date', (req, res) => {
 })
 ;
 
+// Move date to living with
 
-// Living with to occupancy date change, or to home phone
+router.post('/sprint45b/living-with', (req, res) => {
+  res.redirect('/sprint45b/living-with-date')
+})
+;
 
-router.post('/sprint45b/living-with', function(req, res) {
-  if (req.body["living-with"] === "no" && req.session.data["move-month"] === "12") {
-    res.redirect('living-with-date');
-  }
-  else {
-    res.redirect('homephone-address');
-  }
-});
 
-// Occupancy change date to home phone
-
+// Living with to
 router.post('/sprint45b/living-with-date', (req, res) => {
-  res.redirect('homephone-address')
+  res.redirect('declaration')
 })
 ;
 
-// Change home phone
-
-router.post('/sprint45b/homephone-address', function(req, res) {
-  if (req.body["homephone-address"] === "Yes") {
-    res.redirect('homephone-address-change');
-  }
-  else {
-    res.redirect('declaration');
-  }
-});
-
-// New home phone to declaration
-
-router.post('/sprint45b/homephone-address-change', (req, res) => {
-  res.redirect('/sprint45b/declaration')
-})
-;
 
 // Home phone number removal
 router.post('/sprint45b/homephone-remove', function(req, res) {
