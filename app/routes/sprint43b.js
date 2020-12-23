@@ -21,7 +21,7 @@ router.post('/sprint43b/return-queue', (req, res) => {
 
 // GSL TASK TWOOOOOOOO
 router.post('/sprint43b/tasks-2', (req, res) => {
-  res.redirect('/sprint51b/bank-task')
+  res.redirect('/sprint56/bank-task')
 });
 
 // GSL TASK ONEEEE
