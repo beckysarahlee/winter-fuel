@@ -29,51 +29,45 @@ Emergency ‘Top up’ Payments (COVID19)
           <br>
           <br>
 
-          <h2 class="govuk-heading-l">Do you want to reissue the payment to the same bank account?</h2>
+          <h1 class="govuk-heading-l">What are the bank or building society account details?</h1>
 
-          <table class="govuk-table">
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Bank or building society</th>
-                <td class="govuk-table__cell">TSB</td>
-                <td class="govuk-table__cell"></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Account number</th>
-                <td class="govuk-table__cell">
-                  {% if data['accountnumber'] %}
-                  {{data['accountnumber']}}
-                  {% else %}
-                  ****5678
-                  {% endif %}
-                </td>
-              </tr>
-            </tbody>
-          </table>
+<br>
+
+          <form method="post">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="width-20">
+                Name on the account
+              </label>
+              <input class="govuk-input govuk-input--width-20" id="accountholder" name="accountholder" type="text">
+            </div>
 
 
-          {% from "govuk/components/radios/macro.njk" import govukRadios %}
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="sortcode">
+                Sort code
+              </label>
+              <input class="govuk-input govuk-input--width-10" id="sortcode" name="sortcode" type="text">
+            </div>
 
-          {{ govukRadios({
-            classes: "govuk-radios--inline",
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="width-20">
+                Account number
+              </label>
+              <input class="govuk-input govuk-input--width-20" id="accountnumber" name="accountnumber" type="text">
+            </div>
 
-            items: [
-              {
-                value: "yes",
-                text: "Yes"
-              },
-              {
-                value: "no",
-                text: "No"
-              }
-            ]
-          }) }}
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="rollnumber">
+                Building society roll number (if there is one)
+              </label>
+              <input class="govuk-input govuk-input--width-10" id="rollnumber" name="rollnumber" type="text">
+            </div>
 
-          {% from "govuk/components/button/macro.njk" import govukButton %}
 
-          {{ govukButton({
-            text: "Confirm"
-          }) }}
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+          </form>
 
       </div>
 
