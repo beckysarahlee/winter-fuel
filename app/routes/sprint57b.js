@@ -410,7 +410,7 @@ router.post('/sprint57b/start-payments', function(req, res) {
 });
 
 // STOP PAYMENTS - OPT OUT / DEAD ---------------------------------------------------------
-router.post('/sprint57b/stop-payments-future', function(req, res) {
+router.post('/sprint57b/stop-payments-reason', function(req, res) {
   if (req.body['stop-payments'] === 'opted-out') {
     res.redirect('payment-opted-out');
   } else {
