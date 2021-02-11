@@ -101,6 +101,7 @@ const sprint56 = require('./routes/sprint56');
 const sprint57 = require('./routes/sprint57');
 const sprint57b = require('./routes/sprint57b');
 const sprint57c = require('./routes/sprint57c');
+const eligibilitychecker = require('./routes/eligibility-checker');
 
 
 
@@ -204,6 +205,7 @@ router.use(sprint56);
 router.use(sprint57);
 router.use(sprint57b);
 router.use(sprint57c);
+router.use(eligibilitychecker);
 
 
 
