@@ -36,13 +36,13 @@ Emergency ‘Top up’ Payments (COVID19)
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Amount</th>
-                <td class="govuk-table__cell">£100</td>
+                <td class="govuk-table__cell">£200</td>
                 <td class="govuk-table__cell"></td>
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Reason for payment</th>
                 <td class="govuk-table__cell">
-                    COVID-19
+                    NI COVID HEATING
                 </td>
               </tr>
             </tbody>
@@ -51,12 +51,7 @@ Emergency ‘Top up’ Payments (COVID19)
           <h2 class="govuk-heading-m">Bank account details</h2>
           <table class="govuk-table">
             <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Bank or building society</th>
-                <td class="govuk-table__cell">TSB</td>
-                <td class="govuk-table__cell"></td>
-              </tr>
-              <tr class="govuk-table__row">
+                            <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Name on the account</th>
                 <td class="govuk-table__cell">
                   {% if data['accountholder'] %}
@@ -92,11 +87,11 @@ Emergency ‘Top up’ Payments (COVID19)
           {% from "govuk/components/button/macro.njk" import govukButton %}
 
           {{ govukButton({
-            text: "Confirm"
+            text: "Confirm",
+            href: "overview"
           }) }}
 
       </div>
-
 
     </div>
 
