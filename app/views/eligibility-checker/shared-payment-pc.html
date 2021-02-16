@@ -1,13 +1,13 @@
 {% extends "layout.html" %}
 
-{% block header %}
-{% include './_header.html' %}
-{% endblock %}
-
-
 {% block pageTitle %}
-Winter Fuel Payments
+GOV.UK Prototype Kit
 {% endblock %}
+
+{% block beforeContent %}
+{% include './_find-someone.html' %}
+{% endblock %}
+
 {% block content %}
 
 
@@ -39,9 +39,9 @@ Winter Fuel Payments
               who was also getting Pension Credit during qualifying week.</p>
 
 
-              <button type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
+              <a href="date-of-birth.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
                 Start again
-              </button>
+                </a>
 
 
       </div>

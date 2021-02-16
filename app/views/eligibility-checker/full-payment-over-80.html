@@ -1,12 +1,11 @@
 {% extends "layout.html" %}
 
-{% block header %}
-{% include './_header.html' %}
+{% block pageTitle %}
+GOV.UK Prototype Kit
 {% endblock %}
 
-
-{% block pageTitle %}
-Winter Fuel Payments
+{% block beforeContent %}
+{% include './_find-someone.html' %}
 {% endblock %}
 
 {% block content %}
@@ -36,13 +35,30 @@ Winter Fuel Payments
           <p>You qualify for £300 because you:</p>
 
              <ul class="govuk-list govuk-list--bullet">
-               <li>were born on or before 20 September 1940</li>
+               <li>were born before 28 September 1940</li>
                <li>do not live with anyone else who qualifies</li>
              </ul>
 
-             <button class="govuk-button" data-module="govuk-button">
-              Start again
-            </button>
+             <h3 class="govuk-heading-m">What happens next</h3>
+             <p>Your payment will usually be made in November or December, but may take until the following 31 March.</p>
+             <div class="govuk-inset-text">
+              <p>This will happen automatically. You do not need to make a claim.</p>
+           </div>
+  
+             <h3 class="govuk-heading-m">Changes of circumstance</h3>
+            <p>If your circumstances change, it could affect what you are entitled to. For example:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>moving house or there is a change to who you live with</li>
+              <li>being in hospital for more than a year</li>
+              <li>moving into a care home</li>
+            </ul>
+            <div class="govuk-inset-text">
+              <p>You should tell us about any change of circumstances as soon as possible.</p>
+          </div>
+
+          <a href="date-of-birth.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+            Start again
+            </a>
 
 
            </form>

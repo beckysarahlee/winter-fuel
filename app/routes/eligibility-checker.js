@@ -100,13 +100,18 @@ if ( req.body['query'] === 'eligibility' ) {
     } else if ( req.body['where-were-you-living'] === 'carehome' ) {
       res.redirect('care-home');
     } else if ( req.body['where-were-you-living'] === 'no-abode' ) {
-      res.redirect('no-abode');
+      if (req.session.data["dob-year"] === "1939"){
+        res.redirect('no-abode-over-80');
+       } else {
+        res.redirect('no-abode-under-80');}
     } else if ( req.body['where-were-you-living'] === 'prison' ) {
       res.redirect('prison');
     } else {
       res.redirect('who');
     }
   });
+
+
 
   // Residency type PC
 
@@ -116,12 +121,17 @@ if ( req.body['query'] === 'eligibility' ) {
     } else if ( req.body['where-were-you-living'] === 'carehome' ) {
       res.redirect('care-home-pc');
     } else if ( req.body['where-were-you-living'] === 'no-abode' ) {
-      res.redirect('no-abode');
+      if (req.session.data["dob-year"] === "1939"){
+        res.redirect('no-abode-over-80');
+       } else {
+        res.redirect('no-abode-under-80');}
     } else if ( req.body['where-were-you-living'] === 'prison' ) {
       res.redirect('prison');
-    } else {
-      res.redirect('pension-credit');
-    }
+    } else if (req.session.data["dob-year"] === "1939"){
+      res.redirect('over-80-pension-credit-payment');
+     } else {
+      res.redirect('under-80-pension-credit-payment');
+  }
   });
 
 
@@ -149,7 +159,10 @@ if ( req.body['query'] === 'eligibility' ) {
 
     router.post('/eligibility-checker/care-home', function(req, res) {
       if ( req.body['care-home-admission'] === 'yes' ) {
-        res.redirect('care-home-full');
+        if (req.session.data["dob-year"] === "1939") {
+         res.redirect('over-80-care-home-no-pc');
+        } else {
+         res.redirect('under-80-care-home-no-pc');}
       } else {
         res.redirect('care-home-shared');
       }
@@ -160,7 +173,10 @@ if ( req.body['query'] === 'eligibility' ) {
 
       router.post('/eligibility-checker/care-home-pc', function(req, res) {
         if ( req.body['care-home-admission'] === 'yes' ) {
-          res.redirect('shared-payment-pc');
+          if (req.session.data["dob-year"] === "1939") {
+            res.redirect('over-80-care-home-pc');
+           } else {
+            res.redirect('under-80-care-home-pc');}
         } else {
           res.redirect('care-home-over-pc');
         }
@@ -171,9 +187,11 @@ if ( req.body['query'] === 'eligibility' ) {
       router.post('/eligibility-checker/who', function(req, res) {
         if ( req.body['who-do-you-live-with'] === 'yes' ) {
           res.redirect('living-with');
-        } else {
-          res.redirect('full-payment');
-        }
+        } else if (req.session.data["dob-year"] === "1939"){
+          res.redirect('full-payment-over-80');
+         } else {
+          res.redirect('full-payment-under-80');
+      }
       });
 
       // Who (Living with)
@@ -191,11 +209,30 @@ if ( req.body['query'] === 'eligibility' ) {
 
         router.post('/eligibility-checker/living-with', function(req, res) {
           if ( req.body['live-with-age'] === 'yes' ) {
-            res.redirect('shared-payment');
+            if (req.session.data["dob-year"] === "1939") {
+              res.redirect('living-with-over-80');
+             } else {
+              res.redirect('shared-payment');}
           } else {
-            res.redirect('full-payment');
+            if (req.session.data["dob-year"] === "1939") {
+              res.redirect('full-payment-over-80');
+             } else {
+              res.redirect('full-payment-under-80');}
           }
         });
+
+      // Living with over 80
+
+      router.post('/eligibility-checker/living-with-over-80', function(req, res) {
+        if ( req.body['live-with-age-over-80'] === 'yes' ) {
+          if (req.session.data["dob-year"] === "1939") {
+            res.redirect('over-80-shared-over-80');
+           } else {
+            res.redirect('under-80-shared-with-over-80');}
+        } else {
+          res.redirect('over-80-shared');
+        }
+      });
 
       // Shared payment to overpayment find
 

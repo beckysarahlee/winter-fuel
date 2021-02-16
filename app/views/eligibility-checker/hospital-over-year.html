@@ -1,13 +1,13 @@
 {% extends "layout.html" %}
 
-{% block header %}
-{% include './_header.html' %}
-{% endblock %}
-
-
 {% block pageTitle %}
-Winter Fuel Payments
+GOV.UK Prototype Kit
 {% endblock %}
+
+{% block beforeContent %}
+{% include './_find-someone.html' %}
+{% endblock %}
+
 {% block content %}
 
 
@@ -23,16 +23,15 @@ Winter Fuel Payments
               href: "javascript:history.go(-1)"
             }) }}
 
-            <br>
-            <br>
+          <br>
+          <br>
 
-          <h1 class="govuk-heading-xl">You do not qualify for a Winter Fuel Payment</h1>
+          <h1 class="govuk-heading-l">You do not qualify for a Winter Fuel Payment</h1>
 
-          <p>For winter 2020, we worked out payments during the week
-             of 21 to 27 September 2020. This is called the 'qualifying week'.</p>
 
-          <p>You do not qualify because you were in hospital for over a year,
-            including the qualifying week.</p>
+          <p>You do not qualify because you have been in hospital for more than a year.</p>
+          <h3 class="govuk-heading-m">Changes of circumstance</h3>
+          <p>You might be entitled to a Winter Fuel Payment in the future if you leave hospital.</p>
 
       </div>
 

@@ -1,12 +1,11 @@
 {% extends "layout.html" %}
 
-{% block header %}
-{% include './_header.html' %}
+{% block pageTitle %}
+GOV.UK Prototype Kit
 {% endblock %}
 
-
-{% block pageTitle %}
-Winter Fuel Payments
+{% block beforeContent %}
+{% include './_find-someone.html' %}
 {% endblock %}
 
 {% block content %}
@@ -35,15 +34,15 @@ Winter Fuel Payments
           <p>You qualify for £300 because you:</p>
 
           <ul class="govuk-list govuk-list--bullet">
-            <li>were born on or before 20 September 1940</li>
+            <li>were born before 28 September 1940</li>
             <li>live in a care home</li>
           </ul>
 
           </form>
 
-          <button class="govuk-button" data-module="govuk-button">
+          <a href="date-of-birth.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
             Start again
-          </button>
+            </a>
           
       </div>
 
