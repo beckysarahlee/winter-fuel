@@ -15,16 +15,6 @@ Winter Fuel Payments
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        <div class="moj-banner moj-banner--success">
-
-          <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/1000/svg" viewBox="0 0 25 25" height="25" width="25">
-          <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
-  
-          <div class="moj-banner__message">
-          <span class="moj-banner__assistive">Success</span>Death arrears payment cancelled</div>
-  
-          </div>
-
         <form method="post">
 
           <div>
@@ -53,27 +43,14 @@ Winter Fuel Payments
 
           <h2 class="govuk-heading-m">Payment for winter 2020 to 2021</h2>
 
-          <table class="govuk-table">
-            <caption class="govuk-table__caption"></caption>
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header govuk-!-width-one-half">Amount</th>
-                <td class="govuk-table__cell">£200 - cancelled</td>
-              </tr>
-            </thead>
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header">Cancellation requested by</th>
-                <td class="govuk-table__cell">{{data ['cancel-name']}} {% if data['cancel-relationship'] %}({{data['cancel-relationship']}}){% endif %}</td>
-              </tr>
-            </thead>
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header govuk-!-width-one-half">Cancelled on</th>
-                <td class="govuk-table__cell">5 July 2021</td>
-              </tr>
-            </thead>
-          </table>
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              This person qualified for a Winter Fuel payment of £150<br> <a href="dap-name" class="govuk-link">Enter death arrears payee information
+            </a> or <a href="cancel-payment-name">cancel this payment</a></strong>
+          </div>
+
 
           <br>
 
@@ -88,7 +65,7 @@ Winter Fuel Payments
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header govuk-!-width-one-half">Age</th>
+                <th scope="row" class="govuk-table__header">Age</th>
                 <td class="govuk-table__cell">66</td>
                 <td class="govuk-table__cell"></td>
               </tr>
