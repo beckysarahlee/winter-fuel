@@ -104,6 +104,7 @@ const sprint57c = require('./routes/sprint57c');
 const eligibilitychecker = require('./routes/eligibility-checker');
 const sprint59 = require('./routes/sprint59');
 const sprint59b = require('./routes/sprint59b');
+const sprint59c = require('./routes/sprint59c');
 
 
 //copy the router use and update the sprint version
@@ -209,6 +210,7 @@ router.use(sprint57c);
 router.use(eligibilitychecker);
 router.use(sprint59);
 router.use(sprint59b);
+router.use(sprint59c);
 
 
 router.use((req, res, next) => {
