@@ -23,7 +23,7 @@ GOV.UK Prototype Kit
 
         <form method="post">
 
-          {% include './_bar-dead.html' %}
+          {% include './_bar-immigration-control.html' %}
 
           
 
@@ -34,22 +34,22 @@ GOV.UK Prototype Kit
             <table class="govuk-table">
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header govuk-!-width-one-third">
+                  <th scope="row" class="govuk-table__header">
                     Amount already paid</th>
-                  <td class="govuk-table__cell">
-                    £100</td>
+                  <td class="govuk-table__cell govuk-!-width-one-half">
+                    £200</td>
                 </tr>
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Amount overpaid</th>
-                  <td class="govuk-table__cell">£100</td>
+                  <td class="govuk-table__cell">£200</td>
                 </tr>
                 <tr class="govuk-table__row">
                   <th scope="col" class="govuk-table__header">Reason</th>
-                  <td class="govuk-table__cell">Died on 2 August 2020</td>
+                  <td class="govuk-table__cell">Subject to immigration control</td>
                 </tr>
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Updated details received</th>
-                  <td class="govuk-table__cell">4 February 2021</td>
+                  <td class="govuk-table__cell">3 November 2020</td>
                 </tr>
               </tbody>
             </table><br><br>
@@ -60,79 +60,68 @@ GOV.UK Prototype Kit
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
                   <th scope="col" class="govuk-table__header govuk-!-width-one-third">Age</th>
-                  <td class="govuk-table__cell">71
+                  <td class="govuk-table__cell">70
                   </td>
                 </tr>
                 <tr class="govuk-table__row">
                   <th scope="col" class="govuk-table__header">Date of birth</th>
-                  <td class="govuk-table__cell"> 	17 July 1949
+                  <td class="govuk-table__cell"> 	6 May 1950
                   </td>
                 </tr>
                 <tr class="govuk-table__row">
                   <th scope="col" class="govuk-table__header">Address</th>
-                  <td class="govuk-table__cell"> 6  Blackhall Street
-                    <br>HEREFORD
-                    <br>HR2 4JE
+                  <td class="govuk-table__cell"> 102 Fforchaman Road
+                    <br>CWMAMAN
+                    <br>CF44 6NF
                   </td>
-                </tr>
-              </thead>
-              <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                  <th scope="col" class="govuk-table__header">Date moved in</th>
-                  <td class="govuk-table__cell">28 August 2015</td>
                 </tr>
               </thead>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
                   <th scope="col" class="govuk-table__header">Occupancy</th>
-                  <td class="govuk-table__cell">Lives with someone else who gets Winter Fuel Payment</td>
+                  <td class="govuk-table__cell">Does not live with anyone else who gets Winter Fuel Payment</td>
                 </tr>
               </thead>
 
             </table>
             
-<br><br>
+            <br><br> 
             <h1 class="govuk-heading-m">Current details</h1>
             <table class="govuk-table">
               <caption class="govuk-table__caption"></caption>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
                   <th scope="col" class="govuk-table__header govuk-!-width-one-third">Age</th>
-                  <td class="govuk-table__cell">71
+                  <td class="govuk-table__cell">70
                   </td>
                 </tr>
                 <tr class="govuk-table__row">
                   <th scope="col" class="govuk-table__header">Date of birth</th>
-                  <td class="govuk-table__cell"> 	17 July 1949
-                  </td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <th scope="col" class="govuk-table__header">Date of death</th>
-                  <td class="govuk-table__cell"> 	2 August 2020
+                  <td class="govuk-table__cell"> 	6 May 1950
                   </td>
                 </tr>
                 <tr class="govuk-table__row">
                   <th scope="col" class="govuk-table__header">Address</th>
-                  <td class="govuk-table__cell"> 6  Blackhall Street
-                    <br>HEREFORD
-                    <br>HR2 4JE
+                   <td class="govuk-table__cell">9 Steeple Lane<br>
+                   ST IVES<br>
+                   TR26 2AY</td>
                   </td>
                 </tr>
               </thead>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
                   <th scope="col" class="govuk-table__header">Date moved in</th>
-                  <td class="govuk-table__cell">28 August 2015</td>
+                  <td class="govuk-table__cell">12 February 2020</td>
                 </tr>
               </thead>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
                   <th scope="col" class="govuk-table__header">Occupancy</th>
-                  <td class="govuk-table__cell">Lives with someone else who gets Winter Fuel Payment</td>
+                  <td class="govuk-table__cell">Does not live with anyone else who gets Winter Fuel Payment</td>
                 </tr>
               </thead>
             </table>
-           
+
             <br>
 
             <div class="govuk-form-group">
@@ -159,11 +148,12 @@ GOV.UK Prototype Kit
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="recoverable-3" name="recoverable" type="radio" value="debt-mgt">
-        <label class="govuk-label govuk-radios__label" for="recoverable-3">
-          Refer decision to Debt Management
+        <input class="govuk-radios__input" id="recoverable-2" name="recoverable" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="recoverable-2">
+          Common Law - refer decision to Debt Management
         </label>
       </div>
+    
     </div>
   </fieldset>
 </div>
