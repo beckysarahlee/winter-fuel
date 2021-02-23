@@ -420,7 +420,7 @@ router.post('/sprint57b/stop-payments-reason', function(req, res) {
 
 router.post('/sprint57b/date-of-death', function(req, res) {
   if (req.session.data["death-month"] === "10") {
-    res.redirect('/sprint59c/death-arrears-task-1');
+    res.redirect('death-arrears-task-1');
   } else {
     res.redirect('payment-opted-out');
   }
