@@ -83,10 +83,25 @@ router.post('/sprint59c/death-arrears-task-1-dap-make-payment', (req, res) => {
 
 // Cancel payment to updated overview
 
-router.post('/sprint59c/cancel-payment-name', (req, res) => {
+router.post('/sprint59c/cancel-payment-check', (req, res) => {
+
+
+if ( req.body['changed-name'] === 'yes' ) {
   res.redirect('/sprint59c/overview-dead-cancelled')
-})
-;
+} else {
+  res.redirect('/sprint59c/overview-dead')
+}
+});
+
+router.post('/sprint59c/cancel-payment-check-task', (req, res) => {
+
+
+  if ( req.body['changed-name'] === 'yes' ) {
+    res.redirect('/sprint59c/tasks-5-4')
+  } else {
+    res.redirect('/sprint59c/returned-to-queue')
+  }
+  });
 
 // Send WF BR330 to next of kin
 
