@@ -160,7 +160,7 @@ router.post('/sprint60b/address', function(req, res) {
 
 // Address select, yes or search address
 router.post('/sprint60b/address-1', function(req, res) {
-  if (req.body['address-change'] === '27 Kent Street, Amble, NE65 0LZ') {
+  if (req.body['address-change'] === 'HMP Nalder, SHEPTON MALLET, BA4 4HG') {
     res.redirect('move-date');
   } else {
     res.redirect('address-search');
@@ -277,7 +277,7 @@ router.post('/sprint60b/over-payment-3', (req, res) => {
 
 // Confirm report overpayment?
 router.post('/sprint60b/over-payment-2', (req, res) => {
-  res.redirect('/sprint60b/overview-updated-prison')
+  res.redirect('/sprint60b/overview-updated-prison-2')
 })
 ;
 
