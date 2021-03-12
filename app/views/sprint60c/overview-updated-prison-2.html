@@ -15,9 +15,24 @@ Winter Fuel Payments
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
+<div class="moj-banner moj-banner--success">
+
+        <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/1000/svg" viewBox="0 0 25 25" height="25" width="25">
+        <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
+
+        <div class="moj-banner__message">
+          {% if data['recoverable'] === 'yes' %}
+          <span class="moj-banner__assistive">Success</span>Record of decision downloaded - you should now upload this to CAM<br><a href="">Download record of decision again</a></div>
+        {% else %}
+          <span class="moj-banner__assistive">Success</span>Details updated<br><br>
+         Based on the information you have given us, you are ineligible to receive Winter Fuel Payments.<br></div>
+          {% endif %}
+
+        </div>
+
       <form method="post">
 
-            {% include './_bar.html' %}
+            {% include './_bar-prison.html' %}
 
             {% include './_tab-overview.html' %}
 
@@ -75,9 +90,9 @@ Winter Fuel Payments
                     {% elif data.address %}
                     {{data.address.split(', ').join('<br />') | safe}}
                     {% else %}
-                    27 Kent Street<br>
-                    Amble<br> 
-                    NE65 0LZ
+                    HMP Nalder<br>
+                    SHEPTON MALLET<br>
+                    BA4 4HG
                     {% endif %}
                   </td>
                 </tr>
@@ -94,7 +109,7 @@ Winter Fuel Payments
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Date they moved in</th>
                   <td class="govuk-table__cell">
-                    6 March 2016
+                    17 July 2020
                   </td>
                 </tr>
               </tbody>
@@ -103,7 +118,7 @@ Winter Fuel Payments
       </div>
 
       <div class="govuk-grid-column-one-third">
-          {% include './_history.html' %}
+          {% include './_history2.html' %}
       </div>
 
     </div>
