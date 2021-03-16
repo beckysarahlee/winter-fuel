@@ -687,3 +687,105 @@ margin-bottom: 10px;
     padding-top: 20px;
     padding-bottom: 40px;
 }
+
+ul.tab__nav {
+  @include govuk-font(19);
+  margin-top: 0;
+  padding-left: 0;
+
+  li {
+    margin-bottom: 0;
+    list-style: none;
+  }
+  li a {
+    padding: 10px 5px 15px;
+    text-decoration: none;
+    display: block;
+
+    &.active, &:hover.active {
+      @include govuk-font(19, $weight: bold);
+      color: #ffffff;
+      background-color: #5694ca;
+    }
+
+    &.active_task, &:hover.active_task {
+      @include govuk-font(19, $weight: bold);
+      color: #ffffff;
+      background-color: #5694ca;
+    }
+  }
+
+  a:visited {
+    color: #005EA5;
+  }
+
+  .active:hover {
+    background: #FFF;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    color: #005EA5;
+    text-decoration: underline;
+    background: #DEE0E2;
+
+    &.locked {
+      color: #4E5455;
+      background-color: transparent;
+      cursor: default;
+    }
+  }
+  li a:focus {
+    color: #0B0C0C;
+  }
+  .locked {
+    color: #4E5455;
+    padding: 10px 5px 15px;
+  }
+  hr {
+    height: 1px;
+    background-color: #BFC1C3;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 640px ) {
+    margin-bottom: 15px;
+  }
+
+}
+
+.tab__content {
+  float: left;
+  width: 100%;
+}
+
+.js-hidden {
+display:none;
+
+}
+
+.filtersh3 {
+margin-top:0px;
+margin-bottom:0px
+}
+
+.filtersh4{
+  margin-top:0px;
+  margin-bottom:15px;
+  padding-left:15px;
+  padding-bottom:5px;
+  color:#6a6e6e;
+  text-decoration: none;
+}
+
+
+
+.active_task h4{
+  color:#ffffff;
+}
+
+h4.filtersh4:hover {
+  color: #005EA5;
+  text-decoration: none;
+  background: #DEE0E2;
+}
