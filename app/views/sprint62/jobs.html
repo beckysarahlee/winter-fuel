@@ -19,62 +19,32 @@
 
     <h1 class="govuk-heading-xl">Jobs run</h1>
 
-{{ govukDateInput ({
-  id: 'jobs-run',
-  namePrefix: 'jobs-run',
+{% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+
+{{ govukDateInput({
+  id: "start-date",
+  namePrefix: "start-date",
   fieldset: {
     legend: {
-      text: 'Enter the start date',
+      text: "Enter the start date",
       isPageHeading: true,
-      classes: 'govuk-fieldset__legend'
+      classes: "govuk-fieldset__legend"
     }
-  },
-  items: [
-    {
-      classes: 'govuk-input--width-2',
-      name: 'day',
-      value: data['jobs-run-day']
-    },
-    {
-      classes: 'govuk-input--width-2',
-      name: 'month',
-      value: data['jobs-run-month']
-    },
-    {
-      classes: 'govuk-input--width-4',
-      name: 'year',
-      value: data['jobs-run-year']
-    }
-  ]
+  }
 }) }}
 
-{{ govukDateInput ({
-  id: 'jobs-run-end',
-  namePrefix: 'jobs-run-end',
+{% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+
+{{ govukDateInput({
+  id: "end-date",
+  namePrefix: "end-date",
   fieldset: {
     legend: {
-      text: 'Enter the end date',
+      text: "Enter the end date",
       isPageHeading: true,
-      classes: 'govuk-fieldset__legend'
+      classes: "govuk-fieldset__legend"
     }
-  },
-   items: [
-    {
-      classes: 'govuk-input--width-2',
-      name: 'day',
-      value: data['jobs-run-end-day']
-    },
-    {
-      classes: 'govuk-input--width-2',
-      name: 'month',
-      value: data['jobs-run-end-month']
-    },
-    {
-      classes: 'govuk-input--width-4',
-      name: 'year',
-      value: data['jobs-run-end-year']
-    }
-  ]
+  }
 }) }}
 
 {{ govukButton ({
