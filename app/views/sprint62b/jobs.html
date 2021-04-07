@@ -19,12 +19,21 @@
 
     <h1 class="govuk-heading-xl">Jobs run</h1>
 <p>
-From <input class="govuk-input govuk-input--width-10" type="date" id="date" name="date"> to 
-<input class="govuk-input govuk-input--width-10" type="date" id="date2" name="date2">
+From <input class="govuk-input govuk-input--width-10" type="date" id="date" name="date" value="" placeholder="DD/MM/YYYY"> to 
+<input class="govuk-input govuk-input--width-10" type="date" id="date2" name="date2" value="" placeholder="DD/MM/YYYY">
 </p>
 <br>
 
-
+<p>
+<div class="field ">
+  <label for="date" >
+  </label>
+	From 
+  <input class="govuk-input govuk-input--width-10" type="date" id="date" name="date" value="" placeholder="DD/MM/YYYY" >
+	 to 
+	<input class="govuk-input govuk-input--width-10" type="date" id="date2" name="date2" value="" placeholder="DD/MM/YYYY" >
+</div>
+</p>
 
 {{ govukButton ({
   html: 'Continue'
