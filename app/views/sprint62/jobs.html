@@ -18,34 +18,11 @@
 <br>
 
     <h1 class="govuk-heading-xl">Jobs run</h1>
-
-{% from "govuk/components/date-input/macro.njk" import govukDateInput %}
-
-{{ govukDateInput({
-  id: "start-date",
-  namePrefix: "start-date",
-  fieldset: {
-    legend: {
-      text: "Enter the start date",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend"
-    }
-  }
-}) }}
-
-{% from "govuk/components/date-input/macro.njk" import govukDateInput %}
-
-{{ govukDateInput({
-  id: "end-date",
-  namePrefix: "end-date",
-  fieldset: {
-    legend: {
-      text: "Enter the end date",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend"
-    }
-  }
-}) }}
+<p>
+From <input class="govuk-input govuk-input--width-10" type="date" id="date" name="date"> to 
+<input class="govuk-input govuk-input--width-10" type="date" id="date2" name="date2">
+</p>
+<br>
 
 {{ govukButton ({
   html: 'Continue'
