@@ -18,6 +18,7 @@
 <br>
 
     <h1 class="govuk-heading-xl">Jobs run</h1>
+
 <p>
 From <input class="govuk-input govuk-input--width-10" type="date" id="date" name="date"> to 
 <input class="govuk-input govuk-input--width-10" type="date" id="date2" name="date2">
@@ -25,6 +26,74 @@ From <input class="govuk-input govuk-input--width-10" type="date" id="date" name
 <br>
 
 
+<div class="govuk-input govuk-input--width-10">
+From <duet-fieldset label="Valitse aikaväli">  
+  <duet-grid responsive style="max-width: 480px">    
+    <duet-date-picker name="startdate" class="start" expand margin="none" label="Valitse aloituspäivä" label-hidden value="2020-06-01"></duet-date-picker>    
+    <duet-spacer direction="horizontal" breakpoint="small" size="x-small"></duet-spacer>    
+    <duet-spacer direction="vertical" breakpoint="x-small" size="small"></duet-spacer>    
+    <duet-icon class="icon-arrow" name="navigation-arrow-right" margin="none" color="currentColor" size="x-small"></duet-icon>    
+    <duet-spacer direction="horizontal" breakpoint="small" size="x-small"></duet-spacer>    
+    <duet-spacer direction="vertical" breakpoint="x-small" size="small"></duet-spacer>    
+    To <duet-date-picker name="enddate" class="end" expand margin="none" label="Valitse lopetuspäivä" label-hidden direction="left" value="2020-06-10"></duet-date-picker>  
+  </duet-grid>
+</duet-fieldset>
+</div>
+
+<style>  
+  .icon-arrow {    
+    transform: rotate(90deg);    
+    align-self: center;  
+  }  
+  
+@media (min-width: 36em) {    
+  .icon-arrow {      
+    transform: rotate(0);      
+    padding-top: var(--space-medium);      
+    align-self: start;    
+    }  
+  }
+</style>
+
+<script>  
+  // Select the above date picker components  
+  var startPicker = document.querySelector(".start")  
+  var endPicker = document.querySelector(".end")  
+  var startDate, endDate  
+  
+  // Handle date selection  
+  function handleDateSelect() {    
+    if (startDate && endDate) {      
+      console.log("date range selected", startDate, endDate)    
+    }  
+  }  
+  
+  // When the start date picker is changed…  
+  startPicker.addEventListener("duetChange", function(e) {    
+    startDate = e.detail.valueAsDate    
+    endPicker.min = e.detail.value    
+    
+    if (!endDate) {      
+      endPicker.show()    
+    }    
+    handleDateSelect()  
+  })  
+  
+  // When the end date date picker is changed…  
+  endPicker.addEventListener("duetChange", function(e) {    
+    endDate = e.detail.valueAsDate    
+    startPicker.max = e.detail.value    
+    handleDateSelect()  
+  })
+</script>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 {{ govukButton ({
   html: 'Continue'
